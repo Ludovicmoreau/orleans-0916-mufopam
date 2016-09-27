@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
@@ -10,3 +11,8 @@
 /vendor/
 /bin/
 /composer.phar
+=======
+# Created by .ignore support plugin (hsz.mobi)
+Supprimerait documents/
+Supprimerait img/
+>>>>>>> 794c8638a0b2cf244aba61d46c788bdd27934a31
