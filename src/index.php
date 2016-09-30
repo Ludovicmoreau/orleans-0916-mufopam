@@ -66,8 +66,7 @@
                 Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
                  obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.   </p>
 
-                    <iframe width="100%" height="500px" frameBorder="0"
-                            src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
+                    <iframe width="100%" height="500px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=250827#7/46.932/1.884">
                     </iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
                 </div>
 
@@ -81,6 +80,7 @@
                           Blanditiis consequuntur id illo minus
                           modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
                </div>
+
                 <div class="row-news col-lg-4">
                   <a href="#" class="thumbnail">
                       <h1>Dernière publication</h1>
