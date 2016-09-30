@@ -11,8 +11,10 @@
     <head>
         <meta charset="utf-8">
         <title>Page d'acceuil GDR3625</title>
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -38,10 +40,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="#">Equipes </a></li>
-                        <li class="active"><a href="#">News </a></li>
-                        <li class="active"><a href="#">Publication </a></li>
-                        <li class="active"><a href="#">Emploi </a></li>
+                        <li ><a href="#">Equipes </a></li>
+                        <li ><a href="#">News </a></li>
+                        <li ><a href="#">Publication </a></li>
+                        <li> <a href="#">Emploi </a></li>
                         <li><a href="#"></a></li>
 
                     </ul>
