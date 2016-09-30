@@ -66,7 +66,9 @@
                 Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
                  obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.   </p>
 
-                <img src="../web/images/france.png" alt="Carte de france interactive" class="img-responsive">
+                    <iframe width="100%" height="500px" frameBorder="0"
+                            src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
+                    </iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
                 </div>
 
 
@@ -101,18 +103,16 @@
               </div>
 
 
-
-        <footer>
-            <div class="row-footer col-lg-6">
-                <br/>
-            <a>Mention légales</a>
             </div>
-            <div class="WCS col-lg-offset-4 col-lg-2">
-                <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive">
+        <footer>
+            <div class="row-footer col-lg-12">
+
+            <a>Mention légales</a>
+                <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
             </div>
 
         </footer>
-        </div>
+
 
 
     </body>
