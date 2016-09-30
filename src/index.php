@@ -16,9 +16,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
         <div class="banniere">
-            <img src="../web/images/banniere.jpg" alt="banniere_cnrs">
+            <img src="../web/images/banniere.jpg" alt="banniere_cnrs" height="250px" >
         </div>
 
         <nav class="navbar navbar-default">
@@ -31,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="../web/images/logoGDR.png" alt="logoGDR"></a>
+                    <a class="navbar-brand" href="#"><img src="../web/images/logoGDR.png" alt="logoGDR" height="150px" width="400px"></a>
             </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,10 +59,6 @@
         </nav>
 
 
-
-
-
-    </div>
 
 
 
