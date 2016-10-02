@@ -10,10 +10,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Page d'acceuil GDR3625</title>
+        <title>Page d'accueil GDR3625</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -73,9 +73,9 @@
                 </div>
 
 
-              <div class="row-news col-lg-4">
+              <div class="row-news1 col-lg-4">
                   <a href="#" class="thumbnail" >
-                      <h1>Dernière news</h1>
+                      <h2>Dernière news</h2>
                   </a>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                           Architecto cumque dolore ex numquam provident quam rem voluptate.
@@ -83,18 +83,18 @@
                           modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
                </div>
 
-                <div class="row-news col-lg-4">
+                <div class="row-news2 col-lg-4">
                   <a href="#" class="thumbnail">
-                      <h1>Dernière publication</h1>
+                      <h2>Dernière publication</h2>
                   </a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                           Architecto cumque dolore ex numquam provident quam rem voluptate.
                           Blanditiis consequuntur id illo minus
                           modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
                 </div>
-                <div class="row-news col-lg-4">
+                <div class="row-news3 col-lg-4">
                   <a href="#" class="thumbnail">
-                      <h1>Dernière offre</h1>
+                      <h2>Dernière offre</h2>
                   </a>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                           Architecto cumque dolore ex numquam provident quam rem voluptate.
@@ -109,7 +109,16 @@
         <footer>
             <div class="row-footer col-lg-12">
 
-            <a>Mention légales</a>
+                <button type="button" class="btn btn-info mentionslégales" data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</button>
+
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            ...
+                        </div>
+                    </div>
+                </div>
+
                 <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
             </div>
 

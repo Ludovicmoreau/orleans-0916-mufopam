@@ -5,7 +5,7 @@ footer{
 .logowcs{
     float: right;
 }
-.row-news{
+.row-news1,.row-news2,.row-news3{
     border:1px solid black;
     border-radius: 12px;
 }
@@ -14,8 +14,21 @@ footer{
 }
 
 .navbar-collapse{
-    border-bottom:3px solid;
+    border-bottom:1px solid;
     
 }
+.btn-info{
+    margin-top: 10px;
+}
 
+.thumbnail{
+    border:none;
+}
 
+.row-news1{
+    margin-top: 60px;
+}
+
+.row-news2,.row-news3{
+    margin-top: 20px;
+}
