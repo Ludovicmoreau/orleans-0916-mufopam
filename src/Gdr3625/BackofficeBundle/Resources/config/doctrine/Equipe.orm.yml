@@ -76,4 +76,8 @@ Gdr3625\BackofficeBundle\Entity\Equipe:
         descriptionEquipe:
             type: text
             column: description_equipe
+        logo:
+            type: string
+            length: 255
+            column: logo
     lifecycleCallbacks: {  }
