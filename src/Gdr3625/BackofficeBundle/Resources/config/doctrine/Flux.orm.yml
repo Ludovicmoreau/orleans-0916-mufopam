@@ -1,0 +1,28 @@
+Gdr3625\BackofficeBundle\Entity\Flux:
+    type: entity
+    table: null
+    repositoryClass: Gdr3625\BackofficeBundle\Repository\FluxRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        contenu:
+            type: text
+        auteur:
+            type: integer
+        datePublication:
+            type: date
+            column: date_publication
+        typeFlux:
+            type: string
+            length: 255
+            column: type_flux
+        tags:
+            type: text
+    lifecycleCallbacks: {  }

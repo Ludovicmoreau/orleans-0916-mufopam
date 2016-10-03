@@ -1,7 +1,12 @@
-gdr3625_backoffice_equipe:
-    resource: "@Gdr3625BackofficeBundle/Resources/config/routing/equipe.yml"
-    prefix:   /equipe
-
 gdr3625_backoffice_homepage:
     path:     /
     defaults: { _controller: Gdr3625BackofficeBundle:Default:index }
+gdr3625_backoffice_equipes_publications:
+        resource: "@Gdr3625BackofficeBundle/Resources/config/routing/equipes_publications.yml"
+        prefix:   /equipes_publications
+gdr3625_backoffice_flux:
+        resource: "@Gdr3625BackofficeBundle/Resources/config/routing/flux.yml"
+        prefix:   /flux
+gdr3625_backoffice_equipe:
+        resource: "@Gdr3625BackofficeBundle/Resources/config/routing/equipe.yml"
+        prefix:   /equipe
