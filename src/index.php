@@ -72,32 +72,38 @@
                     </iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
                 </div>
 
-
-                <div class="panel panel-info col-lg-4">
-                    <div class="panel-title"> <h2> Dernière News </h2></div>
+            <div class="panel-assembly col-lg-4">
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                    <div class="panel-title">  Dernière News</div>
+                    </div>
                         <div class="panel-body">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
                          dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
                         </div>
                 </div>
-                <div class="panel panel-info col-lg-4">
-                    <div class="panel-title"> <h2> Dernière Publication </h2></div>
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        <div class="panel-title"> Dernière publication </div>
+                    </div>
                     <div class="panel-body">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
                     </div>
                 </div>
-                <div class="panel panel-info col-lg-4">
-                    <div class="panel-title"> <h2> Dernière Offre </h2></div>
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        <div class="panel-title">  Dernière Offre </div>
+                    </div>
                     <div class="panel-body">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
                     </div>
                 </div>
-
-
             </div>
+           </div>
         <footer>
+            <div class="container-fluid">
             <div class="row-footer col-lg-12">
 
                 <button type="button" class="btn btn-info mentionslégales" data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</button>
@@ -112,7 +118,7 @@
 
                 <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
             </div>
-
+            </div>
         </footer>
 
 

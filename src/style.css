@@ -7,18 +7,16 @@
     border-bottom:1px solid;
     
 }
-
-.btn-info{
-    margin-top: 10px;
+.panel-assembly{
+    margin-top: 60px;
 }
-.panel{
-    border:1px solid blue;
-}
-
 footer{
     border-top: 1px solid black;
     text-align: left;
 }
 .logowcs{
     float: right;
+}
+.btn-info{
+    margin-top: 10px;
 }
