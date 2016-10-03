@@ -38,8 +38,13 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                     <ul class="nav navbar-nav">
                         <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+
+                    <ul class="nav navbar-nav ">
+                        <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+
                         <li ><a href="#">Equipes </a></li>
                         <li ><a href="#">News </a></li>
                         <li ><a href="#">Publication </a></li>
@@ -59,70 +64,91 @@
 
 
             <div class="container-fluid ">
-                <div class="row-présentation col-lg-offset-1 col-lg-6  ">
+                <div class="row-presentation col-lg-offset-1 col-lg-6  ">
 
-                <h1>Présentation du GDR</h1>
+                <h1>Présentation du GDR</h1> <br/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
                 obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.
                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
                  obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.   </p>
-
+                    <div class="carte">
                     <iframe width="100%" height="500px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=250827#7/46.932/1.884">
                     </iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
-                </div>
-
-
-              <div class="row-news1 col-lg-4">
-                  <a href="#" class="thumbnail" >
-                      <h2>Dernière news</h2>
-                  </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
-               </div>
-
-                <div class="row-news2 col-lg-4">
-                  <a href="#" class="thumbnail">
-                      <h2>Dernière publication</h2>
-                  </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
-                </div>
-                <div class="row-news3 col-lg-4">
-                  <a href="#" class="thumbnail">
-                      <h2>Dernière offre</h2>
-                  </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
-
-
-              </div>
-
-
-            </div>
-        <footer>
-            <div class="row-footer col-lg-12">
-
-                <button type="button" class="btn btn-info mentionslégales" data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</button>
-
-                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                    <div class="modal-dialog modal-sm" role="document">
-                        <div class="modal-content">
-                            ...
-                        </div>
                     </div>
                 </div>
 
-                <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
+            <div class="panel-assembly col-lg-4">
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                    <div class="panel-title"> <h4> Dernière News</h4></div>
+                    </div>
+                        <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                        </div>
+                </div>
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        <div class="panel-title"> <h4>Dernière publication</h4> </div>
+                    </div>
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                    </div>
+                </div>
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        <div class="panel-title"> <h4> Dernière Offre</h4> </div>
+                    </div>
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                    </div>
+                </div>
             </div>
+           </div>
+        <footer>
+            <div class="container-fluid">
+            <div class="row-footer col-lg-12">
+                <div class="mentions">
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</a>
 
+                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                Mentions légales
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm2">Contact</a>
+
+                    <div class="modal fade bs-example-modal-sm2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                Celine LANDON
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm3">Siège</a>
+
+                    <div class="modal fade bs-example-modal-sm3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="logo">
+                    <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
+                </div>
+            </div>
+            </div>
         </footer>
 
 

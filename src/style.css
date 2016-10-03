@@ -1,3 +1,4 @@
+
 .navbar-brand{
     margin-top: 13px;
     padding-top: 8px;
@@ -8,31 +9,43 @@
     margin-left: 200px;
 
 }
+
+
+
+
+
+
+
+
+
+.navbar-brand{
+    margin-top: -7px;
+}
+
+.navbar-collapse{
+    border-bottom:1px solid;
+    
+}
+.panel-assembly{
+    margin-top: 60px;
+>>>>>>> maquette_ludovic
+}
+.panel-title{
+     text-align: center;
+ }
+.panel{
+    text-align: justify;
+}
+
 footer{
-    border-top:1px solid black;
-    text-align: center;
+    border-top: 1px solid black;
+    text-align: left;
 }
 .logowcs{
     float: right;
+    margin-top: -70px;
 }
-.row-news1,.row-news2,.row-news3{
-    border:1px solid black;
-    border-radius: 5px;
-}
-
-
-.btn-info{
-    margin-top: 10px;
-}
-
-.thumbnail{
-    border:none;
-}
-
-.row-news1{
-    margin-top: 60px;
-}
-
-.row-news2,.row-news3{
+.mentions{
     margin-top: 20px;
+    cursor: pointer;
 }
