@@ -10,3 +10,6 @@ gdr3625_backoffice_flux:
 gdr3625_backoffice_equipe:
         resource: "@Gdr3625BackofficeBundle/Resources/config/routing/equipe.yml"
         prefix:   /equipe
+gdr3625_backoffice_users:
+        resource: "@Gdr3625BackofficeBundle/Resources/config/routing/users.yml"
+        prefix:   /users

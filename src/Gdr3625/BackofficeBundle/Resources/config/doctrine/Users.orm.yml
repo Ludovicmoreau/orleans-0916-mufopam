@@ -1,0 +1,27 @@
+Gdr3625\BackofficeBundle\Entity\Users:
+    type: entity
+    table: null
+    repositoryClass: Gdr3625\BackofficeBundle\Repository\UsersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: '12'
+        email:
+            type: string
+            length: 255
+        idEquipe:
+            type: integer
+            column: id_equipe
+    lifecycleCallbacks: {  }
