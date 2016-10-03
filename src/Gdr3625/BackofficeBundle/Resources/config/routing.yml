@@ -13,3 +13,6 @@ gdr3625_backoffice_equipe:
 gdr3625_backoffice_users:
         resource: "@Gdr3625BackofficeBundle/Resources/config/routing/users.yml"
         prefix:   /users
+gdr3625_backoffice_publications:
+        resource: "@Gdr3625BackofficeBundle/Resources/config/routing/publications.yml"
+        prefix:   /publications

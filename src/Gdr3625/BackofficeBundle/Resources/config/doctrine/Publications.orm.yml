@@ -1,0 +1,16 @@
+Gdr3625\BackofficeBundle\Entity\Publications:
+    type: entity
+    table: null
+    repositoryClass: Gdr3625\BackofficeBundle\Repository\PublicationsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        doi:
+            type: string
+            length: '20'
+            unique: true
+    lifecycleCallbacks: {  }

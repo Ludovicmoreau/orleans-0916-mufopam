@@ -1,0 +1,24 @@
+publications_index:
+    path:     /
+    defaults: { _controller: "Gdr3625BackofficeBundle:Publications:index" }
+    methods:  GET
+
+publications_show:
+    path:     /{id}/show
+    defaults: { _controller: "Gdr3625BackofficeBundle:Publications:show" }
+    methods:  GET
+
+publications_new:
+    path:     /new
+    defaults: { _controller: "Gdr3625BackofficeBundle:Publications:new" }
+    methods:  [GET, POST]
+
+publications_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "Gdr3625BackofficeBundle:Publications:edit" }
+    methods:  [GET, POST]
+
+publications_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "Gdr3625BackofficeBundle:Publications:delete" }
+    methods:  DELETE
