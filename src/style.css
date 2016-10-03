@@ -10,13 +10,22 @@
 .panel-assembly{
     margin-top: 60px;
 }
+.panel-title{
+     text-align: center;
+ }
+.panel{
+    text-align: justify;
+}
+
 footer{
     border-top: 1px solid black;
     text-align: left;
 }
 .logowcs{
     float: right;
+    margin: 0;
 }
-.btn-info{
-    margin-top: 10px;
+.mentions{
+    margin-top: 20px;
+    cursor: pointer;
 }
