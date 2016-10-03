@@ -24,4 +24,7 @@ Gdr3625\BackofficeBundle\Entity\Users:
         idEquipe:
             type: integer
             column: id_equipe
+        admin:
+            type: boolean
+            column: admin
     lifecycleCallbacks: {  }

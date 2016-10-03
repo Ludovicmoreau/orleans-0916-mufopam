@@ -38,6 +38,10 @@ class Users
      * @var int
      */
     private $idEquipe;
+    /**
+     * @var boolean
+     */
+    private $admin;
 
 
     /**
@@ -164,4 +168,27 @@ class Users
     {
         return $this->idEquipe;
     }
+    /**
+     * Set admin
+     *
+     * @param boolean $admin
+     * @return Users
+     */
+    public function setAdmin($admin)
+    {
+        $this->admin = $admin;
+
+        return $this;
+    }
+
+    /**
+     * Get admin
+     *
+     * @return boolean
+     */
+    public function getAdmin()
+    {
+        return $this->admin;
+    }
+
 }

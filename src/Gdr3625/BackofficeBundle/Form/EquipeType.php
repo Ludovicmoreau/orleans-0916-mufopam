@@ -33,6 +33,7 @@ class EquipeType extends AbstractType
             ->add('recherche')
             ->add('projet')
             ->add('descriptionEquipe')
+            ->add('logo')
         ;
     }
     

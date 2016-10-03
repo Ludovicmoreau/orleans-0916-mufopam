@@ -20,6 +20,7 @@ class UsersType extends AbstractType
             ->add('password')
             ->add('email')
             ->add('idEquipe')
+            ->add('admin')
         ;
     }
     
