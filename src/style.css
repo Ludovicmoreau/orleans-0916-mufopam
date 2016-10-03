@@ -1,3 +1,13 @@
+.navbar-brand{
+    margin-top: 13px;
+    padding-top: 8px;
+}
+
+.navbar-collapse{
+    border-bottom:1px solid #383d50;
+    margin-left: 200px;
+
+}
 footer{
     border-top:1px solid black;
     text-align: center;
@@ -9,14 +19,7 @@ footer{
     border:1px solid black;
     border-radius: 5px;
 }
-.navbar-brand{
-    margin-top: -7px;
-}
 
-.navbar-collapse{
-    border-bottom:1px solid;
-    
-}
 
 .btn-info{
     margin-top: 10px;

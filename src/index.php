@@ -14,37 +14,36 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylenavbar.css">
+        <link rel="stylesheet" href="style.css"
     </head>
 
     <body>
+
         <div class="banniere">
             <img src="../web/images/banniere.jpg" alt="banniere_cnrs" height="250px" class="img-responsive"  >
         </div>
 
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
-
-
+            <div class="container-fluid"></div>
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#"><img src="../web/images/logoGDRdetour.png" alt="logoGDR" height="90px" width="350px"  ></a>
-            </div>
+                </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                        <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
                         <li ><a href="#">Equipes </a></li>
                         <li ><a href="#">News </a></li>
                         <li ><a href="#">Publication </a></li>
                         <li> <a href="#">Emploi </a></li>
-                        <li><a href="#"></a></li>
 
                     </ul>
 
@@ -56,6 +55,8 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
+
 
             <div class="container-fluid ">
                 <div class="row-présentation col-lg-offset-1 col-lg-6  ">
