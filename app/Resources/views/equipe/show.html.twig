@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipe</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equipe.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomequipe</th>
+                <td>{{ equipe.nomEquipe }}</td>
+            </tr>
+            <tr>
+                <th>Laboratoire</th>
+                <td>{{ equipe.laboratoire }}</td>
+            </tr>
+            <tr>
+                <th>Libelleadresse</th>
+                <td>{{ equipe.libelleAdresse }}</td>
+            </tr>
+            <tr>
+                <th>Numerorue</th>
+                <td>{{ equipe.numeroRue }}</td>
+            </tr>
+            <tr>
+                <th>Rue</th>
+                <td>{{ equipe.rue }}</td>
+            </tr>
+            <tr>
+                <th>Cp</th>
+                <td>{{ equipe.cp }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ equipe.ville }}</td>
+            </tr>
+            <tr>
+                <th>Codeunite</th>
+                <td>{{ equipe.codeUnite }}</td>
+            </tr>
+            <tr>
+                <th>Tutelle</th>
+                <td>{{ equipe.tutelle }}</td>
+            </tr>
+            <tr>
+                <th>Sitewebequipe</th>
+                <td>{{ equipe.siteWebEquipe }}</td>
+            </tr>
+            <tr>
+                <th>Siteweblabo</th>
+                <td>{{ equipe.siteWebLabo }}</td>
+            </tr>
+            <tr>
+                <th>Nomreferent</th>
+                <td>{{ equipe.nomReferent }}</td>
+            </tr>
+            <tr>
+                <th>Prenomreferent</th>
+                <td>{{ equipe.prenomReferent }}</td>
+            </tr>
+            <tr>
+                <th>Emailreferent</th>
+                <td>{{ equipe.emailReferent }}</td>
+            </tr>
+            <tr>
+                <th>Telephonereferent</th>
+                <td>{{ equipe.telephoneReferent }}</td>
+            </tr>
+            <tr>
+                <th>Recherche</th>
+                <td>{{ equipe.recherche }}</td>
+            </tr>
+            <tr>
+                <th>Projet</th>
+                <td>{{ equipe.projet }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionequipe</th>
+                <td>{{ equipe.descriptionEquipe }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipe_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,79 @@
+Gdr3625\BackofficeBundle\Entity\Equipe:
+    type: entity
+    table: null
+    repositoryClass: Gdr3625\BackofficeBundle\Repository\EquipeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomEquipe:
+            type: string
+            length: 255
+            unique: true
+            column: nom_equipe
+        laboratoire:
+            type: string
+            length: 255
+        libelleAdresse:
+            type: string
+            length: 255
+            column: libelle_adresse
+        numeroRue:
+            type: string
+            length: '50'
+            nullable: true
+            column: numero_rue
+        rue:
+            type: string
+            length: 255
+        cp:
+            type: integer
+        ville:
+            type: string
+            length: 255
+        codeUnite:
+            type: string
+            length: 255
+            nullable: true
+            column: code_unite
+        tutelle:
+            type: string
+            length: 255
+        siteWebEquipe:
+            type: string
+            length: 255
+            nullable: true
+            column: site_web_equipe
+        siteWebLabo:
+            type: string
+            length: 255
+            nullable: true
+            column: site_web_labo
+        nomReferent:
+            type: string
+            length: 255
+            column: nom_referent
+        prenomReferent:
+            type: string
+            length: 255
+            column: prenom_referent
+        emailReferent:
+            type: string
+            length: 255
+            column: email_referent
+        telephoneReferent:
+            type: integer
+            column: telephone_referent
+        recherche:
+            type: text
+            nullable: true
+        projet:
+            type: text
+            nullable: true
+        descriptionEquipe:
+            type: text
+            column: description_equipe
+    lifecycleCallbacks: {  }

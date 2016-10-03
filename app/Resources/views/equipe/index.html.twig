@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipe list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomequipe</th>
+                <th>Laboratoire</th>
+                <th>Libelleadresse</th>
+                <th>Numerorue</th>
+                <th>Rue</th>
+                <th>Cp</th>
+                <th>Ville</th>
+                <th>Codeunite</th>
+                <th>Tutelle</th>
+                <th>Sitewebequipe</th>
+                <th>Siteweblabo</th>
+                <th>Nomreferent</th>
+                <th>Prenomreferent</th>
+                <th>Emailreferent</th>
+                <th>Telephonereferent</th>
+                <th>Recherche</th>
+                <th>Projet</th>
+                <th>Descriptionequipe</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipe in equipes %}
+            <tr>
+                <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
+                <td>{{ equipe.nomEquipe }}</td>
+                <td>{{ equipe.laboratoire }}</td>
+                <td>{{ equipe.libelleAdresse }}</td>
+                <td>{{ equipe.numeroRue }}</td>
+                <td>{{ equipe.rue }}</td>
+                <td>{{ equipe.cp }}</td>
+                <td>{{ equipe.ville }}</td>
+                <td>{{ equipe.codeUnite }}</td>
+                <td>{{ equipe.tutelle }}</td>
+                <td>{{ equipe.siteWebEquipe }}</td>
+                <td>{{ equipe.siteWebLabo }}</td>
+                <td>{{ equipe.nomReferent }}</td>
+                <td>{{ equipe.prenomReferent }}</td>
+                <td>{{ equipe.emailReferent }}</td>
+                <td>{{ equipe.telephoneReferent }}</td>
+                <td>{{ equipe.recherche }}</td>
+                <td>{{ equipe.projet }}</td>
+                <td>{{ equipe.descriptionEquipe }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipe_show', { 'id': equipe.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipe_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

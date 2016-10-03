@@ -1,0 +1,7 @@
+gdr3625_backoffice_equipe:
+    resource: "@Gdr3625BackofficeBundle/Resources/config/routing/equipe.yml"
+    prefix:   /equipe
+
+gdr3625_backoffice_homepage:
+    path:     /
+    defaults: { _controller: Gdr3625BackofficeBundle:Default:index }

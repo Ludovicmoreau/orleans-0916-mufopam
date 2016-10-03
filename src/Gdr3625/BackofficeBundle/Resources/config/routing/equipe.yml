@@ -1,0 +1,24 @@
+equipe_index:
+    path:     /
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipe:index" }
+    methods:  GET
+
+equipe_show:
+    path:     /{id}/show
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipe:show" }
+    methods:  GET
+
+equipe_new:
+    path:     /new
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipe:new" }
+    methods:  [GET, POST]
+
+equipe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipe:edit" }
+    methods:  [GET, POST]
+
+equipe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipe:delete" }
+    methods:  DELETE
