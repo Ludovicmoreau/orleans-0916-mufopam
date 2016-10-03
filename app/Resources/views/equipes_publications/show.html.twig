@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipes_Publications</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equipes_Publication.id }}</td>
+            </tr>
+            <tr>
+                <th>Idpublications</th>
+                <td>{{ equipes_Publication.idPublications }}</td>
+            </tr>
+            <tr>
+                <th>Idequipes</th>
+                <td>{{ equipes_Publication.idEquipes }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipes_publications_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

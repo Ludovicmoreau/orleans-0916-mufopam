@@ -1,0 +1,12 @@
+equipes_publications_index:
+    path:     /
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipes_Publications:index" }
+    methods:  GET
+
+equipes_publications_show:
+    path:     /{id}/show
+    defaults: { _controller: "Gdr3625BackofficeBundle:Equipes_Publications:show" }
+    methods:  GET
+
+
+
