@@ -42,8 +42,6 @@
                     <ul class="nav navbar-nav">
                         <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
 
-                    <ul class="nav navbar-nav ">
-                        <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
 
                         <li ><a href="#">Equipes </a></li>
                         <li ><a href="#">News </a></li>
