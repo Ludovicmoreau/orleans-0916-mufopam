@@ -1,3 +1,7 @@
+gdr3625_backoffice:
+    resource: "@Gdr3625BackofficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
