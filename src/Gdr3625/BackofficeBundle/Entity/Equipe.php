@@ -104,6 +104,11 @@ class Equipe
      */
     private $descriptionEquipe;
 
+    /**
+     * @var string
+     */
+    private $logo;
+
 
     /**
      * Get id
@@ -527,5 +532,28 @@ class Equipe
     public function getDescriptionEquipe()
     {
         return $this->descriptionEquipe;
+    }
+
+    /**
+     * Set logo
+     *
+     * @param string $logo
+     * @return Equipe
+     */
+    public function setlogo($logo)
+    {
+        $this->logo = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Get logo
+     *
+     * @return string
+     */
+    public function getlogo()
+    {
+        return $this->logo;
     }
 }
