@@ -23,7 +23,7 @@ footer{
 }
 .logowcs{
     float: right;
-    margin: 0;
+    margin-top: -60px;
 }
 .mentions{
     margin-top: 20px;
