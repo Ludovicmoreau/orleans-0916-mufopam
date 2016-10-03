@@ -1,14 +1,4 @@
-footer{
-    border-top:1px solid black;
-    text-align: center;
-}
-.logowcs{
-    float: right;
-}
-.row-news1,.row-news2,.row-news3{
-    border:1px solid black;
-    border-radius: 5px;
-}
+
 .navbar-brand{
     margin-top: -7px;
 }
@@ -21,16 +11,14 @@ footer{
 .btn-info{
     margin-top: 10px;
 }
-
-.thumbnail{
-    border:none;
+.panel{
+    border:1px solid blue;
 }
 
-.row-news1{
-    margin-top: 60px;
+footer{
+    border-top: 1px solid black;
+    text-align: left;
 }
-
-.row-news2,.row-news3{
-    margin-top: 20px;
+.logowcs{
+    float: right;
 }
-

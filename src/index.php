@@ -58,7 +58,7 @@
         </nav>
 
             <div class="container-fluid ">
-                <div class="row-présentation col-lg-offset-1 col-lg-6  ">
+                <div class="row-presentation col-lg-offset-1 col-lg-6  ">
 
                 <h1>Présentation du GDR</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -73,36 +73,27 @@
                 </div>
 
 
-              <div class="row-news1 col-lg-4">
-                  <a href="#" class="thumbnail" >
-                      <h2>Dernière news</h2>
-                  </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
-               </div>
-
-                <div class="row-news2 col-lg-4">
-                  <a href="#" class="thumbnail">
-                      <h2>Dernière publication</h2>
-                  </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
+                <div class="panel panel-info col-lg-4">
+                    <div class="panel-title"> <h2> Dernière News </h2></div>
+                        <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                        </div>
                 </div>
-                <div class="row-news3 col-lg-4">
-                  <a href="#" class="thumbnail">
-                      <h2>Dernière offre</h2>
-                  </a>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Architecto cumque dolore ex numquam provident quam rem voluptate.
-                          Blanditiis consequuntur id illo minus
-                          modi perspiciatis qui. At perferendis tempore voluptatem voluptates.</p>
-
-
-              </div>
+                <div class="panel panel-info col-lg-4">
+                    <div class="panel-title"> <h2> Dernière Publication </h2></div>
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                    </div>
+                </div>
+                <div class="panel panel-info col-lg-4">
+                    <div class="panel-title"> <h2> Dernière Offre </h2></div>
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                    </div>
+                </div>
 
 
             </div>
