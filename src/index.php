@@ -116,9 +116,28 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm2">Contact</a>
+
+                    <div class="modal fade bs-example-modal-sm2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                    <a  data-toggle="modal" data-target=".bs-example-modal-sm3">Siège</a>
+
+                    <div class="modal fade bs-example-modal-sm3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
 
                 <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
+                </div>
             </div>
             </div>
         </footer>
