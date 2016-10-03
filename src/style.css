@@ -7,7 +7,7 @@ footer{
 }
 .row-news1,.row-news2,.row-news3{
     border:1px solid black;
-    border-radius: 12px;
+    border-radius: 5px;
 }
 .navbar-brand{
     margin-top: -7px;
@@ -17,6 +17,7 @@ footer{
     border-bottom:1px solid;
     
 }
+
 .btn-info{
     margin-top: 10px;
 }

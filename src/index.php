@@ -58,7 +58,7 @@
         </nav>
 
             <div class="container-fluid ">
-                <div class="row-présentation col-lg-offset-1 col-lg-6 ">
+                <div class="row-présentation col-lg-offset-1 col-lg-6  ">
 
                 <h1>Présentation du GDR</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
