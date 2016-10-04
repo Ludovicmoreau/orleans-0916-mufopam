@@ -78,6 +78,7 @@
     }
     .navbar-toggle{
         display: block !important;
+        height:119px;
     }
     .navbar-header{
         float: none;
