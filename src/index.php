@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand " id="logoMufo" href="#"><img class="img-responsive" src="../web/images/logoGDRdetour.png" alt="logoGDR" ></a>
+                    <a class="navbar-brand " id="logoMufo" href="#"><img class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logoGDR" ></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
