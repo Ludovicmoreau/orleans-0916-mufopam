@@ -22,7 +22,7 @@
 
         <div class="banniere">
             <img src="../web/images/banniere.jpg" alt="banniere_cnrs" height="250px" class="img-responsive"  >
-        </div>
+        </div> <!--image banniere -->
 
         <div class="navigation">
         <nav class="navbar navbar-default">
@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand " id="logoMufo" href="#"><img class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logoGDR" ></a>
-                </div>
+                </div><!--image navbar brand -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,13 +53,13 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"></a></li>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+                        <li><a href="#"><img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"></a></li> <!--image connexion -->
+                </div>
+            </div>
 
 
 
-            <div class="container-fluid ">
+            <div class="container-fluid "> <!--partie présentation -->
                 <div class="row-presentation col-lg-offset-1 col-lg-6  ">
 
                 <h1>Présentation du GDR</h1> <br/>
@@ -73,10 +73,10 @@
                         <iframe width="100%" height="500px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?sc
                         aleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=false&tilelayersControl=false&embedControl=false&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=251139&measureControl=false&editinosmControl=
                         false"></iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
-                    </div>
+                    </div><!--image carte interactive -->
                 </div>
 
-            <div class="panel-assembly col-lg-4">
+            <div class="panel-assembly col-lg-4"> <!--partie panel -->
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
                     <div class="panel-title"> <h4> Dernière News</h4></div>
@@ -106,8 +106,9 @@
                 </div>
             </div>
            </div>
+
         <footer>
-            <div class="container-fluid">
+            <div class="container-fluid"> <!--partie modal mentions légales  -->
             <div class="row-footer col-lg-12">
                 <div class="mentions">
                     <a  data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</a>
@@ -141,7 +142,7 @@
                     </div>
 
                 </div>
-                <div class="logo">
+                <div class="logo"><!--image logo ecole -->
                     <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
                 </div>
             </div>

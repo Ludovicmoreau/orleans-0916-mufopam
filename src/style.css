@@ -1,4 +1,4 @@
-
+                                                    /*navbar*/
 .navbar-brand{
     margin-top: 21px;
 
@@ -26,10 +26,12 @@
 .nav{
     padding-left: 80px;
 }
+
 .logoconnexion{
     height:20px;
     width:15px;
 }
+                                                    /*panel*/
 .panel-assembly{
     margin-top: 60px;
 
@@ -40,7 +42,7 @@
 .panel{
     text-align: justify;
 }
-
+                                                    /*footer*/
 footer{
     border-top: 1px solid black;
     text-align: left;
