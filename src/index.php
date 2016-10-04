@@ -76,7 +76,7 @@
                     </div><!--image carte interactive -->
                 </div>
 
-            <div class="panel-assembly col-lg-4"> <!--partie panel -->
+            <div class="panel-assembly col-lg-5"> <!--partie panel -->
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
                     <div class="panel-title"> <h4> Dernière News</h4></div>
