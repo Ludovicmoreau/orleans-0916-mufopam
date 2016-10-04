@@ -24,6 +24,7 @@
             <img src="../web/images/banniere.jpg" alt="banniere_cnrs" height="250px" class="img-responsive"  >
         </div>
 
+        <div class="navigation">
         <nav class="navbar navbar-default">
             <div class="container-fluid"></div>
                 <div class="navbar-header">
@@ -33,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="../web/images/logoGDRdetour.png" alt="logoGDR" height="90px" width="350px"  ></a>
+                    <a class="navbar-brand " id="logoMufo" href="#"><img class="img-responsive" src="../web/images/logoGDRdetour.png" alt="logoGDR" ></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,8 +42,6 @@
 
                     <ul class="nav navbar-nav">
                         <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-
-
                         <li ><a href="#">Equipes </a></li>
                         <li ><a href="#">News </a></li>
                         <li ><a href="#">Publication </a></li>
@@ -54,10 +53,9 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><img src="../web/images/icon_mdp.jpg" alt="connexion" height="15px" width="15px" class="img-responsive"></a></li>
+                        <li><a href="#"><img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"></a></li>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
-        </nav>
 
 
 
