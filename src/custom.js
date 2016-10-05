@@ -10,13 +10,13 @@ $(function() {
     });*/
     $('nav').affix({
         offset: {
-            top: $('header').height()
+            top: $('.banniere').height()
         }
     });
 
     /*$('nav').affix({
         offset: {
-            top: 250
+            top: 150
         }
     });*/
 });

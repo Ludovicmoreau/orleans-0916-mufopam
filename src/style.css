@@ -1,8 +1,10 @@
 /*##########       banniere | header       ##########*/
-header {
+.banniere {
     height:250px;
 }
-
+nav{
+    border-bottom: 1px solid black;
+}
 /*##########       navbar       ##########*/
 nav.affix {
     position: fixed;
@@ -10,37 +12,32 @@ nav.affix {
     width: 100%;
     z-index:10;
 }
-nav{
-    min-height:120px;
-    border-bottom: solid 1px black;
-}
+
 #logoMufo{
     max-height: 70px;
     max-width: 250px;
 }
-.navbar-nav li{
+/*.navbar-nav li{
     font-size:25px;
     padding-right:20px;
     padding-top: 40px;
-}
-#iconConnexion{
-    /*margin: 0 auto;
-    padding: 0 auto;*/
-}
+}*/
 /*##########       content       ##########*/
 #content {
-    margin-top: 20px;
+    margin-top: 150px;
 }
 iframe {
     width: 100%;
-    height: 600px;
+    height: 800px;
     border:none;
+}
+#map{
+    margin-top: 150px;
 }
 
 /*##########       panel       ##########*/
 .panel-assembly{
     margin-top: 60px;
-
 }
 
 .panel{
