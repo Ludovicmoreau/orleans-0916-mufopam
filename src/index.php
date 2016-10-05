@@ -11,141 +11,166 @@
     <head>
         <meta charset="utf-8">
         <title>Page d'accueil GDR3625</title>
+        <link rel="stylesheet" href="../web/font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        <script src="custom.js"></script>
         <link rel="stylesheet" href="stylenavbar.css">
         <link rel="stylesheet" href="style.css"
     </head>
 
     <body>
-
-        <div class="banniere">
-            <img src="../web/images/banniere.jpg" alt="banniere_cnrs" height="250px" class="img-responsive"  >
-        </div> <!--image banniere -->
-
-        <div class="navigation">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid"></div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand " id="logoMufo" href="#"><img class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logoGDR" ></a>
-                </div><!--image navbar brand -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    <ul class="nav navbar-nav">
-                        <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                        <li ><a href="#">Equipes </a></li>
-                        <li ><a href="#">News </a></li>
-                        <li ><a href="#">Publication </a></li>
-                        <li> <a href="#">Emploi </a></li>
-
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"></a></li> <!--image connexion -->
-                </div>
+        <header class="container-fluid">
+            <div class="banniere">
+                <!--image banniere -->
+                <img src="../web/images/banniere.jpg" alt="banniere_cnrs" class="img-responsive"  >
             </div>
-
-
-
-            <div class="container-fluid "> <!--partie présentation -->
-                <div class="row-presentation col-lg-offset-1 col-lg-6  ">
-
-                <h1>Présentation du GDR</h1> <br/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
-                obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ad adipisci autem deserunt dolores earum eos excepturi harum iste minima mollitia necessitatibus,
-                 obcaecati quaerat quisquam quos recusandae soluta veritatis voluptas voluptatum.   </p>
-                    <div class="carte">
-                        <iframe width="100%" height="500px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?sc
-                        aleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=false&tilelayersControl=false&embedControl=false&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=251139&measureControl=false&editinosmControl=
-                        false"></iframe><p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
-                    </div><!--image carte interactive -->
-                </div>
-
-            <div class="panel-assembly col-lg-5"> <!--partie panel -->
-                <div class="panel panel-primary ">
-                    <div class="panel-heading">
-                    <div class="panel-title"> <h4> Dernière News</h4></div>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--image navbar brand -->
+                        <a class="navbar-brand " href="#">
+                            <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logoDuGDR3625">
+                        </a>
                     </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                            <li ><a href="#">Equipes </a></li>
+                            <li ><a href="#">Actualités</a></li>
+                            <li ><a href="#">Publications</a></li>
+                            <li> <a href="#">Jobs</a></li>
+                            <li><a id="iconConnexion" href="#"><i class="fa fa-lock fa-2x"></i></a></li>
+                        </ul>
+                        <!--Right navbar-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--logo connexion backoffice -->
+                            <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="content" class="container-fluid ">
+            <div class="row">
+                <!--partie présentation -->
+                <div class="col-lg-offset-1 col-lg-5">
+                    <h1>Présentation du GDR</h1>
+                    <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des
+                        Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion
+                        annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février
+                        2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel
+                        Drider, a muri au cours du congrès international AMP2012 (Third International Symposium
+                        on AntiMicrobial Peptides) organisé par la SFPAM à Lille.
+                        Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement
+                        des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En
+                        particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une
+                        part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et
+                        d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-
+                        économiques.</p>
+                </div>
+                <!--image carte interactive -->
+                <div class="col-lg-5">
+                    <iframe frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?sc
+                    aleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=false&tilelayersControl=false&embedControl=false&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=251139&measureControl=false&editinosmControl=
+                    false">
+                    </iframe>
+                    <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
+                </div>
+                <!--partie panel -->
+                <div class="panel-assembly col-lg-4">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h4> Dernière News</h4>
+                            </div>
+                        </div>
                         <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                         dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
                         </div>
-                </div>
-                <div class="panel panel-primary ">
-                    <div class="panel-heading">
-                        <div class="panel-title"> <h4>Dernière publication</h4> </div>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
                     </div>
                 </div>
-                <div class="panel panel-primary ">
-                    <div class="panel-heading">
-                        <div class="panel-title"> <h4> Dernière Offre</h4> </div>
+                <div class="panel-assembly col-lg-4">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h4>Dernière publication</h4>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                            dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                </div>
+                <div class="panel-assembly col-lg-4">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h4> Dernière Offre</h4>
+                                <h6 class="rightPanel panel-title">Auteur / Date</h6>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
+                            dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-           </div>
-
-        <footer>
-            <div class="container-fluid"> <!--partie modal mentions légales  -->
-            <div class="row-footer col-lg-12">
-                <div class="mentions">
-                    <a  data-toggle="modal" data-target=".bs-example-modal-sm">Mentions légales</a>
-
-                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                Mentions légales
+        </div>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--partie modal mentions légales  -->
+                    <ul id="mentions" class="text-center list-inline">
+                        <li>
+                            <a  data-toggle="modal" data-target="#modalMentions">Mentions légales</a>
+                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDesMentionsLegales">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        Mentions légales
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <a  data-toggle="modal" data-target=".bs-example-modal-sm2">Contact</a>
-
-                    <div class="modal fade bs-example-modal-sm2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                Celine LANDON
+                        </li>
+                        <li>
+                            <a  data-toggle="modal" data-target="#modalContact">Contact</a>
+                            <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDuContact">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        Celine LANDON
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <a  data-toggle="modal" data-target=".bs-example-modal-sm3">Siège</a>
-
-                    <div class="modal fade bs-example-modal-sm3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                ...
+                        </li>
+                        <li>
+                            <a  data-toggle="modal" data-target="#localize">Siège</a>
+                            <div id="localize" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLocaliserNous">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        ...
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
+                        </li>
+                        <li>
+                            <!--image logo ecole -->
+                            <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs"src="../web/images/logo_wcs.jpg" alt="logo WCS" class="img-responsive"></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="logo"><!--image logo ecole -->
-                    <img src="../web/images/logo_wcs.jpg" alt="logo WCS" height="100px" width="100px" class="img-responsive logowcs">
-                </div>
-            </div>
             </div>
         </footer>
 
