@@ -30,38 +30,40 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!--image navbar brand -->
-                        <a class="navbar-brand " href="#">
-                            <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
-                        </a>
+            <div class="exemple3">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!--image navbar brand -->
+                            <a class="navbar-brand " href="#">
+                                <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="collapseNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li ><a href="#">Equipes </a></li>
+                                <li ><a href="#">Actualités</a></li>
+                                <li ><a href="#">Publications</a></li>
+                                <li> <a href="#">Jobs</a></li>
+                            </ul>
+                            <!--Right navbar-->
+                            <ul class="nav navbar-nav navbar-right">
+                                <!--logo connexion backoffice -->
+                                <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
+                                <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="collapseNavbar">
-                        <ul class="nav navbar-nav">
-                            <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                            <li ><a href="#">Equipes </a></li>
-                            <li ><a href="#">Actualités</a></li>
-                            <li ><a href="#">Publications</a></li>
-                            <li> <a href="#">Jobs</a></li>
-                        </ul>
-                        <!--Right navbar-->
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--logo connexion backoffice -->
-                            <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
-                            <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
         <main>
             <div id="content" class="container-fluid ">

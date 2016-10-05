@@ -11,14 +11,20 @@ nav.affix {
     z-index:10;
 }
 
-.navbar-brand{
+.navbar-brand {
     padding: 0;
 }
-#logoMufo{
-    max-height: 60px;
+.example3 .navbar-brand>img {
+    padding: 7px 15px;
 }
-.navbar-nav li{
-    font-size:25px;
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 125px;
+    height: 125px;
+    padding-top: 0;
+}
+#logoMufo {
+    height: 120px;
 }
 /*##########       content       ##########*/
 #content {
