@@ -39,11 +39,14 @@ iframe {
 }
 
 /*##########       panel       ##########*/
-.panel-assembly{
-    margin-top: 60px;
-
+.panel-title{
+    height:15px;
+    margin-top: -10px;
 }
-
+.pull-right{
+    font-size:15px;
+    padding-top: 3px;
+}
 .panel{
     text-align: justify;
 }

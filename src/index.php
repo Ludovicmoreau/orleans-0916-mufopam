@@ -92,7 +92,7 @@
                     <div class="panel panel-primary ">
                         <div class="panel-heading">
                             <div class="panel-title">
-                                <h4> Dernière News</h4>
+                                <h4> Dernière News <span class="pull-right">Auteur / Date</span></h4>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -105,7 +105,7 @@
                     <div class="panel panel-primary ">
                         <div class="panel-heading">
                             <div class="panel-title">
-                                <h4>Dernière publication</h4>
+                                <h4>Dernière publication <span class="pull-right">Auteur / Date</span></h4>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -117,9 +117,8 @@
                 <div class="panel-assembly col-lg-4">
                     <div class="panel panel-primary ">
                         <div class="panel-heading">
-                            <div class="panel-title">
-                                <h4> Dernière Offre</h4>
-                                <h6 class="rightPanel panel-title">Auteur / Date</h6>
+                            <div class="panel-title ">
+                                <h4> Dernière Offre <span class="pull-right">Auteur / Date</span></h4>
                             </div>
                         </div>
                         <div class="panel-body">
