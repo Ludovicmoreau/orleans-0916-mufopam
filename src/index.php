@@ -17,25 +17,23 @@
         <!--script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="custom.js"></script>
-        <!--link rel="stylesheet" href="stylenavbar.css"-->
+        <link rel="stylesheet" href="stylenavbar.css">
         <link rel="stylesheet" href="style.css"
     </head>
     <body>
         <header>
-            <div class="banniere">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!--image banniere -->
-                            <img src="../web/images/banniere.jpg" alt="banniere_cnrs" class="img-responsive"  >
-                        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banniere">
+                    <!--image banniere -->
+                    <img src="../web/images/banniere.jpg" alt="banniere_cnrs" class="img-responsive"  >
                     </div>
                 </div>
             </div>
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -43,11 +41,11 @@
                         </button>
                         <!--image navbar brand -->
                         <a class="navbar-brand " href="#">
-                            <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logoDuGDR3625">
+                            <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="collapseNavbar">
                         <ul class="nav navbar-nav">
                             <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
                             <li ><a href="#">Equipes </a></li>
@@ -59,7 +57,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <!--logo connexion backoffice -->
                             <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
-                            <li><a href="#"><i class="fa fa-lock fa-2x"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
                         </ul>
                     </div>
                 </div>
