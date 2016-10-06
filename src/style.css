@@ -3,7 +3,7 @@
 nav{
     border-bottom: 1px solid black;
 }
-/*##########       navbar       ##########*/
+/*##########       navbar       ############*/
 nav.affix {
     position: fixed;
     top: 0;
