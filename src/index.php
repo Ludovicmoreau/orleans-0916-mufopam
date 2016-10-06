@@ -130,15 +130,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <!--image carte interactive -->
-                    <div class="col-lg-5">
-                        <div id="map">
-                            <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
-                            </iframe>
-                            <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845">Voir en plein écran</a></p>
-                        </div>
-                    </div>
-                </div>
                 <div class="row">
                     <!--partie panel -->
                     <div class="panel-assembly col-lg-4">
