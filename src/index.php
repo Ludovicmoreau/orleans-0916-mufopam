@@ -70,18 +70,18 @@
                 <div class="row">
                     <!--partie présentation -->
                     <div id="prez" class="col-lg-offset-1 col-lg-5">
-                        <h1>GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
+                        <h1 class="bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
                         <p>40 équipes de recherche impliquées. Environ 200 chercheurs, enseignant-chercheurs, ingénieurs, techniciens, doctorants et post-doctorants sont impliqués</p>
-                        <h2>Preambule</h2>
+                        <h2 class="bot-left">Preambule</h2>
                         <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
                         <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
-                        <h2>Objectifs prioritaires :</h2>
+                        <h2 class="bot-left">Objectifs prioritaires :</h2>
                         <ul>
                             <li>Fédérer les équipes de recherche françaises qui s’intéressent à la multifonctionnalité des peptides antimicrobiens. </li>
                             <li>Favoriser les rencontres et inciter les synergies entre les différentes disciplines afin de permettre l'émergence de projets innovants et transversaux de recherche pluridisciplinaires à l'échelle nationale et internationale afin de répondre aux divers appels à projets.</li>
                             <li>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</li>
                         </ul>
-                        <h2>Comité de pilotage</h2>
+                        <h2 class="bot-left">Comité de pilotage</h2>
                         <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
                         <table>
                             <tbody>

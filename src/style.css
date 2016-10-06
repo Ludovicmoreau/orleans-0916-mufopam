@@ -63,3 +63,24 @@ footer{
     margin-top :0;
     float: right;
 }
+
+/*############## Gradient Left/Bottom ###############*/
+.bot-left {
+    position: relative;
+}
+.bot-left:before, .bot-left:after {
+    content: ""; position: absolute; bottom: -3px; left: -3px;
+}
+.bot-left:before {
+    top: -3px; width: 3px;
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#337ab7), to(#337ab7));
+    background-image: -webkit-linear-gradient(#337ab7, #337ab7);
+    background-image: -moz-linear-gradient(#337ab7, #337ab7);
+    background-image: -o-linear-gradient(#337ab7, #337ab7); }
+.bot-left:after {
+    right: -3px; height: 3px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#337ab7), to(transparent));
+    background-image: -webkit-linear-gradient(left, #337ab7, transparent);
+    background-image: -moz-linear-gradient(left, #337ab7, transparent);
+    background-image: -o-linear-gradient(left, #337ab7, transparent);
+}
