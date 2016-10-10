@@ -84,58 +84,74 @@
                                 <li><p>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</p></li>
                             </ul>
                             <h2 class="title2">Comité de pilotage</h2>
+                            <p>
+                                Directeur : Céline LANDON - CNRS Orléans
+
+                                e-mail celine.landon@cnrs-orleans.fr Tél. 02.38.25.55.74
+
+                                Directeur Adjoint: Mohamed AMICHE – INSERM Créteil
+
+                                e-mail Mohamed.AMICHE@inserm.fr Tél. 01. 49. 81. 36. 66.
+                            </p>
                             <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
-                            <div class="table-responsive">
-                                <table class="table table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Chercheurs</th>
-                                            <th>Savoir-faire</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Mohamed AMICHE (Créteil)</td>
-                                            <td>PAMs et activité anticancéreuse</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nathalie BOULANGER (Strasbourg)</td>
-                                            <td>PAMs et propriétés immuno-modulatrices</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Philippe BULET (Archamps)</td>
-                                            <td>PAMs et Valorisation</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Delphine DESTOUMIEUX-GARZON (Montpellier)</td>
-                                            <td>PAMs et propriétés immuno-modulatrices</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Djamel DRIDER (Lille)</td>
-                                            <td>PAMs et Valorisation</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nicolas GUYOT (Nouzilly)</td>
-                                            <td>PAMs et fonctions émergentes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Katy JEANNOT (Besançon)</td>
-                                            <td>PAMs et résistance</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Thierry JOUENNE (Rouen)</td>
-                                            <td>PAMs et Biofilms, Valorisation</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Céline LANDON (Orléans)</td>
-                                            <td>PAMs et fonctions émergentes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sylvie REBUFFAT (Paris)</td>
-                                            <td>PAMs et fonctions émergentes</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <a  data-toggle="modal" data-target="#modalMentions"></a>
+                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDesMentionsLegales">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="table-responsive">
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th>Chercheurs</th>
+                                                    <th>Savoir-faire</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Mohamed AMICHE (Créteil)</td>
+                                                    <td>PAMs et activité anticancéreuse</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nathalie BOULANGER (Strasbourg)</td>
+                                                    <td>PAMs et propriétés immuno-modulatrices</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Philippe BULET (Archamps)</td>
+                                                    <td>PAMs et Valorisation</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Delphine DESTOUMIEUX-GARZON (Montpellier)</td>
+                                                    <td>PAMs et propriétés immuno-modulatrices</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Djamel DRIDER (Lille)</td>
+                                                    <td>PAMs et Valorisation</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nicolas GUYOT (Nouzilly)</td>
+                                                    <td>PAMs et fonctions émergentes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Katy JEANNOT (Besançon)</td>
+                                                    <td>PAMs et résistance</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Thierry JOUENNE (Rouen)</td>
+                                                    <td>PAMs et Biofilms, Valorisation</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Céline LANDON (Orléans)</td>
+                                                    <td>PAMs et fonctions émergentes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sylvie REBUFFAT (Paris)</td>
+                                                    <td>PAMs et fonctions émergentes</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -214,15 +230,7 @@
                                 <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDuContact">
                                     <div class="modal-dialog modal-sm" role="document">
                                         <div class="modal-content">
-                                            <p>
-                                                Directeur : Céline LANDON - CNRS Orléans
 
-                                                e-mail celine.landon@cnrs-orleans.fr Tél. 02.38.25.55.74
-
-                                                Directeur Adjoint: Mohamed AMICHE – INSERM Créteil
-
-                                                e-mail Mohamed.AMICHE@inserm.fr Tél. 01. 49. 81. 36. 66.
-                                            </p>
                                         </div>
                                     </div>
                                 </div>

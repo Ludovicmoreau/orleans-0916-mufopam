@@ -27,7 +27,7 @@ nav.affix {
     font-size: 35px;
 }
 #logoMufo {
-    height: 107px;
+    max-height: 107px;
     margin: auto;
 }
 /*###########       content       ##############*/
