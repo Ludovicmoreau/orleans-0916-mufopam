@@ -67,11 +67,13 @@
         <main>
             <div id="content" class="fixNav container-fluid ">
                 <div class="row">
+                    <div class="col-xs-12 col-lg-offset-1 col-lg-10">
+                        <h1 class="title1 bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
+                        <p>40 équipes de recherche impliquées. Environ 200 chercheurs, enseignant-chercheurs, ingénieurs, techniciens, doctorants et post-doctorants sont impliqués</p>
+                    </div>
                     <!--partie présentation -->
                     <div id="prez">
                         <div class="col-lg-offset-1 col-lg-5">
-                            <h1 class="title1 bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
-                            <p>40 équipes de recherche impliquées. Environ 200 chercheurs, enseignant-chercheurs, ingénieurs, techniciens, doctorants et post-doctorants sont impliqués</p>
                             <h2 class="title2">Preambule</h2>
                             <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
                             <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
@@ -139,20 +141,20 @@
                     </div>
                     <!--image carte interactive -->
                     <div class="col-lg-5">
-                        <div id="map">
-                            <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
-                            </iframe>
+                        <aside id="map" class="stickySide">
+                            <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&datalayers=251139&fullscreenControl=false&measureControl=false&editinosmControl=false#6/38/2">
+                            </iframe
                             <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845" target="_blank">Voir en plein écran</a></p>
-                        </div>
+                        </aside>
                     </div>
                 </div>
                 <div class="row">
                     <!--partie panel -->
-                    <div class="panel-assembly col-lg-4">
+                    <div class="panel-assembly col-lg-offset-1 col-lg-3">
                         <div class="panel panel-primary ">
                             <div class="panel-heading">
                                 <div class="panel-title">
-                                    <h4> Dernière News <span class="pull-right auteurDate">Auteur / Date</span></h4>
+                                    <h4>Dernière publication <span class="pull-right auteurDate">Auteur / Date</span></h4>
                                 </div>
                             </div>
                             <div class="panel-body">
@@ -166,16 +168,18 @@
                         <div class="panel panel-primary ">
                             <div class="panel-heading">
                                 <div class="panel-title">
-                                    <h4>Dernière publication <span class="pull-right auteurDate">Auteur / Date</span></h4>
+                                    <h4> Dernière News <span class="pull-right auteurDate">Auteur / Date</span></h4>
                                 </div>
                             </div>
                             <div class="panel-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                                    dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
+                                    dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="panel-assembly col-lg-4">
+                    <div class="panel-assembly col-lg-3">
                         <div class="panel panel-primary ">
                             <div class="panel-heading">
                                 <div class="panel-title">
