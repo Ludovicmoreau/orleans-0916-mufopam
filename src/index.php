@@ -30,38 +30,40 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!--image navbar brand -->
-                        <a class="navbar-brand " href="#">
-                            <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
-                        </a>
+            <div class="exemple3">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!--image navbar brand -->
+                            <a class="navbar-brand " href="#">
+                                <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="collapseNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li ><a href="#">Equipes </a></li>
+                                <li ><a href="#">Actualités</a></li>
+                                <li ><a href="#">Publications</a></li>
+                                <li> <a href="#">Jobs</a></li>
+                            </ul>
+                            <!--Right navbar-->
+                            <ul class="nav navbar-nav navbar-right">
+                                <!--logo connexion backoffice -->
+                                <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
+                                <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="collapseNavbar">
-                        <ul class="nav navbar-nav">
-                            <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                            <li ><a href="#">Equipes </a></li>
-                            <li ><a href="#">Actualités</a></li>
-                            <li ><a href="#">Publications</a></li>
-                            <li> <a href="#">Jobs</a></li>
-                        </ul>
-                        <!--Right navbar-->
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--logo connexion backoffice -->
-                            <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
-                            <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
 
         <div id="content" class="container-fluid ">
@@ -115,18 +117,18 @@
                 <div class="row">
                     <!--partie présentation -->
                     <div id="prez" class="col-lg-offset-1 col-lg-5">
-                        <h1>GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
+                        <h1 class="bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
                         <p>40 équipes de recherche impliquées. Environ 200 chercheurs, enseignant-chercheurs, ingénieurs, techniciens, doctorants et post-doctorants sont impliqués</p>
-                        <h2>Preambule</h2>
+                        <h2 class="bot-left">Preambule</h2>
                         <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
                         <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
-                        <h2>Objectifs prioritaires :</h2>
+                        <h2 class="bot-left">Objectifs prioritaires :</h2>
                         <ul>
                             <li>Fédérer les équipes de recherche françaises qui s’intéressent à la multifonctionnalité des peptides antimicrobiens. </li>
                             <li>Favoriser les rencontres et inciter les synergies entre les différentes disciplines afin de permettre l'émergence de projets innovants et transversaux de recherche pluridisciplinaires à l'échelle nationale et internationale afin de répondre aux divers appels à projets.</li>
                             <li>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</li>
                         </ul>
-                        <h2>Comité de pilotage</h2>
+                        <h2 class="bot-left">Comité de pilotage</h2>
                         <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
                         <table>
                             <tbody>
