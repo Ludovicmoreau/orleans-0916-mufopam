@@ -13,11 +13,13 @@
         <title>Page d'accueil GDR3625</title>
         <link rel="stylesheet" href="../web/font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylenavbar.css">
+        <link rel="stylesheet" href="style.css"
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="custom.js"></script>
-        <link rel="stylesheet" href="stylenavbar.css">
-        <link rel="stylesheet" href="style.css"
     </head>
     <body>
         <header>
@@ -174,7 +176,7 @@
                             <div class="panel-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
                                     dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
