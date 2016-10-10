@@ -19,14 +19,16 @@
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #223656;
-    border-bottom: 1px solid #383d50;
+    text-decoration: underline;
+    /*border-bottom: 1px solid #383d50;*/
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #223656;
     background-color: #ffffff;
-    border-bottom: 1px solid #383d50;
+    text-decoration: underline;
+    /*border-bottom: 1px solid #383d50;*/
 
 }
 .navbar-default .navbar-nav > .open > a,

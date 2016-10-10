@@ -12,6 +12,8 @@ $(function() {
         offset: {
             top: $('.banniere').height()
         }
+        //$('#content').addClass('fixNav');
+
     });
 
     /*$('nav').affix({
