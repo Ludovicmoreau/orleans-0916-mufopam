@@ -1,23 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: louri45
- * Date: 30/09/16
- * Time: 09:16
- */
-?>
-
 <html>
     <head>
         <meta charset="utf-8">
         <title>Page d'accueil GDR3625</title>
         <link rel="stylesheet" href="../web/font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="stylenavbar.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="custom.js"></script>
-        <link rel="stylesheet" href="stylenavbar.css">
-        <link rel="stylesheet" href="style.css"
     </head>
     <body>
         <header>
@@ -74,29 +66,33 @@
                     <!--partie présentation -->
                     <div id="prez">
                         <div class="col-lg-offset-1 col-lg-5">
-                            <h2 class="title2">Preambule</h2>
+                            <h2 class="title2 preambule">Preambule</h2>
                             <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
                             <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
-                            <h2 class="title2">Objectifs prioritaires :</h2>
+                            <h2 class="title2 objectifs">Objectifs prioritaires :</h2>
                             <ul>
                                 <li><p>Fédérer les équipes de recherche françaises qui s’intéressent à la multifonctionnalité des peptides antimicrobiens.</p></li>
                                 <li><p>Favoriser les rencontres et inciter les synergies entre les différentes disciplines afin de permettre l'émergence de projets innovants et transversaux de recherche pluridisciplinaires à l'échelle nationale et internationale afin de répondre aux divers appels à projets.</p></li>
                                 <li><p>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</p></li>
                             </ul>
-                            <h2 class="title2">Comité de pilotage</h2>
+                            <h2 class="title2 direction">Direction</h2>
                             <p>
                                 Directeur : Céline LANDON - CNRS Orléans
-
-                                e-mail celine.landon@cnrs-orleans.fr Tél. 02.38.25.55.74
-
+                                <br/>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>e-mail: celine.landon@cnrs-orleans.fr
+                                <br/>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>Tél: 02.38.25.55.74
+                                <br/>
                                 Directeur Adjoint: Mohamed AMICHE – INSERM Créteil
-
-                                e-mail Mohamed.AMICHE@inserm.fr Tél. 01. 49. 81. 36. 66.
+                                <br/>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>e-mail: Mohamed.AMICHE@inserm.fr
+                                <br/>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>Tél: 01. 49. 81. 36. 66.
                             </p>
                             <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
-                            <a  data-toggle="modal" data-target="#modalMentions"></a>
-                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDesMentionsLegales">
-                                <div class="modal-dialog modal-sm" role="document">
+                            <a  data-toggle="modal" data-target="#modalComite">Détails du Comité de pilotage</a>
+                            <div id="modalComite" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modale du comité de pilotage">
+                                <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="table-responsive">
                                             <table class="table table-condensed">
@@ -164,7 +160,7 @@
                         </aside>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row lastActu">
                     <!--partie panel -->
                     <div class="panel-assembly col-lg-offset-1 col-lg-3">
                         <div class="panel panel-primary ">
