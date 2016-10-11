@@ -9,10 +9,8 @@
                 <th>Id</th>
                 <th>Titre</th>
                 <th>Contenu</th>
-                <th>Auteur</th>
                 <th>Datepublication</th>
                 <th>Typeflux</th>
-                <th>Tags</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,10 +20,8 @@
                 <td><a href="{{ path('flux_show', { 'id': flux.id }) }}">{{ flux.id }}</a></td>
                 <td>{{ flux.titre }}</td>
                 <td>{{ flux.contenu }}</td>
-                <td>{{ flux.auteur }}</td>
-                <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ flux.typeFlux }}</td>
-                <td>{{ flux.tags }}</td>
                 <td>
                     <ul>
                         <li>

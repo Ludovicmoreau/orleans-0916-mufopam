@@ -19,7 +19,6 @@ class UsersType extends AbstractType
             ->add('prenom')
             ->add('password')
             ->add('email')
-            ->add('idEquipe')
             ->add('admin')
         ;
     }

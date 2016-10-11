@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Flux_Keywords</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ flux_Keyword.id }}</td>
+            </tr>
+            <tr>
+                <th>Idflux</th>
+                <td>{{ flux_Keyword.idFlux }}</td>
+            </tr>
+            <tr>
+                <th>Idkeyword</th>
+                <td>{{ flux_Keyword.idKeyword }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('flux_keywords_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

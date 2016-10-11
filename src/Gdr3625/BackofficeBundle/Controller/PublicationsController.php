@@ -4,19 +4,23 @@ namespace Gdr3625\BackofficeBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Publications;
 use Gdr3625\BackofficeBundle\Form\PublicationsType;
 
 /**
  * Publications controller.
  *
+ * @Route("/publications")
  */
 class PublicationsController extends Controller
 {
     /**
      * Lists all Publications entities.
      *
+     * @Route("/", name="publications_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -32,6 +36,8 @@ class PublicationsController extends Controller
     /**
      * Creates a new Publications entity.
      *
+     * @Route("/new", name="publications_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -56,6 +62,8 @@ class PublicationsController extends Controller
     /**
      * Finds and displays a Publications entity.
      *
+     * @Route("/{id}", name="publications_show")
+     * @Method("GET")
      */
     public function showAction(Publications $publication)
     {
@@ -70,6 +78,8 @@ class PublicationsController extends Controller
     /**
      * Displays a form to edit an existing Publications entity.
      *
+     * @Route("/{id}/edit", name="publications_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Publications $publication)
     {
@@ -95,6 +105,8 @@ class PublicationsController extends Controller
     /**
      * Deletes a Publications entity.
      *
+     * @Route("/{id}", name="publications_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Publications $publication)
     {

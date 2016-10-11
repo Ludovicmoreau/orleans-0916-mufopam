@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Flux_Keywords list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idflux</th>
+                <th>Idkeyword</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for flux_Keyword in flux_Keywords %}
+            <tr>
+                <td><a href="{{ path('flux_keywords_show', { 'id': flux_Keyword.id }) }}">{{ flux_Keyword.id }}</a></td>
+                <td>{{ flux_Keyword.idFlux }}</td>
+                <td>{{ flux_Keyword.idKeyword }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('flux_keywords_show', { 'id': flux_Keyword.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

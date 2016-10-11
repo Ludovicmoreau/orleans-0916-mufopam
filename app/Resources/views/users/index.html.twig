@@ -11,7 +11,7 @@
                 <th>Prenom</th>
                 <th>Password</th>
                 <th>Email</th>
-                <th>Idequipe</th>
+                <th>Admin</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 <td>{{ user.prenom }}</td>
                 <td>{{ user.password }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.idEquipe }}</td>
+                <td>{% if user.admin %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>
                         <li>

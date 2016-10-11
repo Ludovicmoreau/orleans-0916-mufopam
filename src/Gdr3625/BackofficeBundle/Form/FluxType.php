@@ -17,10 +17,8 @@ class FluxType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu')
-            ->add('auteur')
-            ->add('datePublication', 'date')
+            ->add('datePublication', 'datetime')
             ->add('typeFlux')
-            ->add('tags')
         ;
     }
     

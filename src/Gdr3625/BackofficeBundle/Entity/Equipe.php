@@ -6,106 +6,151 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Equipe
+ *
+ * @ORM\Table(name="equipe")
+ * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\EquipeRepository")
  */
 class Equipe
 {
     /**
      * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nom_equipe", type="string", length=255)
      */
     private $nomEquipe;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="laboratoire", type="string", length=255)
      */
     private $laboratoire;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="libelle_adresse", type="string", length=255)
      */
     private $libelleAdresse;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="numero_rue", type="string", length=255)
      */
     private $numeroRue;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="rue", type="string", length=255)
      */
     private $rue;
 
     /**
      * @var int
+     *
+     * @ORM\Column(name="cp", type="integer")
      */
     private $cp;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="ville", type="string", length=255)
      */
     private $ville;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="code_unite", type="string", length=255)
      */
     private $codeUnite;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="tutelle", type="string", length=255)
      */
     private $tutelle;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="site_web_equipe", type="string", length=255)
      */
     private $siteWebEquipe;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="site_web_labo", type="string", length=255)
      */
     private $siteWebLabo;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nom_referent", type="string", length=255)
      */
     private $nomReferent;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="prenom_referent", type="string", length=255)
      */
     private $prenomReferent;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="email_referent", type="string", length=255)
      */
     private $emailReferent;
 
     /**
-     * @var int
+     * @var string
+     *
+     * @ORM\Column(name="telephone_referent", type="string", length=255)
      */
     private $telephoneReferent;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="recherche", type="string", length=255)
      */
     private $recherche;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="projet", type="string", length=255)
      */
     private $projet;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="description_equipe", type="text")
      */
     private $descriptionEquipe;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="logo", type="string", length=255)
      */
     private $logo;
 
@@ -445,7 +490,7 @@ class Equipe
     /**
      * Set telephoneReferent
      *
-     * @param integer $telephoneReferent
+     * @param string $telephoneReferent
      * @return Equipe
      */
     public function setTelephoneReferent($telephoneReferent)
@@ -458,7 +503,7 @@ class Equipe
     /**
      * Get telephoneReferent
      *
-     * @return integer 
+     * @return string 
      */
     public function getTelephoneReferent()
     {
@@ -540,7 +585,7 @@ class Equipe
      * @param string $logo
      * @return Equipe
      */
-    public function setlogo($logo)
+    public function setLogo($logo)
     {
         $this->logo = $logo;
 
@@ -550,9 +595,9 @@ class Equipe
     /**
      * Get logo
      *
-     * @return string
+     * @return string 
      */
-    public function getlogo()
+    public function getLogo()
     {
         return $this->logo;
     }
