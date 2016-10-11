@@ -5,12 +5,12 @@ namespace Gdr3625\BackofficeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Equipes_Publications
+ * Equipes_Brevets
  *
- * @ORM\Table(name="equipes__publications")
- * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\Equipes_PublicationsRepository")
+ * @ORM\Table(name="equipes__brevets")
+ * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\Equipes_BrevetsRepository")
  */
-class Equipes_Publications
+class Equipes_Brevets
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Equipes_Publications
     /**
      * @var int
      *
-     * @ORM\Column(name="id_publications", type="integer")
+     * @ORM\Column(name="id_brevets", type="integer")
      */
-    private $idPublications;
+    private $idBrevets;
 
     /**
      * @var int
@@ -47,33 +47,33 @@ class Equipes_Publications
     }
 
     /**
-     * Set idPublications
+     * Set idBrevets
      *
-     * @param integer $idPublications
-     * @return Equipes_Publications
+     * @param integer $idBrevets
+     * @return Equipes_Brevets
      */
-    public function setIdPublications($idPublications)
+    public function setIdBrevets($idBrevets)
     {
-        $this->idPublications = $idPublications;
+        $this->idBrevets = $idBrevets;
 
         return $this;
     }
 
     /**
-     * Get idPublications
+     * Get idBrevets
      *
      * @return integer 
      */
-    public function getIdPublications()
+    public function getIdBrevets()
     {
-        return $this->idPublications;
+        return $this->idBrevets;
     }
 
     /**
      * Set idEquipes
      *
      * @param integer $idEquipes
-     * @return Equipes_Publications
+     * @return Equipes_Brevets
      */
     public function setIdEquipes($idEquipes)
     {

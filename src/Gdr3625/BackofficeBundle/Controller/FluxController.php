@@ -4,19 +4,23 @@ namespace Gdr3625\BackofficeBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Flux;
 use Gdr3625\BackofficeBundle\Form\FluxType;
 
 /**
  * Flux controller.
  *
+ * @Route("/flux")
  */
 class FluxController extends Controller
 {
     /**
      * Lists all Flux entities.
      *
+     * @Route("/", name="flux_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -32,6 +36,8 @@ class FluxController extends Controller
     /**
      * Creates a new Flux entity.
      *
+     * @Route("/new", name="flux_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -56,6 +62,8 @@ class FluxController extends Controller
     /**
      * Finds and displays a Flux entity.
      *
+     * @Route("/{id}", name="flux_show")
+     * @Method("GET")
      */
     public function showAction(Flux $flux)
     {
@@ -70,6 +78,8 @@ class FluxController extends Controller
     /**
      * Displays a form to edit an existing Flux entity.
      *
+     * @Route("/{id}/edit", name="flux_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Flux $flux)
     {
@@ -95,6 +105,8 @@ class FluxController extends Controller
     /**
      * Deletes a Flux entity.
      *
+     * @Route("/{id}", name="flux_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Flux $flux)
     {

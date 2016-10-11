@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipes_Brevets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idbrevets</th>
+                <th>Idequipes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipes_Brevet in equipes_Brevets %}
+            <tr>
+                <td><a href="{{ path('equipes_brevets_show', { 'id': equipes_Brevet.id }) }}">{{ equipes_Brevet.id }}</a></td>
+                <td>{{ equipes_Brevet.idBrevets }}</td>
+                <td>{{ equipes_Brevet.idEquipes }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipes_brevets_show', { 'id': equipes_Brevet.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

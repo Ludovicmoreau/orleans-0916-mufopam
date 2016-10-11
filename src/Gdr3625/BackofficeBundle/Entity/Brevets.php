@@ -5,12 +5,12 @@ namespace Gdr3625\BackofficeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Publications
+ * Brevets
  *
- * @ORM\Table(name="publications")
- * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\PublicationsRepository")
+ * @ORM\Table(name="brevets")
+ * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\BrevetsRepository")
  */
-class Publications
+class Brevets
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Publications
     /**
      * @var string
      *
-     * @ORM\Column(name="doi", type="string", length=255)
+     * @ORM\Column(name="brevet", type="text")
      */
-    private $doi;
+    private $brevet;
 
 
     /**
@@ -40,25 +40,25 @@ class Publications
     }
 
     /**
-     * Set doi
+     * Set brevet
      *
-     * @param string $doi
-     * @return Publications
+     * @param string $brevet
+     * @return Brevets
      */
-    public function setDoi($doi)
+    public function setBrevet($brevet)
     {
-        $this->doi = $doi;
+        $this->brevet = $brevet;
 
         return $this;
     }
 
     /**
-     * Get doi
+     * Get brevet
      *
      * @return string 
      */
-    public function getDoi()
+    public function getBrevet()
     {
-        return $this->doi;
+        return $this->brevet;
     }
 }

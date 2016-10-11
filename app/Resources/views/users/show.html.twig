@@ -26,8 +26,8 @@
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
-                <th>Idequipe</th>
-                <td>{{ user.idEquipe }}</td>
+                <th>Admin</th>
+                <td>{% if user.admin %}Yes{% else %}No{% endif %}</td>
             </tr>
         </tbody>
     </table>

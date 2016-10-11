@@ -18,20 +18,12 @@
                 <td>{{ flux.contenu }}</td>
             </tr>
             <tr>
-                <th>Auteur</th>
-                <td>{{ flux.auteur }}</td>
-            </tr>
-            <tr>
                 <th>Datepublication</th>
-                <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Typeflux</th>
                 <td>{{ flux.typeFlux }}</td>
-            </tr>
-            <tr>
-                <th>Tags</th>
-                <td>{{ flux.tags }}</td>
             </tr>
         </tbody>
     </table>

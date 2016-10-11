@@ -4,19 +4,23 @@ namespace Gdr3625\BackofficeBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Users;
 use Gdr3625\BackofficeBundle\Form\UsersType;
 
 /**
  * Users controller.
  *
+ * @Route("/users")
  */
 class UsersController extends Controller
 {
     /**
      * Lists all Users entities.
      *
+     * @Route("/", name="users_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -32,6 +36,8 @@ class UsersController extends Controller
     /**
      * Creates a new Users entity.
      *
+     * @Route("/new", name="users_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -56,6 +62,8 @@ class UsersController extends Controller
     /**
      * Finds and displays a Users entity.
      *
+     * @Route("/{id}", name="users_show")
+     * @Method("GET")
      */
     public function showAction(Users $user)
     {
@@ -70,6 +78,8 @@ class UsersController extends Controller
     /**
      * Displays a form to edit an existing Users entity.
      *
+     * @Route("/{id}/edit", name="users_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Users $user)
     {
@@ -95,6 +105,8 @@ class UsersController extends Controller
     /**
      * Deletes a Users entity.
      *
+     * @Route("/{id}", name="users_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Users $user)
     {

@@ -4,19 +4,23 @@ namespace Gdr3625\BackofficeBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Equipe;
 use Gdr3625\BackofficeBundle\Form\EquipeType;
 
 /**
  * Equipe controller.
  *
+ * @Route("/equipe")
  */
 class EquipeController extends Controller
 {
     /**
      * Lists all Equipe entities.
      *
+     * @Route("/", name="equipe_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -32,6 +36,8 @@ class EquipeController extends Controller
     /**
      * Creates a new Equipe entity.
      *
+     * @Route("/new", name="equipe_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -56,6 +62,8 @@ class EquipeController extends Controller
     /**
      * Finds and displays a Equipe entity.
      *
+     * @Route("/{id}", name="equipe_show")
+     * @Method("GET")
      */
     public function showAction(Equipe $equipe)
     {
@@ -70,6 +78,8 @@ class EquipeController extends Controller
     /**
      * Displays a form to edit an existing Equipe entity.
      *
+     * @Route("/{id}/edit", name="equipe_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Equipe $equipe)
     {
@@ -95,6 +105,8 @@ class EquipeController extends Controller
     /**
      * Deletes a Equipe entity.
      *
+     * @Route("/{id}", name="equipe_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Equipe $equipe)
     {

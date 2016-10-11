@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class UsersType extends AbstractType
+class BrevetsType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,11 +15,7 @@ class UsersType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
-            ->add('prenom')
-            ->add('password')
-            ->add('email')
-            ->add('admin')
+            ->add('brevet')
         ;
     }
     
@@ -29,7 +25,7 @@ class UsersType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Gdr3625\BackofficeBundle\Entity\Users'
+            'data_class' => 'Gdr3625\BackofficeBundle\Entity\Brevets'
         ));
     }
 }

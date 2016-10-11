@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Equipes_Brevets</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equipes_Brevet.id }}</td>
+            </tr>
+            <tr>
+                <th>Idbrevets</th>
+                <td>{{ equipes_Brevet.idBrevets }}</td>
+            </tr>
+            <tr>
+                <th>Idequipes</th>
+                <td>{{ equipes_Brevet.idEquipes }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipes_brevets_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
