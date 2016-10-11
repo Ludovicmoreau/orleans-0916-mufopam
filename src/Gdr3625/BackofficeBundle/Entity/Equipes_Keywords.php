@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Equipes_Keywords
  *
- * @ORM\Table(name="equipes__keywords")
+ * @ORM\Table(name="equipes_keywords")
  * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\Equipes_KeywordsRepository")
  */
 class Equipes_Keywords

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Flux_Keywords
  *
- * @ORM\Table(name="flux__keywords")
+ * @ORM\Table(name="flux_keywords")
  * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\Flux_KeywordsRepository")
  */
 class Flux_Keywords
