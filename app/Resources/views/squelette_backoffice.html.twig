@@ -10,7 +10,6 @@
             <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-            <link rel="stylesheet" href="{{ asset('style/stylenavbar.css')}}">
             <link rel="stylesheet" href="{{ asset('style/style.css')}}">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,53 +39,11 @@
 
 {%  block contenu %}{% endblock %}
 
-{% block footer %}
-        <footer class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!--partie modal mentions légales  -->
-                    <ul id="mentions" class="text-center list-inline">
-                        <li>
-                            <a  data-toggle="modal" data-target="#modalMentions">Mentions légales</a>
-                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modaleDesMentionsLegales">
-                                <div class="modal-dialog modal-sm" role="document">
-                                    <div class="modal-content">
-                                        <p>Mentions légales</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a  data-toggle="modal" data-target="#modalContact">Contact</a>
-                            <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modaleDuContact">
-                                <div class="modal-dialog modal-sm" role="document">
-                                    <div class="modal-content">
+{% include "footer.html.twig"  %}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a  data-toggle="modal" data-target="#localize">Siège</a>
-                            <div id="localize" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLocaliserNous">
-                                <div class="modal-dialog modal-sm" role="document">
-                                    <div class="modal-content">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <!--image logo ecole -->
-                            <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src='{{ asset("images/logo_wcs.jpg")}}' alt="logo WCS" class="img-responsive"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>
-{% endblock %}
+
 
 
 
