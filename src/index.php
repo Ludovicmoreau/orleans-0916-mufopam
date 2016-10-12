@@ -8,11 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <!--link rel="stylesheet" href="stylenavbar.css"-->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../web/style/style.css">
         <!--link rel="stylesheet" href="navbar.css"-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="custom.js"></script>
+        <script src="../web/style/custom.js"></script>
     </head>
     <body>
         <header>
@@ -241,7 +241,7 @@
                             </li>
                             <li>
                                 <!--image logo ecole -->
-                                <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="../web/images/logo_wcs.jpg" alt="logo WCS" class="img-responsive"></a>
+                                <a href="http://www.wildcodeschool.fr" target="_blank"><img id="logowcs" src="../web/images/logo_wcs_v.jpg" alt="logo WCS" class="img-responsive"></a>
                             </li>
                         </ul>
                     </div>

@@ -1,24 +1,13 @@
 $(function() {
-    /*##### Animation scrolling sticky navbar ####*/
-    /*$(document).on( 'scroll', function(){
-        console.log('scroll top : ' + $(window).scrollTop());
-        if($(window).scrollTop()>=$('.banniere').height()){
-            $('nav').addClass('navbar-fixed-top');
-        } else if ($(window).scrollTop()<$('.banniere').height()) {
-            $('nav').removeClass('navbar-fixed-top');
+    /*##### un Sticky map at end of row2 ####*/
+    //alert($(window).height()-($('.row3').height()+ $('footer').height()));
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        //console.log(scroll);
+        console.log($('row3').position());
+        if (scroll > $(window).height() - ($('.row3').height() + $('footer').height())) {
+            alert($(window).position() - ($('.row3').height() + $('footer').height()));
+            //$('#map').removeClass('affix');
         }
-    });*/
-    $('nav').affix({
-        offset: {
-            top: $('.banniere').height()
-        }
-        //$('#content').addClass('fixNav');
-
     });
-
-    /*$('nav').affix({
-        offset: {
-            top: 150
-        }
-    });*/
 });
