@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MufoPAM - GDR3625</title>
+</head>
+<body>
+<table style=" border-width:1px;
+ border-style:solid;
+ border-color:black;
+ width:50%;" >
+        <tr style=" border-width:1px;
+ border-style:solid;
+ border-color:black;
+ width:50%;">
+            <td>
+                Nom de L'équipe
+            </td>
+            <td>
+                ville
+            </td>
+        </tr>
+
+    {% for equipe in equipes %}
+        <tr style=" border-width:1px;
+ border-style:solid;
+ border-color:black;
+ width:50%;">
+            <td style=" border-width:1px;
+ border-style:solid;
+ border-color:black;
+ width:50%;">{{ equipe.nomEquipe }}</td>
+            <td style=" border-width:1px;
+ border-style:solid;
+ border-color:black;
+ width:50%;">{{ equipe.ville }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+
+</body>
+</html>

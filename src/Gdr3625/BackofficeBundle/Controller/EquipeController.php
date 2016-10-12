@@ -27,8 +27,9 @@ class EquipeController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+        
 
-        return $this->render('equipe/index.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle:Equipe:index.html.twig', array(
             'equipes' => $equipes,
         ));
     }
