@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-        <link rel="stylesheet" href="stylenavbar.css">
+        <!--link rel="stylesheet" href="stylenavbar.css"-->
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,15 +23,12 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="navigation">
                 <nav class="nav navbar navbar-default">
                     <div class="container-fluid">
                         <div class="nav navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                                <span class="">Menu</span>
                             </button>
                             <!--image navbar brand -->
                             <a class="nav navbar-brand " href="#">
@@ -40,17 +37,16 @@
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="collapseNavbar">
-                            <ul class="nav navbar-nav">
-                                <li class="active "><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                                <li ><a href="#">Equipes </a></li>
-                                <li ><a href="#">Actualités</a></li>
-                                <li ><a href="#">Publications</a></li>
-                                <li> <a href="#">Jobs</a></li>
+                            <ul class="nav navbar-nav nav-tabs">
+                                <li class="navLink active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li class="navLink"><a href="#">Equipes </a></li>
+                                <li class="navLink"><a href="#">Actualités</a></li>
+                                <li class="navLink"><a href="#">Publications</a></li>
+                                <li class="navLink"><a href="#">Jobs</a></li>
                             </ul>
                             <!--Right navbar-->
                             <ul class="nav navbar-nav navbar-right">
-                                <!--logo connexion backoffice -->
-                                <!--img  src="../web/images/icon_mdp.jpg" alt="connexion"  class="logoconnexion img-responsive"-->
+                                <!-- connexion backoffice -->
                                 <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
                             </ul>
                         </div>
@@ -155,7 +151,7 @@
                     </div>
                     <!--image carte interactive -->
                     <div class="col-lg-5">
-                        <aside id="map" class="stickySide">
+                        <aside id="map" class="">
                             <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&datalayers=251139&fullscreenControl=false&measureControl=false&editinosmControl=false#6/38/2">
                             </iframe
                             <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845" target="_blank">Voir en plein écran</a></p>
