@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <!--link rel="stylesheet" href="stylenavbar.css"-->
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="navbar.css">
+        <!--link rel="stylesheet" href="navbar.css"-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="custom.js"></script>
@@ -24,17 +24,19 @@
                     </div>
                 </div>
             </div>
-            <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-inverse" role="navigation" data-spy="affix" data-offset-top="180">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
-                            <img src="../web/images/logoGDRdetour.png" alt="logo du mufopam" class="img-responsive">
+                            <img src="../web/images/fleche.png" alt="logo du mufopam" class="img-responsive">
                         </a>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span><span class="icon-bar">
                             </span><span class="icon-bar"></span>
-                        </button> </div> <div class="collapse navbar-collapse navbar-menubuilder">
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-menubuilder">
                         <ul class="nav navbar-nav navbar-left">
                             <li class="active"><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
                             <li><a href="#">Equipes</a></li>
@@ -48,47 +50,20 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <!--div class="navigation">
-                <nav class="nav navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="nav navbar-header">
-                            <a class="nav navbar-brand " href="#">
-                                Brand<!--img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625"-->
-                            <!--/a>
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
-                                <span class="">Menu</span>
-                            </button>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <!--div class="collapse navbar-collapse" id="collapseNavbar">
-                            <ul class="nav navbar-nav nav-tabs">
-                                <li class="navLink active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                                <li class="navLink"><a href="#">Equipes </a></li>
-                                <li class="navLink"><a href="#">Actualités</a></li>
-                                <li class="navLink"><a href="#">Publications</a></li>
-                                <li class="navLink"><a href="#">Jobs</a></li>
-                            </ul>
-                            <!--Right navbar-->
-                            <!--ul class="nav navbar-nav navbar-right">
-                                <!-- connexion backoffice -->
-                                <!--li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div-->
+            </nav>
         </header>
         <main>
             <div id="content" class="fixNav container-fluid ">
-                <div class="row">
+                <div class="row row1">
                     <div class="col-xs-12 col-lg-offset-1 col-lg-10">
                         <h1 class="title1 bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
                         <p>40 équipes de recherche impliquées. Environ 200 chercheurs, enseignant-chercheurs, ingénieurs, techniciens, doctorants et post-doctorants sont impliqués</p>
                     </div>
+                </div>
+                <div class="row row2">
                     <!--partie présentation -->
-                    <div id="prez">
-                        <div class="col-lg-offset-1 col-lg-5">
+                    <div class="col-lg-offset-1 col-lg-5">
+                        <div id="prez">
                             <h2 class="title2 preambule">Preambule</h2>
                             <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
                             <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
@@ -176,14 +151,14 @@
                     </div>
                     <!--image carte interactive -->
                     <div class="col-lg-5">
-                        <aside id="map" class="">
+                        <div id="map" class="stickySide" data-spy="affix" data-offset-top="350">
                             <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&datalayers=251139&fullscreenControl=false&measureControl=false&editinosmControl=false#6/38/2">
                             </iframe
                             <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845" target="_blank">Voir en plein écran</a></p>
-                        </aside>
+                        </div>
                     </div>
                 </div>
-                <div class="row lastActu">
+                <div class="row row3">
                     <!--partie panel -->
                     <div class="panel-assembly col-lg-offset-1 col-lg-3">
                         <div class="panel panel-primary ">
