@@ -15,7 +15,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script src="{{ asset('style/custom.js')}}"></script>
-            <title>GDR3625</title>
+            <title>Page D'aministration - GDR3625</title>
         </head>
         <body>
     {% endblock %}
@@ -35,7 +35,7 @@
 {% endblock %}
 
 {%  block navbar %}
-    {%  include "navBarUtilisateur.html.twig" %}
+    {%  include "navBarUtilisateur_backoffice.html.twig" %}
 {% endblock %}
 
 {%  block contenu %}{% endblock %}
@@ -48,7 +48,7 @@
                     <ul id="mentions" class="text-center list-inline">
                         <li>
                             <a  data-toggle="modal" data-target="#modalMentions">Mentions légales</a>
-                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDesMentionsLegales">
+                            <div id="modalMentions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modaleDesMentionsLegales">
                                 <div class="modal-dialog modal-sm" role="document">
                                     <div class="modal-content">
                                         <p>Mentions légales</p>
@@ -58,7 +58,7 @@
                         </li>
                         <li>
                             <a  data-toggle="modal" data-target="#modalContact">Contact</a>
-                            <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDuContact">
+                            <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modaleDuContact">
                                 <div class="modal-dialog modal-sm" role="document">
                                     <div class="modal-content">
 
