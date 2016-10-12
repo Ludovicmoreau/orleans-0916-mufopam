@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <!--link rel="stylesheet" href="stylenavbar.css"-->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="custom.js"></script>
@@ -19,24 +20,48 @@
                 <div class="col-lg-12">
                     <div class="banniere">
                     <!--image banniere -->
-                    <img src="../web/images/banniere.jpg" alt="banniere_cnrs" class="img-responsive"  >
+                    <img src="../web/images/banniere.jpg" alt="banniere_cnrs" class="img-responsive">
                     </div>
                 </div>
             </div>
-            <div class="navigation">
+            <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="../web/images/logoGDRdetour.png" alt="logo du mufopam" class="img-responsive">
+                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span><span class="icon-bar">
+                            </span><span class="icon-bar"></span>
+                        </button> </div> <div class="collapse navbar-collapse navbar-menubuilder">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="active"><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Equipes</a></li>
+                            <li><a href="#">Actualités</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Brevets</a></li>
+                            <li><a href="#">Jobs</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--div class="navigation">
                 <nav class="nav navbar navbar-default">
                     <div class="container-fluid">
                         <div class="nav navbar-header">
+                            <a class="nav navbar-brand " href="#">
+                                Brand<!--img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625"-->
+                            <!--/a>
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar" aria-expanded="false">
                                 <span class="">Menu</span>
                             </button>
-                            <!--image navbar brand -->
-                            <a class="nav navbar-brand " href="#">
-                                <img id="logoMufo" class="img-responsive" src="../web/images/logoGDRdetour.jpg" alt="logo du GDR3625">
-                            </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="collapseNavbar">
+                        <!--div class="collapse navbar-collapse" id="collapseNavbar">
                             <ul class="nav navbar-nav nav-tabs">
                                 <li class="navLink active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
                                 <li class="navLink"><a href="#">Equipes </a></li>
@@ -45,14 +70,14 @@
                                 <li class="navLink"><a href="#">Jobs</a></li>
                             </ul>
                             <!--Right navbar-->
-                            <ul class="nav navbar-nav navbar-right">
+                            <!--ul class="nav navbar-nav navbar-right">
                                 <!-- connexion backoffice -->
-                                <li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
+                                <!--li><a href="#"><i class="fa fa-lock fa-1x"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div-->
         </header>
         <main>
             <div id="content" class="fixNav container-fluid ">
