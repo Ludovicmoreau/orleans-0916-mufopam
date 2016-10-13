@@ -26,12 +26,12 @@
                     <td>{{ equipe.telephoneReferent }}</td>
                     <td>
                         <ul>
-                            <li>
-                                 <a href="{{ path('equipe_show', { 'id': equipe.id }) }}"> <button type="button" class="btn btn-info">Show</button></a>
+                            <li class="puceaenlever">
+                                 <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"> <button type="button" class="btn btn-info">Show</button></a>
 
                             </li>
-                            <li>
-                                 <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><button type="button" class="btn btn-warning">Edit</button></a>
+                            <li class="puceaenlever">
+                                 <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><button type="button" class="btn btn-warning">Edit</button></a>
                             </li>
                         </ul>
                     </td>
