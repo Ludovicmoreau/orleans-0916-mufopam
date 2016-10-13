@@ -14,4 +14,19 @@ class DefaultController extends Controller
     {
         return $this->render('Gdr3625BackofficeBundle:Default:index.html.twig');
     }
+    /**
+     * @Route("/accueil")
+     */
+    public function accueilAction()
+    {
+        return $this->render('accueil.html.twig');
+    }
+    /**
+     * @Route("/equipes")
+     */
+    public function equipesAction()
+    {
+        return $this->render('equipes.html.twig');
+    }
+
 }
