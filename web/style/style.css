@@ -195,7 +195,7 @@ footer{
 /**** table ****/
 th {
     text-align: center;
-    
+    background-color: #337ab7;
 }
 
 td{
