@@ -2,35 +2,35 @@
 
 {% block contenu %}
     <h1>Brevets list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Brevet</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for brevet in brevets %}
-            <tr>
-                <td><a href="{{ path('brevets_show', { 'id': brevet.id }) }}">{{ brevet.id }}</a></td>
-                <td>{{ brevet.brevet }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('brevets_show', { 'id': brevet.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('brevets_edit', { 'id': brevet.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+      <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Brevet</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for brevet in brevets %}
+                <tr>
+                    <td><a href="{{ path('brevets_show', { 'id': brevet.id }) }}">{{ brevet.id }}</a></td>
+                    <td>{{ brevet.brevet }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('brevets_show', { 'id': brevet.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('brevets_edit', { 'id': brevet.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+      </div>
     <ul>
         <li>
             <a href="{{ path('brevets_new') }}">Create a new entry</a>
