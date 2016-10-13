@@ -200,10 +200,17 @@ th {
 
 td{
     text-align: center;
+    vertical-align: middle !important;
+
+
+
 
 }
 .puceaenlever{
     list-style-type:none
-   
-}
 
+
+}
+.btn{
+    margin-top: 5px;
+}
