@@ -234,13 +234,32 @@ td{
 
 }
 .puceaenlever{
-    list-style-type:none
-
+    list-style-type:none;
+    display: block;
+    float: left;
+    margin-right: 15px;
 }
-.btn{
+.boutontable{
     margin-top: 5px;
     width: 100px;
 }
 .titretable{
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    padding-bottom: 10px;
 }
+.creation{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    list-style-type:none
+
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+tr.found{
+    background-color: #DBDBF1;
+}
+
