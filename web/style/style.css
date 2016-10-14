@@ -18,7 +18,7 @@ p{
 /* Navbar brand style */
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(0, 0, 0, 1);
-    border-bottom: 5px solid #337ab7;
+    /*border-bottom: 5px solid #337ab7;*/
 }
 /* Navbar default (link navigation container */
 #custom-bootstrap-menu.navbar-default {
@@ -32,11 +32,10 @@ p{
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
     color: rgba(0, 0, 0, 1);
     background-color: #FFFFFF;
-    border-bottom: 5px solid #337ab7;
+    /*border-bottom: 5px solid #337ab7;*/
 }
 /* Non active : Focus and Over style */
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
-
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
@@ -44,23 +43,22 @@ p{
 }
 /* Active : Focus and Over style */
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
-
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
-
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
-    border-bottom: 5px solid #FFFFFF;
+
 }
 /* burger style */
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #337ab7;;
+    border-color: #337ab7;
 }
 
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
     background-color: #337ab7;
+
 }
 
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
@@ -79,6 +77,9 @@ p{
     width: 100%;
     z-index: 2;
 }
+#custom-bootstrap-menu.navbar-default{
+    border-bottom: 5px solid #337ab7;
+}
 .navbar-nav > li > a, .navbar-brand{
     padding-top: 35px;
     font-size: 25px;
@@ -90,7 +91,6 @@ p{
     position: relative;
     height: 30px;
 }
-
 /*###########                   content                 ##############*/
 .row1 {
     margin-top: 30px;
@@ -173,6 +173,27 @@ td > i{
 .panel-heading{
     padding-top:5px;
     padding-bottom: 5px;
+}
+
+/**** equipes ****/
+.filterCol{
+    border: 1px solid black;
+    height: 1500px;
+}
+.grid {
+    border: 1px solid black;
+}
+.carteEquipe {
+    width: 500px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 25px;
+    font-size: 15px;
+}
+.carteEquipe li {
+    list-style: none;
+    margin-left: -25px;
+    margin-top: 5px;
 }
 
 /**** footer ****/

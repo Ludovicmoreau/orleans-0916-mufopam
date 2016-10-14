@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\BrevetsType;
 /**
  * Brevets controller.
  *
- * @Route("/brevets")
+ * @Route("/back/brevets")
  */
 class BrevetsController extends Controller
 {

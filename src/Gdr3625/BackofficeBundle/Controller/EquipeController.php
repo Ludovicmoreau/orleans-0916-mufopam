@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\EquipeType;
 /**
  * Equipe controller.
  *
- * @Route("/equipe")
+ * @Route("back/equipes")
  */
 class EquipeController extends Controller
 {

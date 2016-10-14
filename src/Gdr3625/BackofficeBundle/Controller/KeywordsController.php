@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\KeywordsType;
 /**
  * Keywords controller.
  *
- * @Route("/keywords")
+ * @Route("/back/keywords")
  */
 class KeywordsController extends Controller
 {

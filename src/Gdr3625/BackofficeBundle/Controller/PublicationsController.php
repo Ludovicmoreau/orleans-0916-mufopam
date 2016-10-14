@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\PublicationsType;
 /**
  * Publications controller.
  *
- * @Route("/publications")
+ * @Route("/back/publications")
  */
 class PublicationsController extends Controller
 {

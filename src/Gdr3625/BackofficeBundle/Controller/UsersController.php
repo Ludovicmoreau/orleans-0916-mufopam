@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\UsersType;
 /**
  * Users controller.
  *
- * @Route("/users")
+ * @Route("/back/users")
  */
 class UsersController extends Controller
 {
