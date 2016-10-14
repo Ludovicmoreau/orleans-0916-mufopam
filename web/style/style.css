@@ -235,7 +235,7 @@ footer{
     list-style-type:none;
     display: block;
     float: left;
-    margin-right: 15px;
+
 }
 .boutontable{
     margin-top: 5px;
@@ -252,7 +252,6 @@ footer{
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 30px;
     padding-top: 30px;
-
     list-style-type:none
 
 }
