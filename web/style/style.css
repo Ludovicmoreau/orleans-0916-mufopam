@@ -225,7 +225,9 @@ td{
 
 }
 .puceaenlever{
-    list-style-type:none
+    list-style-type:none;
+    display: block;
+    float: left;
 
 }
 .boutontable{
@@ -243,5 +245,13 @@ td{
     font-family: 'Ubuntu', sans-serif;
     font-size: 25px !important;
     padding-bottom: 20px;
+    list-style-type:none
 
 }
+
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+tr.found{
+    background-color: #DBDBF1;
+}
+

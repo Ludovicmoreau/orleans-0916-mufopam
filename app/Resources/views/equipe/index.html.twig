@@ -3,7 +3,7 @@
 {% block contenu %}
     <h1 class="titretable">Liste des équipes</h1>
     <div class="table-responsive">
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -27,11 +27,11 @@
                     <td>
                         <ul>
                             <li class="puceaenlever">
-                                 <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"> <button type="button" class="boutontable btn btn-info btn-lg">Show</button></a>
+                                 <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
 
                             </li>
                             <li class="puceaenlever">
-                                 <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><button type="button" class="boutontable btn btn-warning btn-lg">Edit</button></a>
+                                 <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </td>
@@ -41,7 +41,7 @@
         </table>
     </div>
     <ul>
-        <li class="puceaenlever creation"
+        <li class="creation"
             <a href="{{ path('equipe_new') }}"> <button type="button" class="btn btn-success btn-lg"> Créer une nouvelle équipe </button> </a>
         </li>
     </ul>
