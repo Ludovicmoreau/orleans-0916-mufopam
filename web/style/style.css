@@ -197,9 +197,11 @@ td > i{
 }
 .form-group{
     padding-top: 5px;
+    text-align: right;
 }
 .groupequipformulaire {
     padding-top: 30px;
+
 }
 
 
