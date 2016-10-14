@@ -41,6 +41,12 @@ p{
     background-color: #337ab7;
     border-bottom: 5px solid #FFFFFF;
 }
+.isOpen{
+    color: rgba(255, 255, 255, 1);
+    background-color: #337ab7;
+    border-bottom: 5px solid #337ab7;
+
+}
 /* Active : Focus and Over style */
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
@@ -176,26 +182,64 @@ td > i{
 }
 
 /**** equipes ****/
+.borderBlue{
+    border: 3px solid #337ab7;
+}
+.borderOrange{
+    border: 3px solid #f0ad4e;
+}
+.borderRed{
+    border: 3px solid #b92c28;
+}
+.borderGreen{
+    border: 3px solid #3e8f3e;
+}
+.borderPurple{
+    border: 3px solid #8959A8;
+}
+.filtersDisplay, .equipesDisplay{
+    padding: 15px;
+}
 .filterCol{
-    border: 1px solid black;
+    border: 1px solid #337ab7;
     height: 1500px;
 }
-.grid {
-    border: 1px solid black;
+.equipeCol{
+    border: 1px solid #337ab7;
+    height: 1500px;
 }
-.carteEquipe {
-    width: 500px;
-    height: 250px;
-    border: 1px solid black;
-    margin: 25px;
-    font-size: 15px;
+.equipeRow{
+    padding: 5px;
+}
+.carteEquipe, .topCarte, .bottomCarte, .equipeLogo, .equipeName, .equipeLeftCarte, .equipeRightCarte{
+    padding:0 ;
+}
+.carteContent a {
+    text-decoration: none;
+    color: inherit;
+}
+.carteEquipe h1{
+    font-size: 20px;
 }
 .carteEquipe li {
     list-style: none;
-    margin-left: -25px;
+    margin-left: -35px;
     margin-top: 5px;
 }
-
+.carteEquipe p{
+    font-size: 15px;
+}
+.carteEquipe{
+    font-size: 13px;
+    margin: 1px;
+    max-width: 495px;
+}
+.equipeLeftCarte i {
+    margin-right: 5px;
+}
+.equipeLeftCarte a {
+    color: inherit;
+}
 /**** footer ****/
 footer{
     border-top: 1px solid black;
