@@ -1,61 +1,148 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-<div class="row">
-    <div class="col-lg-3">
-        <div id="filterEquipes" class="filterCol" data-spy="affix" data-offset-top="400">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 filtersDisplay">
+            <!--div id="filterEquipes" class="filterCol" data-spy="" data-offset-top="">
 
+            </div-->
         </div>
-    </div>
-    <div class="col-lg-9">
-        <div class="col-lg-3 carteEquipe">
-            <div class="row">
-                <div class="col-lg-2">
-                    <img src="http://placehold.it/140x100" alt="logo equipe ">
+        <div class="col-lg-10 equipesDisplay">
+            <div class="col-lg-12 equipeRow">
+                <div class="col-md-4 col-lg-4 carteEquipe borderBlue">
+                    <a href="#" target="_blank">
+                        <div class="carteContent">
+                            <div class="col-lg-12 topCarte">
+                                <div class="col-md-4 col-lg-4 equipeLeftCarte">
+                                    <div class="col-lg-12 equipeLogo">
+                                        <img class="img-responsive"src="http://placehold.it/160x100" alt="logo equipe ">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-8 equipeRightCarte">
+                                    <div class="col-lg-12 equipeName text-center">
+                                        <h1>Nom de l'Equipe</h1>
+                                        <p>Mots clés de l'équipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-12 bottomCarte">
+                                <div class="col-md-5 col-lg-5 equipeLeftCarte">
+                                    <ul>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i>Céline Landon</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i>0203040506</li>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i>celine.landon@cnrs.fr</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Adresse</li>
+                                        <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i>www.site-equipe.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-lg-7 equipeRightCarte">
+                                    <p>Resumé de la description de l'équipe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-lg-10">
-                    <h1>Nom de l'Equipe</h1>
+                <div class="col-md-4 col-lg-4 carteEquipe borderOrange">
+                    <a href="#" target="_blank">
+                        <div class="carteContent">
+                            <div class="col-lg-12 topCarte">
+                                <div class="col-md-4 col-lg-4 equipeLeftCarte">
+                                    <div class="col-lg-12 equipeLogo">
+                                        <img class="img-responsive" src="http://placehold.it/160x100" alt="logo equipe ">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-8 equipeRightCarte">
+                                    <div class="col-lg-12 equipeName text-center">
+                                        <h1>Nom de l'Equipe</h1>
+                                        <p>Mots clés de l'équipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 bottomCarte">
+                                <div class="col-md-5 col-lg-5 equipeLeftCarte">
+                                    <ul>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i>Céline Landon</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i>0203040506</li>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i>celine.landon@cnrs.fr</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Adresse</li>
+                                        <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i>www.site-equipe.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-lg-7 equipeRightCarte">
+                                    <p>Resumé de la description de l'équipe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-4 carteEquipe borderRed">
+                    <a href="#" target="_blank">
+                        <div class="carteContent">
+                            <div class="col-lg-12 topCarte">
+                                <div class="col-md-4 col-lg-4 equipeLeftCarte">
+                                    <div class="col-lg-12 equipeLogo">
+                                        <img class="img-responsive" src="http://placehold.it/160x100" alt="logo equipe ">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-8 equipeRightCarte">
+                                    <div class="col-lg-12 equipeName text-center">
+                                        <h1>Nom de l'Equipe</h1>
+                                        <p>Mots clés de l'équipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-12 bottomCarte">
+                                <div class="col-md-5 col-lg-5 equipeLeftCarte">
+                                    <ul>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i>Céline Landon</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i>0203040506</li>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i>celine.landon@cnrs.fr</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Adresse</li>
+                                        <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i>www.site-equipe.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-lg-7 equipeRightCarte">
+                                    <p>Resumé de la description de l'équipe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div></div>
-            </div>
-        </div>
-        <div class="grid" data-masonry='{ "columnWidth": 200, "itemSelector": ".grid-item" }'>
-            <div class="grid-sizer">
-                <div class="grid-item carteEquipe">
-                    <div class="grid-item grid-item--width1 grid-item--height1">
-                        <img src="http://placehold.it/140x100" alt="logo equipe ">
-                    </div>
-                    <div class="grid-item grid-item--width1 grid-item--height1">
-                       <h1>Nom de l'Equipe</h1>
-                    </div>
-                    <div class="grid-item grid-item--width1 grid-item--height1">
-                        <ul>
-                            <li>Nom du contact</li>
-                            <li>Téléphone</li>
-                            <li>Email</li>
-                            <li>Adresse</li>
-                            <li>www.site-equipe.com</li>
-                        </ul>
-                    </div>
-                    <div class="grid-item grid-item--width2">
-
-                    </div>
-                    <div class="grid-item grid-item--height2">
-
-                    </div>
-                </div>
-                <div class="grid-item carteEquipe">
-                    <div class="grid-item grid-item--width1 grid-item--height1">
-                        <img src="http://placehold.it/140x100" alt="logo equipe ">
-                    </div>
-                    <div class="grid-item grid-item--width2">
-
-                    </div>
-                    <div class="grid-item grid-item--height2">
-
-                    </div>
+            <div class="col-lg-12 equipeRow">
+                <div class="col-md-4 col-lg-4 carteEquipe borderPurple">
+                    <a href="#" target="_blank">
+                        <div class="carteContent">
+                            <div class="col-lg-12 topCarte">
+                                <div class="col-md-4 col-lg-4 equipeLeftCarte">
+                                    <div class="col-lg-12 equipeLogo">
+                                        <img class="img-responsive" src="http://placehold.it/160x100" alt="logo equipe ">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-8 equipeRightCarte">
+                                    <div class="col-lg-12 equipeName text-center">
+                                        <h1>Nom de l'Equipe</h1>
+                                        <p>Mots clés de l'équipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 bottomCarte">
+                                <div class="col-md-5 col-lg-5 equipeLeftCarte">
+                                    <ul>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i>Céline Landon</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i>0203040506</li>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i>celine.landon@cnrs.fr</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Adresse</li>
+                                        <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i>www.site-equipe.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-lg-7 equipeRightCarte">
+                                    <p>Resumé de la description de l'équipe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

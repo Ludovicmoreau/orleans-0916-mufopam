@@ -1,40 +1,40 @@
 {% block contenu %}
     <h1>Flux list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Contenu</th>
-                <th>Datepublication</th>
-                <th>Typeflux</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for flux in fluxes %}
-            <tr>
-                <td><a href="{{ path('flux_show', { 'id': flux.id }) }}">{{ flux.id }}</a></td>
-                <td>{{ flux.titre }}</td>
-                <td>{{ flux.contenu }}</td>
-                <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ flux.typeFlux }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('flux_show', { 'id': flux.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('flux_edit', { 'id': flux.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+    <div class="table-responsive" >
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Contenu</th>
+                    <th>Date publication</th>
+                    <th>Type flux</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for flux in fluxes %}
+                <tr>
+                    <td><a href="{{ path('flux_show', { 'id': flux.id }) }}">{{ flux.id }}</a></td>
+                    <td>{{ flux.titre }}</td>
+                    <td>{{ flux.contenu }}</td>
+                    <td>{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{{ flux.typeFlux }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('flux_show', { 'id': flux.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('flux_edit', { 'id': flux.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
     <ul>
         <li>
             <a href="{{ path('flux_new') }}">Create a new entry</a>
