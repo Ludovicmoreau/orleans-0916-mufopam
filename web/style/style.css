@@ -195,6 +195,13 @@ td > i{
     margin-left: -25px;
     margin-top: 5px;
 }
+.form-group{
+    padding-top: 5px;
+}
+.groupequipformulaire {
+    padding-top: 30px;
+}
+
 
 /**** footer ****/
 footer{
