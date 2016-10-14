@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu  %}
+<div class="row">
+    <div class="col-lg-3">
+        <div id="filterEquipes" class="filterCol" data-spy="affix" data-offset-top="400">
+
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="col-lg-3 carteEquipe">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="http://placehold.it/140x100" alt="logo equipe ">
+                </div>
+                <div class="col-lg-10">
+                    <h1>Nom de l'Equipe</h1>
+                </div>
+            </div>
+        </div>
+        <div class="grid" data-masonry='{ "columnWidth": 200, "itemSelector": ".grid-item" }'>
+            <div class="grid-sizer">
+                <div class="grid-item carteEquipe">
+                    <div class="grid-item grid-item--width1 grid-item--height1">
+                        <img src="http://placehold.it/140x100" alt="logo equipe ">
+                    </div>
+                    <div class="grid-item grid-item--width1 grid-item--height1">
+                       <h1>Nom de l'Equipe</h1>
+                    </div>
+                    <div class="grid-item grid-item--width1 grid-item--height1">
+                        <ul>
+                            <li>Nom du contact</li>
+                            <li>Téléphone</li>
+                            <li>Email</li>
+                            <li>Adresse</li>
+                            <li>www.site-equipe.com</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item grid-item--width2">
+
+                    </div>
+                    <div class="grid-item grid-item--height2">
+
+                    </div>
+                </div>
+                <div class="grid-item carteEquipe">
+                    <div class="grid-item grid-item--width1 grid-item--height1">
+                        <img src="http://placehold.it/140x100" alt="logo equipe ">
+                    </div>
+                    <div class="grid-item grid-item--width2">
+
+                    </div>
+                    <div class="grid-item grid-item--height2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

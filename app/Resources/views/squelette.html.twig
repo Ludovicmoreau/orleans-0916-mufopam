@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('font-awesome-4.6.3/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/masonry.pkgd.min.js') }}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('style/style.css')}}">
-    <script src="{{ asset('style/js/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ asset('style/jquery/jquery-3.1.1.min.js')}}"></script>
     <script src="{{ asset('style/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('style/custom.js')}}"></script>
     <title>GDR3625</title>
@@ -31,10 +32,8 @@
         {%  include "navBarUtilisateur.html.twig" %}
     {% endblock %}
     {%  block contenu %}
-        {%  include "accueil.html.twig" %}
+        {% include "accueil.html.twig" %}
     {% endblock %}
     {%  include "footer.html.twig" %}
     </body>
 </html>
-
-
