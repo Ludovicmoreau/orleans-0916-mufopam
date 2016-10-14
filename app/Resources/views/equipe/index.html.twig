@@ -1,7 +1,7 @@
 {% extends 'base_backoffice.html.twig' %}
 
 {% block contenu %}
-    <h1 class="titretable">Equipe list</h1>
+    <h1 class="titretable">Liste des équipes</h1>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -27,11 +27,11 @@
                     <td>
                         <ul>
                             <li class="puceaenlever">
-                                 <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"> <button type="button" class="btn btn-info btn-lg">Show</button></a>
+                                 <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"> <button type="button" class="boutontable btn btn-info btn-lg">Show</button></a>
 
                             </li>
                             <li class="puceaenlever">
-                                 <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><button type="button" class="btn btn-warning btn-lg">Edit</button></a>
+                                 <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><button type="button" class="boutontable btn btn-warning btn-lg">Edit</button></a>
                             </li>
                         </ul>
                     </td>
@@ -41,8 +41,8 @@
         </table>
     </div>
     <ul>
-        <li>
-            <a href="{{ path('equipe_new') }}">Create a new entry</a>
+        <li class="puceaenlever creation"
+            <a href="{{ path('equipe_new') }}"> <button type="button" class="btn btn-success btn-lg"> Créer une nouvelle équipe </button> </a>
         </li>
     </ul>
 {% endblock %}
