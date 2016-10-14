@@ -3,7 +3,7 @@
 {% block contenu %}
     <h1 class="titretable">Liste des équipes</h1>
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -41,7 +41,7 @@
         </table>
     </div>
     <ul>
-        <li class="creation"
+        <li class="creation">
             <a href="{{ path('equipe_new') }}"> <button type="button" class="btn btn-success btn-lg"> Créer une nouvelle équipe </button> </a>
         </li>
     </ul>

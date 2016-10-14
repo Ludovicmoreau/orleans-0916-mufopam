@@ -228,7 +228,7 @@ td{
     list-style-type:none;
     display: block;
     float: left;
-
+    margin-right: 15px;
 }
 .boutontable{
     margin-top: 5px;
@@ -243,13 +243,12 @@ td{
 .creation{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 25px !important;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
     list-style-type:none
 
 }
-
-
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
     background-color: #DBDBF1;
