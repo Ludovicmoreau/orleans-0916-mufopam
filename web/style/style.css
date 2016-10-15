@@ -234,8 +234,8 @@ footer{
 }
 .puceaenlever{
     list-style-type:none;
-    display: block;
-    float: left;
+    display: inline-block;
+
 
 }
 .boutontable{
@@ -259,4 +259,14 @@ footer{
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
     background-color: #DBDBF1;
+}
+
+.fa-pencil{
+    margin-left:20px;
+}
+.fa-eye{
+    margin-left: -20px;
+}
+.fa-pencil, .fa-eye{
+    text-align: center;
 }
