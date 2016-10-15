@@ -224,6 +224,7 @@ footer{
 .thtable {
     text-align: center;
     background-color: #337ab7;
+    font-size: 25px;
 }
 
 .tdtable{
@@ -259,4 +260,3 @@ footer{
 tr.found{
     background-color: #DBDBF1;
 }
-
