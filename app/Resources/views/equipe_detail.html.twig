@@ -1,45 +1,70 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-<div class="container-fluid">
+<div class="equipeDetail">
     <div class="row">
-        <div class="col-lg-10 equipesDisplay">
-            <div class="col-lg-12 equipeRow">
-                {% for equipe in equipes %}
-                    <div class="col-md-4 col-lg-4 carteEquipe borderBlue">
-                        <a href="{{ path('equipe_detail', { 'id': equipe.id }) }}" target="_blank">
-                            <div class="carteContent">
-                                <div class="col-lg-12 topCarte">
-                                    <div class="col-md-4 col-lg-4 equipeLeftCarte">
-                                        <div class="col-lg-12 equipeLogo">
-                                            <img class="img-responsive"src="http://placehold.it/160x100" alt="logo equipe ">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-lg-8 equipeRightCarte">
-                                        <div class="col-lg-12 equipeName text-center">
-                                            <h1>{{ equipe.nomEquipe }}</h1>
-                                            <p>Mots clés de l'équipe</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-12 bottomCarte">
-                                    <div class="col-md-5 col-lg-5 equipeLeftCarte">
-                                        <ul>
-                                            <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
-                                            <li><i class="fa fa-phone" aria-hidden="true"></i>{{ equipe.telephoneReferent }}</li>
-                                            <li><i class="fa fa-envelope" aria-hidden="true"></i>{{ equipe.emailReferent }}</li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Adresse</li>
-                                            <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i>www.site-equipe.com</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-7 col-lg-7 equipeRightCarte">
-                                        <p>Resumé de la description de l'équipe</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
+        <div class="col-md-4 col-lg-4">
+            <div class="col-lg-12 equipeDetailLogo">
+                <img class="img-responsive" src="{{ asset( '/images/logos_equipes/' ~  equipe.logo) }}" alt="logo equipe {{ equipe.nomEquipe }}">
+            </div>
+            <div class="col-lg-12">
+                <h3 class="thtable"> Référent de l'équipe :</h3>
+                <ul>
+                    <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>{{ equipe.telephoneReferent }}</li>
+                    <li><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>{{ equipe.emailReferent }}</a></li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ equipe.rue }} {{ equipe.cp }} {{ equipe.ville }}</li>
+                    <li><a href="{{ equipe.sitewebequipe }}" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>{{ equipe.sitewebequipe }}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h3>Brevets</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>
+                                <h3>Publications</h3>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-lg-8">
+            <div class="col-lg-12 equipeDetailTitle">
+                <h1>{{ equipe.nomEquipe }}</h1>
+                <p>Mots clés de l'équipe</p>
+            </div>
+            <div class="col-lg-12 equipeDetailResume">
+                <p>{{ equipe.descriptionequipe }}</p>
             </div>
         </div>
     </div>
