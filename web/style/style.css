@@ -263,21 +263,19 @@ footer{
 }
 
 /**** table ****/
-th {
+.thtable {
     text-align: center;
     background-color: #337ab7;
+    font-size: 25px;
 }
-
-td{
+.tdtable{
     text-align: center;
     vertical-align: middle !important;
 
 }
 .puceaenlever{
     list-style-type:none;
-    display: block;
-    float: left;
-    margin-right: 15px;
+    display: inline-block;
 }
 .boutontable{
     margin-top: 5px;
@@ -294,12 +292,15 @@ td{
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 30px;
     padding-top: 30px;
-
     list-style-type:none
-
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
     background-color: #DBDBF1;
 }
-
+.fa-eye{
+    margin-left: -15px;
+}
+.fa-pencil, .fa-eye{
+    text-align: center;
+}

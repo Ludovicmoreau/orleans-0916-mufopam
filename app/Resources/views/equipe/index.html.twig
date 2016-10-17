@@ -3,34 +3,34 @@
 {% block contenu %}
     <h1 class="titretable">Liste des équipes</h1>
     <div class="table-responsive">
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered table-condensed">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nom de l'équipe</th>
-                    <th>Nom référent</th>
-                    <th>Prenom référent</th>
-                    <th>Email référent</th>
-                    <th>Téléphone référent</th>
-                    <th>Actions</th>
+                    <th class="thtable">Id</th>
+                    <th class="thtable">Nom de l'équipe</th>
+                    <th class="thtable">Nom référent</th>
+                    <th class="thtable">Prenom référent</th>
+                    <th class="thtable">Email référent</th>
+                    <th class="thtable">Téléphone référent</th>
+                    <th class="thtable">Actions</th>
                 </tr>
             </thead>
             <tbody>
             {% for equipe in equipes %}
                 <tr>
-                    <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
-                    <td>{{ equipe.nomEquipe }}</td>
-                    <td>{{ equipe.nomReferent }}</td>
-                    <td>{{ equipe.prenomReferent }}</td>
-                    <td>{{ equipe.emailReferent }}</td>
-                    <td>{{ equipe.telephoneReferent }}</td>
-                    <td>
+                    <td class="tdtable"><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
+                    <td class="tdtable">{{ equipe.nomEquipe }}</td>
+                    <td class="tdtable">{{ equipe.nomReferent }}</td>
+                    <td class="tdtable">{{ equipe.prenomReferent }}</td>
+                    <td class="tdtable">{{ equipe.emailReferent }}</td>
+                    <td class="tdtable">{{ equipe.telephoneReferent }}</td>
+                    <td class="tdtable">
                         <ul>
                             <li class="puceaenlever">
                                  <a  href="{{ path('equipe_show', { 'id': equipe.id }) }}"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
 
                             </li>
-                            <li class="puceaenlever">
+                            <li class="puceaenlever ">
                                  <a id="equipedit" href="{{ path('equipe_edit', { 'id': equipe.id }) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
                             </li>
                         </ul>
