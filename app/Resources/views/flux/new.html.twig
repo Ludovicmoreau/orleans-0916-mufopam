@@ -2,15 +2,49 @@
 
 {% block contenu %}
     <h1>Flux creation</h1>
-
+<div class="well">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="groupequipformulaire">
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+        {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(form.typeFlux, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
 
+
+        <input type="submit" value="Créer" />
+    {{ form_end(form) }}
+</div>
     <ul>
         <li>
-            <a href="{{ path('flux_index') }}">Back to the list</a>
+            <a href="{{ path('flux_index') }}">Retour à la liste</a>
         </li>
     </ul>
 {% endblock %}
