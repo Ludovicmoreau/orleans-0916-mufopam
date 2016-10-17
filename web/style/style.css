@@ -240,6 +240,12 @@ td > i{
     padding-top: 5px;
     text-align: right;
 }
+/************Brevet****************/
+.brevetareataille{
+    min-height: 250px!important;
+}
+
+/************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;
 

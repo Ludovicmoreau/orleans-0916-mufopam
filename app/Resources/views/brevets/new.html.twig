@@ -3,14 +3,29 @@
 {% block contenu %}
     <h1>Brevets creation</h1>
 
+<div class="well">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
+    <div class="groupequipformulaire">
+        <div class="row">
+            <div class="form-group" >
+                {{ form_label(form.brevet, "Brevet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-8">
+                    {{ form_widget(form.brevet, {'attr': {'class': 'form-control brevetareataille'}}) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="groupequipformulaire">
         <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    </div>
 
+    {{ form_end(form) }}
+</div>
+<div>
     <ul>
         <li>
             <a href="{{ path('brevets_index') }}">Back to the list</a>
         </li>
     </ul>
+</div>
 {% endblock %}
