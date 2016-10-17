@@ -154,7 +154,6 @@ class Equipe
      */
     private $logo;
 
-
     /**
      * Get id
      *
