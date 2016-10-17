@@ -17,8 +17,6 @@ class EquipeType extends AbstractType
         $builder
             ->add('nomEquipe')
             ->add('laboratoire')
-            ->add('libelleAdresse')
-            ->add('numeroRue')
             ->add('rue')
             ->add('cp')
             ->add('ville')
