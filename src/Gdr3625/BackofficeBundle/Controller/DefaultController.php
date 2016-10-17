@@ -24,11 +24,28 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/equipes")
+     * @Route("/equipes", name="equipes")
      */
     public function equipesAction()
     {
-        return $this->render('equipes.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+        $border=['borderBlue','borderOrange','borderRed','borderPurple','borderGreen'];
+        $borderClass = $border[array_rand($border)];
+        return $this->render('equipes.html.twig', array(
+            'equipes' => $equipes,'borderClass' => $borderClass));
+    }
+    /**
+     * @Route("/equipe/details", name="equipe_detail")
+     */
+    public function equipeDetailAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+
+        return $this->render('equipe_detail.html.twig', array(
+            'equipes' => $equipes,));
     }
 
     /**

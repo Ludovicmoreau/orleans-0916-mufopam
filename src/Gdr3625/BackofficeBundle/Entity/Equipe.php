@@ -38,20 +38,6 @@ class Equipe
     /**
      * @var string
      *
-     * @ORM\Column(name="libelle_adresse", type="string", length=255)
-     */
-    private $libelleAdresse;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="numero_rue", type="string", length=255)
-     */
-    private $numeroRue;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="rue", type="string", length=255)
      */
     private $rue;
@@ -209,52 +195,6 @@ class Equipe
     public function getLaboratoire()
     {
         return $this->laboratoire;
-    }
-
-    /**
-     * Set libelleAdresse
-     *
-     * @param string $libelleAdresse
-     * @return Equipe
-     */
-    public function setLibelleAdresse($libelleAdresse)
-    {
-        $this->libelleAdresse = $libelleAdresse;
-
-        return $this;
-    }
-
-    /**
-     * Get libelleAdresse
-     *
-     * @return string 
-     */
-    public function getLibelleAdresse()
-    {
-        return $this->libelleAdresse;
-    }
-
-    /**
-     * Set numeroRue
-     *
-     * @param string $numeroRue
-     * @return Equipe
-     */
-    public function setNumeroRue($numeroRue)
-    {
-        $this->numeroRue = $numeroRue;
-
-        return $this;
-    }
-
-    /**
-     * Get numeroRue
-     *
-     * @return string 
-     */
-    public function getNumeroRue()
-    {
-        return $this->numeroRue;
     }
 
     /**

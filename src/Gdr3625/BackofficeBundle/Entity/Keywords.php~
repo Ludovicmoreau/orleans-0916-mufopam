@@ -5,12 +5,12 @@ namespace Gdr3625\BackofficeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Publications
+ * Keywords
  *
- * @ORM\Table(name="publications")
- * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\PublicationsRepository")
+ * @ORM\Table(name="keywords")
+ * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\KeywordsRepository")
  */
-class Publications
+class Keywords
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Publications
     /**
      * @var string
      *
-     * @ORM\Column(name="doi", type="string", length=255)
+     * @ORM\Column(name="keyword", type="string", length=255)
      */
-    private $doi;
+    private $keyword;
 
 
     /**
@@ -40,25 +40,25 @@ class Publications
     }
 
     /**
-     * Set doi
+     * Set keyword
      *
-     * @param string $doi
-     * @return Publications
+     * @param string $keyword
+     * @return Keywords
      */
-    public function setDoi($doi)
+    public function setKeyword($keyword)
     {
-        $this->doi = $doi;
+        $this->keyword = $keyword;
 
         return $this;
     }
 
     /**
-     * Get doi
+     * Get keyword
      *
      * @return string 
      */
-    public function getDoi()
+    public function getKeyword()
     {
-        return $this->doi;
+        return $this->keyword;
     }
 }
