@@ -6,40 +6,53 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Users
+ *
+ * @ORM\Table(name="users")
+ * @ORM\Entity(repositoryClass="Gdr3625\BackofficeBundle\Repository\UsersRepository")
  */
 class Users
 {
     /**
      * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
      */
     private $prenom;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255)
      */
     private $password;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
 
     /**
-     * @var int
-     */
-    private $idEquipe;
-    /**
-     * @var boolean
+     * @var bool
+     *
+     * @ORM\Column(name="admin", type="boolean")
      */
     private $admin;
 
@@ -147,28 +160,6 @@ class Users
     }
 
     /**
-     * Set idEquipe
-     *
-     * @param integer $idEquipe
-     * @return Users
-     */
-    public function setIdEquipe($idEquipe)
-    {
-        $this->idEquipe = $idEquipe;
-
-        return $this;
-    }
-
-    /**
-     * Get idEquipe
-     *
-     * @return integer 
-     */
-    public function getIdEquipe()
-    {
-        return $this->idEquipe;
-    }
-    /**
      * Set admin
      *
      * @param boolean $admin
@@ -184,11 +175,10 @@ class Users
     /**
      * Get admin
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getAdmin()
     {
         return $this->admin;
     }
-
 }
