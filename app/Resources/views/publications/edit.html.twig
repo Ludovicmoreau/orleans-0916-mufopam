@@ -3,18 +3,28 @@
 {% block contenu %}
     <h1>Publications edit</h1>
 
+<div class="well">
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <div class="groupequipformulaire">
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(edit_form.doi, "D.O.I", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(edit_form.doi, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
 
+        <input type="submit" value="Editer" />
+        {{ form_end(edit_form) }}
+    </div>
     <ul>
         <li>
-            <a href="{{ path('publications_index') }}">Back to the list</a>
+            <a href="{{ path('publications_index') }}">Retour à la liste</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>
