@@ -292,7 +292,7 @@ footer{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 20px;
     list-style-type:none
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
