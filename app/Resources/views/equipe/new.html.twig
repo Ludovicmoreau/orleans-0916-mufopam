@@ -26,6 +26,22 @@
     <div class="groupequipformulaire">
         <div class="row">
             <div class="form-group">
+                {{ form_label(form.libelleAdresse, "Adresse", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(form.libelleAdresse, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form.numeroRue, "N° de rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-1">
+                    {{ form_widget(form.numeroRue, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
                 {{ form_label(form.rue, "Rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
                     {{ form_widget(form.rue, {'attr': {'class': 'form-control'}}) }}
