@@ -24,8 +24,8 @@ p{
 #custom-bootstrap-menu.navbar-default {
     font-size: 20px;
     background-color: #FFFFFF;
-    border-width: 0px;
-    border-radius: 0px;
+    border-width: 0;
+    border-radius: 0;
 
 }
 /* Navigation links style  */
@@ -40,6 +40,12 @@ p{
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
     border-bottom: 5px solid #FFFFFF;
+}
+.isOpen{
+    color: rgba(255, 255, 255, 1);
+    background-color: #337ab7;
+    border-bottom: 5px solid #337ab7;
+
 }
 /* Active : Focus and Over style */
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
@@ -176,32 +182,68 @@ td > i{
 }
 
 /**** equipes ****/
+.borderBlue{
+    border: 3px solid #337ab7;
+}
+.borderOrange{
+    border: 3px solid #f0ad4e;
+}
+.borderRed{
+    border: 3px solid #b92c28;
+}
+.borderGreen{
+    border: 3px solid #3e8f3e;
+}
+.borderPurple{
+    border: 3px solid #8959A8;
+}
+.filtersDisplay, .equipesDisplay{
+    padding: 15px;
+}
 .filterCol{
-    border: 1px solid black;
+    border: 1px solid #337ab7;
     height: 1500px;
 }
-.grid {
-    border: 1px solid black;
+.equipeCol{
+    border: 1px solid #337ab7;
+    height: 1500px;
 }
-.carteEquipe {
-    width: 500px;
-    height: 250px;
-    border: 1px solid black;
-    margin: 25px;
-    font-size: 15px;
+.equipeRow{
+    padding: 5px;
+}
+.carteEquipe, .topCarte, .bottomCarte, .equipeLogo, .equipeName, .equipeLeftCarte, .equipeRightCarte{
+    padding:0 ;
+}
+.carteContent a {
+    text-decoration: none;
+    color: inherit;
+}
+.carteEquipe h1{
+    font-size: 20px;
 }
 .carteEquipe li {
     list-style: none;
-    margin-left: -25px;
+    margin-left: -35px;
     margin-top: 5px;
 }
+
+.carteEquipe p{
+    font-size: 15px;
+}
+.carteEquipe{
+    font-size: 13px;
+    margin: 1px;
+    max-width: 495px;
+}
+
 .form-group{
     padding-top: 5px;
+    text-align: right;
 }
 .groupequipformulaire {
     padding-top: 30px;
-}
 
+}
 
 /**** footer ****/
 footer{
@@ -221,24 +263,44 @@ footer{
 }
 
 /**** table ****/
-th {
+.thtable {
     text-align: center;
     background-color: #337ab7;
+    font-size: 25px;
 }
-
-td{
+.tdtable{
     text-align: center;
     vertical-align: middle !important;
 
 }
 .puceaenlever{
-    list-style-type:none
-
+    list-style-type:none;
+    display: inline-block;
 }
-.btn{
+.boutontable{
     margin-top: 5px;
     width: 100px;
 }
 .titretable{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+.creation{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    list-style-type:none
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+tr.found{
+    background-color: #DBDBF1;
+}
+.fa-eye{
+    margin-left: -15px;
+}
+.fa-pencil, .fa-eye{
     text-align: center;
 }
