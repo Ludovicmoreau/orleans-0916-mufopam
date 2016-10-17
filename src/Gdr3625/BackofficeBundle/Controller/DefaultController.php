@@ -31,21 +31,21 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
-        $border=['borderBlue','borderOrange','borderRed','borderPurple','borderGreen'];
-        $borderClass = $border[array_rand($border)];
+
         return $this->render('equipes.html.twig', array(
-            'equipes' => $equipes,'borderClass' => $borderClass));
+            'equipes' => $equipes,));
     }
     /**
-     * @Route("/equipe/details", name="equipe_detail")
+     * @Route("/equipe/detail/{id}", name="equipe_detail")
      */
-    public function equipeDetailAction()
+    public function equipeDetailAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
-
+        $equipe = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findOneById($id);
+        $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findOneById($id);
+        $publications = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findOneById($id);
         return $this->render('equipe_detail.html.twig', array(
-            'equipes' => $equipes,));
+            'equipe' => $equipe, 'brevets'=>$brevets, 'publications'=>$publications,));
     }
 
     /**

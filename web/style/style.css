@@ -218,6 +218,9 @@ td > i{
     text-decoration: none;
     color: inherit;
 }
+.bottomCarte>.equipeLeftCarte>ul>li>a {
+    text-decoration: underline;
+}
 .carteEquipe h1{
     font-size: 20px;
 }
@@ -226,7 +229,6 @@ td > i{
     margin-left: -35px;
     margin-top: 5px;
 }
-
 .carteEquipe p{
     font-size: 15px;
 }
@@ -235,14 +237,53 @@ td > i{
     margin: 1px;
     max-width: 495px;
 }
-
+.equipeLeftCarte i{
+    margin-right: 5px;
+}
+.equipeLeftCarte h5{
+    text-decoration: underline;
+}
+.equipeRightCarte {
+    word-wrap: break-word;
+    padding-right: 10px;
+}
+.equipeRightCarte p{
+    display: block;
+    width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .form-group{
     padding-top: 5px;
     text-align: right;
 }
 .groupequipformulaire {
     padding-top: 30px;
-
+}
+.equipeLogo{
+    max-width: 120px;
+    max-height: 120px;
+}
+/**** Page Details Equipe ****/
+.equipeDetail a {
+    text-decoration: underline;
+    color: inherit;
+}
+.equipeDetail li{
+    list-style: none;
+}
+.equipeDetail i{
+    margin-right: 10px;
+    font-size: 15px;
+}
+.equipeDetailLogo{
+    max-width: 300px;
+    max-height: 300px;
+}
+.equipeDetailResume p{
+    font-size: 20px;
+    line-height: 1.7;
 }
 
 /**** footer ****/
