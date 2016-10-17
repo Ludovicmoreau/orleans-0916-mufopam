@@ -261,11 +261,9 @@ tr.found{
     background-color: #DBDBF1;
 }
 
-.fa-pencil{
-    margin-left:20px;
-}
+
 .fa-eye{
-    margin-left: -20px;
+    margin-left: -15px;
 }
 .fa-pencil, .fa-eye{
     text-align: center;
