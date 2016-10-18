@@ -347,7 +347,11 @@ tr.found{
 
 .fa-pencil, .fa-file-text-o{
     text-align: center;
+
 }
 .puces{
     min-width: 150px;
+}
+.colorInherit{
+    color: inherit;
 }
