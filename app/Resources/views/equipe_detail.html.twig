@@ -8,51 +8,89 @@
                 <img class="img-responsive" src="{{ asset( '/images/logos_equipes/' ~  equipe.logo) }}" alt="logo equipe {{ equipe.nomEquipe }}">
             </div>
             <div class="col-lg-12">
-                <h3 class="thtable"> Référent de l'équipe :</h3>
-                <ul>
-                    <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>{{ equipe.telephoneReferent }}</li>
-                    <li><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>{{ equipe.emailReferent }}</a></li>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ equipe.rue }} {{ equipe.cp }} {{ equipe.ville }}</li>
-                    <li><a href="{{ equipe.sitewebequipe }}" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>{{ equipe.sitewebequipe }}</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-12">
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table table-condensed">
                         <thead>
                             <tr>
-                                <th>
-                                    <h3>Brevets</h3>
+                                <th class="thtable">
+                                    <h3> Référent </h3>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-
+                                <td class="text-left">
+                                    <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>{{ equipe.telephoneReferent }}</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <li><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>{{ equipe.emailReferent }}</a></li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ equipe.rue }} {{ equipe.cp }} {{ equipe.ville }}</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <li><a href="{{ equipe.sitewebequipe }}" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>{{ equipe.sitewebequipe }}</a></li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th class="thtable">
+                                    <h3>Brevets</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {#{% for brevet in equipe.brevets %}
+                                <tr>
+                                    <td class="text-left">
+                                        {{ brevet.id }}
+                                    </td>
+                                    <td class="text-left">
+                                        {{ brevet.brevet }}
+                                    </td>
+                                </tr>
+                            {% endfor %}#}
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="col-lg-12">
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table table-striped table-condensed">
                         <thead>
-                        <tr>
-                            <th>
-                                <h3>Publications</h3>
-                            </th>
-                        </tr>
+                            <tr>
+                                <th class="thtable">
+                                    <h3>Publications</h3>
+                                </th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>
-
-                            </td>
-                        </tr>
+                            {#{% for publication in equipe.publications %}
+                                <tr>
+                                    <td class="text-left">
+                                        {{ publication.id }}
+                                    </td>
+                                    <td class="text-left">
+                                        {{ publication.doi }}
+                                    </td>
+                                </tr>
+                            {% endfor %}#}
                         </tbody>
                     </table>
                 </div>
@@ -61,7 +99,7 @@
         <div class="col-md-8 col-lg-8">
             <div class="col-lg-12 equipeDetailTitle">
                 <h1>{{ equipe.nomEquipe }}</h1>
-                <p>Mots clés de l'équipe</p>
+                <p>{# equipe.equipes_keywords.keywords.keyword #}</p>
             </div>
             <div class="col-lg-12 equipeDetailResume">
                 <p>{{ equipe.descriptionequipe }}</p>
