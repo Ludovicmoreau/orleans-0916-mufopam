@@ -22,6 +22,7 @@ use Doctrine\Common\Collections\Collection;
  */
 abstract class User implements UserInterface, GroupableInterface
 {
+
     /**
      * @var mixed
      */

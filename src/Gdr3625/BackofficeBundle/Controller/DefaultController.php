@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/back")
+     * @Route("/back", name="back")
      */
     public function indexAction()
     {
@@ -79,5 +79,25 @@ class DefaultController extends Controller
     {
 
         return $this->render('brevets.html.twig');
+    }
+
+    /**
+     * @Route("/users")
+     */
+    public function userAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('Gdr3625BackofficeBundle:User')->findAll();
+
+        return $this->render('index.html.twig', array(
+            'users' => $users));
+    }
+    
+    public function helloAction($userId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $userName = $em->getRepository('Gdr3625BackofficeBundle:User')->findOneBy($userId);
+        
+        return $this->getUser()-> getUsername();
     }
 }
