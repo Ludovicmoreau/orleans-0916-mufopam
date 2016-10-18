@@ -8,159 +8,27 @@
     <div class="groupequipformulaire">
         <div class="row">
             <div class="form-group">
-                {{ form_label(form.nomUser, "Nom de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                {{ form_label(form.username, "Nom de l'utilisateur", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                {{ form_widget(form.nomUser, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                {{ form_label(form.laboratoire, "Laboratoire", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                {{ form_label(form.id, "id", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.id, {'attr': {'class': 'form-control'}}) }}
                 </div>
             </div>
         </div>
     </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.rue, "Rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.rue, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.cp, "Code postal", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.cp, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.codeUnite, "Code unité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.tutelle, "Tutelle", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.tutelle, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.siteWebUser, "Site internet équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.siteWebUser, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.siteWebLabo, "Site internet labo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.nomReferent, "Nom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.prenomReferent, "Prénom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.emailReferent, "Email référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.telephoneReferent, "Téléphone référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.recherche, "Recherche", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.recherche, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.projet, "Projet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.projet, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.descriptionUser, "Description équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.descriptionUser, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.logo, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
     <div class="groupequipformulaire">
         <input type="submit" value="Create" />
     </div>
 
     {{ form_end(form) }}
+
 </div>
 <div>
     <ul>
