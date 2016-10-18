@@ -12,7 +12,7 @@ use Gdr3625\BackofficeBundle\Form\FluxType;
 /**
  * Flux controller.
  *
- * @Route("/back/flux")
+ * @Route("/back/flux", name="flux_back")
  */
 class FluxController extends Controller
 {

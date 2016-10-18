@@ -1,7 +1,6 @@
 gdr3625_backoffice_publications:
     resource: "@Gdr3625BackofficeBundle/Controller/PublicationsController.php"
     type:     annotation
-
 gdr3625_backoffice_keywords:
     resource: "@Gdr3625BackofficeBundle/Controller/KeywordsController.php"
     type:     annotation
