@@ -18,6 +18,9 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
+                always_use_default_target_path: false
+                default_target_path: /back/flux
+
             logout:       true
             anonymous:    true
     encoders:

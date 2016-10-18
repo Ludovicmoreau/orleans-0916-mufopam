@@ -21,7 +21,12 @@
                     <li id="jobs" class=""><a href="/flux/jobs">Jobs</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/back/flux"><i class="fa fa-lock fa-1x"></i></a></li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-lock fa-1x"></i></a>
+                        {{ render(controller(
+                        'FOSUserBundle:Security:login'
+                        )) }}
+                    </li>
                 </ul>
             </div>
         </div>

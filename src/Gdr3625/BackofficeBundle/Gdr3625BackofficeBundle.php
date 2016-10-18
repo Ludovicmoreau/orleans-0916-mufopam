@@ -6,4 +6,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class Gdr3625BackofficeBundle extends Bundle
 {
+    public function getParent()
+    {
+        return 'FOSUserBundle';
+    }
 }

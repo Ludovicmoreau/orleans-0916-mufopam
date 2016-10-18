@@ -9,18 +9,19 @@ use Gdr3625\BackofficeBundle\Entity\Publications;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/back", name="back")
      */
     public function indexAction()
     {
-        return $this->render('base.html.twig');
-    }
-    /**
-     * @Route("/back")
-     */
-    public function backAction()
-    {
         return $this->render('base_backoffice.html.twig');
+    }
+
+    /**
+     * @Route("/")
+     */
+    public function accueilAction()
+    {
+        return $this->render('base.html.twig');
     }
 
     /**
@@ -85,5 +86,25 @@ class DefaultController extends Controller
     {
 
         return $this->render('brevets.html.twig');
+    }
+
+    /**
+     * @Route("/users")
+     */
+    public function userAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('Gdr3625BackofficeBundle:User')->findAll();
+
+        return $this->render('index.html.twig', array(
+            'users' => $users));
+    }
+
+    public function helloAction($userId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $userName = $em->getRepository('Gdr3625BackofficeBundle:User')->findOneBy($userId);
+
+        return $this->getUser()-> getUsername();
     }
 }
