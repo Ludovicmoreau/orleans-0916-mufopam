@@ -8,13 +8,15 @@
         <div class="row">
             <div class="form-group">
                 {{ form_label(form.doi, "D.O.I", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-lg-4">
                     {{ form_widget(form.doi, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="col-sm-4 col-lg-4">
+                    <a class="btn btn-default" href="{{ path('publication_generate', {'doi':'toto'}) }}">Générer la Publication</a>
                 </div>
             </div>
         </div>
-
-        <input type="submit" value="Créer" />
+        <input type="submit" value="Créer"/>
     {{ form_end(form) }}
     </div>
     <ul>
@@ -22,4 +24,5 @@
             <a href="{{ path('publications_index') }}">Retour à la liste</a>
         </li>
     </ul>
+</div>
 {% endblock %}
