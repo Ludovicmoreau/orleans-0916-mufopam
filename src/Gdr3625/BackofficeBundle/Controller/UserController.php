@@ -7,11 +7,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Gdr3625\BackofficeBundle\Entity\Equipe;
-use Gdr3625\BackofficeBundle\Form\EquipeType;
+use Gdr3625\BackofficeBundle\Form\UserType;
 
 /**
- * Equipe controller.
+ * User controller.
  *
  * @Route("back/user")
  */
@@ -44,7 +43,7 @@ class UserController extends Controller
     public function newAction(Request $request)
     {
         $users = new User();
-        $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $users);
+        $form = $this->createForm('Gdr3625\BackofficeBundle\Form\UserType', $users);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -67,7 +66,7 @@ class UserController extends Controller
      * @Route("/{id}", name="user_show")
      * @Method("GET")
      */
-    public function showAction(Equipe $user)
+    public function showAction(User $user)
     {
         $deleteForm = $this->createDeleteForm($user);
 
@@ -83,10 +82,10 @@ class UserController extends Controller
      * @Route("/{id}/edit", name="user_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Equipe $user)
+    public function editAction(Request $request, User $user)
     {
         $deleteForm = $this->createDeleteForm($user);
-        $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\UserType', $user);
+        $editForm = $this->createForm('FOS\User-bund', $user);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -110,7 +109,7 @@ class UserController extends Controller
      * @Route("/{id}", name="user_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Equipe $user)
+    public function deleteAction(Request $request, User $user)
     {
         $form = $this->createDeleteForm($user);
         $form->handleRequest($request);
@@ -125,13 +124,13 @@ class UserController extends Controller
     }
 
     /**
-     * Creates a form to delete a Equipe entity.
+     * Creates a form to delete a User entity.
      *
      * @param User $user The User entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Equipe $user)
+    private function createDeleteForm(User $user)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('user_delete', array('id' => $user->getId())))
