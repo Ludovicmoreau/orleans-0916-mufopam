@@ -20,7 +20,7 @@
                         <tr>
                             <td class="tdtable">{{ flux.id }} </td>
                             <td class="tdtable">{{ flux.titre }}</td>
-                            <td class="tdtable">{{ flux.contenu }}</td>
+                            <td class="tdtable">{{ flux.contenu | truncate(300,true,' (...) ') }}</td>
                             <td class="tdtable">{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
                             <td class="tdtable">{{ flux.typeFlux }}</td>
                             <td class="tdtable puces">
