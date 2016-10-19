@@ -1,5 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-page du flux brevets
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 filtersDisplay">
+                <div id="filter" class="filterCol" data-spy="" data-offset-top="">
+
+                </div>
+            </div>
+            {% for key, brevet in brevets %}
+                <div class="col-lg-5">
+                    <div class="col-lg-12">
+                        <div class="panel-assembly">
+                            <div class="panel panelBrevet {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Brevet</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    {{ brevet.brevet }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
