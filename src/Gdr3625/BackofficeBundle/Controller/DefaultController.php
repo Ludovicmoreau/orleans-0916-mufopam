@@ -61,15 +61,16 @@ class DefaultController extends Controller
 
     }
     /**
-     * @Route("/flux/actus/detail", name="actu_detail")
+     * @Route("/flux/actus/detail/{id}", name="actu_detail")
      */
-    public function actusDetailAction()
+    public function actusDetailAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
-
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findOneByid($id);
+        $tab = ['primary','success','warning','default','info','danger'];
+        $couleur = $tab[array_rand($tab)];
         return $this->render('fluxActus_detail.html.twig', array(
-            'fluxes' => $fluxes,));
+            'fluxes' => $fluxes, 'couleur' => $couleur));
 
     }
     /**

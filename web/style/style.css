@@ -305,9 +305,19 @@ td > i{
     text-align: left;
 
 }
-.aNews:hover{
-    text-decoration : none;
+.aNews:link{
+    text-decoration : inherit;
     color: inherit;
+}
+.aNews:hover{
+    text-decoration : inherit;
+    color: inherit;
+}
+.boutonRetourActu{
+
+}
+.btn{
+    margin-bottom: 20px;
 }
 
 

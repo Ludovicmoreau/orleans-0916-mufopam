@@ -29,7 +29,7 @@
 
                             </div>
                             <div class="panel-body">
-                                <p class="pContenu">{{ flux.contenu }}</p>
+                                <p class="pContenu">{{ flux.contenu | truncate(180,true,' (...) ')  }}</p>
                             </div>
                         </div>
                     </div>
