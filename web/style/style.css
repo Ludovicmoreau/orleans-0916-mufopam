@@ -163,7 +163,7 @@ td > i{
 }
 .panel-title{
     height:25px;
-    margin-top: -10px;
+    margin-top: 0;
 }
 .pull-right{
     font-size:15px;
@@ -206,6 +206,7 @@ td > i{
 }
 .filterCol{
     border: 1px solid #337ab7;
+    min-height: 1000px;
 }
 .equipeRow{
     padding: 5px;
@@ -247,22 +248,21 @@ td > i{
     word-wrap: break-word;
     padding-right: 10px;
 }
-/*.equipeRightCarte p{
-    display: block;
-    width: 600px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}*/
 .form-group{
     padding-top: 5px;
     text-align: right;
 }
-/************Brevet****************/
+/************ Brevet ****************/
 .brevetAreaTaille{
     min-height: 250px!important;
 }
-
+.panelBrevet{
+    min-height: 200px;
+}
+/************ Publications ****************/
+.panelPublication{
+    min-height: 400px;
+}
 /************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;

@@ -84,8 +84,10 @@ class DefaultController extends Controller
      */
     public function brevetsAction()
     {
-
-        return $this->render('brevets.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findAll();
+        return $this->render('brevets.html.twig', array(
+            'brevets'=>$brevets,));
     }
 
     /**
