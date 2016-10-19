@@ -266,7 +266,7 @@ td > i{
 /************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;
-<<<<<<< HEAD
+
 }
 .equipeLogo{
     max-width: 120px;
@@ -328,7 +328,7 @@ footer{
     float: right;
 }
 
-/**** table ****/
+/************** table **************/
 .thtable {
     text-align: center;
     background-color: #337ab7;
@@ -344,10 +344,7 @@ footer{
     margin-right: 10px;
 
 }
-.boutontable{
-    margin-top: 5px;
-    width: 100px;
-}
+
 .titretable{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -376,11 +373,29 @@ tr.found{
     color: inherit;
 }
 
-@media only screen and (max-width: 800px) {
-    #unseen table td:nth-child(5),
-    #unseen table th:nth-child(5) {
-        display: none;
-    }
+/**************************  table show **************************/
+.thtable2{
+    text-align: left;
+    background-color: #337ab7;
+    font-size: 20px;
+}
+
+
+.tdtable2{
+    text-align: justify;
+    vertical-align: middle !important;
+}
+.BoutonTableShow{
+    list-style-type:none;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    padding-left: 50px;
+
+}
+.boutonCenter{
+    text-align: center;
+}
+.boutonDelete{
 
 }
 
