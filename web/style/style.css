@@ -322,6 +322,9 @@ td > i{
 .btn{
     margin-bottom: 20px;
 }
+.actuHauteur{
+    min-height: 180px;
+}
 
 
 /**** footer ****/
