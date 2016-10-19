@@ -50,7 +50,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/flux/actus")
+     * @Route("/flux/actus", name="actus")
      */
     public function actusAction()
     {
@@ -58,8 +58,8 @@ class DefaultController extends Controller
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
         return $this->render('fluxActus.html.twig', array(
             'fluxes' => $fluxes,));
-
     }
+
     /**
      * @Route("/flux/actus/detail/{id}", name="actu_detail")
      */
