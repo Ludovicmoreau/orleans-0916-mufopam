@@ -318,12 +318,12 @@ footer{
 .tdtable{
     text-align: center;
     vertical-align: middle !important;
-    min-width: 150px;
-
 }
 .puceaenlever{
     list-style-type:none;
     display: inline-block;
+    margin-right: 10px;
+
 }
 .boutontable{
     margin-top: 5px;
@@ -338,19 +338,31 @@ footer{
 .creation{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    padding-bottom: 30px;
-    padding-top: 20px;
-    list-style-type:none
+    list-style-type:none;
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
     background-color: #DBDBF1;
 }
-.fa-eye{
-    margin-left: -15px;
-}
-.fa-pencil, .fa-eye{
+
+.fa-pencil, .fa-file-text-o{
     text-align: center;
+
+
+}
+.puces{
+    min-width: 150px;
+}
+.colorInherit{
+    color: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+    #unseen table td:nth-child(5),
+    #unseen table th:nth-child(5) {
+        display: none;
+    }
+
 }
 
 /**************************  Modal Login **************************/
@@ -450,4 +462,5 @@ tr.found{
 
 .login-help{
     font-size: 12px;
+
 }
