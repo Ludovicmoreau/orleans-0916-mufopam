@@ -74,12 +74,14 @@ class DefaultController extends Controller
 
     }
     /**
-     * @Route("/flux/jobs")
+     * @Route("/flux/jobs", name="jobs")
      */
     public function jobsAction()
     {
-
-        return $this->render('fluxJobs.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Jobs');
+        return $this->render('fluxJobs.html.twig', array(
+            'fluxes' => $fluxes,));
     }
     /**
      * @Route("/publications")
