@@ -274,6 +274,7 @@ td > i{
 }
 .boutonEdit{
     margin-left: 15px;
+    list-style-type: none;
 }
 /**** Page Details Equipe ****/
 .equipeDetail a {
