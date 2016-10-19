@@ -10,7 +10,7 @@
             <div class="form-group">
                 {{ form_label(form.nomEquipe, "Nom de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                {{ form_widget(form.nomEquipe, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.nomEquipe, {'attr': {'class': 'form-control', 'placeholder': "Nom de l'équipe"}}) }}
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="form-group">
                 {{ form_label(form.laboratoire, "Laboratoire", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control', 'placeholder': "Laboratoire"}}) }}
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="form-group">
                 {{ form_label(form.rue, "Rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.rue, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.rue, {'attr': {'class': 'form-control', 'placeholder': "Rue"}}) }}
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="form-group">
                 {{ form_label(form.cp, "Code postal", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.cp, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.cp, {'attr': {'class': 'form-control', 'placeholder': "00000"}}) }}
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="form-group">
                 {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.ville, {'attr': {'class': 'form-control', 'placeholder': "Ville"}}) }}
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="form-group">
                 {{ form_label(form.codeUnite, "Code unité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control', 'placeholder': "Code unité"}}) }}
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
             <div class="form-group">
                 {{ form_label(form.tutelle, "Tutelle", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.tutelle, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.tutelle, {'attr': {'class': 'form-control', 'placeholder': "Tutelle"}}) }}
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
             <div class="form-group">
                 {{ form_label(form.siteWebEquipe, "Site internet équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.siteWebEquipe, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.siteWebEquipe, {'attr': {'class': 'form-control', 'placeholder': "http://www.equipe-inernet.fr"}}) }}
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="form-group">
                 {{ form_label(form.siteWebLabo, "Site internet labo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control', 'placeholder': "http://www.labo-inernet.fr"}}) }}
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
             <div class="form-group">
                 {{ form_label(form.nomReferent, "Nom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control', 'placeholder': "Nom référent"}}) }}
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
             <div class="form-group">
                 {{ form_label(form.prenomReferent, "Prénom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control', 'placeholder': "Prénom référent"}}) }}
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
             <div class="form-group">
                 {{ form_label(form.emailReferent, "Email référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control', 'placeholder': "email@email.fr"}}) }}
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
             <div class="form-group">
                 {{ form_label(form.telephoneReferent, "Téléphone référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control', 'placeholder': "03 00 00 00 00"}}) }}
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
             <div class="form-group">
                 {{ form_label(form.recherche, "Recherche", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.recherche, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.recherche, {'attr': {'class': 'form-control', 'placeholder': "Recherche"}}) }}
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
             <div class="form-group">
                 {{ form_label(form.projet, "Projet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.projet, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.projet, {'attr': {'class': 'form-control', 'placeholder': "Projet"}}) }}
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
             <div class="form-group">
                 {{ form_label(form.descriptionEquipe, "Description équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.descriptionEquipe, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.descriptionEquipe, {'attr': {'class': 'form-control', 'placeholder': "Description équipe"}}) }}
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
             <div class="form-group">
                 {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.logo, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.logo, {'attr': {'class': 'form-control', 'placeholder': "Nom_du_logo.jpg"}}) }}
                 </div>
             </div>
         </div>
