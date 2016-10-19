@@ -266,6 +266,7 @@ td > i{
 /************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;
+<<<<<<< HEAD
 }
 .equipeLogo{
     max-width: 120px;
@@ -290,7 +291,25 @@ td > i{
 .equipeDetailResume p{
     font-size: 20px;
     line-height: 1.7;
+
+
+
 }
+/***************news*******************/
+.divTitre{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.pContenu{
+    color: black;
+    text-align: left;
+
+}
+.aNews:hover{
+    text-decoration : none;
+    color: inherit;
+}
+
 
 /**** footer ****/
 footer{

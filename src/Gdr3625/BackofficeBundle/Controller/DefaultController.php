@@ -54,8 +54,23 @@ class DefaultController extends Controller
      */
     public function actusAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
+        return $this->render('fluxActus.html.twig', array(
+            'fluxes' => $fluxes,));
 
-        return $this->render('fluxActus.html.twig');
+    }
+    /**
+     * @Route("/flux/actus/detail", name="actu_detail")
+     */
+    public function actusDetailAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
+
+        return $this->render('fluxActus_detail.html.twig', array(
+            'fluxes' => $fluxes,));
+
     }
     /**
      * @Route("/flux/jobs")
