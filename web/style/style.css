@@ -272,6 +272,9 @@ td > i{
     max-width: 120px;
     max-height: 120px;
 }
+.boutonEdit{
+    margin-left: 15px;
+}
 /**** Page Details Equipe ****/
 .equipeDetail a {
     text-decoration: underline;
@@ -389,8 +392,6 @@ tr.found{
     font-size: 20px;
     min-width: 300px;
 }
-
-
 .tdtable2{
     text-align: justify;
     vertical-align: middle !important;
@@ -399,7 +400,7 @@ tr.found{
     list-style-type:none;
     font-family: 'Ubuntu', sans-serif;
     display: inline-block;
-    padding-left: 50px;
+    padding-right: 50px;
 
 }
 .boutonCenter{
