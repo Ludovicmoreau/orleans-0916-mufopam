@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <h3>Auteurs :</h3>
-                                        <ul class="list-inline">
+                                        <ul class="list-inline text-left">
                                             {% for author in publication.message.author %}
                                                     <li>{{ author.given ~' '~ author.family ~ ',' }}</li>
                                             {% endfor %}
