@@ -249,7 +249,22 @@ td > i{
 .groupequipformulaire {
     padding-top: 30px;
 
+
 }
+/***************news*******************/
+.divTitre{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.pContenu{
+    color: black;
+    text-align: left;
+}
+.aNews:hover{
+    text-decoration : none;
+    color: inherit;
+}
+
 
 /**** footer ****/
 footer{
