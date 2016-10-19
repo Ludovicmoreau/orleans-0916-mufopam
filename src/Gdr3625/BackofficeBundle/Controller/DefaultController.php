@@ -82,14 +82,6 @@ class DefaultController extends Controller
         return 'Done';
     }
 
-    /**
-     * @Route("/umap", name="umap_geojson")
-     */
-    public function umapAction()
-    {
-        $umapJson = file('umap.json');
-        return $this->render('umapJson.html.twig', array('umapJson'=>$umapJson));
-    }
 
     /**
      * @Route("/equipes", name="equipes")
