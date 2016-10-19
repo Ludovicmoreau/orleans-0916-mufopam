@@ -15,7 +15,7 @@
                     <tbody>
                     {% for publication in publications %}
                         <tr>
-                            <td class="tdtable"><a href="{{ path('publications_show', { 'id': publication.id }) }}">{{ publication.id }}</a></td>
+                            <td class="tdtable">{{ publication.id }}</td>
                             <td class="tdtable">{{ publication.doi }}</td>
                             <td class="tdtable puces">
                                 <ul>

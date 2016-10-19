@@ -18,7 +18,7 @@
                     <tbody>
                     {% for flux in fluxes %}
                         <tr>
-                            <td class="tdtable"><a href="{{ path('flux_show', { 'id': flux.id }) }}">{{ flux.id }} </a></td>
+                            <td class="tdtable">{{ flux.id }} </td>
                             <td class="tdtable">{{ flux.titre }}</td>
                             <td class="tdtable">{{ flux.contenu }}</td>
                             <td class="tdtable">{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
