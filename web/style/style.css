@@ -342,7 +342,7 @@ footer{
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
-    background-color: #DBDBF1;
+    background-color: #E7E4F1;
 }
 
 .fa-pencil, .fa-file-text-o{

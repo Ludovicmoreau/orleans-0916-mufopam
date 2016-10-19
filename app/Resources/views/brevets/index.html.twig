@@ -15,7 +15,7 @@
                 <tbody>
                 {% for brevet in brevets %}
                     <tr>
-                        <td class="tdtable"><a href="{{ path('brevets_show', { 'id': brevet.id }) }}">{{ brevet.id }}</a></td>
+                        <td class="tdtable">{{ brevet.id }}</td>
                         <td class="tdtable">{{ brevet.brevet }}</td>
                         <td class="tdtable puces">
                             <ul>
