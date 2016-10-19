@@ -40,7 +40,6 @@ class DefaultController extends Controller
             $url = "http://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
             $json = file_get_contents($url);
             $coord[] = json_decode($json,true);
-            //var_dump($coord);
             $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
             $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
             $geojson = $geojson.
@@ -80,6 +79,7 @@ class DefaultController extends Controller
         }');
         //LOGO EQUIPES '.$equipeData->getLogo().'
         fclose($fp);
+        return 'Done';
     }
 
     /**
