@@ -385,9 +385,9 @@ tr.found{
 
 /**************************  table show **************************/
 .thtable2{
-    text-align: left;
     background-color: #337ab7;
     font-size: 20px;
+    min-width: 300px;
 }
 
 
@@ -405,9 +405,7 @@ tr.found{
 .boutonCenter{
     text-align: center;
 }
-.boutonDelete{
 
-}
 
 /**************************  Modal Login **************************/
 
