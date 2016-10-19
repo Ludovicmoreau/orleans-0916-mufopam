@@ -272,6 +272,9 @@ td > i{
     max-width: 120px;
     max-height: 120px;
 }
+.boutonEdit{
+    margin-left: 15px;
+}
 /**** Page Details Equipe ****/
 .equipeDetail a {
     text-decoration: underline;
