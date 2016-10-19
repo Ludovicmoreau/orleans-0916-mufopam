@@ -18,7 +18,7 @@
                 <tbody>
                 {% for equipe in equipes %}
                     <tr>
-                        <td class="tdtable"><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
+                        <td class="tdtable">{{ equipe.id }}</td>
                         <td class="tdtable">{{ equipe.nomEquipe }}</td>
                         <td class="tdtable">{{ equipe.nomReferent }}</td>
                         <td class="tdtable">{{ equipe.prenomReferent }}</td>
