@@ -1,23 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 filtersDisplay">
-        <div id="filterNews" class="filterCol" data-spy="" data-offset-top="">
+        <div class="filterCol" data-spy="" data-offset-top="">
 
         </div>
       </div>
       <div class="col-lg-10">
         <div class="row">
             {% for flux in fluxes %}
-            <div class="col-lg-6">
-                <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-
-                    <div class="panel-assembly">
-                        <div class="panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
-                            <div class="panel-heading divTitre">
-
+                <div class="col-lg-6">
+                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
+                        <div class="panel-assembly">
+                            <div class="panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
+                                <div class="panel-heading divTitre">
                                     <div class="panel-title">
                                          <div class="col-lg-8" >
                                             <p>{{ flux.titre }} </p>
@@ -26,16 +24,14 @@
                                             <p>{{ flux.datePublication | date('d-m-Y') }}</p>
                                         </div>
                                     </div>
-
-                            </div>
-                            <div class="panel-body">
-                                <p class="pContenu">{{ flux.contenu }}</p>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="pContenu">{{ flux.contenu | truncate(180,true,' (...) ')  }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-
+                    </a>
+                </div>
             {% endfor %}
         </div>
       </div>

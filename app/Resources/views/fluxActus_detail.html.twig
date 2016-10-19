@@ -1,6 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-10">
+                <div class="panel-assembly">
+                    <div class="panel panel-{{  couleur }}">
+                        <div class="panel-heading divTitre">
+                            <div class="panel-title">
+                                <div class="col-lg-10" >
+                                    <p>{{ fluxes.titre }} </p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p>{{ fluxes.datePublication | date('d-m-Y') }}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel-body">
+                            <p class="pContenu">{{ fluxes.contenu }}</p>
+                        </div>
+
+                    </div>
+                    <a class="aNews" href="/flux/actus">
+                        <div class="panel panel-{{  couleur }}">
+                            <div class="panel-heading divTitre  ">
+                                <div class="panel-title ">
+                                    <p class="text-center">Retour aux actualités</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

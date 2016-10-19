@@ -266,10 +266,14 @@ td > i{
 /************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;
+
 }
 .equipeLogo{
     max-width: 120px;
     max-height: 120px;
+}
+.boutonEdit{
+    margin-left: 15px;
 }
 /**** Page Details Equipe ****/
 .equipeDetail a {
@@ -304,9 +308,19 @@ td > i{
     text-align: left;
 
 }
-.aNews:hover{
-    text-decoration : none;
+.aNews:link{
+    text-decoration : inherit;
     color: inherit;
+}
+.aNews:hover{
+    text-decoration : inherit;
+    color: inherit;
+}
+.boutonRetourActu{
+
+}
+.btn{
+    margin-bottom: 20px;
 }
 
 
@@ -327,7 +341,7 @@ footer{
     float: right;
 }
 
-/**** table ****/
+/************** table **************/
 .thtable {
     text-align: center;
     background-color: #337ab7;
@@ -343,10 +357,7 @@ footer{
     margin-right: 10px;
 
 }
-.boutontable{
-    margin-top: 5px;
-    width: 100px;
-}
+
 .titretable{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -375,13 +386,27 @@ tr.found{
     color: inherit;
 }
 
-@media only screen and (max-width: 800px) {
-    #unseen table td:nth-child(5),
-    #unseen table th:nth-child(5) {
-        display: none;
-    }
+/**************************  table show **************************/
+.thtable2{
+    background-color: #337ab7;
+    font-size: 20px;
+    min-width: 300px;
+}
+.tdtable2{
+    text-align: justify;
+    vertical-align: middle !important;
+}
+.BoutonTableShow{
+    list-style-type:none;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    padding-right: 50px;
 
 }
+.boutonCenter{
+    text-align: center;
+}
+
 
 /**************************  Modal Login **************************/
 
