@@ -2,6 +2,7 @@
 
 namespace Gdr3625\BackofficeBundle\Controller;
 
+use Gdr3625\BackofficeBundle\Gdr3625BackofficeBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Publications;
@@ -17,11 +18,77 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/")
+     * @Route("/", name="accueil")
      */
     public function accueilAction()
     {
         return $this->render('base.html.twig');
+    }
+
+    /**
+     * @Route("/generateMap", name="generate_map")
+     */
+    public function generateMapAction()
+    {
+        if (file_exists('umap.json')) {
+            unlink('umap.json');
+        }
+        $em = $this->getDoctrine()->getManager();
+        $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+        $geojson = '';
+        foreach($equipesDatas as $key => $equipeData){
+            $url = "http://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
+            $json = file_get_contents($url);
+            $coord[] = json_decode($json,true);
+            //var_dump($coord);
+            $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
+            $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
+            $geojson = $geojson.
+                '
+                {  
+                    "type": "Feature",
+                    "properties": {
+                        "country": "France",
+                        "city": "'.$equipeData->getVille().'",
+                        "street": "'.$equipeData->getRue().'",
+                        "postcode": "'.$equipeData->getCp().'",
+                        "name": "'.$equipeData->getNomEquipe().'",
+                        "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [['.$equipeData->getSiteWebEquipe().'|Site-Web]]**",
+                        "_storage_options": {
+                            "color": "Blue"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            '.$lng.',
+                            '.$lat.'
+                        ]
+                    }
+                }';
+            if ($key < count($equipesDatas)-1){
+                $geojson=$geojson.',';
+            }
+        }
+        $fp = fopen('umap.json','w+');
+        fwrite($fp,'
+        {
+            "type": "FeatureCollection",
+            "features": ['
+            .$geojson.'
+            ]
+        }');
+        //LOGO EQUIPES '.$equipeData->getLogo().'
+        fclose($fp);
+    }
+
+    /**
+     * @Route("/umap", name="umap_geojson")
+     */
+    public function umapAction()
+    {
+        $umapJson = file('umap.json');
+        return $this->render('umapJson.html.twig', array('umapJson'=>$umapJson));
     }
 
     /**
@@ -30,7 +97,6 @@ class DefaultController extends Controller
     public function equipesAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
         return $this->render('equipes.html.twig', array(
