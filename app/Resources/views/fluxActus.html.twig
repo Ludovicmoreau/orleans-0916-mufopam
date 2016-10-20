@@ -1,43 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-offset-1 col-lg-10">
-            <h1 class="title1 bot-left">Les actualités de MuFoPAM</h1>
-        </div>
-      <div class="col-lg-2 filtersDisplay">
-        <div class="filterCol" data-spy="" data-offset-top="">
-
-        </div>
-      </div>
-      <div class="col-lg-10">
+    <div class="container-fluid">
         <div class="row">
-            {% for flux in fluxes %}
-                <div class="col-lg-6">
-                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                        <div class="panel-assembly">
-                            <div class="actuHauteur panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
-                                <div class="panel-heading divTitre">
-                                    <div class="panel-title">
-                                         <div class="col-lg-9" >
-                                            <p>{{ flux.titre }} </p>
-                                         </div>
-                                        <div class="col-lg-3">
-                                            <p>{{ flux.datePublication | date('d-m-Y') }}</p>
+            <div class="col-lg-offset-1 col-lg-10">
+                <h1 class="title1 bot-left">Les actualités de MuFoPAM</h1>
+            </div>
+            <div class="col-lg-2 filtersDisplay">
+                <div class="filterCol" data-spy="" data-offset-top="">
+
+                </div>
+            </div>
+            <div class="col-lg-10 equipesDisplay">
+                <div class="row">
+                    {% for flux in fluxes %}
+                        <div class="col-lg-6">
+                            <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
+                                <div class="panel-assembly">
+                                    <div class="actuHauteur panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
+                                        <div class="panel-heading divTitre">
+                                            <div class="panel-title">
+                                                 <div class="col-lg-9" >
+                                                    <p>{{ flux.titre }} </p>
+                                                 </div>
+                                                <div class="col-lg-3">
+                                                    <p>{{ flux.datePublication | date('d-m-Y') }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p class="pContenu">{{ flux.contenu | truncate(180,true,' (...) ')  }}</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="panel-body">
-                                    <p class="pContenu">{{ flux.contenu | truncate(180,true,' (...) ')  }}</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                    </a>
+                    {% endfor %}
                 </div>
-            {% endfor %}
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 {% endblock %}
