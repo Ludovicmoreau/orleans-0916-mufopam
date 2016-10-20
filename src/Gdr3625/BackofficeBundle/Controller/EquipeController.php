@@ -47,6 +47,13 @@ class EquipeController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $equipe->getLogo();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $equipe->setLogo($fileName);
+            $file->move(
+                $this->getParameter('upload_directory'),
+                $fileName
+            );
             $em = $this->getDoctrine()->getManager();
             $em->persist($equipe);
             $em->flush();

@@ -3,6 +3,7 @@
 namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Equipe
@@ -137,6 +138,8 @@ class Equipe
      * @var string
      *
      * @ORM\Column(name="logo", type="string", length=255)
+     * @Assert\NotBlank(message="Télécherger le logo du laboratoire en jpeg ou png.")
+     * @Assert\File(mimeTypes={ "image/pdf", "image/png" })
      */
     private $logo;
 
