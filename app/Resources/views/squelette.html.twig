@@ -7,7 +7,6 @@
     <meta name="keywords" content="peptides,antimicrobiens,groupe de recherche,CNRS,recherche,mufopam">
     <link rel="stylesheet" href="{{ asset('font-awesome-4.6.3/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ asset('style/masonry.pkgd.min.js') }}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -19,24 +18,24 @@
     <title>GDR3625 MuFoPAM - « MultiFonction des Peptides AntiMicrobiens »</title>
 </head>
 <body>
-{% endblock %}
-    {% block banniere %}
-    <header>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="banniere">
-                    <!--image banniere -->
-                    <img src="{{ asset("images/banniere.jpg")}}" alt="banniere avec les logos du cnrs et du mufopam" class="img-responsive">
+    {% endblock %}
+        {% block banniere %}
+        <header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banniere">
+                        <!--image banniere -->
+                        <img src="{{ asset("images/banniere.jpg")}}" alt="banniere avec les logos du cnrs et du mufopam" class="img-responsive">
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endblock %}
-    {%  block navbar %}
-        {%  include "navBarUtilisateur.html.twig" %}
-    {% endblock %}
-    {%  block contenu %}
-        {% include "accueil.html.twig" %}
-    {% endblock %}
-        {%  include "footer.html.twig" %}
-    </body>
+        {% endblock %}
+        {%  block navbar %}
+            {%  include "navBarUtilisateur.html.twig" %}
+        {% endblock %}
+        {%  block contenu %}
+            {% include "accueil.html.twig" %}
+        {% endblock %}
+            {%  include "footer.html.twig" %}
+</body>
 </html>
