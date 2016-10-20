@@ -1,7 +1,7 @@
 {% extends 'base_backoffice.html.twig' %}
 
 {% block contenu %}
-    <h1>Flux edit</h1>
+    <h1>Edition d'actualité</h1>
 
 <div class="well">
     {{ form_start(edit_form) }}
@@ -39,20 +39,23 @@
             </div>
         </div>
     </div>
-        <div class="groupequipformulaire">
-            <input type="submit" value="Edit" />
+    <div class="row">
+        <div class="col-sm-offset-3">
+            <div class="groupequipformulaire boutonEdit">
+                <button type="submit" class="btn btn-success btn-lg"><h4>Editer</h4></button>
+            </div>
         </div>
-
+    </div>
     {{ form_end(edit_form) }}
 </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('flux_index') }}">Retour à la liste</a>
+    <ul class="boutonCenter">
+        <li class="BoutonTableShow">
+            <a href="{{ path('flux_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
         </li>
-        <li>
+        <li class="BoutonTableShow">
             {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer">
+                 <button type="submit" class="btn btn-danger btn-lg"><h4>Supprimer</h4></button>
             {{ form_end(delete_form) }}
         </li>
     </ul>
