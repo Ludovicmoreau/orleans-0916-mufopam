@@ -21,12 +21,7 @@
                                             <div class="actuHauteur panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
                                                 <div class="panel-heading divTitre">
                                                     <div class="panel-title">
-                                                         <div class="col-lg-9" >
-                                                            <p>{{ flux.titre }} </p>
-                                                         </div>
-                                                        <div class="col-lg-3">
-                                                            <p>{{ flux.datePublication | date('d-m-Y') }}</p>
-                                                        </div>
+                                                        <h4>{{ flux.titre | truncate(65,true,' (...) ')}}<span class="pull-right auteurDate">{{ flux.datePublication | date('d-m-Y')}}</span></h4>
                                                     </div>
                                                 </div>
                                                 <div class="panel-body">
