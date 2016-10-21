@@ -13,15 +13,7 @@
             </div>
             <div class="col-lg-10 equipesDisplay">
                 <div class="row">
-                    {#{ dump(fluxes) }#}
-                    {#{ dump(fluxes[1])}#}
                     {% for key, flux in fluxes %}
-                        {{ dump(fluxes[key]) }}
-                        {# if key >= fluxes|length %}
-                            {{ dump(fluxes[key+1]) }}
-                        {% endif #}
-                        <div class="row">
-                        {# if flux.id % 2 == 0 #}
                             <div class="col-lg-6">
                                 <div class="">
                                     <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
@@ -38,39 +30,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="panel-body">
-                                                    <p class="pContenu">{{ flux.contenu | truncate(random([200,300,500]),true,' (...) ')  }}</p>
+                                                    <p class="pContenu">{{ flux.contenu | truncate(200,true,' (...) ')  }}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                        {# else #}
-                            <div class="col-lg-6">
-                                <div class="">
-                                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                                        <div class="panel-assembly">
-                                            <div class="actuHauteur panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
-                                                <div class="panel-heading divTitre">
-                                                    <div class="panel-title">
-                                                        <div class="col-lg-9" >
-                                                            <p>{{ flux.titre }} </p>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <p>{{ flux.datePublication | date('d-m-Y') }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <p class="pContenu">{{ flux.contenu | truncate(random([180,260,450]),true,' (...) ')  }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        {# endif #}
-                        </div>
                     {% endfor %}
                 </div>
             </div>
