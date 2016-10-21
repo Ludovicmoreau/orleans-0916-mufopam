@@ -118,8 +118,12 @@ class Flux
      * @param \DateTime $datePublication
      * @return Flux
      */
-    public function setDatePublication($datePublication)
+
+    public function setDatePublication($datePublication='')
     {
+        if (!$datePublication) {
+            $datePublication = new \DateTime('now');
+        }
         $this->datePublication = $datePublication;
 
         return $this;

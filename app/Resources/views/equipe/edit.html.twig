@@ -141,12 +141,27 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class=" col-sm-4 imgEquipeEdit">
+                    <img class="equipeLogo" src="{{ '../../../' ~ equipe.logo }}"/>
+                </div>
+            </div>
+            <div class="row">
+            <div class="form-group">
+                {{ form_label(edit_form.logo, "Enregister un nouveau logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(edit_form.logo) }}
+                </div>
+            </div>
         </div>
+    </div>
 
         <div class="row">
             <div class="col-sm-offset-3">
                 <div class="groupequipformulaire boutonEdit  ">
-                    <button type="submit" class="btn btn-success btn-lg"><h4>Editer</h4></button>
+                    <button type="submit" class="btn btn-success btn-lg"><h4>Enregistrer</h4></button>
                 </div>
             </div>
         </div>

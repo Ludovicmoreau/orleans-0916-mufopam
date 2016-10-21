@@ -1,7 +1,7 @@
 {% extends 'base_backoffice.html.twig' %}
 
 {% block contenu %}
-    <h1>Equipe creation</h1>
+    <h1>Création d'équipe</h1>
 
 <div class="well">
     {{ form_start(form) }}
@@ -148,24 +148,25 @@
             <div class="form-group">
                 {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.logo, {'attr': {'class': 'form-control', 'placeholder': "Nom_du_logo.jpg"}}) }}
+                    {{ form_widget(form.logo) }}
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-offset-3">
+            <li class="groupequipformulaire  boutonEdit ">
+                <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
+            </li>
+        </div>
 
-
-
-    <div class="groupequipformulaire">
-        <input type="submit" value="Create" />
-    </div>
 
     {{ form_end(form) }}
 </div>
 <div>
-    <ul>
-        <li>
-            <a href="{{ path('equipe_index') }}">Retour à la liste</a>
+    <ul class="boutonCenter">
+        <li class="BoutonTableShow">
+            <a href="{{ path('equipe_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
         </li>
     </ul>
 </div>

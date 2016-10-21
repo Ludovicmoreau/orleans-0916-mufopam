@@ -8,6 +8,7 @@ imports:
 parameters:
     locale: en
     upload_directory: '%kernel.root_dir%/../web/images/logos_equipes'
+    load_directory: 'images/logos_equipes'
 
 framework:
     #esi:             ~
