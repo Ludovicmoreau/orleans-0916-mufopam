@@ -49,6 +49,12 @@ class Flux
      */
     private $typeFlux;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
+     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     */
+    private $keywords;
+
 
     /**
      * Get id
@@ -150,5 +156,45 @@ class Flux
     public function getTypeFlux()
     {
         return $this->typeFlux;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->keywords = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add keywords
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     * @return Flux
+     */
+    public function addKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    {
+        $this->keywords[] = $keywords;
+
+        return $this;
+    }
+
+    /**
+     * Remove keywords
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     */
+    public function removeKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    {
+        $this->keywords->removeElement($keywords);
+    }
+
+    /**
+     * Get keywords
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
     }
 }

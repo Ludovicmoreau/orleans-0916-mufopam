@@ -144,6 +144,17 @@ class Equipe
     private $logo;
 
     /**
+     * @ORM\OneToMany(targetEntity="Brevets", mappedBy="equipe")
+     */
+    private $brevets;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
+     * @ORM\JoinTable(name="keywords")
+     */
+    private $keywordss;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -542,5 +553,111 @@ class Equipe
     public function getLogo()
     {
         return $this->logo;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->brevets = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add brevets
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
+     * @return Equipe
+     */
+    public function addBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
+    {
+        $this->brevets[] = $brevets;
+
+        return $this;
+    }
+
+    /**
+     * Remove brevets
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
+     */
+    public function removeBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
+    {
+        $this->brevets->removeElement($brevets);
+    }
+
+    /**
+     * Get brevets
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBrevets()
+    {
+        return $this->brevets;
+    }
+
+    /**
+     * Add keywords
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     * @return Equipe
+     */
+    public function addKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    {
+        $this->keywords[] = $keywords;
+
+        return $this;
+    }
+
+    /**
+     * Remove keywords
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     */
+    public function removeKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    {
+        $this->keywords->removeElement($keywords);
+    }
+
+    /**
+     * Get keywords
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
+    }
+
+    /**
+     * Add keywordss
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordss
+     * @return Equipe
+     */
+    public function addKeywordss(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordss)
+    {
+        $this->keywordss[] = $keywordss;
+
+        return $this;
+    }
+
+    /**
+     * Remove keywordss
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordss
+     */
+    public function removeKeywordss(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordss)
+    {
+        $this->keywordss->removeElement($keywordss);
+    }
+
+    /**
+     * Get keywordss
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getKeywordss()
+    {
+        return $this->keywordss;
     }
 }

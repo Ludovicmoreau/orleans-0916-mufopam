@@ -28,6 +28,18 @@ class Keywords
      */
     private $keyword;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordss")
+     * @ORM\JoinTable(name="equipe")
+     */
+    private $equipes;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Flux", mappedBy="fluxes")
+     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     */
+    private $fluxes;
+
 
     /**
      * Get id
@@ -60,5 +72,78 @@ class Keywords
     public function getKeyword()
     {
         return $this->keyword;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->equipes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add equipes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipes $equipes
+     * @return Keywords
+     */
+    public function addEquipe(\Gdr3625\BackofficeBundle\Entity\Equipes $equipes)
+    {
+        $this->equipes[] = $equipes;
+
+        return $this;
+    }
+
+    /**
+     * Remove equipes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipes $equipes
+     */
+    public function removeEquipe(\Gdr3625\BackofficeBundle\Entity\Equipes $equipes)
+    {
+        $this->equipes->removeElement($equipes);
+    }
+
+    /**
+     * Get equipes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEquipes()
+    {
+        return $this->equipes;
+    }
+
+    /**
+     * Add fluxes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Flux $fluxes
+     * @return Keywords
+     */
+    public function addFlux(\Gdr3625\BackofficeBundle\Entity\Flux $fluxes)
+    {
+        $this->fluxes[] = $fluxes;
+
+        return $this;
+    }
+
+    /**
+     * Remove fluxes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Flux $fluxes
+     */
+    public function removeFlux(\Gdr3625\BackofficeBundle\Entity\Flux $fluxes)
+    {
+        $this->fluxes->removeElement($fluxes);
+    }
+
+    /**
+     * Get fluxes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFluxes()
+    {
+        return $this->fluxes;
     }
 }

@@ -28,6 +28,12 @@ class Brevets
      */
     private $brevet;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Equipe", inversedBy="brevets")
+     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     */
+    private $equipe;
+
 
     /**
      * Get id
@@ -60,5 +66,51 @@ class Brevets
     public function getBrevet()
     {
         return $this->brevet;
+    }
+
+    /**
+     * Set equipes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipes $equipes
+     * @return Brevets
+     */
+    public function setEquipes(\Gdr3625\BackofficeBundle\Entity\Equipes $equipes = null)
+    {
+        $this->equipes = $equipes;
+
+        return $this;
+    }
+
+    /**
+     * Get equipes
+     *
+     * @return \Gdr3625\BackofficeBundle\Entity\Equipes 
+     */
+    public function getEquipes()
+    {
+        return $this->equipes;
+    }
+
+    /**
+     * Set equipe
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipe $equipe
+     * @return Brevets
+     */
+    public function setEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $equipe = null)
+    {
+        $this->equipe = $equipe;
+
+        return $this;
+    }
+
+    /**
+     * Get equipe
+     *
+     * @return \Gdr3625\BackofficeBundle\Entity\Equipe 
+     */
+    public function getEquipe()
+    {
+        return $this->equipe;
     }
 }
