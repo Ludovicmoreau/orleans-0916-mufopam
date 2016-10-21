@@ -42,6 +42,7 @@ class FluxController extends Controller
     public function newAction(Request $request)
     {
         $flux = new Flux();
+        $flux->setDatePublication();
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\FluxType', $flux);
         $form->handleRequest($request);
 
