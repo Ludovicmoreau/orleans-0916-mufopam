@@ -5,6 +5,8 @@ namespace Gdr3625\BackofficeBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class FluxType extends AbstractType
 {
@@ -17,8 +19,14 @@ class FluxType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu')
-            ->add('datePublication', 'datetime')
-            ->add('typeFlux')
+            ->add('datePublication', DateType::class, array('widget' => "single_text"))
+            ->add('typeFlux',ChoiceType::class, array(
+                        'choices' => array(
+                            'Actus' =>  'Actualités',
+                            'Jobs' => 'Stages - Contrats',
+                            'Events' => 'Evènements',
+                        ),
+            ))
         ;
     }
     
