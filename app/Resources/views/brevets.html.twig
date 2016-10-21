@@ -22,7 +22,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
-                                        {{ brevet.brevet }}
+                                        {{ brevet.brevet| truncate(200,true,' (...) ') }}
                                     </div>
                                 </div>
                             </div>
