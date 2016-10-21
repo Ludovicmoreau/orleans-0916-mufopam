@@ -20,7 +20,7 @@
                                     <div class="panel panelPublication {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
                                         <div class="panel-heading divTitre">
                                             <div class="panel-title">
-                                                <h4>{{ publication['message']['title'][0] | truncate(65,true,' (...) ')}}<span class="pull-right auteurDate">{{ publication['message']['published-print']['date-parts'][0][0]~' / ' ~ publication['message']['published-print']['date-parts'][0][1]}}</span></h4>
+                                                <h4>{{ publication['message']['title'][0] | truncate(65,true,' (...) ')}}<span class="pull-right auteurDate">{{ publication['message']['published-print']['date-parts'][0][1]~'-' ~ publication['message']['published-print']['date-parts'][0][0]}}</span></h4>
                                             </div>
                                         </div>
                                         <div class="panel-body">

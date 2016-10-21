@@ -93,7 +93,7 @@ class DefaultController extends Controller
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
         return $this->render('equipes.html.twig', array(
-            'equipes' => $equipes,));
+            'equipes' => $equipes));
     }
     /**
      * @Route("/equipe/detail/{id}", name="equipe_detail")
@@ -116,7 +116,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
         return $this->render('fluxActus.html.twig', array(
-            'fluxes' => $fluxes,));
+            'fluxes' => $fluxes));
     }
 
     /**
@@ -140,10 +140,10 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Jobs');
         return $this->render('fluxJobs.html.twig', array(
-            'fluxes' => $fluxes,));
+            'fluxes' => $fluxes));
     }
     /**
-     * @Route("/publications")
+     * @Route("/publications", name="publications")
      */
     public function publicationsAction()
     {
@@ -154,17 +154,17 @@ class DefaultController extends Controller
                 $publications[]=json_decode($json,true);
         }
         return $this->render('publications.html.twig', array(
-            'publications'=>$publications,));
+            'publications'=>$publications));
     }
     /**
-     * @Route("/brevets")
+     * @Route("/brevets", name="brevets")
      */
     public function brevetsAction()
     {
         $em = $this->getDoctrine()->getManager();
         $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findAll();
         return $this->render('brevets.html.twig', array(
-            'brevets'=>$brevets,));
+            'brevets'=>$brevets));
     }
 
     /**

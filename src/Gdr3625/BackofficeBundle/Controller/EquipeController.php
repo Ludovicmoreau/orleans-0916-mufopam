@@ -14,8 +14,9 @@ use Symfony\Component\HttpFoundation\File\File;
 /**
  * Equipe controller.
  *
- * @Route("back/equipes")
+ * @Route("back/equipes", name="back_equipes")
  */
+
 class EquipeController extends Controller
 {
     /**
