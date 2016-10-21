@@ -295,9 +295,10 @@ td > i{
 .equipeDetailResume p{
     font-size: 20px;
     line-height: 1.7;
-
-
-
+}
+.imgEquipeEdit{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /***************news*******************/
 .divTitre{
