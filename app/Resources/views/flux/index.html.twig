@@ -11,7 +11,7 @@
                             <th class="thtable">Titre</th>
                             <th class="thtable">Contenu</th>
                             <th class="thtable">Date de publication</th>
-                            <th class="thtable">Type de flux</th>
+                            <th class="thtable">Type d'actualités</th>
                             <th class="thtable">Actions</th>
                         </tr>
                     </thead>
@@ -20,7 +20,7 @@
                         <tr>
                             <td class="tdtable">{{ flux.id }} </td>
                             <td class="tdtable">{{ flux.titre }}</td>
-                            <td class="tdtable">{{ flux.contenu | truncate(300,true,' (...) ') }}</td>
+                            <td class="tdtable">{{ flux.contenu | truncate(200,true,' (...) ') }}</td>
                             <td class="tdtable">{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
                             <td class="tdtable">{{ flux.typeFlux }}</td>
                             <td class="tdtable puces">

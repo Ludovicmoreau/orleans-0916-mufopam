@@ -382,8 +382,6 @@ tr.found{
 
 .fa-pencil, .fa-file-text-o{
     text-align: center;
-
-
 }
 .puces{
     min-width: 150px;
@@ -394,13 +392,16 @@ tr.found{
 
 /**************************  table show **************************/
 .thtable2{
+    vertical-align: middle !important;
     background-color: #337ab7;
     font-size: 20px;
-    min-width: 300px;
+    width: 200px;
+
 }
 .tdtable2{
     text-align: justify;
     vertical-align: middle !important;
+
 }
 .BoutonTableShow{
     list-style-type:none;
