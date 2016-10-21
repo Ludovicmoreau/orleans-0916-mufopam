@@ -10,7 +10,7 @@
                 <div id="filter" class="filterCol" data-spy="" data-offset-top="">
                 </div>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 equipesDisplay">
                 <div class="row">
                     {% for key, brevet in brevets %}
                         <div class="col-lg-6">
@@ -22,7 +22,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
-                                        {{ brevet.brevet }}
+                                        {{ brevet.brevet| truncate(200,true,' (...) ') }}
                                     </div>
                                 </div>
                             </div>

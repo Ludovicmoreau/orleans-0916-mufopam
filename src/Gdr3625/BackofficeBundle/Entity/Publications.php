@@ -26,7 +26,7 @@ class Publications
      *
      * @ORM\Column(name="doi", type="string", length=255)
      */
-    public $doi;
+    private $doi;
 
 
     /**

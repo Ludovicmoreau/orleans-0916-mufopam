@@ -149,7 +149,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $dois = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findAll();
         foreach ($dois as $key=>$doi) {
-                $json = file_get_contents('http://api.crossref.org/works/'.$dois[$key]->doi);
+                $json = file_get_contents('http://api.crossref.org/works/'.$dois[$key]->getDoi());
                 $publications[]=json_decode($json,true);
         }
         return $this->render('publications.html.twig', array(
