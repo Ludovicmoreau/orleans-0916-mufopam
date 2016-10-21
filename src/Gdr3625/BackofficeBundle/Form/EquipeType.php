@@ -32,7 +32,7 @@ class EquipeType extends AbstractType
             ->add('recherche')
             ->add('projet')
             ->add('descriptionEquipe')
-            ->add('logo', FileType::class)
+            ->add('logo', FileType::class, array('required' => false))
         ;
     }
     
