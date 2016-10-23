@@ -3,6 +3,7 @@
 namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Flux
@@ -48,12 +49,11 @@ class Flux
      * @ORM\Column(name="type_flux", type="string", length=255)
      */
     private $typeFlux;
-
+    
     /**
-     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
-     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="fluxes")
      */
-    private $keywords;
+    private $keywordsflux;
 
 
     /**
@@ -201,4 +201,38 @@ class Flux
     {
         return $this->keywords;
     }
+
+    /**
+     * Add keywordsflux
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsflux
+     * @return Flux
+     */
+    public function addKeywordsflux(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsflux)
+    {
+        $this->keywordsflux[] = $keywordsflux;
+
+        return $this;
+    }
+
+    /**
+     * Remove keywordsflux
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsflux
+     */
+    public function removeKeywordsflux(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsflux)
+    {
+        $this->keywordsflux->removeElement($keywordsflux);
+    }
+
+    /**
+     * Get keywordsflux
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getKeywordsflux()
+    {
+        return $this->keywordsflux;
+    }
+
 }

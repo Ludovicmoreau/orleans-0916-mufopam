@@ -3,6 +3,7 @@
 namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Keywords
@@ -29,14 +30,13 @@ class Keywords
     private $keyword;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordss")
-     * @ORM\JoinTable(name="equipe")
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe")
+     * @ORM\JoinTable(name="keywords_equipe")
      */
     private $equipes;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Flux", mappedBy="fluxes")
-     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Flux", mappedBy="keywordsflux")
      */
     private $fluxes;
 
@@ -79,15 +79,18 @@ class Keywords
     public function __construct()
     {
         $this->equipes = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
+
+
     }
 
     /**
      * Add equipes
      *
-     * @param \Gdr3625\BackofficeBundle\Entity\Equipes $equipes
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipe $equipes
      * @return Keywords
      */
-    public function addEquipe(\Gdr3625\BackofficeBundle\Entity\Equipes $equipes)
+    public function addEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $equipes)
     {
         $this->equipes[] = $equipes;
 
@@ -99,7 +102,7 @@ class Keywords
      *
      * @param \Gdr3625\BackofficeBundle\Entity\Equipes $equipes
      */
-    public function removeEquipe(\Gdr3625\BackofficeBundle\Entity\Equipes $equipes)
+    public function removeEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $equipes)
     {
         $this->equipes->removeElement($equipes);
     }
@@ -109,7 +112,7 @@ class Keywords
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getEquipes()
+    public function getEquipe()
     {
         return $this->equipes;
     }

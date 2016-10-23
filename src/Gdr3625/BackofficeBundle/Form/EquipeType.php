@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class EquipeType extends AbstractType
 {
@@ -32,7 +35,8 @@ class EquipeType extends AbstractType
             ->add('recherche')
             ->add('projet')
             ->add('descriptionEquipe')
-            ->add('logo', FileType::class)
+            ->add('logo')
+            ->add('keywordsEquipe')
         ;
     }
     

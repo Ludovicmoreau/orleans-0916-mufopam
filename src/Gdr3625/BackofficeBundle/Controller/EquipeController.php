@@ -11,6 +11,7 @@ use Gdr3625\BackofficeBundle\Form\EquipeType;
 use Symfony\Component\HttpFoundation\File\File;
 
 
+
 /**
  * Equipe controller.
  *
@@ -47,6 +48,10 @@ class EquipeController extends Controller
         $equipe = new Equipe();
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $form->handleRequest($request);
+
+        var_dump($form);
+
+        var_dump($equipe->getkeywordsEquipe());
 
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $equipe->getLogo();

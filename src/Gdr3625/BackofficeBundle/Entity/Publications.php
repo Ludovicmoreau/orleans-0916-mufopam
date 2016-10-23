@@ -28,6 +28,8 @@ class Publications
      */
     private $doi;
 
+    
+
 
     /**
      * Get id
@@ -61,4 +63,45 @@ class Publications
     {
         return $this->doi;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->equipes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add equipes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $equipes
+     * @return Publications
+     */
+    public function addEquipe(\Gdr3625\BackofficeBundle\Entity\Publications $equipes)
+    {
+        $this->equipes[] = $equipes;
+
+        return $this;
+    }
+
+    /**
+     * Remove equipes
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $equipes
+     */
+    public function removeEquipe(\Gdr3625\BackofficeBundle\Entity\Publications $equipes)
+    {
+        $this->equipes->removeElement($equipes);
+    }
+
+    /**
+     * Get equipes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEquipes()
+    {
+        return $this->equipes;
+    }
+    
 }

@@ -4,6 +4,7 @@ namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Equipe
@@ -138,21 +139,21 @@ class Equipe
      * @var string
      *
      * @ORM\Column(name="logo", type="string", length=255)
-     * @Assert\NotBlank(message="Télécherger le logo du laboratoire en jpeg ou png.")
-     * @Assert\File(mimeTypes={ "image/pdf", "image/png" })
+     * @Assert\NotBlank(message="Télècharger le logo du laboratoire en jpeg ou png.")
+     * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpeg", "image/jpeg"})
      */
     private $logo;
 
     /**
      * @ORM\OneToMany(targetEntity="Brevets", mappedBy="equipe")
      */
-    private $brevets;
+    protected $brevets;
 
     /**
      * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
-     * @ORM\JoinTable(name="keywords")
      */
-    private $keywordss;
+    protected $keywordsEquipe;
+
 
     /**
      * Get id
@@ -560,6 +561,8 @@ class Equipe
     public function __construct()
     {
         $this->brevets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->keywordsEquipe = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->publications = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -595,69 +598,72 @@ class Equipe
         return $this->brevets;
     }
 
+    
+
     /**
-     * Add keywords
+     * Add publications
      *
-     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $publications
      * @return Equipe
      */
-    public function addKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    public function addPublication(\Gdr3625\BackofficeBundle\Entity\Publications $publications)
     {
-        $this->keywords[] = $keywords;
+        $this->publications[] = $publications;
 
         return $this;
     }
 
     /**
-     * Remove keywords
+     * Remove publications
      *
-     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywords
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $publications
      */
-    public function removeKeyword(\Gdr3625\BackofficeBundle\Entity\Keywords $keywords)
+    public function removePublication(\Gdr3625\BackofficeBundle\Entity\Publications $publications)
     {
-        $this->keywords->removeElement($keywords);
+        $this->publications->removeElement($publications);
     }
 
     /**
-     * Get keywords
+     * Get publications
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getKeywords()
+    public function getPublications()
     {
-        return $this->keywords;
+        return $this->publications;
     }
 
     /**
-     * Add keywordss
+     * Add keywordsEquipe
      *
-     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordss
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe
      * @return Equipe
      */
-    public function addKeywordss(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordss)
+    public function addkeywordsEquipe(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe)
     {
-        $this->keywordss[] = $keywordss;
+        $this->keywordsEquipe[] = $keywordsEquipe;
 
         return $this;
     }
 
     /**
-     * Remove keywordss
+     * Remove keywordsEquipe
      *
-     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordss
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe
      */
-    public function removeKeywordss(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordss)
+    public function removekeywordsEquipe(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe)
     {
-        $this->keywordss->removeElement($keywordss);
+        $this->keywordsEquipe->removeElement($keywordsEquipe);
     }
 
     /**
-     * Get keywordss
+     * Get keywordsEquipe
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getKeywordss()
+    public function getkeywordsEquipe()
     {
-        return $this->keywordss;
+        return $this->keywordsEquipe;
     }
+    
 }
