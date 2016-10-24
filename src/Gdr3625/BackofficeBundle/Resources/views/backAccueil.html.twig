@@ -1,0 +1,5 @@
+{% block contenu  %}
+<div class="text-center">
+    <h1>Bienvenue sur l'interface d'administration du site {% if app.user.username is defined %} {{app.user.username }} {% endif %}</h1>
+</div>
+{% endblock %}
