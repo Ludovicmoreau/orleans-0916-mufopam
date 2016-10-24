@@ -419,6 +419,13 @@ tr.found{
     text-align: center;
 }
 
+/**************************  Alert PopUp Message **************************/
+.alert-message{
+    border: solid 2px;
+    opacity: 0.5;
+    width: 800px;
+}
+
 
 /**************************  Modal Login **************************/
 

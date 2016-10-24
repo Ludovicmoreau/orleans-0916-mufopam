@@ -137,9 +137,9 @@ class Equipe
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
-     * @Assert\NotBlank(message="Télécherger le logo du laboratoire en jpeg ou png.")
-     * @Assert\File(mimeTypes={ "image/pdf", "image/png" })
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="Télécharger le logo du laboratoire en jpeg, jpg ou png.")
+     * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpg" })
      */
     private $logo;
 

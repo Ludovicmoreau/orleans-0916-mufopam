@@ -22,6 +22,7 @@ class FluxType extends AbstractType
             ->add('datePublication', DateType::class, array('widget' => "single_text"))
             ->add('typeFlux',ChoiceType::class, array(
                         'choices' => array(
+                            ' '=>'Selectionnez le type de flux',
                             'Actus' =>  'Actualités',
                             'Jobs' => 'Stages - Contrats',
                             'Events' => 'Evènements',

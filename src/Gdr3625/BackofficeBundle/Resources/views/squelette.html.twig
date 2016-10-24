@@ -31,6 +31,24 @@
                             <img src="{{ asset("images/banniere.jpg")}}" alt="banniere avec les logos du cnrs et du mufopam" class="img-responsive">
                         </div>
                     </a>
+                    {% for flash_message in app.session.flashBag.get('success') %}
+                        <div class="fade in alert-message alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                    {% for flash_message in app.session.flashBag.get('warning') %}
+                        <div class="fade in alert-message alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                    {% for flash_message in app.session.flashBag.get('danger') %}
+                        <div class="fade in alert-message alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         {% endblock %}

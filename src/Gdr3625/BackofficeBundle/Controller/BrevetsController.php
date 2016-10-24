@@ -27,7 +27,7 @@ class BrevetsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findAll();
+        $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findBy(array(),array('id'=>'DESC'));
 
         return $this->render('brevets/index.html.twig', array(
             'brevets' => $brevets,
