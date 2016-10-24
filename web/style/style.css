@@ -45,7 +45,10 @@ p{
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
     border-bottom: 5px solid #337ab7;
-
+}
+.isActiveMenu{
+    color: rgba(125, 125, 125, 1);
+    background-color: #337ab7;
 }
 /* Active : Focus and Over style */
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
@@ -53,8 +56,8 @@ p{
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
-
 }
+
 /* burger style */
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #337ab7;
@@ -328,7 +331,6 @@ td > i{
 .actuHauteur{
     min-height: 205px;
 }
-
 
 /**** footer ****/
 footer{

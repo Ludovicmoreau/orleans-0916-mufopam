@@ -41,8 +41,5 @@ gdr3625_backoffice:
     resource: "@Gdr3625BackofficeBundle/Controller/"
     type:     annotation
     prefix:   /
-gdr3625_backoffice_user:
-    resource: "@Gdr3625BackofficeBundle/Controller/UserController.php"
-    type:     annotation
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
