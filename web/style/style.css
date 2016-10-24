@@ -272,6 +272,9 @@ td > i{
     padding-top: 30px;
 
 }
+.iconLeft{
+    padding-right: 100%;
+}
 .equipeLogo{
     max-width: 120px;
     max-height: 120px;

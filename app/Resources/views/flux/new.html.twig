@@ -2,49 +2,63 @@
 
 {% block contenu %}
     <h1>Création d'actualité</h1>
-<div class=" container well">
-    {{ form_start(form) }}
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-        {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder': "Titre"}}) }}
+    <div class="well">
+        {{ form_start(form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+
+                        {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder': "Titre"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-tag iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.contenu, {'attr': {'class': 'form-control', 'placeholder': "Contenu"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-file-text-o iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+                    <div class="col-sm-4">
+                        {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-calendar iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.typeFlux, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-tachometer iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group">
-                {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control', 'placeholder': "Contenu"}}) }}
-                </div>
+            <div class="col-sm-offset-3">
+                <li class="groupequipformulaire  boutonEdit ">
+                    <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
+                </li>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.typeFlux, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-</div>
-    <div class="row">
-        <div class="col-sm-offset-3">
-            <li class="groupequipformulaire  boutonEdit ">
-                <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
-            </li>
-        </div>
-    </div>
     </div>
     {{ form_end(form) }}
 
