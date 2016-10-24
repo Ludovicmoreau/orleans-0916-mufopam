@@ -26,67 +26,6 @@ class DefaultController extends Controller
         return $this->render('base.html.twig');
     }
 
-    // Generation du geojson pour carte dynamique vers umap.openstreetmap.fr
-    // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
-    // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
-    /**
-     * @Route("/generateMap", name="generate_map")
-     */
-    public function generateMapAction()
-    {
-        if (file_exists('umap.json')) {
-            unlink('umap.json');
-        }
-        $em = $this->getDoctrine()->getManager();
-        $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
-        $geojson = '';
-        foreach($equipesDatas as $key => $equipeData){
-            $url = "http://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
-            $json = file_get_contents($url);
-            $coord[] = json_decode($json,true);
-            $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
-            $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
-            $geojson = $geojson.
-                '
-                {  
-                    "type": "Feature",
-                    "properties": {
-                        "country": "France",
-                        "city": "'.$equipeData->getVille().'",
-                        "street": "'.$equipeData->getRue().'",
-                        "postcode": "'.$equipeData->getCp().'",
-                        "name": "'.$equipeData->getNomEquipe().'",
-                        "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [['.$equipeData->getSiteWebEquipe().'|Site-Web]]**",
-                        "_storage_options": {
-                            "color": "Blue"
-                        }
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            '.$lng.',
-                            '.$lat.'
-                        ]
-                    }
-                }';
-            if ($key < count($equipesDatas)-1){
-                $geojson=$geojson.',';
-            }
-        }
-        $fp = fopen('umap.json','w+');
-        fwrite($fp,'
-        {
-            "type": "FeatureCollection",
-            "features": ['
-            .$geojson.'
-            ]
-        }');
-        //LOGO EQUIPES '.$equipeData->getLogo().'
-        fclose($fp);
-        return 'Done';
-    }
-
-
     /**
      * @Route("/equipes", name="equipes")
      */

@@ -13,4 +13,7 @@ $(function() {
         dateFormat: "yy-m-d"
     });
 
+    /**/
+    $(".alert-message").alert();
+    window.setTimeout(function() { $(".alert-message").alert('close'); }, 4000);
 });

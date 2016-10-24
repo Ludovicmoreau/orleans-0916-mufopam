@@ -26,7 +26,7 @@ class PublicationsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $publications = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findAll();
+        $publications = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findBy(array(),array('id'=>'DESC'));
 
         return $this->render('publications/index.html.twig', array(
             'publications' => $publications,
