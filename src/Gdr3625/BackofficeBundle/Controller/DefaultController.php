@@ -26,6 +26,9 @@ class DefaultController extends Controller
         return $this->render('base.html.twig');
     }
 
+    // Generation du geojson pour carte dynamique vers umap.openstreetmap.fr
+    // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
+    // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
     /**
      * @Route("/generateMap", name="generate_map")
      */
@@ -92,7 +95,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
-        return $this->render('equipes.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::equipes.html.twig', array(
             'equipes' => $equipes));
     }
     /**
@@ -104,7 +107,7 @@ class DefaultController extends Controller
         $equipe = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findOneById($id);
         //$brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findOneById($id);
         //$publications = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findOneById($id);
-        return $this->render('equipe_detail.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::equipe_detail.html.twig', array(
             'equipe' => $equipe, ));//'brevets'=>$brevets, 'publications'=>$publications,));
     }
 
@@ -115,7 +118,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
-        return $this->render('fluxActus.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::fluxActus.html.twig', array(
             'fluxes' => $fluxes));
     }
 
@@ -128,7 +131,7 @@ class DefaultController extends Controller
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findOneByid($id);
         $tab = ['primary','success','warning','default','info','danger'];
         $couleur = $tab[array_rand($tab)];
-        return $this->render('fluxActus_detail.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::fluxActus_detail.html.twig', array(
             'fluxes' => $fluxes, 'couleur' => $couleur));
 
     }
@@ -139,7 +142,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Jobs');
-        return $this->render('fluxJobs.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::fluxJobs.html.twig', array(
             'fluxes' => $fluxes));
     }
     /**
@@ -153,7 +156,7 @@ class DefaultController extends Controller
                 $json = file_get_contents('http://api.crossref.org/works/'.$dois[$key]->getDoi());
                 $publications[]=json_decode($json,true);
         }
-        return $this->render('publications.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::publications.html.twig', array(
             'publications'=>$publications));
     }
     /**
@@ -163,7 +166,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $brevets = $em->getRepository('Gdr3625BackofficeBundle:Brevets')->findAll();
-        return $this->render('brevets.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::brevets.html.twig', array(
             'brevets'=>$brevets));
     }
 
