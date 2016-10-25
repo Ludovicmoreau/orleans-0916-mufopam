@@ -142,29 +142,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
-                </div>
                 <div class=" col-sm-4 imgEquipeEdit">
-                    <img class="equipeLogo" src="{{ '../../../' ~ equipe.logo }}"/>
+                        <img class="equipeLogo" src="{{ asset( equipe.logo) }}" alt=""/>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-3">
-                </div>
-                <div class="col-sm-4">
-                    {{ form_widget(edit_form.descriptionEquipe, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
-                    {{ form_label(edit_form.keywords.keyword, "Enregister un nouveau logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                    <div class="col-sm-4">
-                        {{ form_widget(edit_form.keywords.keyword) }}
+            <div class="groupequipformulaire">
+                <div class="row">
+                    <div class="form-group">
+                        {{ form_label(edit_form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        <div class="col-sm-4">
+                            {{ form_widget(edit_form.logo) }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-sm-offset-3">
                 <div class="groupequipformulaire boutonEdit  ">
