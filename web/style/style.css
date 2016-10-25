@@ -284,6 +284,10 @@ td > i{
     min-width: 200px;
     font-size: 20px;
 }
+.iconLeft{
+    padding-right: 100%;
+}
+
 /**** Page Details Equipe ****/
 .equipeDetail a {
     text-decoration: underline;
@@ -308,6 +312,7 @@ td > i{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 /***************news*******************/
 .divTitre{
     padding-top: 15px;
