@@ -121,11 +121,4 @@ class DefaultController extends Controller
             'users' => $users));
     }
 
-    public function helloAction($userId)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $userName = $em->getRepository('Gdr3625BackofficeBundle:User')->findOneBy($userId);
-
-        return $this->getUser()-> getUsername();
-    }
 }
