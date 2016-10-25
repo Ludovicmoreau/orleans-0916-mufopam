@@ -21,7 +21,7 @@
                 <div class="form-group">
                     {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
-                        {{ form_widget(form.contenu, {'attr': {'class': 'form-control', 'placeholder': "Contenu"}}) }}
+                        {{ form_widget(form.contenu, {'attr': {'class': 'form-control texteArea', 'placeholder': "Contenu"}}) }}
                     </div>
                     <div class="col-sm-1">
                         <i class="fa fa-file-text-o iconLeft" aria-hidden="true"></i>
@@ -33,7 +33,7 @@
                     {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
 
                     <div class="col-sm-4">
-                        {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
+                        {{ form_widget(form.datePublication, {'attr': {'class': 'form-control'}}) }}
                     </div>
                     <div class="col-sm-1">
                         <i class="fa fa-calendar iconLeft" aria-hidden="true"></i>

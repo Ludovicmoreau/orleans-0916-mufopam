@@ -287,6 +287,10 @@ td > i{
 .iconLeft{
     padding-right: 100%;
 }
+.texteArea{
+    max-width: 100% ;
+    min-height: 200px;
+}
 
 /**** Page Details Equipe ****/
 .equipeDetail a {
@@ -451,3 +455,4 @@ a.back-to-top {
     color: #337ab7;
     font-size: 70px;
 }
+
