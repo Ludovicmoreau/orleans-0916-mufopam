@@ -16,4 +16,21 @@ $(function() {
     /**/
     $(".alert-message").alert();
     window.setTimeout(function() { $(".alert-message").alert('close'); }, 4000);
+
+    // bp back to top
+    // scroll distance to display bp
+    var amountScrolled = 350;
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('a.back-to-top').fadeIn('slow');
+        } else {
+            $('a.back-to-top').fadeOut('slow');
+        }
+    });
+    // bp action to up
+    $('a.back-to-top').click(function() {
+        $(window).animate({
+            scrollTop: 0
+        }, 700);
+    });
 });
