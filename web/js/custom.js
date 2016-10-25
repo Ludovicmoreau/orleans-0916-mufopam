@@ -17,7 +17,7 @@ $(function() {
     $(".alert-message").alert();
     window.setTimeout(function() { $(".alert-message").alert('close'); }, 4000);
 
-    // bp back to top
+    /*##### bp back to top #####*/
     // scroll distance to display bp
     var amountScrolled = 350;
     $(window).scroll(function() {
@@ -33,4 +33,7 @@ $(function() {
             scrollTop: 0
         }, 700);
     });
+    /*##### Table sorter #####*/
+    $('.tableSorter').tablesorter();
+
 });

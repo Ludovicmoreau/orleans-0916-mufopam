@@ -16,11 +16,11 @@
                     <li class="dropdown {% if app.request.attributes.get('_route') in ['flux_index','flux_edit','flux_show','flux_delete','brevets_index','brevets_edit','brevets_show','brevets_delete','publications_index','publications_edit','publications_show','publications_delete'] %} active {% endif %}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Edition Contenus <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li class="{% if app.request.attributes.get('_route') in ['flux_index','flux_edit','flux_show','flux_delete'] %} active {% endif %}"><a href="/back/flux">Actualités</a></li>
+                            <li class="text-center {% if app.request.attributes.get('_route') in ['flux_index','flux_edit','flux_show','flux_delete'] %} active {% endif %}"><a href="/back/flux">Actualités</a></li>
                             <li role="separator" class="divider"></li>
-                            <li class="{% if app.request.attributes.get('_route') in ['brevets_index','brevets_edit','brevets_show','brevets_delete'] %} active {% endif %}"><a href="/back/brevets">Brevets</a></li>
+                            <li class="text-center {% if app.request.attributes.get('_route') in ['brevets_index','brevets_edit','brevets_show','brevets_delete'] %} active {% endif %}"><a href="/back/brevets">Brevets</a></li>
                             <li role="separator" class="divider"></li>
-                            <li class="{% if app.request.attributes.get('_route') in ['publications_index','publications_edit','publications_show','publications_delete'] %} active {% endif %}"><a href="/back/publications/">Publications</a></li>
+                            <li class="text-center {% if app.request.attributes.get('_route') in ['publications_index','publications_edit','publications_show','publications_delete'] %} active {% endif %}"><a href="/back/publications/">Publications</a></li>
                         </ul>
                     </li>
                     <li class="{% if app.request.attributes.get('_route') in ['user_index','user_edit','user_show','user_delete'] %} active {% endif %}"><a href="/back/user/">Edition Utilisateurs</a></li>
