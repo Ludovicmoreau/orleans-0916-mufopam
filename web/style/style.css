@@ -322,9 +322,6 @@ td > i{
     text-decoration : inherit;
     color: inherit;
 }
-.boutonRetourActu{
-
-}
 .btn{
     margin-bottom: 20px;
 }
@@ -372,10 +369,11 @@ footer{
     font-weight: 900;
     padding-bottom: 10px;
 }
-.creation{
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    list-style-type:none;
+.btnForm{
+    min-width: 250px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
 tr.found{
@@ -404,16 +402,6 @@ tr.found{
     text-align: justify;
     vertical-align: middle !important;
 
-}
-.BoutonTableShow{
-    list-style-type:none;
-    font-family: 'Ubuntu', sans-serif;
-    display: inline-block;
-    padding-right: 50px;
-
-}
-.boutonCenter{
-    text-align: center;
 }
 
 /**************************  Alert PopUp Message **************************/

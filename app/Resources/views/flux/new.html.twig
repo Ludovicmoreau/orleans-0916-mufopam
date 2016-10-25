@@ -2,55 +2,54 @@
 
 {% block contenu %}
     <h1>Création d'actualité</h1>
-<div class="well">
-    {{ form_start(form) }}
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-        {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder': "Titre"}}) }}
+    <div class="well">
+        {{ form_start(form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+            {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder': "Titre"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.contenu, {'attr': {'class': 'form-control', 'placeholder': "Contenu"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.typeFlux, {'attr': {'class': 'form-control'}}) }}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group">
-                {{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control', 'placeholder': "Contenu"}}) }}
-                </div>
+            <div class="col-sm-offset-3">
+                <li class="groupequipformulaire  boutonEdit ">
+                    <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
+                </li>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.datePublication, {'attr': {'class': ''}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.typeFlux, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-</div>
-    <div class="row">
-        <div class="col-sm-offset-3">
-            <li class="groupequipformulaire  boutonEdit ">
-                <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
-            </li>
-        </div>
-    </div>
     </div>
     {{ form_end(form) }}
-
-    <ul class="boutonCenter">
-        <li class="BoutonTableShow">
-            <a href="{{ path('flux_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
+    <ul class="list-inline text-center">
+        <li>
+            <a class="btn btn-default btn-lg btnForm" href="{{ path('flux_index') }}">Retourner à la liste</a>
         </li>
     </ul>
 {% endblock %}

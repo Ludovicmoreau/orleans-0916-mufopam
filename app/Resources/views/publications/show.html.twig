@@ -18,14 +18,14 @@
     </div>
     <ul class="boutonCenter">
         <li class="BoutonTableShow ">
-            <a href="{{ path('publications_index') }}"> <button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button> </a>
+            <a class="btn btn-default btn-lg btnForm" href="{{ path('publications_index') }}">Retourner à la liste</a>
         </li>
         <li class="BoutonTableShow ">
-            <a href="{{ path('publications_edit', { 'id': publication.id }) }}"><button type="button" class="btn btn-success btn-lg"><h4>Editer</h4></button></a>
+            <a class="btn btn-success btn-lg btnForm" href="{{ path('publications_edit', { 'id': publication.id }) }}">Editer</a>
         </li>
         <li class="BoutonTableShow ">
             {{ form_start(delete_form) }}
-                 <button type="submit" class="btn btn-danger btn-lg"><h4>Supprimer</h4></button>
+                 <button type="submit" class="btn btn-danger btn-lg btnForm">Supprimer</button>
             {{ form_end(delete_form) }}
         </li>
     </ul>
