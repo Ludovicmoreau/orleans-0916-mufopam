@@ -2,6 +2,7 @@
 
 namespace Gdr3625\BackofficeBundle\Controller;
 
+use Doctrine\ORM\Query\ResultSetMapping;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -135,7 +136,18 @@ class FluxController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('flux_delete', array('id' => $flux->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
+
+    public function findLastAction()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBy(array(), array('id'=>'desc'), array(0,1));
+
+        return $this->render('@Gdr3625Backoffice/last_news.html.twig', array(
+            'fluxes' => $fluxes,
+        ));
+    }
+
 }

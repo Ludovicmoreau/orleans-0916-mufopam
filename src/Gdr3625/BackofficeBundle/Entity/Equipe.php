@@ -4,6 +4,7 @@ namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Equipe
@@ -137,11 +138,22 @@ class Equipe
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Télécharger le logo du laboratoire en jpeg, jpg ou png.")
-     * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpeg" })
+     * @ORM\Column(name="logo", type="string", length=255)
+     * @Assert\NotBlank(message="Télècharger le logo du laboratoire en jpeg ou png.")
+     * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpeg", "image/jpeg"})
      */
     private $logo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Brevets", mappedBy="equipe")
+     */
+    protected $brevets;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
+     */
+    protected $keywordsEquipe;
+
 
     /**
      * Get id
@@ -543,4 +555,115 @@ class Equipe
     {
         return $this->logo;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->brevets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->keywordsEquipe = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->publications = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add brevets
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
+     * @return Equipe
+     */
+    public function addBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
+    {
+        $this->brevets[] = $brevets;
+
+        return $this;
+    }
+
+    /**
+     * Remove brevets
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
+     */
+    public function removeBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
+    {
+        $this->brevets->removeElement($brevets);
+    }
+
+    /**
+     * Get brevets
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBrevets()
+    {
+        return $this->brevets;
+    }
+
+    
+
+    /**
+     * Add publications
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $publications
+     * @return Equipe
+     */
+    public function addPublication(\Gdr3625\BackofficeBundle\Entity\Publications $publications)
+    {
+        $this->publications[] = $publications;
+
+        return $this;
+    }
+
+    /**
+     * Remove publications
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $publications
+     */
+    public function removePublication(\Gdr3625\BackofficeBundle\Entity\Publications $publications)
+    {
+        $this->publications->removeElement($publications);
+    }
+
+    /**
+     * Get publications
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPublications()
+    {
+        return $this->publications;
+    }
+
+    /**
+     * Add keywordsEquipe
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe
+     * @return Equipe
+     */
+    public function addkeywordsEquipe(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe)
+    {
+        $this->keywordsEquipe[] = $keywordsEquipe;
+
+        return $this;
+    }
+
+    /**
+     * Remove keywordsEquipe
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe
+     */
+    public function removekeywordsEquipe(\Gdr3625\BackofficeBundle\Entity\Keywords $keywordsEquipe)
+    {
+        $this->keywordsEquipe->removeElement($keywordsEquipe);
+    }
+
+    /**
+     * Get keywordsEquipe
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getkeywordsEquipe()
+    {
+        return $this->keywordsEquipe;
+    }
+    
 }
