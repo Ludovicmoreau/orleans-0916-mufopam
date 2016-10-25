@@ -451,3 +451,48 @@ a.back-to-top {
     color: #337ab7;
     font-size: 70px;
 }
+
+/*************************** Masonry ***********************************/
+* { box-sizing: border-box; }
+
+body {
+    font-family: sans-serif;
+}
+
+/* ---- input ---- */
+
+input[type="text"] {
+    font-size: 20px;
+}
+
+/* ---- isotope ---- */
+
+.grid {
+    margin-left: 8%;
+    width: 100%;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.grid-sizer,
+.element-item {
+    position: relative;
+    height: auto;
+    width: 33.333%;
+    display: block;
+    margin-right: 10px;
+    min-width: 100px;
+
+}
+
+.element-item > * {
+    margin: 0;
+    padding: 0;
+}
