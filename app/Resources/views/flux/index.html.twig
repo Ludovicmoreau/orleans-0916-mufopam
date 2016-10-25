@@ -12,10 +12,8 @@
                 <table class="table table-striped table-bordered table-condensed tableSorter">
                     <thead>
                         <tr>
-                            <th class="thtable">Id</th>
-                            <th class="thtable">Titre</th>
-                            <th class="thtable">Contenu</th>
                             <th class="thtable">Date de publication</th>
+                            <th class="thtable">Titre</th>
                             <th class="thtable">Type d'actualités</th>
                             <th class="thtable">Actions</th>
                         </tr>
@@ -23,10 +21,8 @@
                     <tbody>
                     {% for flux in fluxes %}
                         <tr>
-                            <td class="tdtable">{{ flux.id }} </td>
-                            <td class="tdtable">{{ flux.titre }}</td>
-                            <td class="tdtable">{{ flux.contenu | truncate(200,true,' (...) ') }}</td>
-                            <td class="tdtable">{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td class="tdtable">{% if flux.datePublication %}{{ flux.datePublication|date('Y-m-d') }}{% endif %}</td>
+                            <td class="tdtable">{{ flux.titre | truncate(110,true,' (...) ') }}</td>
                             <td class="tdtable">{{ flux.typeFlux }}</td>
                             <td class="tdtable puces">
                                 <ul>
