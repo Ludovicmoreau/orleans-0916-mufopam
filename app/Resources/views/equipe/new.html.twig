@@ -1,224 +1,221 @@
 {% extends 'base_backoffice.html.twig' %}
 
 {% block contenu %}
-<h1>Création d'équipe</h1>
-
-<div class="well">
-    {{ form_start(form) }}
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.nomEquipe, "Nom de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.nomEquipe, {'attr': {'class': 'form-control', 'placeholder': "Nom de l'équipe"}}) }}
+    <h1>Création d'équipe</h1>
+    <div class="well">
+        {{ form_start(form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.nomEquipe, "Nom de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.nomEquipe, {'attr': {'class': 'form-control', 'placeholder': "Nom de l'équipe"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-gitlab iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-gitlab iconLeft" aria-hidden="true"></i>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.laboratoire, "Laboratoire", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control', 'placeholder': "Laboratoire"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-university iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.rue, "Rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.rue, {'attr': {'class': 'form-control', 'placeholder': "Rue"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-road iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.cp, "Code postal", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.cp, {'attr': {'class': 'form-control', 'placeholder': "00000"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-ellipsis-h iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.ville, {'attr': {'class': 'form-control', 'placeholder': "Ville"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-building iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.codeUnite, "Code unité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control', 'placeholder': "Code unité"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-language iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.tutelle, "Tutelle", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.tutelle, {'attr': {'class': 'form-control', 'placeholder': "Tutelle"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.siteWebEquipe, "Site internet équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.siteWebEquipe, {'attr': {'class': 'form-control', 'placeholder': "http://www.equipe-inernet.fr"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.siteWebLabo, "Site internet labo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control', 'placeholder': "http://www.labo-inernet.fr"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.nomReferent, "Nom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control', 'placeholder': "Nom référent"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.prenomReferent, "Prénom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control', 'placeholder': "Prénom référent"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.emailReferent, "Email référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control', 'placeholder': "email@email.fr"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-envelope iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.telephoneReferent, "Téléphone référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control', 'placeholder': "03 00 00 00 00"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-phone iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.recherche, "Recherche", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.recherche, {'attr': {'class': 'form-control', 'placeholder': "Recherche"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-search iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.projet, "Projet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.projet, {'attr': {'class': 'form-control', 'placeholder': "Projet"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-first-order iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.descriptionEquipe, "Description équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.descriptionEquipe, {'attr': {'class': 'form-control', 'placeholder': "Description équipe"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-file-text-o iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.logo) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-file-image iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group">
-                {{ form_label(form.laboratoire, "Laboratoire", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control', 'placeholder': "Laboratoire"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-university iconLeft" aria-hidden="true"></i>
-                </div>
+            <div class="col-sm-offset-3">
+                <li class="groupequipformulaire  boutonEdit ">
+                    <button type="submit" class="btn btn-success btn-lg btnForm"><h4>Créer</h4></button>
+                </li>
             </div>
         </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.rue, "Rue", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.rue, {'attr': {'class': 'form-control', 'placeholder': "Rue"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-road iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.cp, "Code postal", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.cp, {'attr': {'class': 'form-control', 'placeholder': "00000"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-ellipsis-h iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.ville, {'attr': {'class': 'form-control', 'placeholder': "Ville"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-building iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.codeUnite, "Code unité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control', 'placeholder': "Code unité"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-language iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.tutelle, "Tutelle", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.tutelle, {'attr': {'class': 'form-control', 'placeholder': "Tutelle"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-male iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.siteWebEquipe, "Site internet équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.siteWebEquipe, {'attr': {'class': 'form-control', 'placeholder': "http://www.equipe-inernet.fr"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.siteWebLabo, "Site internet labo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control', 'placeholder': "http://www.labo-inernet.fr"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.nomReferent, "Nom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control', 'placeholder': "Nom référent"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-male iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.prenomReferent, "Prénom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control', 'placeholder': "Prénom référent"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-male iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.emailReferent, "Email référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control', 'placeholder': "email@email.fr"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-envelope iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.telephoneReferent, "Téléphone référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control', 'placeholder': "03 00 00 00 00"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-phone iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.recherche, "Recherche", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.recherche, {'attr': {'class': 'form-control', 'placeholder': "Recherche"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-search iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.projet, "Projet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.projet, {'attr': {'class': 'form-control', 'placeholder': "Projet"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-first-order iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.descriptionEquipe, "Description équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.descriptionEquipe, {'attr': {'class': 'form-control', 'placeholder': "Description équipe"}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-file-text-o iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.logo) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-file-image iconLeft" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-offset-3">
-            <li class="groupequipformulaire  boutonEdit ">
-                <button type="submit" class="btn btn-success btn-lg"><h4>Créer</h4></button>
-            </li>
-        </div>
-
-
         {{ form_end(form) }}
     </div>
-    <div>
-        <ul class="boutonCenter">
-            <li class="BoutonTableShow">
-                <a href="{{ path('equipe_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
-            </li>
-        </ul>
-    </div>
-    {% endblock %}
+    <ul class="list-inline text-center">
+        <li>
+            <a href="{{ path('equipe_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
+        </li>
+    </ul>
+{% endblock %}

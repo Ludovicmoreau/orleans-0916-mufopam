@@ -2,7 +2,6 @@
 
 {% block contenu %}
     <h1>Edition d'actualité</h1>
-
     <div class="well">
         {{ form_start(edit_form) }}
         <div class="groupequipformulaire">
@@ -64,10 +63,58 @@
     <ul class="boutonCenter">
         <li class="BoutonTableShow">
             <a href="{{ path('flux_index') }}"><button type="button" class="btn btn-default btn-lg"><h4>Retourner à la liste</h4></button></a>
+    <div class="well">
+        {{ form_start(edit_form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(edit_form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.titre, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(edit_form.contenu, "Contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.contenu, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(edit_form.datePublication, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.datePublication, {'attr': {'class': ''}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(edit_form.typeFlux, "Type flux", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.typeFlux, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-3">
+                <div class="groupequipformulaire boutonEdit">
+                    <button type="submit" class="btn btn-success btn-lg btnForm">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+        {{ form_end(edit_form) }}
+    </div>
+    <ul class="list-inline text-center">
+        <li>
+            <a class="btn btn-default btn-lg btnForm" href="{{ path('flux_index') }}">Retourner à la liste</a>
         </li>
-        <li class="BoutonTableShow">
+        <li>
             {{ form_start(delete_form) }}
-            <button type="submit" class="btn btn-danger btn-lg"><h4>Supprimer</h4></button>
+                 <button type="submit" class="btn btn-danger btn-lg btnForm">Supprimer</button>
             {{ form_end(delete_form) }}
         </li>
     </ul>
