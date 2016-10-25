@@ -337,6 +337,23 @@ td > i{
 }
 
 
+/**** table sorter ****/
+th.headerSortUp {
+    background-image: url('../js/jquery.tablesorter/img/small_asc.gif');
+    background-color: #3399FF;
+}
+th.headerSortDown {
+    background-image: url('../js/jquery.tablesorter/img/small_desc.gif');
+    background-color: #3399FF;
+}
+th.header {
+    background-image: url('../js/jquery.tablesorter/img/small.gif');
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+}
+
 /**** footer ****/
 footer{
     border-top: 1px solid black;
@@ -359,6 +376,7 @@ footer{
     text-align: center;
     background-color: #337ab7;
     font-size: 25px;
+    min-width: 80px;
 }
 .tdtable{
     text-align: center;
@@ -368,12 +386,10 @@ footer{
     list-style-type:none;
     display: inline-block;
     margin-right: 10px;
-
 }
 
 .titretable{
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
     font-weight: 900;
     padding-bottom: 10px;
 }
