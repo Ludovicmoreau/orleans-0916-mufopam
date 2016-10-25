@@ -27,7 +27,7 @@ class FluxController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findAll();
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBy(array(),array('id'=>'DESC'));
 
         return $this->render('flux/index.html.twig', array(
             'fluxes' => $fluxes,

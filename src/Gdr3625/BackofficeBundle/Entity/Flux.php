@@ -46,7 +46,7 @@ class Flux
     /**
      * @var string
      *
-     * @ORM\Column(name="type_flux", type="string", length=255)
+     * @ORM\Column(name="type_flux", type="string", length=255, nullable=false)
      */
     private $typeFlux;
     

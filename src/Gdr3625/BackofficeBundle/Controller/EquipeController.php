@@ -30,12 +30,86 @@ class EquipeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+        $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findBy(array(),array('id'=>'DESC'));
         
 
         return $this->render('equipe/index.html.twig', array(
             'equipes' => $equipes,
         ));
+    }
+
+    // Generation du geojson pour carte dynamique vers umap.openstreetmap.fr
+    // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
+    // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
+    /**
+     * @Route("/generateMap", name="generate_map")
+     */
+    public function generateMapAction()
+    {
+        if (file_exists('umap.json')) {
+            unlink('umap.json');
+        }
+        $em = $this->getDoctrine()->getManager();
+        $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
+        $geojson = '';
+
+        foreach($equipesDatas as $key => $equipeData){
+
+            $adresse = urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
+            $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'";
+            if (!$json = file_get_contents($url)){
+                $errorApi = true;
+                $this->addFlash('danger',"Il y a un erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse" );
+                break;
+            }else {
+                $coord[] = json_decode($json, true);
+                $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
+                $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
+                $geojson = $geojson .
+                    '
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "' . $equipeData->getVille() . '",
+                            "street": "' . $equipeData->getRue() . '",
+                            "postcode": "' . $equipeData->getCp() . '",
+                            "name": "' . $equipeData->getNomEquipe() . '",
+                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                ' . $lng . ',
+                                ' . $lat . '
+                            ]
+                        }
+                    }';
+                if ($key < count($equipesDatas) - 1) {
+                    $geojson = $geojson . ',';
+                }
+                $fp = fopen('umap.json','w+');
+                fwrite($fp,'
+                {
+                    "type": "FeatureCollection",
+                    "features": ['
+                        .$geojson.'
+                    ]
+                }');
+
+
+                //LOGO EQUIPES '.$equipeData->getLogo().'
+                fclose($fp);
+                // Reset error
+                $errorApi = false;
+            }
+        }
+        if (!$errorApi){
+            $this->addFlash('success','Génération de la carte réussi, patientez quelques minutes pour que la carte soit actualisée');
+        }
     }
 
     /**
@@ -66,9 +140,11 @@ class EquipeController extends Controller
             $em->persist($equipe);
             $em->flush();
 
+            // generation de umap.json après création équipe
+            $this->generateMapAction();
+            $this->addFlash('success',"Création équipe terminée");
             return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
         }
-
         return $this->render('equipe/new.html.twig', array(
             'equipe' => $equipe,
             'form' => $form->createView(),
@@ -119,6 +195,7 @@ class EquipeController extends Controller
             $em->persist($equipe);
             $em->flush();
 
+            $this->addFlash('success',"Edition équipe terminée");
             return $this->redirectToRoute('equipe_edit', array('id' => $equipe->getId()));
         }
 
@@ -146,6 +223,7 @@ class EquipeController extends Controller
             $em->flush();
         }
 
+        $this->addFlash('success',"Equipe supprimée");
         return $this->redirectToRoute('equipe_index');
     }
 
