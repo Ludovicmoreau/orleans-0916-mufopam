@@ -13,9 +13,17 @@ class DefaultController extends Controller
     /**
      * @Route("/back", name="back")
      */
-    public function indexAction()
+    public function backAction()
     {
         return $this->render('base_backoffice.html.twig');
+    }
+
+    /**
+     * @Route("/back/user", name="back_user")
+     */
+    public function backUserAction()
+    {
+        return $this->render('Gdr3625BackofficeBundle:Registration:register.html.twig');
     }
 
     /**
