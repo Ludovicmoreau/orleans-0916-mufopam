@@ -437,3 +437,13 @@ tr.found{
     text-align: center;
 }
 
+a.back-to-top {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 5%;
+    bottom: 10%;
+    opacity: 0.8;
+    color: #337ab7;
+    font-size: 70px;
+}

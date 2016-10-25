@@ -75,7 +75,7 @@ class EquipeController extends Controller
                             "street": "' . $equipeData->getRue() . '",
                             "postcode": "' . $equipeData->getCp() . '",
                             "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
