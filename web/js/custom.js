@@ -19,7 +19,7 @@ $(function() {
 
     /*##### bp back to top #####*/
     // scroll distance to display bp
-    var amountScrolled = 350;
+    var amountScrolled = 600;
     $(window).scroll(function() {
         if ( $(window).scrollTop() > amountScrolled ) {
             $('a.back-to-top').fadeIn('slow');

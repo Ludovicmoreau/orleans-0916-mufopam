@@ -1,35 +1,35 @@
 {% extends 'base_backoffice.html.twig' %}
 
 {% block contenu %}
-    <h1>Création de publication</h1>
-<div class=" container well">
-    {{ form_start(form) }}
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.doi, "D.O.I", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <div class="col-sm-4 col-lg-4">
-                    {{ form_widget(form.doi, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div class="col-sm-1">
-                    <i class="fa fa-rss iconLeft" aria-hidden="true"></i>
-                </div>
-                <div class="col-sm-4 col-lg-4">
-                    <a class="btn btn-default" href="{{ path('publication_generate', {'doi':'toto'}) }}">Générer la Publication</a>
-                </div>
+    <h1 class="text-center titretable">Création de publication</h1>
+    <div class="container well">
+        {{ form_start(form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.doi, "D.O.I", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4 col-lg-4">
+                        {{ form_widget(form.doi, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-rss iconLeft" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-4 col-lg-4">
+                        <a class="btn btn-default" href="{{ path('publication_generate', {'doi':'toto'}) }}">Générer la Publication</a>
+                    </div>
 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-3">
+                    <div class="groupequipformulaire  boutonEdit ">
+                        <button type="submit" class="btn btn-success btn-lg btnForm">Enregistrer</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-offset-3">
-                <li class="groupequipformulaire  boutonEdit ">
-                    <button type="submit" class="btn btn-success btn-lg btnform">Créer</button>
-                </li>
-            </div>
-        </div>
+        {{ form_end(form) }}
     </div>
-    {{ form_end(form) }}
-</div>
     <ul class="list-inline text-center">
         <li>
             <a class="btn btn-default btn-lg btnForm" href="{{ path('publications_index') }}">Retourner à la liste</a>

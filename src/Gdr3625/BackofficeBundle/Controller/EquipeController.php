@@ -124,10 +124,6 @@ class EquipeController extends Controller
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $form->handleRequest($request);
 
-        var_dump($form);
-
-        var_dump($equipe->getkeywordsEquipe());
-
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $equipe->getLogo();
             $fileName = md5(uniqid()).'.'.$file->guessExtension();
