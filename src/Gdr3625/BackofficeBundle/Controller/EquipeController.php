@@ -50,6 +50,8 @@ class EquipeController extends Controller
         if (file_exists('umap.json')) {
             unlink('umap.json');
         }
+        $root = "%kernel.root_dir%/../web/images/logos_equipes/";
+        var_dump($root);
         $em = $this->getDoctrine()->getManager();
         $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
         $geojson = '';
@@ -76,7 +78,7 @@ class EquipeController extends Controller
                             "street": "' . $equipeData->getRue() . '",
                             "postcode": "' . $equipeData->getCp() . '",
                             "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "description": "'.$root.$equipeData->getLogo().'\n\n# Référent :\n**'.$equipeData->getNomReferent().' '.$equipeData->getPrenomReferent().'**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -111,6 +113,7 @@ class EquipeController extends Controller
         if (!$errorApi){
             $this->addFlash('success','Génération de la carte réussi, patientez quelques minutes pour que la carte soit actualisée');
         }
+        return $this->redirectToRoute('equipe_index');
     }
 
     /**
@@ -194,6 +197,8 @@ class EquipeController extends Controller
             $em->persist($equipe);
             $em->flush();
 
+            // generation de umap.json après modification équipe
+            $this->generateMapAction();
             $this->addFlash('success',"Edition équipe terminée");
             return $this->redirectToRoute('equipe_edit', array('id' => $equipe->getId()));
         }
@@ -222,6 +227,8 @@ class EquipeController extends Controller
             $em->flush();
         }
 
+        // generation de umap.json après suppression équipe
+        $this->generateMapAction();
         $this->addFlash('success',"Equipe supprimée");
         return $this->redirectToRoute('equipe_index');
     }
