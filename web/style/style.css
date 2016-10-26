@@ -370,10 +370,12 @@ th.header {
 /**** footer ****/
 footer{
     border-top: 1px solid black;
+    margin-top: 15px;
 }
 #logowcs{
     max-height:80px;
     max-width:80px;
+    margin-top: 3px;
 }
 #mentions li {
     margin-top: 20px;
@@ -476,8 +478,8 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 /* clear fix */
@@ -521,4 +523,5 @@ input[type="text"] {
     margin-right: 10px;
     max-width: 300px;
     min-height: 250px;
+
 }
