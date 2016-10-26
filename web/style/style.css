@@ -324,7 +324,7 @@ td > i{
 
 }
 .aNews:link{
-    text-decoration : inherit;
+    text-decoration: inherit;
     color: inherit;
 }
 .aNews:hover{
@@ -340,6 +340,15 @@ td > i{
 .actuHauteur{
     min-height: 205px;
 }
+.paddingActu{
+    padding: 5px 5px 5px 5px;
+}
+.h2Actu{
+    font-size: 21px;
+    margin-top: inherit;
+}
+
+
 
 /**** table sorter ****/
 th.headerSortUp {
@@ -467,8 +476,8 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 8%;
-    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 /* clear fix */
@@ -489,11 +498,27 @@ input[type="text"] {
     margin-right: 10px;
     min-width: 250px;
     min-height: 250px;
-
 }
 
 .element-item > * {
     margin: 0;
     padding: 0;
 }
-
+.grid-sizerActu {
+    position: relative;
+    height: auto;
+    width: 33.333%;
+    display: block;
+    margin-right: 10px;
+    min-width: 430px;
+    min-height: 270px;
+}
+.grid-sizerBrevet {
+    position: relative;
+    height: auto;
+    width: 33.333%;
+    display: block;
+    margin-right: 10px;
+    max-width: 300px;
+    min-height: 250px;
+}
