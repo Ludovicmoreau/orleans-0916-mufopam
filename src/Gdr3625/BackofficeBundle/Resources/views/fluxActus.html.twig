@@ -1,40 +1,66 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-offset-1 col-lg-10">
-                <h1 class="title1 bot-left">Les actualités de MuFoPAM</h1>
-            </div>
-            <div class="col-lg-2 filtersDisplay">
-                <div class="filterCol" data-spy="" data-offset-top="">
-
-                </div>
-            </div>
-            <div class="col-lg-10 equipesDisplay">
-                <div class="row">
-                    {% for key, flux in fluxes %}
-                            <div class="col-lg-6">
-                                <div class="">
-                                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                                        <div class="panel-assembly">
-                                            <div class="actuHauteur panel {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
-                                                <div class="panel-heading divTitre">
-                                                    <div class="panel-title">
-                                                        <h4>{{ flux.titre | truncate(65,true,' (...) ')}}<span class="pull-right auteurDate">{{ flux.datePublication | date('d-m-Y')}}</span></h4>
-                                                    </div>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <p class="pContenu">{{ flux.contenu | truncate(200,true,' (...) ')  }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                    {% endfor %}
-                </div>
+            <div class="col-lg-offset-4 col-lg-4 text-center">
+                <h1>Actualité :</h1>
+                <p><input type="text" class="quicksearch" placeholder="Rechercher ici ..." /></p>
             </div>
         </div>
+        <div class="grid row">
+            {% for key, flux in fluxes %}
+                <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
+                    <div class="element-item grid-sizerActu  carteEquipe borderRed col-lg-12 ">
+                        <div class="carteContent ">
+                            <div class="topCarte">
+                                <div class="paddingActu">
+                                    <p class="text-center"> {{ flux.datePublication | date('d-m-Y')}}</p>
+                                        <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
+                                        <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ')  }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div>
+
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
+    </script>
 {% endblock %}
