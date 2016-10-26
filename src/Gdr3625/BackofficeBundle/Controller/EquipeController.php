@@ -75,7 +75,7 @@ class EquipeController extends Controller
                             "street": "' . $equipeData->getRue() . '",
                             "postcode": "' . $equipeData->getCp() . '",
                             "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -123,10 +123,6 @@ class EquipeController extends Controller
         $equipe = new Equipe();
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $form->handleRequest($request);
-
-        var_dump($form);
-
-        var_dump($equipe->getkeywordsEquipe());
 
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $equipe->getLogo();
