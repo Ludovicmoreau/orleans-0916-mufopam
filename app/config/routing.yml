@@ -5,32 +5,12 @@ gdr3625_backoffice_keywords:
     resource: "@Gdr3625BackofficeBundle/Controller/KeywordsController.php"
     type:     annotation
 
-gdr3625_backoffice_flux.keywords:
-    resource: "@Gdr3625BackofficeBundle/Controller/Flux_KeywordsController.php"
-    type:     annotation
-
 gdr3625_backoffice_flux:
     resource: "@Gdr3625BackofficeBundle/Controller/FluxController.php"
     type:     annotation
 
-gdr3625_backoffice_equipes.publications:
-    resource: "@Gdr3625BackofficeBundle/Controller/Equipes_PublicationsController.php"
-    type:     annotation
-
-gdr3625_backoffice_equipes.keywords:
-    resource: "@Gdr3625BackofficeBundle/Controller/Equipes_KeywordsController.php"
-    type:     annotation
-
-gdr3625_backoffice_equipes.brevets:
-    resource: "@Gdr3625BackofficeBundle/Controller/Equipes_BrevetsController.php"
-    type:     annotation
-
 gdr3625_backoffice_brevets:
     resource: "@Gdr3625BackofficeBundle/Controller/BrevetsController.php"
-    type:     annotation
-
-gdr3625_backoffice_equipe:
-    resource: "@Gdr3625BackofficeBundle/Controller/EquipeController.php"
     type:     annotation
 
 gdr3625_backoffice_equipe:

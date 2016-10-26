@@ -20,14 +20,6 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/back/user", name="back_user")
-     */
-    public function backUserAction()
-    {
-        return $this->render('Gdr3625BackofficeBundle:Registration:register.html.twig');
-    }
-
-    /**
      * @Route("/", name="accueil")
      */
     public function accueilAction()

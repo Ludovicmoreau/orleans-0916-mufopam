@@ -75,7 +75,19 @@
                         </tr>
                         <tr>
                             <th class="thtable2 text-center">Logo</th>
-                            <td class="tdtable2"><img src="{{ asset('/images/logos_equipes/'~equipe.logo) }}" alt=""></td>
+                            <td class="tdtable2">
+                                <div class="equipeDetailLogo">
+                                    <img class="img-responsive" src="{{ asset('images/logos_equipes/'~equipe.logo) }}" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="thtable2 text-center">Mots Clés</th>
+                            <td class="tdtable2">
+                                {% for key, keywords in equipe.keywordsEquipe %}
+                                    {{ keywords.keyword }}
+                                {% endfor %}
+                            </td>
                         </tr>
                     </tbody>
                 </table>

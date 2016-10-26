@@ -28,8 +28,10 @@ class Publications
      */
     private $doi;
 
-    
-
+    /**
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="equipePublication")
+     */
+    private $publicationEquipe;
 
     /**
      * Get id
