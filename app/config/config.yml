@@ -7,7 +7,6 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    #'%kernel.root_dir%/../web/images/logos_equipes/'
     upload_directory: '%kernel.root_dir%/../web/images/logos_equipes/'
     load_directory: '/web/images/logos_equipes/'
 
