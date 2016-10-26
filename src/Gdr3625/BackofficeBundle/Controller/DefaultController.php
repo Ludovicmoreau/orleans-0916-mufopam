@@ -42,7 +42,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
-        return $this->render('Gdr3625BackofficeBundle::equipes.html.twig', array(
+        return $this->render('Gdr3625BackofficeBundle::new_equipes.html.twig', array(
             'equipes' => $equipes));
     }
     /**

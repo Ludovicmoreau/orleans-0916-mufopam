@@ -2,16 +2,86 @@
 
 {% block contenu  %}
 
-    <div class="grid" >
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        ...
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 text-center">
+            <h1>Rechercher une équipe :</h1>
+            <p><input type="text" class="quicksearch" placeholder="Taper ici ..." /></p>
+            </div>
+        </div>
+        <div class="grid row">
+            {% for equipe in equipes %}
+                <a href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
+                    <div class="element-item grid-sizer transition carteEquipe borderBlue col-lg-12">
+                        <div class="carteContent">
+                            <div class="topCarte">
+                                <div class="equipeLeftCarte">
+                                    <div class="equipeLogo">
+                                        <img class="img-responsive" src="
+                                            {% if equipe.logo  %}
+                                                {{ asset( '/images/logos_equipes/' ~  equipe.logo) }}
+                                            {% else %}
+                                                {{ asset( '/images/logoGDR.png') }}
+                                            {% endif %}
+                                        " alt="logo equipe de recherche">
+                                    </div>
+                                </div>
+                                <div class="equipeRightCarte">
+                                    <div class="equipeName text-center">
+                                        <h1>{{ equipe.nomEquipe }}</h1>
+                                        <p>{# equipe.equipes_keywords.keywords.keyword #}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomCarte">
+                                <div class="equipeLeftCarte">
+                                    <h5>Référent de l'équipe :</h5>
+                                    <ul>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
+                                        <li><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>Email du référent</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div>
 
-    <script>  $('.grid').masonry({
-    // options...
-    itemSelector: '.grid-item',
-    columnWidth: 200
-    });
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
     </script>
 {% endblock %}

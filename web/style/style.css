@@ -1,4 +1,5 @@
 /*###########               Html styling            ##############*/
+
 body {
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
@@ -48,8 +49,8 @@ p{
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(255, 255, 255, 1);
     background-color: #337ab7;
-}
 
+}
 /* burger style */
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #337ab7;
@@ -450,3 +451,50 @@ a.back-to-top {
     color: #337ab7;
     font-size: 70px;
 }
+
+/*************************** Masonry ***********************************/
+* { box-sizing: border-box; }
+
+body {
+    font-family: sans-serif;
+}
+
+/* ---- input ---- */
+
+input[type="text"] {
+    font-size: 20px;
+}
+
+/* ---- isotope ---- */
+
+.grid {
+    margin-left: 8%;
+    width: 100%;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.grid-sizer,
+.element-item {
+    position: relative;
+    height: auto;
+    width: 33.333%;
+    display: block;
+    margin-right: 10px;
+    min-width: 250px;
+    min-height: 250px;
+
+}
+
+.element-item > * {
+    margin: 0;
+    padding: 0;
+}
+
