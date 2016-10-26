@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Publications;
 use Symfony\Component\HttpFoundation\File\File;
+use Gdr3625\BackofficeBundle\Form;
 
 class DefaultController extends Controller
 {
