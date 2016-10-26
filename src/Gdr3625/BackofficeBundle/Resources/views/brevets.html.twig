@@ -3,33 +3,61 @@
 {% block contenu  %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-offset-1 col-lg-10">
-                <h1 class="title1 bot-left">Les brevets de MuFoPAM</h1>
+            <div class="col-lg-offset-4 col-lg-4 text-center">
+                <h1>Brevet</h1>
+                <p><input type="text" class="quicksearch" placeholder="Rechercher ici ..." /></p>
             </div>
-            <div class="col-lg-2 filtersDisplay">
-                <div id="filter" class="filterCol" data-spy="" data-offset-top="">
-                </div>
-            </div>
-            <div class="col-lg-10 equipesDisplay">
-                <div class="row">
-                    {% for key, brevet in brevets %}
-                        <div class="col-lg-6">
-                            <div class="panel-assembly">
-                                <div class="panel panelBrevet {{ random(['panel-primary','panel-success','panel-warning','panel-default','panel-info','panel-danger']) }}">
-                                    <div class="panel-heading divTitre">
-                                        <div class="panel-title">
-                                            <h4>Brevet</h4>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        {{ brevet.brevet| truncate(200,true,' (...) ') }}
-                                    </div>
+        </div>
+        <div class="grid row">
+            {% for key, brevet in brevets %}
+                    <div class="element-item grid-sizerBrevet carteEquipe borderOrange col-lg-12">
+                        <div class="carteContent ">
+                            <div class="topCarte">
+                                <div class="paddingActu">
+                                    <h2 class="text-center"> {{ 'Brevet ' ~ brevet.id }} </h2>
+                                    <p> {{ brevet.brevet }}</p>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
-            </div>
+                    </div>
+
+            {% endfor %}
         </div>
     </div>
+
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
+    </script>
 {% endblock %}
