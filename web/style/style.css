@@ -331,6 +331,11 @@ td > i{
     text-decoration : inherit;
     color: inherit;
 }
+.aNews:visited{
+    text-decoration : inherit;
+    color: inherit;
+}
+
 .boutonRetourActu{
 
 }
@@ -341,7 +346,7 @@ td > i{
     min-height: 205px;
 }
 .paddingActu{
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 }
 .h2Actu{
     font-size: 21px;
@@ -478,8 +483,8 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 5px;
+    margin-right: 1px;
 }
 
 /* clear fix */
@@ -497,7 +502,7 @@ input[type="text"] {
     height: auto;
     width: 33.333%;
     display: block;
-    margin-right: 10px;
+    margin: 7px;
     min-width: 250px;
     min-height: 250px;
 }
@@ -511,7 +516,7 @@ input[type="text"] {
     height: auto;
     width: 33.333%;
     display: block;
-    margin-right: 10px;
+    margin: 7px;
     min-width: 430px;
     min-height: 270px;
 }
@@ -520,7 +525,7 @@ input[type="text"] {
     height: auto;
     width: 33.333%;
     display: block;
-    margin-right: 10px;
+    margin: 7px;
     max-width: 300px;
     min-height: 250px;
 
