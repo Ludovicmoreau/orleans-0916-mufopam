@@ -1,9 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-    <h1>Rechercher une équipe :</h1>
-    <p><input type="text" class="quicksearch" placeholder="Taper ici ..." /></p>
+
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 text-center">
+            <h1>Rechercher une équipe :</h1>
+            <p><input type="text" class="quicksearch" placeholder="Taper ici ..." /></p>
+            </div>
+        </div>
         <div class="grid row">
             {% for equipe in equipes %}
                 <a href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
@@ -12,7 +17,13 @@
                             <div class="topCarte">
                                 <div class="equipeLeftCarte">
                                     <div class="equipeLogo">
-                                        <img class="img-responsive" src="{{ asset( '/images/logos_equipes/' ~  equipe.logo) }}" alt="logo equipe de recherche">
+                                        <img class="img-responsive" src="
+                                            {% if equipe.logo  %}
+                                                {{ asset( '/images/logos_equipes/' ~  equipe.logo) }}
+                                            {% else %}
+                                                {{ asset( '/images/logoGDR.png') }}
+                                            {% endif %}
+                                        " alt="logo equipe de recherche">
                                     </div>
                                 </div>
                                 <div class="equipeRightCarte">
