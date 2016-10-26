@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Equipe;
 use Gdr3625\BackofficeBundle\Form\EquipeType;
 use Symfony\Component\HttpFoundation\File\File;
+use Gdr3625\BackofficeBundle\Entity\Keywords;
 
 
 
@@ -145,7 +146,7 @@ class EquipeController extends Controller
             'equipe' => $equipe,
             'form' => $form->createView(),
         ));
-    }
+    }//            'motscles' => $keywords,
 
     /**
      * Finds and displays a Equipe entity.
@@ -171,22 +172,24 @@ class EquipeController extends Controller
      */
     public function editAction(Request $request, Equipe $equipe)
     {
+
         $equipe->setLogo(
-            new File($this->getParameter('load_directory').'/'.$equipe->getLogo())
+            new File($this->getParameter('load_directory').$equipe->getLogo())
         );
         $deleteForm = $this->createDeleteForm($equipe);
         $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $file = $equipe->getLogo();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $equipe->setLogo($fileName);
-            $file->move(
-                $this->getParameter('upload_directory'),
-                $fileName
-            );
-
+            if (!$_FILES['logo']) {
+                $file = $equipe->getLogo();
+                $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+                $equipe->setLogo($fileName);
+                $file->move(
+                    $this->getParameter('upload_directory'),
+                    $fileName
+                );
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($equipe);
             $em->flush();

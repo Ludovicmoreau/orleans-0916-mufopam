@@ -150,10 +150,20 @@ class Equipe
     protected $brevets;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"all"})
+     * @ORM\JoinColumn(name="keywords_id", referencedColumnName="id")
      */
-    protected $keywordsEquipe;
+    private $keywordsEquipe;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Publications", inversedBy="publicationEquipe")
+     */
+    private $equipePublication;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Brevets", inversedBy="brevetEquipe")
+     */
+    private $equipeBrevet;
 
     /**
      * Get id

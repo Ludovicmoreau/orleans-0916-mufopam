@@ -14,7 +14,7 @@ $(function() {
     });
 
     /**/
-    $(".alert-message").alert();
+    $(".flash-success, .flash-notice, .flash-alerte").alert();
     window.setTimeout(function() { $(".alert-message").alert('close'); }, 4000);
 
     /*##### bp back to top #####*/

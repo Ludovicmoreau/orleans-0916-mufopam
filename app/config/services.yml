@@ -3,9 +3,4 @@
 parameters:
 #    parameter_name: value
 # app/config/services.yml
-services:
-    app.form.registration:
-        class: Gdr3625\BackofficeBundle\Form\RegistrationType
-        tags:
-            - { name: form.type, alias: app_user_registration }
 
