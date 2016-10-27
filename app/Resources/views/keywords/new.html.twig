@@ -1,16 +1,36 @@
 {% extends 'base_backoffice.html.twig' %}
 
+
 {% block contenu %}
-    <h1>Keywords creation</h1>
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
+    <h1 class="text-center titretable">Création de mots clés</h1>
+    <div class="container well">
+        {{ form_start(form) }}
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.keyword, "Mot clés", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4 col-lg-4">
+                        {{ form_widget(form.keyword, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-briefcase iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-3">
+                    <div class="groupequipformulaire  boutonEdit ">
+                        <button type="submit" class="btn btn-success btn-lg btnForm">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+    <ul class="list-inline text-center">
         <li>
-            <a href="{{ path('keywords_index') }}">Back to the list</a>
+            <a class="btn btn-default btn-lg btnForm" href="{{ path('keywords_index') }}">Retourner à la liste</a>
         </li>
     </ul>
+
 {% endblock %}

@@ -6,39 +6,13 @@
             <div class="col-lg-1">
 
             </div>
-            <div class="col-lg-10">
-                <div class="panel-assembly">
-                    <div class="panel panel-{{  couleur }}">
-                        <div class="panel-heading divTitre">
-                            <div class="panel-title">
-                                <div class="col-lg-10" >
-                                    <p>{{ fluxes.titre }} </p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p>{{ fluxes.datePublication | date('d-m-Y') }}</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="panel-body">
-                            <p class="pContenu">{{ fluxes.contenu }}</p>
-                        </div>
-
-                    </div>
-                    <a class="aNews" href="/flux/actus">
-                        <div class="panel panel-{{  couleur }}">
-                            <div class="panel-heading divTitre  ">
-                                <div class="panel-title ">
-                                    <p class="text-center">Retour aux actualités</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            <div class="col-lg-10 borderRed">
+                <div class="paddingActu">
+                    <p class="text-center"> {{ fluxes.datePublication | date('d-m-Y')}}</p>
+                    <h1>{{ fluxes.titre }}</h1>
+                    <p >{{ fluxes.contenu }}</p>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 {%  endblock  %}
