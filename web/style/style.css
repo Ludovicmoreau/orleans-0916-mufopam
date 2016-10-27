@@ -5,7 +5,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     /*font-family: 'Play', sans-serif;*/
     /*font-family: 'Roboto Slab', serif;*/
-
 }
 
 p{
@@ -290,6 +289,9 @@ td > i{
 .loginLabel{
     margin-left: 35%;
 }
+.txtArea{
+    min-height: 150px;
+}
 /**** Page Details Equipe ****/
 .equipeDetail a {
     text-decoration: underline;
@@ -337,10 +339,6 @@ td > i{
     text-decoration : inherit;
     color: inherit;
 }
-
-.boutonRetourActu{
-
-}
 .btn{
     margin-bottom: 20px;
 }
@@ -353,6 +351,9 @@ td > i{
 .h2Actu{
     font-size: 21px;
     margin-top: inherit;
+}
+.actuDetailDate{
+    padding-top: 30px;
 }
 
 
@@ -473,9 +474,6 @@ a.back-to-top {
 /*************************** Masonry ***********************************/
 * { box-sizing: border-box; }
 
-body {
-    font-family: sans-serif;
-}
 
 /* ---- input ---- */
 

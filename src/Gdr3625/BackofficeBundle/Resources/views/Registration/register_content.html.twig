@@ -1,29 +1,37 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class=" container well">
+<div class="container well">
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     <div class="groupequipformulaire">
         <div class="row">
-            <div class="form-group">
-                {{ form_label(form, "username", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            <div class="form-group ">
+                {{ form_label(form, "Username", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form, {'attr': {'class': 'form-control', 'placeholder': "Nom d'utilisateur"}}) }}
+                    {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': "Nom d'utilisateur"}}) }}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                {{ form_label(form, "email", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                {{ form_label(form, "Email", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form, {'attr': {'class': 'form-control', 'placeholder': "Email"}}) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': "Email"}}) }}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                {{ form_label(form, "password", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                {{ form_label(form, "Password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(form, "Reapeat password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
+                <div class="col-sm-4">
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
                 </div>
             </div>
         </div>

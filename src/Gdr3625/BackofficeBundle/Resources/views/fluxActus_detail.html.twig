@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-1">
-
+            <div class="col-md-4 col-lg-4 actuDetailDate">
+                <p class="text-center"> {{ fluxes.datePublication | date('d-m-Y')}}</p>
             </div>
-            <div class="col-lg-10 borderRed">
-                <div class="paddingActu">
-                    <p class="text-center"> {{ fluxes.datePublication | date('d-m-Y')}}</p>
+            <div class="col-md-8 col-lg-8">
+                <div>
+
                     <h1>{{ fluxes.titre }}</h1>
-                    <p >{{ fluxes.contenu }}</p>
+                    <p>{{ fluxes.contenu }}</p>
                 </div>
             </div>
         </div>

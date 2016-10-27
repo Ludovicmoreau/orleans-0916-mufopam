@@ -23,3 +23,7 @@ gdr3625_backoffice:
     prefix:   /
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting

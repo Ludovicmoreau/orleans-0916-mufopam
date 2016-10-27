@@ -28,10 +28,7 @@ class Brevets
      */
     private $brevet;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Equipe", inversedBy="brevets")
-     * @ORM\JoinColumn(name="id", referencedColumnName="id")
-     */
+
     private $equipe;
 
     /**
