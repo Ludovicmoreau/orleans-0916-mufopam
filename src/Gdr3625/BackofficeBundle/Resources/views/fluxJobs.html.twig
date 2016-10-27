@@ -3,6 +3,67 @@
 {% block contenu  %}
     <div class="container-fluid">
         <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 text-center">
+                <h1>Les jobs de MuFoPAM</h1>
+                <p><input type="text" class="quicksearch" placeholder="Rechercher ici ..." /></p>
+            </div>
+        </div>
+        <div class="grid row">
+            {% for flux in fluxes %}
+                <div class="element-item grid-sizerActu carteEquipe borderPurple col-lg-12">
+                    <div class="carteContent ">
+                        <div class="topCarte">
+                            <div class="paddingActu">
+                                <h2 class="text-center"> {{ flux.titre }} </h2>
+                                <p> {{ flux.contenu }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
+    </script>
+
+
+  {#  <div class="container-fluid">
+        <div class="row">
             <div class="col-lg-offset-1 col-lg-10">
                 <h1 class="title1 bot-left">Les jobs de MuFoPAM</h1>
             </div>
@@ -32,5 +93,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> #}
 {% endblock %}
