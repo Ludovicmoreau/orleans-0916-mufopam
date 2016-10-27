@@ -288,6 +288,9 @@ td > i{
 .loginLabel{
     margin-left: 35%;
 }
+.txtArea{
+    min-height: 150px;
+}
 /**** Page Details Equipe ****/
 .equipeDetail a {
     text-decoration: underline;
