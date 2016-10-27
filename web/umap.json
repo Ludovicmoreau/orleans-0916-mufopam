@@ -10,7 +10,7 @@
                             "street": "rue Koeberlé",
                             "postcode": "67000",
                             "name": "Virulence bactérienne précoce : groupe borréliose de Lyme",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.chru-strasbourg.fr/Les-centres-de-reference/Borrelia|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.chru-strasbourg.fr/Les-centres-de-reference/Borrelia|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -31,7 +31,7 @@
                             "street": "Georges Bonnet",
                             "postcode": "86073",
                             "name": "EBI",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -52,7 +52,7 @@
                             "street": "2 avenue de la Forêt de Haye",
                             "postcode": "54518",
                             "name": "LIBio",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://libio.univ-lorraine.fr|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://libio.univ-lorraine.fr|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -73,7 +73,7 @@
                             "street": "Université Pierre et Marie CURIE (UPMC)  Bâtiment A, 5 ème étage, case courrier 29",
                             "postcode": "75252",
                             "name": "Biogenèse des Signaux  Peptidiques (BioSiPe)",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.ibps.upmc.fr/fr/plateformes/equipe-associee|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.ibps.upmc.fr/fr/plateformes/equipe-associee|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -94,7 +94,7 @@
                             "street": "57 rue Cuvier",
                             "postcode": "75005",
                             "name": "Molécules de défense et de communication dans les écosystèmes microbiens (MDCEM)",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://mcam.mnhn.fr//MDCEM/|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://mcam.mnhn.fr//MDCEM/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -115,7 +115,7 @@
                             "street": "Avenue Michel Crépeau",
                             "postcode": "17042",
                             "name": "AMES / DYFEA",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[Aucun|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[Aucun|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -136,7 +136,7 @@
                             "street": "Esplanade de la Paix",
                             "postcode": "14032",
                             "name": "B3A « Biodiversité et Bases Biologiques  pour l’Aquaculture »",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://borea.mnhn.fr/|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://borea.mnhn.fr/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -157,7 +157,7 @@
                             "street": "CHRU Jean Minjoz",
                             "postcode": "25000",
                             "name": "Agents Pathogènes et Inflammation",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.cnr-resistance-antibiotiques.fr/|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.cnr-resistance-antibiotiques.fr/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -178,7 +178,7 @@
                             "street": "Rue Charles Sadron",
                             "postcode": "45071",
                             "name": "RMN des biomolécules",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?rubrique40&lang=fr|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?rubrique40&lang=fr|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -199,7 +199,7 @@
                             "street": "-",
                             "postcode": "13000",
                             "name": "BiosCiences",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.biosciences.univ-amu.fr|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.biosciences.univ-amu.fr|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -220,7 +220,7 @@
                             "street": "Cité Scientifique, Université de Lille1",
                             "postcode": "59655",
                             "name": "Species Interactions and Comparative Immunology (SPICI)",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -241,7 +241,7 @@
                             "street": "Centre de Recherche Val de Loire",
                             "postcode": "37380",
                             "name": "Centre International de Ressources Microbiennes dédié aux Bactéries Pathogènes (CIRM-BP)",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[www6.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[www.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -262,7 +262,7 @@
                             "street": "Centre de Recherche Val de Loire",
                             "postcode": "37380",
                             "name": "Pathogénie de la Colibacillose Aviaire",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -279,11 +279,11 @@
                         "type": "Feature",
                         "properties": {
                             "country": "France",
-                            "city": "orleans",
-                            "street": "1 avenue du champ de mars",
-                            "postcode": "45000",
-                            "name": "f",
-                            "description": "{{logo}}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[k|Site-Web]]**",
+                            "city": "Saint Julien en Genevois ",
+                            "street": "260 Avenue Marie Curie",
+                            "postcode": "74166",
+                            "name": "IMMUNOLOGIE ANALYTIQUE DES PATHOLOGIES CHRONIQUES",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[https://iab.univ-grenoble-alpes.fr|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -291,10 +291,136 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                1.8941995,
-                                47.8938701
+                                6.1207983,
+                                46.1405958
                             ]
                         }
-                    }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Rennes",
+                            "street": "Campus de Beaulieu, 263 Av.  Leclerc",
+                            "postcode": "35042",
+                            "name": "ICMV – Ingénierie Moléculaire et Chimie pour le Vivant",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.scienceschimiques.univ-rennes1.fr/equipes/icmv/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -1.6777926,
+                                48.117266
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Pessac",
+                            "street": "Allée Saint-Hilaire",
+                            "postcode": "33460",
+                            "name": "Biophysique des Assemblages membranaires (BAM)",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.cbmn.u-bordeaux.fr/27-chimie-biophysique- biophysique-des-assemblages-membranaires.html|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -0.607487,
+                                44.804218
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Strasbourg",
+                            "street": "Faculté de Chirurgie Dentaire, Hôpital Civil, Porte de l’hôpital,",
+                            "postcode": "67000",
+                            "name": "Design de matériaux antimicrobiens",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[www.u1121.inserm.fr |Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                7.7835217,
+                                48.6019858
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Plouzané",
+                            "street": "Technopôle de Brest Iroise",
+                            "postcode": "29280",
+                            "name": "Contrôle des communautés – Molécules antimicrobiennes",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.univ-brest.fr/LUBEM|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -4.620404,
+                                48.381438
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Orléans",
+                            "street": "Rue Charles Sadron",
+                            "postcode": "45071",
+                            "name": "Chimie des protéines de synthèse et glycoingénierie",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?article81|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                1.9467861,
+                                47.8404704
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Lorient ",
+                            "street": "Université de Bretagne-Sud",
+                            "postcode": "56321",
+                            "name": "Laboratoire de Biotechnologie et Chimie Marines",
+                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www-lbcm.univ-ubs.fr/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -3.3702449,
+                                47.7482524
+                            ]
+                        }
+                    },
                     ]
                 }
