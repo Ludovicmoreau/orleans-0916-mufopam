@@ -142,6 +142,17 @@
                 </div>
             </div>
         </div>
+        {#<ul id="keyword-fields-list"
+            {{ form_label(form.keywordsEquipe, "Mots clés", {'label_attr': {'class': 'col-sm-3 control-label'}} }}
+            data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
+            {% for keywordField in form.keywordsEquipe %}
+                <li>
+                    {{ form_errors(form.keywordField) }}
+                    {{ form_widget(form.keywordField) }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="#" id="add-another-keyword">Add another email</a>#}
         <div class="groupequipformulaire">
             <div class="row">
                 <div class="form-group">
@@ -152,7 +163,7 @@
                 </div>
             </div>
         </div>
-        <div class="groupequipformulaire">
+        {#<div class="groupequipformulaire">
             <div class="row">
                 <div class="form-group">
                     {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
@@ -161,7 +172,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>#}
         <div class="row">
             <div class="col-sm-offset-3">
                 <div class="groupequipformulaire boutonEdit ">
@@ -176,4 +187,29 @@
             <a class="btn btn-default btn-lg btnForm" href="{{ path('equipe_index') }}">Retourner à la liste</a>
         </li>
     </ul>
+
+    <script type="text/javascript">
+        // keep track of how many email fields have been rendered
+        var keywordCount = '{{ form.keywordsEquipe|length }}';
+
+        jQuery(document).ready(function() {
+            jQuery('#add-another-keyword').click(function(e) {
+                e.preventDefault();
+
+                var keywordList = jQuery('#keyword-fields-list');
+
+                // grab the prototype template
+                var newWidget = keywordList.attr('data-prototype');
+                // replace the "__name__" used in the id and name of the prototype
+                // with a number that's unique to your emails
+                // end name attribute looks like name="contact[emails][2]"
+                newWidget = newWidget.replace(/keywords/g, keywordCount);
+                keywordCount++;
+
+                // create a new list element and add it to the list
+                var newLi = jQuery('<li></li>').html(newWidget);
+                newLi.appendTo(keywordList);
+            });
+        })
+    </script>
 {% endblock %}

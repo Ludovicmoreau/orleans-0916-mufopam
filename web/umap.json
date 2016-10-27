@@ -253,6 +253,27 @@
                                 47.543367
                             ]
                         }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "orleans",
+                            "street": "1 avenue du champ de mars",
+                            "postcode": "45000",
+                            "name": "f",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**g g**\n---\n**Nous trouver : [[g|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                1.8941995,
+                                47.8938701
+                            ]
+                        }
                     }
                     ]
                 }

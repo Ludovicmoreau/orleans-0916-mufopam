@@ -39,6 +39,143 @@ class EquipeController extends Controller
         ));
     }
 
+    /**
+     * Creates a new Equipe entity.
+     *
+     * @Route("/new", name="equipe_new")
+     * @Method({"GET", "POST"})
+     */
+    public function newAction(Request $request)
+    {
+        $equipe = new Equipe();
+        $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            /*$file = $equipe->getLogo();
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $equipe->setLogo($fileName);
+            $file->move(
+                $this->getParameter('upload_directory'),
+                $fileName
+            );*/
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($equipe);
+            $em->flush();
+
+            // generation de umap.json après création équipe
+            $this->generateMapAction();
+            // load success message in flashbag
+            $this->addFlash('success',"Création équipe terminée");
+            return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
+        }
+        return $this->render('equipe/new.html.twig', array(
+            'equipe' => $equipe,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * Finds and displays a Equipe entity.
+     *
+     * @Route("/{id}", name="equipe_show")
+     * @Method("GET")
+     */
+    public function showAction(Equipe $equipe)
+    {
+        $deleteForm = $this->createDeleteForm($equipe);
+
+        return $this->render('equipe/show.html.twig', array(
+            'equipe' => $equipe,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing Equipe entity.
+     *
+     * @Route("/{id}/edit", name="equipe_edit")
+     * @Method({"GET", "POST"})
+     */
+    public function editAction(Request $request, Equipe $equipe)
+    {
+
+        /*$equipe->setLogo(
+            new File($this->getParameter('load_directory').$equipe->getLogo())
+        );*/
+        $deleteForm = $this->createDeleteForm($equipe);
+        $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /*if (!$_FILES['logo']) {
+                $file = $equipe->getLogo();
+                $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+                $equipe->setLogo($fileName);
+                $file->move(
+                    $this->getParameter('upload_directory'),
+                    $fileName
+                );
+            }*/
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($equipe);
+            $em->flush();
+
+            // generation de umap.json après modification équipe
+            $this->generateMapAction();
+
+            // load success message in flashbag
+            $this->addFlash('success',"Edition équipe terminée");
+            return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
+        }
+
+        return $this->render('equipe/edit.html.twig', array(
+            'equipe' => $equipe,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a Equipe entity.
+     *
+     * @Route("/{id}", name="equipe_delete")
+     * @Method("DELETE")
+     */
+    public function deleteAction(Request $request, Equipe $equipe)
+    {
+        $form = $this->createDeleteForm($equipe);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($equipe);
+            $em->flush();
+        }
+
+        // generation de umap.json après suppression équipe
+        $this->generateMapAction();
+        // load success message in flashbag
+        $this->addFlash('success',"Equipe supprimée");
+        return $this->redirectToRoute('equipe_index');
+    }
+
+    /**
+     * Creates a form to delete a Equipe entity.
+     *
+     * @param Equipe $equipe The Equipe entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createDeleteForm(Equipe $equipe)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('equipe_delete', array('id' => $equipe->getId())))
+            ->setMethod('DELETE')
+            ->getForm()
+        ;
+    }
+
     // Generation du geojson pour carte dynamique vers umap.openstreetmap.fr
     // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
     // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
@@ -50,11 +187,14 @@ class EquipeController extends Controller
         if (file_exists('umap.json')) {
             unlink('umap.json');
         }
+        //init variables
         $root = "%kernel.root_dir%/../web/images/logos_equipes/";
-        var_dump($root);
         $em = $this->getDoctrine()->getManager();
-        $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
         $geojson = '';
+        $errorApi = false;
+
+        // get values from bdd
+        $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
         foreach($equipesDatas as $key => $equipeData){
 
@@ -99,154 +239,16 @@ class EquipeController extends Controller
                 {
                     "type": "FeatureCollection",
                     "features": ['
-                        .$geojson.'
+                    .$geojson.'
                     ]
                 }');
-
-
-                //LOGO EQUIPES '.$equipeData->getLogo().'
                 fclose($fp);
-                // Reset error
-                $errorApi = false;
             }
         }
         if (!$errorApi){
             $this->addFlash('success','Génération de la carte réussi, patientez quelques minutes pour que la carte soit actualisée');
         }
         return $this->redirectToRoute('equipe_index');
-    }
-
-    /**
-     * Creates a new Equipe entity.
-     *
-     * @Route("/new", name="equipe_new")
-     * @Method({"GET", "POST"})
-     */
-    public function newAction(Request $request)
-    {
-        $equipe = new Equipe();
-        $form = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $file = $equipe->getLogo();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $equipe->setLogo($fileName);
-            $file->move(
-                $this->getParameter('upload_directory'),
-                $fileName
-            );
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($equipe);
-            $em->flush();
-
-            // generation de umap.json après création équipe
-            $this->generateMapAction();
-            $this->addFlash('success',"Création équipe terminée");
-            return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
-        }
-        return $this->render('equipe/new.html.twig', array(
-            'equipe' => $equipe,
-            'form' => $form->createView(),
-        ));
-    }//            'motscles' => $keywords,
-
-    /**
-     * Finds and displays a Equipe entity.
-     *
-     * @Route("/{id}", name="equipe_show")
-     * @Method("GET")
-     */
-    public function showAction(Equipe $equipe)
-    {
-        $deleteForm = $this->createDeleteForm($equipe);
-
-        return $this->render('equipe/show.html.twig', array(
-            'equipe' => $equipe,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Equipe entity.
-     *
-     * @Route("/{id}/edit", name="equipe_edit")
-     * @Method({"GET", "POST"})
-     */
-    public function editAction(Request $request, Equipe $equipe)
-    {
-
-        $equipe->setLogo(
-            new File($this->getParameter('load_directory').$equipe->getLogo())
-        );
-        $deleteForm = $this->createDeleteForm($equipe);
-        $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
-        $editForm->handleRequest($request);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            if (!$_FILES['logo']) {
-                $file = $equipe->getLogo();
-                $fileName = md5(uniqid()) . '.' . $file->guessExtension();
-                $equipe->setLogo($fileName);
-                $file->move(
-                    $this->getParameter('upload_directory'),
-                    $fileName
-                );
-            }
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($equipe);
-            $em->flush();
-
-            // generation de umap.json après modification équipe
-            $this->generateMapAction();
-            $this->addFlash('success',"Edition équipe terminée");
-            return $this->redirectToRoute('equipe_edit', array('id' => $equipe->getId()));
-        }
-
-        return $this->render('equipe/edit.html.twig', array(
-            'equipe' => $equipe,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Deletes a Equipe entity.
-     *
-     * @Route("/{id}", name="equipe_delete")
-     * @Method("DELETE")
-     */
-    public function deleteAction(Request $request, Equipe $equipe)
-    {
-        $form = $this->createDeleteForm($equipe);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($equipe);
-            $em->flush();
-        }
-
-        // generation de umap.json après suppression équipe
-        $this->generateMapAction();
-        $this->addFlash('success',"Equipe supprimée");
-        return $this->redirectToRoute('equipe_index');
-    }
-
-    /**
-     * Creates a form to delete a Equipe entity.
-     *
-     * @param Equipe $equipe The Equipe entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Equipe $equipe)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('equipe_delete', array('id' => $equipe->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
     }
 }
 

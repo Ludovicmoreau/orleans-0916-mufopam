@@ -146,22 +146,45 @@
                         <img class="img-responsive" src="{{ equipe.logo }}" alt=""/>
                 </div>
             </div>
-            <div class="row">
+            {# store the prototype on the data-prototype attribute #}
+            <ul id="keyword-fields-list"
+                data-prototype="{{ form_widget(edit_form.keywordsEquipe.vars.prototype)|e }}">
+                {% for keywords in edit_form.keywordsEquipe %}
+                    <li>
+                        {{ form_errors(keywords) }}
+                        {{ form_widget(keywords) }}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <a href="#" id="add-another-keyword">Add another keyword</a>
+
+            {#<div class="row">
                 <div class="form-group">
                     {{ form_label(edit_form.keywordsEquipe, "Mots clés", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
-                        {{ form_widget(edit_form.keywordsEquipe) }}
+                        {{ form_widget(edit_form.keywordsEquipe, {'attr': {'class': 'form-control'}}) }}
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </div>#}
+            {#<div class="row">
+                <div class="form-group">
+                    {{ form_label(edit_form.keywordsEquipe, "Mots clés déjà sélectionnés", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    {{ form_label(edit_form.keywordsEquipe, "Mots clés", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.keywordsEquipe, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>#}
+            {#<div class="row">
                 <div class="form-group">
                     {{ form_label(edit_form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(edit_form.logo) }}
                     </div>
                 </div>
-            </div>
+            </div>#}
+
         </div>
         <div class="row">
             <div class="col-sm-offset-3">
@@ -183,5 +206,28 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    <script type="text/javascript">
+        // keep track of how many email fields have been rendered
+        var keywordCount = '{{ edit_form.keywordsEquipe|length }}';
 
+        jQuery(document).ready(function() {
+            jQuery('#add-another-keyword').click(function(e) {
+                e.preventDefault();
+
+                var keywordList = jQuery('#keyword-fields-list');
+
+                // grab the prototype template
+                var newWidget = keywordList.attr('data-prototype');
+                // replace the "__name__" used in the id and name of the prototype
+                // with a number that's unique to your emails
+                // end name attribute looks like name="contact[emails][2]"
+                newWidget = newWidget.replace(/__name__/g, keywordCount);
+                keywordCount++;
+
+                // create a new list element and add it to the list
+                var newLi = jQuery('<li></li>').html(newWidget);
+                newLi.appendTo(keywordList);
+            });
+        })
+    </script>
 {% endblock %}
