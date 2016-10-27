@@ -32,11 +32,12 @@
             <a class="btn btn-default btn-lg btnForm" href="{{ path('keywords_index') }}">Retourner à la liste</a>
         </li>
     </ul>
-    {{ dump(autocompleteKeywords) }}
+
     <script>
-        /*var keywords = {# for keyword in autocompleteKeywords  %}
-                            {{ keyword }}
-                        {% endfor #};
+        var autocompleteKeyword = [];
+        {% for key, autocompleteKeyword in  autocompleteKeywords%}
+            autocompleteKeyword[{{ key }}] = '{{ autocompleteKeyword.keyword }}';
+        {% endfor %}
 
     </script>
 {% endblock %}

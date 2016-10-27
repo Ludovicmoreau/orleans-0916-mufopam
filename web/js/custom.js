@@ -8,7 +8,6 @@ $(function() {
         }
     });
 
-
     /*Gestion du flashbag*/
     $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert();
     window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 4000);
@@ -34,7 +33,7 @@ $(function() {
 
     /*##### autocomplete in form #####*/
     $( "#keywords_keyword" ).autocomplete({
-        source: keywords
+        source: autocompleteKeyword
     });
 
     /*##### datetime picker in form #####*/
