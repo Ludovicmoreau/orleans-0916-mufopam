@@ -40,12 +40,6 @@ class EquipeType extends AbstractType
             ->add('recherche')
             ->add('projet')
             ->add('descriptionEquipe')
-            /*->add('keywordsEquipe', EntityType::class, array(
-                'class' => 'Gdr3625BackofficeBundle:Keywords',
-                'choice_label' => 'keyword',
-                'expanded' => false,
-                'multiple' => true,
-                'required' => false,))*/
             ->add('keywordsEquipe', CollectionType::class, array(
                 'entry_type' => EntityType::class,
                 'entry_options' => array(

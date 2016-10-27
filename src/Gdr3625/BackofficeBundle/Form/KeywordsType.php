@@ -21,13 +21,6 @@ class KeywordsType extends AbstractType
     {
         $builder
             ->add('keyword', TextType::class)
-            /*->add('keyword', EntityType::class ,array(
-                'class' => 'Gdr3625BackofficeBundle:Keywords',
-                'choice_label' => 'keyword',
-                'expanded' => false,
-                'multiple' => false,
-                'required' => false,
-            ))*/
         ;
     }
     
