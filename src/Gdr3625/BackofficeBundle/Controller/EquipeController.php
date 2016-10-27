@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Equipe;
 use Gdr3625\BackofficeBundle\Form\EquipeType;
 use Symfony\Component\HttpFoundation\File\File;
+use Gdr3625\BackofficeBundle\Entity\Keywords;
 
 
 
@@ -49,6 +50,8 @@ class EquipeController extends Controller
         if (file_exists('umap.json')) {
             unlink('umap.json');
         }
+        $root = "%kernel.root_dir%/../web/images/logos_equipes/";
+        var_dump($root);
         $em = $this->getDoctrine()->getManager();
         $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
         $geojson = '';
@@ -75,7 +78,7 @@ class EquipeController extends Controller
                             "street": "' . $equipeData->getRue() . '",
                             "postcode": "' . $equipeData->getCp() . '",
                             "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "description": "'.$root.$equipeData->getLogo().'\n\n# Référent :\n**'.$equipeData->getNomReferent().' '.$equipeData->getPrenomReferent().'**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -110,6 +113,7 @@ class EquipeController extends Controller
         if (!$errorApi){
             $this->addFlash('success','Génération de la carte réussi, patientez quelques minutes pour que la carte soit actualisée');
         }
+        return $this->redirectToRoute('equipe_index');
     }
 
     /**
@@ -145,7 +149,7 @@ class EquipeController extends Controller
             'equipe' => $equipe,
             'form' => $form->createView(),
         ));
-    }
+    }//            'motscles' => $keywords,
 
     /**
      * Finds and displays a Equipe entity.
@@ -171,26 +175,30 @@ class EquipeController extends Controller
      */
     public function editAction(Request $request, Equipe $equipe)
     {
+
         $equipe->setLogo(
-            new File($this->getParameter('load_directory').'/'.$equipe->getLogo())
+            new File($this->getParameter('load_directory').$equipe->getLogo())
         );
         $deleteForm = $this->createDeleteForm($equipe);
         $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $file = $equipe->getLogo();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $equipe->setLogo($fileName);
-            $file->move(
-                $this->getParameter('upload_directory'),
-                $fileName
-            );
-
+            if (!$_FILES['logo']) {
+                $file = $equipe->getLogo();
+                $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+                $equipe->setLogo($fileName);
+                $file->move(
+                    $this->getParameter('upload_directory'),
+                    $fileName
+                );
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($equipe);
             $em->flush();
 
+            // generation de umap.json après modification équipe
+            $this->generateMapAction();
             $this->addFlash('success',"Edition équipe terminée");
             return $this->redirectToRoute('equipe_edit', array('id' => $equipe->getId()));
         }
@@ -219,6 +227,8 @@ class EquipeController extends Controller
             $em->flush();
         }
 
+        // generation de umap.json après suppression équipe
+        $this->generateMapAction();
         $this->addFlash('success',"Equipe supprimée");
         return $this->redirectToRoute('equipe_index');
     }

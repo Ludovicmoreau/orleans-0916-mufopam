@@ -31,6 +31,10 @@ class Brevets
 
     private $equipe;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Brevets", mappedBy="equipeBrevet")
+     */
+    private $brevetEquipe;
 
     /**
      * Get id

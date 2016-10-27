@@ -6,6 +6,7 @@
                         "type": "Feature",
                         "properties": {
                             "country": "France",
+<<<<<<< HEAD
                             "city": "Strasbourg",
                             "street": "rue Koeberlé",
                             "postcode": "67000",
@@ -27,11 +28,17 @@
                         "type": "Feature",
                         "properties": {
                             "country": "France",
+=======
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "city": "Poitiers",
                             "street": "Georges Bonnet",
                             "postcode": "86073",
                             "name": "EBI",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/da305d0e96dca3f39ad1864bc94961b7.png\n\n# Référent :\n**BERJAUD Jean-Marc**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -52,7 +59,11 @@
                             "street": "2 avenue de la Forêt de Haye",
                             "postcode": "54518",
                             "name": "LIBio",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://libio.univ-lorraine.fr|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**REVOL-JUNELLES Anne-Marie**\n---\n**Nous trouver : [[http://libio.univ-lorraine.fr|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -73,7 +84,11 @@
                             "street": "Université Pierre et Marie CURIE (UPMC)  Bâtiment A, 5 ème étage, case courrier 29",
                             "postcode": "75252",
                             "name": "Biogenèse des Signaux  Peptidiques (BioSiPe)",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.ibps.upmc.fr/fr/plateformes/equipe-associee|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LADRAM Ali**\n---\n**Nous trouver : [[http://www.ibps.upmc.fr/fr/plateformes/equipe-associee|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -94,7 +109,11 @@
                             "street": "57 rue Cuvier",
                             "postcode": "75005",
                             "name": "Molécules de défense et de communication dans les écosystèmes microbiens (MDCEM)",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://mcam.mnhn.fr//MDCEM/|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**REBUFFAT Sylvie**\n---\n**Nous trouver : [[http://mcam.mnhn.fr//MDCEM/|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -115,7 +134,11 @@
                             "street": "Avenue Michel Crépeau",
                             "postcode": "17042",
                             "name": "AMES / DYFEA",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[Aucun|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**SABLE Sophie**\n---\n**Nous trouver : [[Aucun|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -136,7 +159,11 @@
                             "street": "Esplanade de la Paix",
                             "postcode": "14032",
                             "name": "B3A « Biodiversité et Bases Biologiques  pour l’Aquaculture »",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://borea.mnhn.fr/|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**ZATYLNY-GAUDIN Céline**\n---\n**Nous trouver : [[http://borea.mnhn.fr/|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -157,7 +184,11 @@
                             "street": "CHRU Jean Minjoz",
                             "postcode": "25000",
                             "name": "Agents Pathogènes et Inflammation",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.cnr-resistance-antibiotiques.fr/|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**Jeannot Katy**\n---\n**Nous trouver : [[http://www.cnr-resistance-antibiotiques.fr/|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -178,7 +209,11 @@
                             "street": "Rue Charles Sadron",
                             "postcode": "45071",
                             "name": "RMN des biomolécules",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?rubrique40&lang=fr|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LANDON Céline**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?rubrique40&lang=fr|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -199,7 +234,11 @@
                             "street": "-",
                             "postcode": "13000",
                             "name": "BiosCiences",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www.biosciences.univ-amu.fr|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**PERRIER Josette**\n---\n**Nous trouver : [[http://www.biosciences.univ-amu.fr|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -220,7 +259,11 @@
                             "street": "Cité Scientifique, Université de Lille1",
                             "postcode": "59655",
                             "name": "Species Interactions and Comparative Immunology (SPICI)",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**Tasiemski Aurélie**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -241,7 +284,11 @@
                             "street": "Centre de Recherche Val de Loire",
                             "postcode": "37380",
                             "name": "Centre International de Ressources Microbiennes dédié aux Bactéries Pathogènes (CIRM-BP)",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[www.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[www6.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -262,7 +309,11 @@
                             "street": "Centre de Recherche Val de Loire",
                             "postcode": "37380",
                             "name": "Pathogénie de la Colibacillose Aviaire",
+<<<<<<< HEAD
                             "description": "{{ app.request.schemeAndHttpHost }}\n\n# Thèmes :\n**Bioactive peptides**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
+=======
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -274,6 +325,7 @@
                                 47.543367
                             ]
                         }
+<<<<<<< HEAD
                     },
                     {  
                         "type": "Feature",
@@ -422,5 +474,8 @@
                             ]
                         }
                     },
+=======
+                    }
+>>>>>>> 2fb748ccf781eb0da45ab4770b7230f7c3d70017
                     ]
                 }

@@ -30,10 +30,10 @@ class Keywords
     private $keyword;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe")
-     * @ORM\JoinTable(name="keywords_equipe")
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe", cascade={"all"})
+     * @ORM\JoinColumn(name="equipe_id", referencedColumnName="id")
      */
-    private $equipes;
+    public $equipes;
 
     /**
      * @ORM\ManyToMany(targetEntity="Flux", mappedBy="keywordsflux")

@@ -14,8 +14,8 @@ $(function() {
     });
 
     /**/
-    $(".alert-message").alert();
-    window.setTimeout(function() { $(".alert-message").alert('close'); }, 4000);
+    $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert();
+    window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 4000);
 
     /*##### bp back to top #####*/
     // scroll distance to display bp

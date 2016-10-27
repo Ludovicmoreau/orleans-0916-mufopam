@@ -145,6 +145,16 @@
         <div class="groupequipformulaire">
             <div class="row">
                 <div class="form-group">
+                    {{ form_label(form.keywordsEquipe, "Mots clés équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-4">
+                        {{ form_widget(form.keywordsEquipe, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
                     {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.logo) }}
@@ -154,9 +164,9 @@
         </div>
         <div class="row">
             <div class="col-sm-offset-3">
-                <li class="groupequipformulaire boutonEdit ">
+                <div class="groupequipformulaire boutonEdit ">
                     <button type="submit" class="btn btn-success btn-lg btnForm">Créer</button>
-                </li>
+                </div>
             </div>
         </div>
         {{ form_end(form) }}
