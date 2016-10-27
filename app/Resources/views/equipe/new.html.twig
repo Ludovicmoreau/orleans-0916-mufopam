@@ -142,24 +142,20 @@
                 </div>
             </div>
         </div>
-        {#<ul id="keyword-fields-list"
-            {{ form_label(form.keywordsEquipe, "Mots clés", {'label_attr': {'class': 'col-sm-3 control-label'}} }}
-            data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
-            {% for keywordField in form.keywordsEquipe %}
-                <li>
-                    {{ form_errors(form.keywordField) }}
-                    {{ form_widget(form.keywordField) }}
-                </li>
-            {% endfor %}
-        </ul>
-        <a href="#" id="add-another-keyword">Add another email</a>#}
-        <div class="groupequipformulaire">
-            <div class="row">
-                <div class="form-group">
-                    {{ form_label(form.keywordsEquipe, "Mots clés équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                    <div class="col-sm-4">
-                        {{ form_widget(form.keywordsEquipe, {'attr': {'class': 'form-control'}}) }}
-                    </div>
+        <div class="row">
+            <div class="form-group">
+                {{ form_label(edit_form.keywordsEquipe, "Mots clés de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                <a href="#" class="col-sm-1 add-another-keyword"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                <div class="col-sm-4">
+                    {# store the prototype on the data-prototype attribute #}
+                    <ul id="keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(edit_form.keywordsEquipe.vars.prototype)|e }}">
+                        {% for key, keywords in edit_form.keywordsEquipe %}
+                            <li>
+                                {{ form_errors(keywords) }}
+                                {{ form_widget(keywords) }}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
@@ -187,13 +183,12 @@
             <a class="btn btn-default btn-lg btnForm" href="{{ path('equipe_index') }}">Retourner à la liste</a>
         </li>
     </ul>
-
-    <script type="text/javascript">
+    <script>
         // keep track of how many email fields have been rendered
-        var keywordCount = '{{ form.keywordsEquipe|length }}';
+        var keywordCount = '{{ edit_form.keywordsEquipe|length }}';
 
         jQuery(document).ready(function() {
-            jQuery('#add-another-keyword').click(function(e) {
+            jQuery('.add-another-keyword').click(function(e) {
                 e.preventDefault();
 
                 var keywordList = jQuery('#keyword-fields-list');
@@ -203,7 +198,7 @@
                 // replace the "__name__" used in the id and name of the prototype
                 // with a number that's unique to your emails
                 // end name attribute looks like name="contact[emails][2]"
-                newWidget = newWidget.replace(/keywords/g, keywordCount);
+                newWidget = newWidget.replace(/__name__/g, keywordCount);
                 keywordCount++;
 
                 // create a new list element and add it to the list
@@ -211,5 +206,6 @@
                 newLi.appendTo(keywordList);
             });
         })
+
     </script>
 {% endblock %}
