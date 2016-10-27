@@ -8,12 +8,8 @@ $(function() {
         }
     });
 
-    /*##### datetime picker in form #####*/
-    $( "#flux_datePublication" ).datepicker({
-        dateFormat: "yy-m-d"
-    });
 
-    /**/
+    /*Gestion du flashbag*/
     $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert();
     window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 4000);
 
@@ -35,5 +31,15 @@ $(function() {
     });
     /*##### Table sorter #####*/
     $('.tableSorter').tablesorter();
+
+    /*##### autocomplete in form #####*/
+    $( "#keywords_keyword" ).autocomplete({
+        source: keywords
+    });
+
+    /*##### datetime picker in form #####*/
+    $( "#flux_datePublication" ).datepicker({
+        dateFormat: "yy-m-d"
+    });
 
 });

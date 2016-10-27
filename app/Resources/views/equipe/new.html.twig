@@ -142,20 +142,22 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form.keywordsEquipe, "Mots clés de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-                <a href="#" class="col-sm-1 add-another-keyword"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                <div class="col-sm-4">
-                    {# store the prototype on the data-prototype attribute #}
-                    <ul id="keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
-                        {% for key, keywords in form.keywordsEquipe %}
-                            <li>
-                                {{ form_errors(keywords) }}
-                                {{ form_widget(keywords) }}
-                            </li>
-                        {% endfor %}
-                    </ul>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
+                    {{ form_label(form.keywordsEquipe, "Mots clés de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <a href="#" class="col-sm-1 add-another-keyword"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        {# store the prototype on the data-prototype attribute #}
+                        <ul id="keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
+                            {{ form_widget(form.keywordsEquipe) }}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
