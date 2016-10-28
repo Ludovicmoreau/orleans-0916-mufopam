@@ -94,7 +94,7 @@ class FluxController extends Controller
             $em->persist($flux);
             $em->flush();
 
-            return $this->redirectToRoute('flux_edit', array('id' => $flux->getId()));
+            return $this->redirectToRoute('flux_show', array('id' => $flux->getId()));
         }
 
         return $this->render('flux/edit.html.twig', array(

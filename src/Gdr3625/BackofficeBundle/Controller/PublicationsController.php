@@ -120,7 +120,7 @@ class PublicationsController extends Controller
             $em->persist($publication);
             $em->flush();
 
-            return $this->redirectToRoute('publications_edit', array('id' => $publication->getId()));
+            return $this->redirectToRoute('publications_show', array('id' => $publication->getId()));
         }
 
         return $this->render('publications/edit.html.twig', array(

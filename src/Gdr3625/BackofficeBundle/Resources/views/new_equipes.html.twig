@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-offset-4 col-lg-4 text-center">
             <h1>Rechercher une équipe :</h1>
-            <p><input type="text" class="quicksearch" placeholder="Taper ici ..." /></p>
+            <p><input type="text" class="quicksearch" placeholder="Rechercher ici ..." /></p>
             </div>
         </div>
         <div class="grid row">
@@ -29,7 +29,10 @@
                                 <div class="equipeRightCarte">
                                     <div class="equipeName text-center">
                                         <h1>{{ equipe.nomEquipe }}</h1>
-                                        <p>{# equipe.equipes_keywords.keywords.keyword #}</p>
+                                        {# dump(equipe.keywordsEquipe.values) #}
+                                        {#  for key, words in  equipe.keywordsEquipe.values %}
+                                            <p>{{ words}}</p>
+                                        {% endfor %}{#[key]['Keywords']['keyword']#}
                                     </div>
                                 </div>
                             </div>

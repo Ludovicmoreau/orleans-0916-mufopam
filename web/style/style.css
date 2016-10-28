@@ -5,6 +5,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     /*font-family: 'Play', sans-serif;*/
     /*font-family: 'Roboto Slab', serif;*/
+
 }
 
 p{
@@ -290,7 +291,8 @@ td > i{
     margin-left: 35%;
 }
 .txtArea{
-    min-height: 150px;
+    max-width: 100%;
+    min-height: 250px;
 }
 /**** Page Details Equipe ****/
 .equipeDetail a {
