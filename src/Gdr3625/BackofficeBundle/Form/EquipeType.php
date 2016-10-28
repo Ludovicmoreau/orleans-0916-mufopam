@@ -54,7 +54,7 @@ class EquipeType extends AbstractType
                 'required'=>false,
             ))
 
-            //->add('logo', FileType::class, array('required' => false))
+            ->add('logo', FileType::class, array('required' => false))
         ;
     }
     

@@ -12,15 +12,14 @@
             {% for flux in fluxes %}
                 <div class="element-item grid-sizerActu carteEquipe borderPurple col-lg-12">
                     <div class="carteContent ">
-                        <div class="topCarte">
-                            <div class="paddingActu">
-                                <h2 class="text-center"> {{ flux.titre }} </h2>
-                                <p> {{ flux.contenu }}</p>
-                            </div>
+                        <div class="topCarte topCarteJob">
+                            <h4>{{ flux.titre | truncate(82,true,' (...) ') |upper }}<span class="pull-right auteurDate">{{ flux.datepublication |date ('d-m-Y') }}</span></h4>
+                        </div>
+                        <div class="paddingActu">
+                            <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
                         </div>
                     </div>
                 </div>
-
             {% endfor %}
         </div>
     </div>

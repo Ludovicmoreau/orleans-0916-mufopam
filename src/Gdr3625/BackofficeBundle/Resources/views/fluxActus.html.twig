@@ -14,12 +14,11 @@
                 <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
                     <div class="element-item grid-sizerActu  carteEquipe borderRed col-lg-12 ">
                         <div class="carteContent ">
-                            <div class="topCarte">
-                                <div class="paddingActu">
-                                    <p class="text-center"> {{ flux.datePublication | date('d-m-Y')}}</p>
-                                        <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
-                                        <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
-                                </div>
+                            <div class="topCarte topCarteActu">
+                                <h4>{{ flux.titre | truncate(82,true,' (...) ') |upper }}<span class="pull-right auteurDate">{{ flux.datepublication |date ('d-m-Y') }}</span></h4>
+                            </div>
+                            <div class="paddingActu">
+                                <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
                             </div>
                         </div>
                     </div>

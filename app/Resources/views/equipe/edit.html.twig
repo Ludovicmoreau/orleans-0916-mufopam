@@ -191,7 +191,7 @@
             </div>
             <div class="row">
                 <div class="text-center col-sm-offset-3 col-sm-4 imgEquipeEdit equipeDetailLogo">
-                        <img class="img-responsive" src="{{ equipe.logo }}" alt=""/>
+                        <img class="img-responsive" src="{{ asset('images/logos_equipes/'~logopath) }}" alt=""/>
                 </div>
             </div>
             <div class="groupequipformulaire">
@@ -217,14 +217,14 @@
                     </div>
                 </div>
             </div>
-            {#<div class="row">
+            <div class="row">
                 <div class="form-group">
                     {{ form_label(edit_form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(edit_form.logo) }}
                     </div>
                 </div>
-            </div>#}
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-offset-3">
