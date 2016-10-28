@@ -31,11 +31,6 @@ $(function() {
     /*##### Table sorter #####*/
     $('.tableSorter').tablesorter();
 
-    /*##### autocomplete in form #####*/
-    $( "#keywords_keyword" ).autocomplete({
-        source: autocompleteKeyword
-    });
-
     /*##### datetime picker in form #####*/
     $( "#flux_datePublication" ).datepicker({
         dateFormat: "yy-m-d"

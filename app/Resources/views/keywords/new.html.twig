@@ -34,10 +34,13 @@
     </ul>
 
     <script>
+        /*##### autocomplete in form #####*/
         var autocompleteKeyword = [];
         {% for key, autocompleteKeyword in  autocompleteKeywords%}
             autocompleteKeyword[{{ key }}] = '{{ autocompleteKeyword.keyword }}';
         {% endfor %}
-
+        $( "#keywords_keyword" ).autocomplete({
+            source: autocompleteKeyword
+        });
     </script>
 {% endblock %}
