@@ -15,7 +15,7 @@
                 </tr>
                 <tr>
                     <th class="thtable2 text-center">Contenu</th>
-                    <td class="tdtable2">{{ flux.contenu }}</td>
+                    <td class="tdtable2">{{ flux.contenu | raw}}</td>
                 </tr>
                 <tr>
                     <th class="thtable2 text-center">Date de publication</th>
@@ -33,7 +33,7 @@
             <a class="btn btn-default btn-lg btnForm" href="{{ path('flux_index') }}">Retourner à la liste</a>
         </li>
         <li>
-            <a class="btn btn-success btn-lg btnForm" href="{{ path('flux_edit', { 'id': flux.id }) }}">Editer</a>
+            <a class="btn btn-success btn-lg btnForm click2edit" href="{{ path('flux_edit', { 'id': flux.id }) }}">Editer</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
