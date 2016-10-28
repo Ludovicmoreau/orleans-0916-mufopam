@@ -226,7 +226,7 @@ td > i{
     text-decoration: underline;
 }
 .carteEquipe h1{
-    font-size: 20px;
+    font-size: 18px;
 }
 .carteEquipe li {
     list-style: none;
@@ -286,8 +286,8 @@ td > i{
 
 }
 .equipeLogo{
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 100px;
+    max-height: 100px;
 }
 .boutonEdit{
     margin-left: 15px;
@@ -490,6 +490,9 @@ a.back-to-top {
 /*************************** Masonry ***********************************/
 * { box-sizing: border-box; }
 
+.titreCarte{
+    font-size: 10px;
+}
 
 /* ---- input ---- */
 
@@ -500,8 +503,10 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 5px;
+    margin-left: 9vw;
     margin-right: 1px;
+    fitWidth: true;
+
 }
 
 /* clear fix */
@@ -522,6 +527,13 @@ input[type="text"] {
     margin: 7px;
     min-width: 250px;
     min-height: 250px;
+    background-color: #337AB7;
+    color: white;
+}
+
+.element-item:hover{
+    background-color: white;
+    color: #337AB7;
 }
 
 .element-item > * {

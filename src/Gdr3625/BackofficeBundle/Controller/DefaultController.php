@@ -35,8 +35,14 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $equipes = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
 
+        $em = $this->getDoctrine()->getManager();
+        $keywords = $em->getRepository('Gdr3625BackofficeBundle:Keywords')->findAll();
+
+
         return $this->render('Gdr3625BackofficeBundle::new_equipes.html.twig', array(
-            'equipes' => $equipes));
+            'equipes' => $equipes,
+            'keywordsEquipe' => $keywords,
+        ));
     }
     /**
      * @Route("/equipe/detail/{id}", name="equipe_detail")

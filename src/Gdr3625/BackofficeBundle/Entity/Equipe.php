@@ -150,7 +150,6 @@ class Equipe
 
     /**
      * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"persist"})
-     * @ORM\JoinColumn(name="keywords_id", referencedColumnName="id")
      */
     private $keywordsEquipe;
 
