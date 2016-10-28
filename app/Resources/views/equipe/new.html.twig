@@ -11,6 +11,9 @@
                     <div class="col-sm-4">
                     {{ form_widget(form.nomEquipe, {'attr': {'class': 'form-control', 'placeholder': "Nom de l'équipe"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-gitlab iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -18,6 +21,9 @@
                     {{ form_label(form.laboratoire, "Laboratoire", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.laboratoire, {'attr': {'class': 'form-control', 'placeholder': "Laboratoire"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-university iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -29,6 +35,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.rue, {'attr': {'class': 'form-control', 'placeholder': "Rue"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-road iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -37,6 +46,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.cp, {'attr': {'class': 'form-control', 'placeholder': "00000"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-ellipsis-h iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -44,6 +56,9 @@
                     {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.ville, {'attr': {'class': 'form-control', 'placeholder': "Ville"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-building iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -55,6 +70,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.codeUnite, {'attr': {'class': 'form-control', 'placeholder': "Code unité"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-language iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -62,6 +80,9 @@
                     {{ form_label(form.tutelle, "Tutelle", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.tutelle, {'attr': {'class': 'form-control', 'placeholder': "Tutelle"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -71,6 +92,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.siteWebEquipe, {'attr': {'class': 'form-control', 'placeholder': "http://www.equipe-inernet.fr"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -78,6 +102,9 @@
                     {{ form_label(form.siteWebLabo, "Site internet labo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.siteWebLabo, {'attr': {'class': 'form-control', 'placeholder': "http://www.labo-inernet.fr"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-internet-explorer iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -89,6 +116,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.nomReferent, {'attr': {'class': 'form-control', 'placeholder': "Nom référent"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -96,6 +126,9 @@
                     {{ form_label(form.prenomReferent, "Prénom référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.prenomReferent, {'attr': {'class': 'form-control', 'placeholder': "Prénom référent"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-male iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -105,6 +138,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.emailReferent, {'attr': {'class': 'form-control', 'placeholder': "email@email.fr"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-envelope iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -112,6 +148,9 @@
                     {{ form_label(form.telephoneReferent, "Téléphone référent", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.telephoneReferent, {'attr': {'class': 'form-control', 'placeholder': "03 00 00 00 00"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-phone iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -123,6 +162,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.recherche, {'attr': {'class': 'form-control', 'placeholder': "Recherche"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-search iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -130,6 +172,9 @@
                     {{ form_label(form.projet, "Projet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-4">
                         {{ form_widget(form.projet, {'attr': {'class': 'form-control', 'placeholder': "Projet"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-first-order iconLeft" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -139,6 +184,9 @@
                     <div class="col-sm-4">
                         {{ form_widget(form.descriptionEquipe, {'attr': {'class': 'form-control txtArea', 'placeholder': "Description équipe"}}) }}
                     </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-file-text-o iconLeft" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,7 +195,6 @@
                 <div class="form-group">
                     {{ form_label(form.keywordsEquipe, "Mots clés de l'équipe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <a href="#" class="col-sm-1 add-another-keyword"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-
                 </div>
             </div>
             <div class="row">

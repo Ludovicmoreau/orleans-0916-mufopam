@@ -292,7 +292,7 @@ td > i{
 }
 .txtArea{
     max-width: 100%;
-    min-height: 350px;
+    min-height: 250px;
 }
 /**** Page Details Equipe ****/
 .equipeDetail a {
