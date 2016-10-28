@@ -31,9 +31,31 @@ $(function() {
     /*##### Table sorter #####*/
     $('.tableSorter').tablesorter();
 
+    /*##### autocomplete in form #####*/
+    $( "#keywords_keyword" ).autocomplete({
+        source: autocompleteKeyword
+    });
+
     /*##### datetime picker in form #####*/
     $( "#flux_datePublication" ).datepicker({
         dateFormat: "yy-m-d"
     });
+
+    /*##### Summernote #####*/
+    $(document).ready(function() {
+        $('#flux_contenu').summernote({
+            height: 300,
+        });
+
+        var html = $('#flux_contenu').summernote('code');
+    });
+
+
+
+    var save = function() {
+        var makrup = $('.click2edit').summernote('code');
+        $('.click2edit').summernote('destroy');
+    };
+
 
 });

@@ -6,6 +6,27 @@
                         "type": "Feature",
                         "properties": {
                             "country": "France",
+                            "city": "Strasbourg",
+                            "street": "rue Koeberlé",
+                            "postcode": "67000",
+                            "name": "Virulence bactérienne précoce : groupe borréliose de Lyme",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**BOULANGER Nathalie**\n---\n**Nous trouver : [[http://www.chru-strasbourg.fr/Les-centres-de-reference/Borrelia|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                7.7394028,
+                                48.5748778
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
                             "city": "Poitiers",
                             "street": "Georges Bonnet",
                             "postcode": "86073",
@@ -191,110 +212,5 @@
                             ]
                         }
                     },
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "Villeneuve d’Ascq",
-                            "street": "Cité Scientifique, Université de Lille1",
-                            "postcode": "59655",
-                            "name": "Species Interactions and Comparative Immunology (SPICI)",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**Tasiemski Aurélie**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
-                            }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                3.1442651,
-                                50.6232523
-                            ]
-                        }
-                    },
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "Nouzilly",
-                            "street": "Centre de Recherche Val de Loire",
-                            "postcode": "37380",
-                            "name": "Centre International de Ressources Microbiennes dédié aux Bactéries Pathogènes (CIRM-BP)",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[www6.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
-                            }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                0.744155,
-                                47.543367
-                            ]
-                        }
-                    },
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "Nouzilly",
-                            "street": "Centre de Recherche Val de Loire",
-                            "postcode": "37380",
-                            "name": "Pathogénie de la Colibacillose Aviaire",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
-                            }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                0.744155,
-                                47.543367
-                            ]
-                        }
-                    },
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "orleans",
-                            "street": "1 avenue du champ de mars",
-                            "postcode": "45000",
-                            "name": "f",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**g g**\n---\n**Nous trouver : [[g|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
-                            }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                1.8941995,
-                                47.8938701
-                            ]
-                        }
-                    },
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "orleans",
-                            "street": "1 avenue du champ de mars",
-                            "postcode": "45000",
-                            "name": "f",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**d d**\n---\n**Nous trouver : [[d|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
-                            }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                1.8941995,
-                                47.8938701
-                            ]
-                        }
-                    }
                     ]
                 }
