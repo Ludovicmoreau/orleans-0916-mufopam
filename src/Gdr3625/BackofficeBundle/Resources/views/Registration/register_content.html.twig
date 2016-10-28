@@ -5,7 +5,7 @@
     <div class="groupequipformulaire">
         <div class="row">
             <div class="form-group ">
-                {{ form_label(form, "Username", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
+                {{ form_label(form, "Nom d'utilisateur", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
                     {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': "Nom d'utilisateur"}}) }}
                 </div>
@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="form-group">
-                {{ form_label(form, "Password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
+                {{ form_label(form, "Mot de passe", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
                     {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
                 </div>
@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="form-group">
-                {{ form_label(form, "Reapeat password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
+                {{ form_label(form, "Répéter le mot de passe", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
                     {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
                 </div>
