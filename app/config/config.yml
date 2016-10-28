@@ -82,7 +82,7 @@ fos_user:
             email:
                 from_email:
                     address:        resetting@example.com
-                    sender_name:    Demo Resetting
+                    sender_name:    Administrateur du site
 services:
     twig.extension.text:
         class: Twig_Extensions_Extension_Text

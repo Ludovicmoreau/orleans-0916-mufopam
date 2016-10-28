@@ -23,7 +23,7 @@
             <div class="form-group">
                 {{ form_label(form, "Password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="form-group">
                 {{ form_label(form, "Reapeat password", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
                 <div class="col-sm-4">
-                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
                 </div>
             </div>
         </div>
