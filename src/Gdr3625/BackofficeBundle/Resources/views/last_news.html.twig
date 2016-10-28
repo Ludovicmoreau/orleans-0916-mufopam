@@ -1,6 +1,6 @@
 <div class="panel-heading">
     <div class="panel-title">
-        <h4> Dernière {{ fluxes.0.typeflux }} <span class="pull-right auteurDate">Le {{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
+        <h4>{{ fluxes.0.typeflux | upper}} <span class="pull-right auteurDate">{{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
     </div>
 </div>
 <div class="panel-body">
