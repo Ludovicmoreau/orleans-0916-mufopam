@@ -266,6 +266,19 @@ td > i{
 .panelPublication{
     min-height: 400px;
 }
+.h2Publication{
+    font-size: 23px;
+    margin-top: 0;
+
+}
+.list-inline {
+    padding-left: 17px;
+    margin-left: 0px;
+}
+.list-inline > li {
+    padding-left: 18px;
+    padding-right: 18px;
+}
 /************ formulaire **************/
 .groupequipformulaire {
     padding-top: 30px;
@@ -533,3 +546,4 @@ input[type="text"] {
     min-height: 250px;
 
 }
+
