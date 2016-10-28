@@ -24,7 +24,7 @@
                         </ul>
                     </li>
 
-                    <li class="{% if app.request.attributes.get('_route') in ['user_index','user_edit','user_show','user_delete'] %} active {% endif %}"><a href="/back/user">Edition Utilisateurs</a></li>
+                    <li class="{% if app.request.attributes.get('_route') in ['user_index','user_edit','user_show','user_delete'] %} active {% endif %}"><a href="/register">Edition Utilisateurs</a></li>
                     <li class="{% if app.request.attributes.get('_route') in ['equipe_index','equipe_edit','equipe_show','equipe_delete'] %} active {% endif %}"><a href="/back/equipes">Edition Equipes</a></li>
                     <li class="text-center {% if app.request.attributes.get('_route') in ['keywords_index','keywords_edit','keywords_show','keywords_delete'] %} active {% endif %}"><a href="/back/keywords"> Edition Mot clés</a></li>
 
