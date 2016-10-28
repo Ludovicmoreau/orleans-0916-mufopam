@@ -50,6 +50,7 @@ class EquipeType extends AbstractType
                     'required' => false,
                                         ),
                 'allow_add'=> true,
+                'allow_delete'=> true,
                 'required'=>false,
             ))
 
