@@ -185,9 +185,6 @@ td > i{
 #panneau_lateral{
     padding-top: 112px;
 }
-.panel-body{
-    background-color: #F5F5F5;
-}
 /**** equipes ****/
 .borderBlue{
     border: 3px solid #337ab7;
@@ -265,6 +262,19 @@ td > i{
 /************ Publications ****************/
 .panelPublication{
     min-height: 400px;
+}
+.h2Publication{
+    font-size: 23px;
+    margin-top: 0;
+
+}
+.list-inline {
+    padding-left: 17px;
+    margin-left: 0px;
+}
+.list-inline > li {
+    padding-left: 18px;
+    padding-right: 18px;
 }
 /************ formulaire **************/
 .groupequipformulaire {
@@ -533,3 +543,4 @@ input[type="text"] {
     min-height: 250px;
 
 }
+
