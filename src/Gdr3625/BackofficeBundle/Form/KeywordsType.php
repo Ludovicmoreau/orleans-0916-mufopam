@@ -3,8 +3,13 @@
 namespace Gdr3625\BackofficeBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\Type;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Gdr3625\BackofficeBundle\Entity\Equipe;
+use Gdr3625\BackofficeBundle\Entity\Keywords;
 
 class KeywordsType extends AbstractType
 {
@@ -15,7 +20,7 @@ class KeywordsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('keyword')
+            ->add('keyword', TextType::class)
         ;
     }
     

@@ -45,6 +45,10 @@ class KeywordsController extends Controller
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\KeywordsType', $keyword);
         $form->handleRequest($request);
 
+        // récupération des keyword dans la bdd pour autocomplete dans le form afin d'éviter les doublons à la saisie
+        $em = $this->getDoctrine()->getManager();
+        $words = $em->getRepository('Gdr3625BackofficeBundle:Keywords')->findAll();
+
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($keyword);
@@ -55,6 +59,7 @@ class KeywordsController extends Controller
 
         return $this->render('keywords/new.html.twig', array(
             'keyword' => $keyword,
+            'autocompleteKeywords' =>$words,
             'form' => $form->createView(),
         ));
     }

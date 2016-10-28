@@ -33,4 +33,11 @@
         </li>
     </ul>
 
+    <script>
+        var autocompleteKeyword = [];
+        {% for key, autocompleteKeyword in  autocompleteKeywords%}
+            autocompleteKeyword[{{ key }}] = '{{ autocompleteKeyword.keyword }}';
+        {% endfor %}
+
+    </script>
 {% endblock %}

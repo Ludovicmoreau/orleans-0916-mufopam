@@ -138,8 +138,7 @@ class Equipe
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
-     * @Assert\NotBlank(message="Télècharger le logo du laboratoire en jpeg ou png.")
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
      * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpeg", "image/jpeg"})
      */
     private $logo;
@@ -150,7 +149,7 @@ class Equipe
     protected $brevets;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"all"})
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"persist"})
      * @ORM\JoinColumn(name="keywords_id", referencedColumnName="id")
      */
     private $keywordsEquipe;

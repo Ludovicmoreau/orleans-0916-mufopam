@@ -13,7 +13,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-menubuilder">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="dropdown {% if app.request.attributes.get('_route') in ['flux_index','flux_new','flux_edit','flux_show','flux_delete','brevets_index','brevets_index','brevets_edit','brevets_show','brevets_delete','publications_index','publications_index','publications_edit','publications_show','publications_delete'] %} active {% endif %}">
+                    <li class="dropdown {% if app.request.attributes.get('_route') in ['flux_index','flux_new','flux_edit','flux_show','flux_delete','brevets_index','brevets_new','brevets_edit','brevets_show','brevets_delete','publications_index','publications_new','publications_edit','publications_show','publications_delete'] %} active {% endif %}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Edition Contenus <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="text-center {% if app.request.attributes.get('_route') in ['flux_index','flux_new','flux_edit','flux_show','flux_delete'] %} active {% endif %}"><a href="/back/flux">Actualités</a></li>
@@ -23,11 +23,9 @@
                             <li class="text-center {% if app.request.attributes.get('_route') in ['publications_index','publications_new','publications_edit','publications_show','publications_delete'] %} active {% endif %}"><a href="/back/publications">Publications</a></li>
                         </ul>
                     </li>
-
-                    <li class="{% if app.request.attributes.get('_route') in ['user_index','user_edit','user_show','user_delete'] %} active {% endif %}"><a href="/back/user">Edition Utilisateurs</a></li>
-                    <li class="{% if app.request.attributes.get('_route') in ['equipe_index','equipe_edit','equipe_show','equipe_delete'] %} active {% endif %}"><a href="/back/equipes">Edition Equipes</a></li>
-                    <li class="text-center {% if app.request.attributes.get('_route') in ['keywords_index','keywords_edit','keywords_show','keywords_delete'] %} active {% endif %}"><a href="/back/keywords"> Edition Mot clés</a></li>
-
+                    <li class="{% if app.request.attributes.get('_route') in ['register'] %} active {% endif %}"><a href="/register">Edition Utilisateurs</a></li>
+                    <li class="{% if app.request.attributes.get('_route') in ['equipe_index','equipe_new','equipe_edit','equipe_show','equipe_delete'] %} active {% endif %}"><a href="/back/equipes">Edition Equipes</a></li>
+                    <li class="text-center {% if app.request.attributes.get('_route') in ['keywords_index','keywords_index','keywords_edit','keywords_show','keywords_delete'] %} active {% endif %}"><a href="/back/keywords"> Edition Mot clés</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/logout">{% if app.user.username is defined %} {{app.user.username }} {% endif %}  <i class="fa fa-unlock fa-1x"></i></a></li>
