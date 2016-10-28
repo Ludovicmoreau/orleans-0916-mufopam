@@ -60,9 +60,11 @@
         {%  block navbar %}
             {%  include "Gdr3625BackofficeBundle::navBarUtilisateur.html.twig" %}
         {% endblock %}
+        <main>
         {%  block contenu %}
             {% include "Gdr3625BackofficeBundle::new_accueil.html.twig" %}
         {% endblock %}
+        </main>
         <a href="#" class="back-to-top"><i class="fa fa-chevron-circle-up"></i></a>
         {%  include "Gdr3625BackofficeBundle::footer.html.twig" %}
 </body>
