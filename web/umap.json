@@ -10,7 +10,7 @@
                             "street": "Georges Bonnet",
                             "postcode": "86073",
                             "name": "EBI",
-                            "description": "%kernel.root_dir%/../web/images/logos_equipes/da305d0e96dca3f39ad1864bc94961b7.png\n\n# Référent :\n**BERJAUD Jean-Marc**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**BERJAUD Jean-Marc**\n---\n**Nous trouver : [[http://ebi.labo.univ-poitiers.fr/|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }

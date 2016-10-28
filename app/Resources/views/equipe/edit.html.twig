@@ -205,7 +205,7 @@
                     <div class="form-group">
                         <div class="col-sm-8">
                             {# store the prototype on the data-prototype attribute #}
-                            <ul id="keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(edit_form.keywordsEquipe.vars.prototype)|e }}">
+                            <ul id="edit-keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(edit_form.keywordsEquipe.vars.prototype)|e }}">
                                 {% for key, keywords in edit_form.keywordsEquipe %}
                                     <li>
                                         {{ form_errors(keywords) }}
@@ -253,7 +253,7 @@
         jQuery(document).ready(function() {
 
             // Get the ul that holds the collection of tags
-            $collectionHolder = $('#keyword-fields-list');
+            $collectionHolder = $('#edit-keyword-fields-list');
             // add a delete link to all of the existing tag form li elements
             $collectionHolder.find('li').each(function() {
                 addTagFormDeleteLink($(this));
@@ -263,7 +263,7 @@
             jQuery('.add-another-keyword').click(function(e) {
                 e.preventDefault();
 
-                var keywordList = jQuery('#keyword-fields-list');
+                var keywordList = jQuery('#edit-keyword-fields-list');
 
                 // grab the prototype template
                 var newWidget = keywordList.attr('data-prototype');

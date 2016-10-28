@@ -97,7 +97,7 @@ class KeywordsController extends Controller
             $em->persist($keyword);
             $em->flush();
 
-            return $this->redirectToRoute('keywords_edit', array('id' => $keyword->getId()));
+            return $this->redirectToRoute('keywords_show', array('id' => $keyword->getId()));
         }
 
         return $this->render('keywords/edit.html.twig', array(

@@ -93,7 +93,7 @@ class BrevetsController extends Controller
             $em->persist($brevet);
             $em->flush();
 
-            return $this->redirectToRoute('brevets_edit', array('id' => $brevet->getId()));
+            return $this->redirectToRoute('brevets_show', array('id' => $brevet->getId()));
         }
 
         return $this->render('brevets/edit.html.twig', array(

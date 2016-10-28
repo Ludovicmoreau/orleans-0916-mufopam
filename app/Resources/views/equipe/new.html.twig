@@ -201,7 +201,7 @@
                 <div class="form-group">
                     <div class="col-sm-8">
                         {# store the prototype on the data-prototype attribute #}
-                        <ul id="keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
+                        <ul id="new-keyword-fields-list" class="list-inline" data-prototype="{{ form_widget(form.keywordsEquipe.vars.prototype)|e }}">
                             {{ form_widget(form.keywordsEquipe) }}
                         </ul>
                     </div>
@@ -240,7 +240,7 @@
             jQuery('.add-another-keyword').click(function(e) {
                 e.preventDefault();
 
-                var keywordList = jQuery('#keyword-fields-list');
+                var keywordList = jQuery('#new-keyword-fields-list');
 
                 // grab the prototype template
                 var newWidget = keywordList.attr('data-prototype');
