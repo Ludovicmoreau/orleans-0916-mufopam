@@ -53,8 +53,7 @@ class EquipeType extends AbstractType
                 'allow_delete'=> true,
                 'required'=>false,
             ))
-
-            //->add('logo', FileType::class, array('required' => false))
+            ->add('logo', FileType::class, array('required' => false))
         ;
     }
     

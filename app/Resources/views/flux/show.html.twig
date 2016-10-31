@@ -25,6 +25,14 @@
                     <th class="thtable2 text-center">Type d'actualité</th>
                     <td class="tdtable2">{{ flux.typeFlux }}</td>
                 </tr>
+                <tr>
+                    <th class="thtable2 text-center">Mots Clés</th>
+                    <td class="tdtable2">
+                        {% for key, keywords in flux.keywordsFlux %}
+                            {{ keywords.keyword }}
+                        {% endfor %}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
