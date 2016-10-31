@@ -223,22 +223,6 @@ td > i{
 .carteEquipe, .bottomCarte, .equipeLogo, .equipeName, .equipeLeftCarte, .equipeRightCarte{
     padding:0 ;
 }
-.topCarteActu{
-    background-color: #b92c28;
-}
-.topCartePublication{
-    background-color: #3e8f3e;
-}
-.topCarteBrevet{
-    background-color: #f0ad4e;
-}
-.topCarteJob{
-    background-color: #8959A8;
-}
-.topCarte{
-    padding: 5px;
-    color: white;
-}
 .carteContent a {
     text-decoration: none;
     color: inherit;
@@ -298,7 +282,7 @@ td > i{
 }
 .list-inline {
     padding-left: 17px;
-    margin-left: 0px;
+    margin-left: 0;
 }
 .list-inline > li {
     padding-left: 18px;
@@ -515,7 +499,6 @@ input[type="text"] {
 .grid {
     margin-left: 9vw;
     margin-right: 1px;
-    fitWidth: true;
 
 }
 

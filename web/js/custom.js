@@ -41,7 +41,7 @@ $(function() {
             height: 300,
         });
 
-    var html = $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote('code');
+    
 
     var save = function() {
         var makrup = $('.click2edit').summernote('code');

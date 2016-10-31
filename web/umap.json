@@ -401,5 +401,68 @@
                             ]
                         }
                     },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Lorient ",
+                            "street": "Université de Bretagne-Sud",
+                            "postcode": "56321",
+                            "name": "Laboratoire de Biotechnologie et Chimie Marines",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DUFOUR Alain**\n---\n**Nous trouver : [[http://www-lbcm.univ-ubs.fr/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -3.3702449,
+                                47.7482524
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Montpellier",
+                            "street": "Place Eugène Bataillon",
+                            "postcode": "34095",
+                            "name": "Réponses Immunitaires de Macroorganismes et Environnement",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DESTOUMIEUX-GARZON Delphine**\n---\n**Nous trouver : [[http://www.ecosym.univ-montp2.fr/index.php?option=com_content&task=view&id=118&Itemid=9|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                3.8606028,
+                                43.6314973
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Albi",
+                            "street": "Place de Verdun",
+                            "postcode": "81012",
+                            "name": "Venins et Activités Biologiques (VAcBio)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**TREILHOU Michel**\n---\n**Nous trouver : [[http://www.univ-jfc.fr/equipesrecherche/venins-activites-biologiques-vacbio-ea-4357-albi |Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                2.1396019,
+                                43.9198215
+                            ]
+                        }
+                    },
                     ]
                 }
