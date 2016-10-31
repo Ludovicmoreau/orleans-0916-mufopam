@@ -36,7 +36,7 @@ class Publications
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,12 +59,13 @@ class Publications
     /**
      * Get doi
      *
-     * @return string 
+     * @return string
      */
     public function getDoi()
     {
         return $this->doi;
     }
+
     /**
      * Constructor
      */
@@ -99,7 +100,7 @@ class Publications
     /**
      * Get equipes
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getEquipes()
     {
@@ -122,7 +123,6 @@ class Publications
         $this->publicationEquipe = $publicationEquipe;
     }
 
-    
 
     /**
      * Add publicationEquipe
@@ -145,15 +145,5 @@ class Publications
     public function removePublicationEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe)
     {
         $this->publicationEquipe->removeElement($publicationEquipe);
-    }
-
-    /**
-     * Get publicationEquipe
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPublicationEquipe()
-    {
-        return $this->publicationEquipe;
     }
 }
