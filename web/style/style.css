@@ -206,18 +206,6 @@ td > i{
     padding-top: 112px;
 }
 /**** equipes ****/
-.borderOrange{
-    border: 3px solid #f0ad4e;
-}
-.borderRed{
-    border: 3px solid #b92c28;
-}
-.borderGreen{
-    border: 3px solid #3e8f3e;
-}
-.borderPurple{
-    border: 3px solid #8959A8;
-}
 .filtersDisplay, .equipesDisplay{
     padding: 15px;
 }
@@ -374,9 +362,7 @@ td > i{
 .actuHauteur{
     min-height: 205px;
 }
-.paddingActu{
-    padding: 5px;
-}
+
 .h2Actu{
     font-size: 21px;
     margin-top: inherit;
@@ -595,22 +581,6 @@ input[type="text"] {
     background-color: #9ACD32;
     color: #337AB7;
 }
-.rouge:hover{
-    background-color: white;
-    color: #E3302B;
-}
-.vert:hover{
-    background-color: white;
-    color: #3E8F3E;
-}
-.jaune:hover{
-    background-color: white;
-    color: #F0902A;
-}
-.violet:hover{
-    background-color: white;
-    color: #7A2C6A;
-}
 .motclef{
     font-size: 9px;
     display: none;
@@ -644,19 +614,26 @@ input[type="text"] {
     height: auto;
     width: 33.333%;
     display: block;
-    margin: 7px;
-    max-width: 300px;
-    min-height: 250px;
+    margin-left: 7vw;
+    min-width: 430px;
+    min-height: 270px;
 }
 .infoEquipe{
     font-size: 15px;
 }
-.panelimg{
+.panelimg,
+.titreBrevet{
     background-color: white;
     padding-top: 4px;
     padding-bottom: 4px;
 }
+.titreBrevet{
+    color: #337AB7;
+}
 .nomEquipe{
     font-size: 20px;
+}
+.paddingActu{
+    padding: 15px;
 }
 
