@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+    <h1>Page non trouvée !</h1>
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# ... #}
+    {% endif %}
+
+    <p>
+        La page recherchée n'a pas pu être localisée. Regardez si il y a une faute dans l'URL ou
+        <a href="{{ path('accueil') }}">retourner à l'accueil</a>.
+    </p>
+{% endblock %}
+
