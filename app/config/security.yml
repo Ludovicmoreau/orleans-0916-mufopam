@@ -35,5 +35,6 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/back/flux, role: ROLE_ADMIN }
         - { path: ^/back/equipes, role: ROLE_SUPER_ADMIN }
+        - { path: ^/register/confirmed, role: ROLE_ADMIN }
         - { path: ^/register, role: ROLE_SUPER_ADMIN }
         - { path: ^/back/keywords$, role: ROLE_SUPER_ADMIN }
