@@ -13,16 +13,16 @@
             </div>
             <div class="collapse navbar-collapse navbar-menubuilder">
                 <ul class="nav navbar-nav navbar-left">
-                    <li id="accueil" class="{%if app.request.attributes.get('_route') in 'accueil' %} active {% endif %}"><a href="/">Accueil</a></li>
-                    <li id="equipes" class="{%if app.request.attributes.get('_route') in ['equipes','equipe_detail'] %} active {% endif %}"><a href="/equipes">Equipes</a></li>
-                    <li id="actualites" class="{%if app.request.attributes.get('_route') in ['actus','actu_detail'] %} active {% endif %}"><a href="/flux/actus">Actualités</a></li>
-                    <li id="publications" class="{%if app.request.attributes.get('_route') in 'publications' %} active {% endif %}"><a href="/publications">Publications</a></li>
-                    <li id="brevets" class="{%if app.request.attributes.get('_route') in 'brevets' %} active {% endif %}"><a href="/brevets">Brevets</a></li>
-                    <li id="jobs" class="{%if app.request.attributes.get('_route') in 'jobs' %} active {% endif %}"><a href="/flux/jobs">Jobs</a></li>
+                    <li id="accueil" class="{%if app.request.attributes.get('_route') in 'accueil' %} active {% endif %}"><a href="{{ path("accueil") }}">Accueil</a></li>
+                    <li id="equipes" class="{%if app.request.attributes.get('_route') in ['equipes','equipe_detail'] %} active {% endif %}"><a href="{{ path("equipes")}}">Equipes</a></li>
+                    <li id="actualites" class="{%if app.request.attributes.get('_route') in ['actus','actu_detail'] %} active {% endif %}"><a href="{{ path("actus")}}">Actualités</a></li>
+                    <li id="publications" class="{%if app.request.attributes.get('_route') in 'publications' %} active {% endif %}"><a href="{{ path("publications")}}">Publications</a></li>
+                    <li id="brevets" class="{%if app.request.attributes.get('_route') in 'brevets' %} active {% endif %}"><a href="{{ path("brevets")}}">Brevets</a></li>
+                    <li id="jobs" class="{%if app.request.attributes.get('_route') in 'jobs' %} active {% endif %}"><a href="{{ path("jobs")}}">Jobs</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/login"><i class="fa fa-lock fa-1x"></i></a>
+                        <a href="{{ path("fos_user_security_login") }}"><i class="fa fa-lock fa-1x"></i></a>
                     </li>
                 </ul>
             </div>

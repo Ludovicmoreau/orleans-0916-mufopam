@@ -36,7 +36,7 @@ class Publications
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -146,4 +146,5 @@ class Publications
     {
         $this->publicationEquipe->removeElement($publicationEquipe);
     }
+
 }

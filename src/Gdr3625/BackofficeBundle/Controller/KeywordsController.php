@@ -54,6 +54,8 @@ class KeywordsController extends Controller
             $em->persist($keyword);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success',"Création mot clé terminée");
             return $this->redirectToRoute('keywords_show', array('id' => $keyword->getId()));
         }
 
@@ -97,6 +99,8 @@ class KeywordsController extends Controller
             $em->persist($keyword);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success',"Edition mot clé terminée");
             return $this->redirectToRoute('keywords_show', array('id' => $keyword->getId()));
         }
 
@@ -124,6 +128,8 @@ class KeywordsController extends Controller
             $em->flush();
         }
 
+        // load success message in flashbag
+        $this->addFlash('success',"Equipe supprimée");
         return $this->redirectToRoute('keywords_index');
     }
 
