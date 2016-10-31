@@ -34,7 +34,7 @@
                                 <div class="paddingActu">
 
                                     <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
-                                    <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ')  }}</p>
+                                    <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
                                 </div>
                             </div>
                         </div>
