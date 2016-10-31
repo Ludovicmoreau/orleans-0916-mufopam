@@ -144,7 +144,7 @@ class Equipe
     private $logo;
     
     /**
-     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
      */
     private $keywordsEquipe;
 

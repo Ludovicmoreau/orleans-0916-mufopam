@@ -7,6 +7,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Gdr3625\BackofficeBundle\Form\KeywordsType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class FluxType extends AbstractType
 {
@@ -27,6 +30,19 @@ class FluxType extends AbstractType
                             'Jobs' => 'Stages - Contrats',
                             'Events' => 'Evènements',
                         ),
+            ))
+            ->add('keywordsFlux', CollectionType::class, array(
+                'entry_type' => EntityType::class,
+                'entry_options' => array(
+                    'class' => 'Gdr3625BackofficeBundle:Keywords',
+                    'choice_label' => 'keyword',
+                    'expanded' => false,
+                    'multiple' => false,
+                    'required' => false,
+                ),
+                'allow_add'=> true,
+                'allow_delete'=> true,
+                'required'=>false,
             ))
         ;
     }
