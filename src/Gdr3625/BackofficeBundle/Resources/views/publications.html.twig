@@ -9,29 +9,25 @@
             </div>
         </div>
         <div class="grid row">
-            {% for key, publication in publications %}
+            {% for publication in publications %}
                     <div class="element-item bleu grid-sizerActu  carteEquipe borderGreen col-lg-12 ">
                         <div class="carteContent ">
                             <div class="topCarte">
-                                    <div class="panel-heading divTitre">
-                                        <div class="panel-title">
-                                            <h2 class="h2Publication">{{ publication['message']['title'][0] | truncate(65,true,' (...) ')}}<span class="pull-right auteurDate">{{ publication['message']['published-print']['date-parts'][0][1]~'-' ~ publication['message']['published-print']['date-parts'][0][0]}}</span></h2>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <h3>Auteurs :</h3>
-                                        <ul class="list-inline">
-                                            {% for author in publication.message.author %}
-                                                <li>{{ author.given ~' '~ author.family ~ ',' ~ ' ' }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                        <h3>Revue :</h3>
-                                        <p>{{ publication.message.publisher }}</p>
-                                        <h3>DOI :</h3>
-                                        <p>{{ publication['message']['DOI'] }}</p>
-                                        <a href="{{ publication['message']['URL'] }}" target="_blank">Lien vers l'article</a>
+                                <div class="panel-heading divTitre">
+                                    <div class="panel-title">
+                                        <h2 class="h2Publication">{{ publication.titre }}<span class="pull-right auteurDate">{{ publication.date }}</span></h2>
                                     </div>
                                 </div>
+                                <div class="panel-body">
+                                    <h3>Auteurs :</h3>
+                                    {{ publication.auteur }}
+                                    <h3>Revue :</h3>
+                                    <p>{{ publication.revue }}</p>
+                                    <h3>DOI :</h3>
+                                    <p>{{ publication.doi }}</p>
+                                    <a href="{{ publication.url }}" target="_blank">Lien vers l'article</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
             {% endfor %}
