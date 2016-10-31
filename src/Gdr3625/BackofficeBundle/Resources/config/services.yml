@@ -1,4 +1,1 @@
 services:
-#    gdr3625_backoffice.example:
-#        class: Gdr3625\BackofficeBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]

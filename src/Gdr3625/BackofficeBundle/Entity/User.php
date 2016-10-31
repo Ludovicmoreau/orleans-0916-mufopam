@@ -30,4 +30,34 @@ class User extends BaseUser
      */
     protected $name;
 
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+        $this->roles = array('ROLE_ADMIN');
+    }
+
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return User
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 }

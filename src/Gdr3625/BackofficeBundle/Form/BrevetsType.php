@@ -16,6 +16,7 @@ class BrevetsType extends AbstractType
     {
         $builder
             ->add('brevet')
+            ->add('titre')
         ;
     }
     
