@@ -571,7 +571,7 @@ input[type="text"] {
     min-height: 220px;
 }
 .infoEquipe{
-    font-size: 15px;
+    font-size: 20px;
 }
 .panelimg,
 .titreBrevet,
@@ -588,6 +588,7 @@ input[type="text"] {
 }
 .nomEquipe{
     font-size: 20px;
+    margin-bottom: 35px;
 }
 #titreRubriques {
     margin-bottom: 50px;
@@ -601,5 +602,48 @@ input[type="text"] {
     z-index: 0;
 }
 .textEquipe{
-    font-size: 10px;
+    font-size: 15px;
 }
+
+/* ########################### Média Queries ########################### */
+
+/* Telephone */
+@media only screen and (min-width : 320px) {
+    .title1 {
+        font-size: 50px;
+    }
+    #module_map{
+        display: none;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .title1 {
+        font-size: 50px;
+    }
+    #module_map{
+        display: none;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .title1 {
+        font-size: 50px;
+    }
+    #module_map{
+        display: none;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
