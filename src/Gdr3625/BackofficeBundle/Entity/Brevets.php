@@ -114,4 +114,22 @@ class Brevets
     {
         return $this->equipe;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBrevetEquipe()
+    {
+        return $this->brevetEquipe;
+    }
+
+    /**
+     * @param mixed $brevetEquipe
+     */
+    public function setBrevetEquipe($brevetEquipe)
+    {
+        $this->brevetEquipe = $brevetEquipe;
+    }
+
+
 }

@@ -105,5 +105,22 @@ class Publications
     {
         return $this->equipes;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPublicationEquipe()
+    {
+        return $this->publicationEquipe;
+    }
+
+    /**
+     * @param mixed $publicationEquipe
+     */
+    public function setPublicationEquipe($publicationEquipe)
+    {
+        $this->publicationEquipe = $publicationEquipe;
+    }
+
     
 }

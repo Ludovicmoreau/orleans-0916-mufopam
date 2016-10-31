@@ -118,7 +118,6 @@ class EquipeController extends Controller
                     $fileName
                 );
             }elseif (isset($logo)) {
-               // var_dump($logo); exit();
                 $equipe->setLogo(basename($logo));
             }
             $em = $this->getDoctrine()->getManager();

@@ -149,8 +149,7 @@ class Equipe
     protected $brevets;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"persist"})
-     * @ORM\JoinColumn(name="keywords_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes")
      */
     private $keywordsEquipe;
 
@@ -674,5 +673,38 @@ class Equipe
     {
         return $this->keywordsEquipe;
     }
-    
+
+    /**
+     * @return mixed
+     */
+    public function getEquipePublication()
+    {
+        return $this->equipePublication;
+    }
+
+    /**
+     * @param mixed $equipePublication
+     */
+    public function setEquipePublication($equipePublication)
+    {
+        $this->equipePublication = $equipePublication;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEquipeBrevet()
+    {
+        return $this->equipeBrevet;
+    }
+
+    /**
+     * @param mixed $equipeBrevet
+     */
+    public function setEquipeBrevet($equipeBrevet)
+    {
+        $this->equipeBrevet = $equipeBrevet;
+    }
+
+
 }
