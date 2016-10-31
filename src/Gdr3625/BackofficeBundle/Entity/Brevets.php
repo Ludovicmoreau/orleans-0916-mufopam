@@ -28,13 +28,12 @@ class Brevets
      */
     private $brevet;
 
-
-    private $equipe;
-
     /**
-     * @ORM\ManyToMany(targetEntity="Brevets", mappedBy="equipeBrevet")
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="text")
      */
-    private $brevetEquipe;
+    private $titre;
 
     /**
      * Get id
@@ -68,4 +67,22 @@ class Brevets
     {
         return $this->brevet;
     }
+
+    /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+    
+
 }

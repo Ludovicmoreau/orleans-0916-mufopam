@@ -7,6 +7,15 @@
         <div class="groupequipformulaire">
             <div class="row">
                 <div class="form-group" >
+                    {{ form_label(form.titre, "Titre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <div class="col-sm-8">
+                        {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder': "Titre"}}) }}
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-text-width iconLeft" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-group" >
                     {{ form_label(form.brevet, "Brevet", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-8">
                         {{ form_widget(form.brevet, {'attr': {'class': 'form-control brevetAreaTaille', 'placeholder': "Brevet"}}) }}

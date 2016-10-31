@@ -4,21 +4,37 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-offset-4 col-lg-4 text-center">
-                <h1>Actualité :</h1>
-                <p><input type="text" class="quicksearch" placeholder="Rechercher ici ..." /></p>
+            <div class="col-md-offset-3 col-md-6">
+                <div>
+                    <h1 id="titreRubriques" class="text-center">Listes des Actualités du MuFoPAM</h1>
+                </div>
+                <!-- Barre de recherche -->
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input id="searchBar" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher un brevet ..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="grid row">
             {% for key, flux in fluxes %}
                 <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                    <div class="element-item bleu grid-sizerActu  carteEquipe borderRed col-lg-12 ">
+                    <div class="element-item bleu grid-sizerActu bleu carteEquipe col-lg-12 ">
                         <div class="carteContent ">
                             <div class="topCarte">
+                                <div class="panelFlux">
+                                    <p class="text-left">{{ flux.typeFlux }}</p>
+                                    <p class="text-right"> {{ flux.datePublication | date('d-m-Y')}}</p>
+                                </div>
                                 <div class="paddingActu">
-                                    <p class="text-center"> {{ flux.datePublication | date('d-m-Y')}}</p>
-                                        <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
-                                        <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ')  }}</p>
+
+                                    <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
+                                    <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ')  }}</p>
                                 </div>
                             </div>
                         </div>

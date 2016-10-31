@@ -33,7 +33,7 @@ class Keywords
      * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe", cascade={"all"})
      * @ORM\JoinColumn(name="equipe_id", referencedColumnName="id")
      */
-    public $equipes;
+    protected $equipes;
 
     /**
      * @ORM\ManyToMany(targetEntity="Flux", mappedBy="keywordsflux")
@@ -148,5 +148,15 @@ class Keywords
     public function getFluxes()
     {
         return $this->fluxes;
+    }
+
+    /**
+     * Get equipes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEquipes()
+    {
+        return $this->equipes;
     }
 }
