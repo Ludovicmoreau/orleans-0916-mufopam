@@ -97,6 +97,22 @@ main{
     position: relative;
     height: 30px;
 }
+.vcenter {
+    vertical-align: middle;
+    font-size: 12px;
+}
+.dropdown-menu{
+    min-width: 241px;
+}
+
+.dropdown-menu > li > a{
+    font-size: 20px;
+    margin-top: 0px;
+    padding-top: 36px;
+}
+
+
+
 /*###########                   content                 ##############*/
 .row1 {
     margin-top: 30px;
@@ -190,21 +206,6 @@ td > i{
     padding-top: 112px;
 }
 /**** equipes ****/
-.borderBlue{
-    border: 3px solid #337ab7;
-}
-.borderOrange{
-    border: 3px solid #f0ad4e;
-}
-.borderRed{
-    border: 3px solid #b92c28;
-}
-.borderGreen{
-    border: 3px solid #3e8f3e;
-}
-.borderPurple{
-    border: 3px solid #8959A8;
-}
 .filtersDisplay, .equipesDisplay{
     padding: 15px;
 }
@@ -226,7 +227,7 @@ td > i{
     text-decoration: underline;
 }
 .carteEquipe h1{
-    font-size: 20px;
+    font-size: 18px;
 }
 .carteEquipe li {
     list-style: none;
@@ -286,8 +287,8 @@ td > i{
 
 }
 .equipeLogo{
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 100px;
+    max-height: 100px;
 }
 .boutonEdit{
     margin-left: 15px;
@@ -361,9 +362,7 @@ td > i{
 .actuHauteur{
     min-height: 205px;
 }
-.paddingActu{
-    padding: 5px;
-}
+
 .h2Actu{
     font-size: 21px;
     margin-top: inherit;
@@ -487,9 +486,12 @@ a.back-to-top {
     font-size: 70px;
 }
 
-/*************************** Masonry ***********************************/
+/*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 
+.titreCarte{
+    font-size: 10px;
+}
 
 /* ---- input ---- */
 
@@ -500,8 +502,10 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 5px;
+    margin-left: 9vw;
     margin-right: 1px;
+    fitWidth: true;
+
 }
 
 /* clear fix */
@@ -511,17 +515,85 @@ input[type="text"] {
     clear: both;
 }
 
-/* ---- .element-item ---- */
+/* ---- .element-item ou Gestion des blocs Isotope ---- */
 
 .grid-sizer,
 .element-item {
     position: relative;
-    height: auto;
     width: 33.333%;
     display: block;
     margin: 7px;
     min-width: 250px;
-    min-height: 250px;
+    height: 320px;
+    color: white;
+}
+.bleu{
+    background-color: #337AB7;
+    position: relative;
+    width: 33.333%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.rouge{
+    background-color: #E3302B;
+    position: relative;
+    width: 50%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.vert{
+    background-color: #3E8F3E;
+    position: relative;
+    width: 33.333%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.jaune{
+    background-color: #F0902A;
+    position: relative;
+    width: 33.333%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.violet{
+    background-color: #7A2C6A;
+    position: relative;
+    width: 33.333%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.bleu:hover{
+    background-color: #9ACD32;
+    color: #337AB7;
+}
+.motclef{
+    font-size: 9px;
+    display: none;
+}
+
+
+.equipeName img{
+    height: 80px;
+    width: auto;
+}
+
+.equipeName h2{
+    font-size: 20px;
 }
 
 .element-item > * {
@@ -542,9 +614,26 @@ input[type="text"] {
     height: auto;
     width: 33.333%;
     display: block;
-    margin: 7px;
-    max-width: 300px;
-    min-height: 250px;
-
+    margin-left: 7vw;
+    min-width: 430px;
+    min-height: 270px;
+}
+.infoEquipe{
+    font-size: 15px;
+}
+.panelimg,
+.titreBrevet{
+    background-color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.titreBrevet{
+    color: #337AB7;
+}
+.nomEquipe{
+    font-size: 20px;
+}
+.paddingActu{
+    padding: 15px;
 }
 
