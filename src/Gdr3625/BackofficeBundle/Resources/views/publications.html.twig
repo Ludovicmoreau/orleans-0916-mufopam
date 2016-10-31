@@ -9,7 +9,8 @@
             </div>
         </div>
         <div class="grid row">
-            {% for publication in publications %}
+
+            {%  for publication in publications %}
                     <div class="element-item bleu grid-sizerActu  carteEquipe borderGreen col-lg-12 ">
                         <div class="carteContent ">
                             <div class="topCarte">
@@ -20,12 +21,12 @@
                                 </div>
                                 <div class="panel-body">
                                     <h3>Auteurs :</h3>
-                                    {{ publication.auteur }}
+                                    <p>{{ publication.auteur }}</p>
                                     <h3>Revue :</h3>
                                     <p>{{ publication.revue }}</p>
                                     <h3>DOI :</h3>
                                     <p>{{ publication.doi }}</p>
-                                    <a href="{{ publication.url }}" target="_blank">Lien vers l'article</a>
+                                    <a href="{{ publication.lien }}" target="_blank">Lien vers l'article</a>
                                 </div>
                             </div>
                         </div>

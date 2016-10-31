@@ -97,11 +97,8 @@ class DefaultController extends Controller
     public function publicationsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $dois = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findAll();
-        foreach ($dois as $key=>$doi) {
-                $json = file_get_contents('http://api.crossref.org/works/'.$dois[$key]->getDoi());
-                $publications[]=json_decode($json,true);
-        }
+        $publications = $em->getRepository('Gdr3625BackofficeBundle:Publications')->findAll();
+
         return $this->render('Gdr3625BackofficeBundle::publications.html.twig', array(
             'publications'=>$publications));
     }
