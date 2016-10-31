@@ -147,13 +147,4 @@ class Publications
         $this->publicationEquipe->removeElement($publicationEquipe);
     }
 
-    /**
-     * Get publicationEquipe
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPublicationEquipe()
-    {
-        return $this->publicationEquipe;
-    }
 }
