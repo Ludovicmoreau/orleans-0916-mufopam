@@ -37,15 +37,11 @@ $(function() {
     });
 
     /*##### Summernote #####*/
-    $(document).ready(function() {
-        $('#flux_contenu').summernote({
+     $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote({
             height: 300,
         });
 
-        var html = $('#flux_contenu').summernote('code');
-    });
-
-
+    var html = $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote('code');
 
     var save = function() {
         var makrup = $('.click2edit').summernote('code');
