@@ -610,32 +610,14 @@ input[type="text"] {
 
 /* Telephone */
 @media only screen and (min-width : 320px) {
-    .title1 {
-        font-size: 50px;
-    }
-    #module_map{
-        display: none;
-    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-    .title1 {
-        font-size: 50px;
-    }
-    #module_map{
-        display: none;
-    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    .title1 {
-        font-size: 50px;
-    }
-    #module_map{
-        display: none;
-    }
 }
 
 /* Medium Devices, Desktops */
