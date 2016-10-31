@@ -16,6 +16,11 @@ class PublicationsType extends AbstractType
     {
         $builder
             ->add('doi')
+          /*  ->add('titre')
+            ->add('date')
+            ->add('auteur')
+            ->add('revue')
+            ->add('lien') */
         ;
     }
     
@@ -28,4 +33,6 @@ class PublicationsType extends AbstractType
             'data_class' => 'Gdr3625\BackofficeBundle\Entity\Publications'
         ));
     }
+
+
 }

@@ -47,6 +47,17 @@ class PublicationsController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $json = file_get_contents('http://api.crossref.org/works/'. $publication->getDoi());
+            $publicationJson=json_decode($json,true);
+            $publication -> setTitre($publicationJson['message']['title'][0]);
+            $publication -> setDate($publicationJson['message']['published-print']['date-parts'][0][1] .'-' . $publicationJson['message']['published-print']['date-parts'][0][0]);
+            $authors='';
+            foreach($publicationJson['message']['author'] as $author) {
+                $authors[] = $author['given'].' '.$author['family'];
+            }
+            $publication -> setAuteur(implode(', ', $authors));
+            $publication -> setRevue($publicationJson['message']['publisher']);
+            $publication -> setLien($publicationJson['message']['URL']);
             $em->persist($publication);
             $em->flush();
 
@@ -57,16 +68,24 @@ class PublicationsController extends Controller
             'publication' => $publication,
             'form' => $form->createView(),
         ));
+
     }
 
-    /**
+  /*  /**
      * Generate a new Publications before save in BDD.
      *
      * @Route("/new/generate/{doi}", name="publication_generate")
      * @Method({"GET", "POST"})
      */
-    public function genearteAction($doi)
+  /*  public function generateAction($doi)
     {
+        $json = file_get_contents('http://api.crossref.org/works/'.$doi);
+        $publications[]=json_decode($json,true);
+
+        return $this->render('publications/new.html.twig', array(
+            'publications'=>$publications));
+
+
         /*$publication = new Publications();
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\PublicationsType', $publication);
         $form->handleRequest($request);
@@ -82,10 +101,10 @@ class PublicationsController extends Controller
         return $this->render('publications/new.html.twig', array(
             'publication' => $publication,
             'form' => $form->createView(),
-        ));*/
+        ));
         return $this->render('publications/new.html.twig', array(
             'publication' => $doi,));
-    }
+    } */
 
     /**
      * Finds and displays a Publications entity.

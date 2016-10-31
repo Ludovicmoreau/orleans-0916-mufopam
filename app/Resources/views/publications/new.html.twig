@@ -14,10 +14,15 @@
                     <div class="col-sm-1">
                         <i class="fa fa-rss iconLeft" aria-hidden="true"></i>
                     </div>
-                    <div class="col-sm-4 col-lg-4">
-                        <a class="btn btn-default" href="{{ path('publication_generate', {'doi':'toto'}) }}">Générer la Publication</a>
-                    </div>
+                </div>
+            </div>
 
+
+
+                    <div class="col-sm-4 col-lg-4">
+                      {#  <a class="btn btn-default" href="{{ path('publication_generate', {'doi':'toto'}) }}">Générer la Publication</a> #}
+                    </div>
+                    <div>{# publication['message'] #}</div>
                 </div>
             </div>
             <div class="row">

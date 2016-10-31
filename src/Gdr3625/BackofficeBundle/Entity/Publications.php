@@ -27,6 +27,38 @@ class Publications
      * @ORM\Column(name="doi", type="string", length=255)
      */
     private $doi;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    private $titre;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date", type="string", length=255)
+     */
+    private $date;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="auteur", type="text")
+     */
+    private $auteur;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="revue", type="text")
+     */
+    private $revue;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lien", type="text")
+     */
+    private $lien;
+
+
 
     /**
      * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="equipePublication")
@@ -105,6 +137,120 @@ class Publications
     public function getEquipes()
     {
         return $this->equipes;
+    }
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     * @return Publications
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set date
+     *
+     * @param string $date
+     * @return Publications
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set auteur
+     *
+     * @param string $auteur
+     * @return Publications
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
+
+        return $this;
+    }
+
+    /**
+     * Get auteur
+     *
+     * @return string
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * Set revue
+     *
+     * @param string $revue
+     * @return Publications
+     */
+    public function setRevue($revue)
+    {
+        $this->revue = $revue;
+
+        return $this;
+    }
+
+    /**
+     * Get revue
+     *
+     * @return string
+     */
+    public function getRevue()
+    {
+        return $this->revue;
+    }
+
+    /**
+     * Set lien
+     *
+     * @param string $lien
+     * @return Publications
+     */
+    public function setLien($lien)
+    {
+        $this->lien = $lien;
+
+        return $this;
+    }
+
+    /**
+     * Get lien
+     *
+     * @return string
+     */
+    public function getLien()
+    {
+        return $this->lien;
     }
 
     /**
