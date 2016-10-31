@@ -51,6 +51,8 @@ class BrevetsController extends Controller
             $em->persist($brevet);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success',"Création brevet terminée");
             return $this->redirectToRoute('brevets_show', array('id' => $brevet->getId()));
         }
 
@@ -93,6 +95,8 @@ class BrevetsController extends Controller
             $em->persist($brevet);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success',"Edition brevet terminée");
             return $this->redirectToRoute('brevets_show', array('id' => $brevet->getId()));
         }
 
@@ -119,7 +123,8 @@ class BrevetsController extends Controller
             $em->remove($brevet);
             $em->flush();
         }
-
+        // load success message in flashbag
+        $this->addFlash('success',"Brevet supprimée");
         return $this->redirectToRoute('brevets_index');
     }
 

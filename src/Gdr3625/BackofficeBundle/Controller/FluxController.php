@@ -52,6 +52,8 @@ class FluxController extends Controller
             $em->persist($flux);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success','Création '.$flux->getTypeFlux().' terminée');
             return $this->redirectToRoute('flux_show', array('id' => $flux->getId()));
         }
 
@@ -94,6 +96,8 @@ class FluxController extends Controller
             $em->persist($flux);
             $em->flush();
 
+            // load success message in flashbag
+            $this->addFlash('success','Edition '.$flux->getTypeFlux().' terminée');
             return $this->redirectToRoute('flux_show', array('id' => $flux->getId()));
         }
 
@@ -121,6 +125,8 @@ class FluxController extends Controller
             $em->flush();
         }
 
+        // load success message in flashbag
+        $this->addFlash('success',$flux->getTypeFlux().' supprimé(e)');
         return $this->redirectToRoute('flux_index');
     }
 

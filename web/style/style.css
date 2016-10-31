@@ -149,13 +149,13 @@ main{
     background-image: -webkit-linear-gradient(#337ab7, #337ab7);
     background-image: -moz-linear-gradient(#337ab7, #337ab7);
     background-image: -o-linear-gradient(#337ab7, #337ab7); }
-.bot-left:after {
+/*.bot-left:after {
     right: -3px; height: 8px;
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#337ab7), to(transparent));
     background-image: -webkit-linear-gradient(left, #337ab7, transparent);
     background-image: -moz-linear-gradient(left, #337ab7, transparent);
     background-image: -o-linear-gradient(left, #337ab7, transparent);
-}
+}*/
 
 /***** map ****/
 .stickySide.affix {
@@ -382,6 +382,10 @@ td > i{
     padding-top: 30px;
 }
 
+.aNews{
+    text-decoration: none;
+    color: inherit;
+}
 
 
 /**** table sorter ****/
@@ -616,4 +620,11 @@ input[type="text"] {
 .input-group{
     margin-bottom: 40px;
     z-index: 0;
+}
+
+.alert-message{
+    position: absolute;
+    top: 23vh;
+    right: 1.5vw;
+    z-index: 1000;
 }

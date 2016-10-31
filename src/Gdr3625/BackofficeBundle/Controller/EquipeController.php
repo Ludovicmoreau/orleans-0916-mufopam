@@ -199,14 +199,14 @@ class EquipeController extends Controller
 
         // get values from bdd
         $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
-
+        $nbEquipes = count($equipesDatas);
         foreach($equipesDatas as $key => $equipeData){
 
             $adresse = urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
-            $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'";
+            $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'&key=AIzaSyC3FNl0wh7Ucu8CpnoIw6xH_Pz15ZuAcIs";
             if (!$json = file_get_contents($url)){
                 $errorApi = true;
-                $this->addFlash('danger',"Il y a un erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse" );
+                $this->addFlash('danger',"Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse" );
                 break;
             }else {
                 $coord[] = json_decode($json, true);
@@ -222,7 +222,7 @@ class EquipeController extends Controller
                             "street": "' . $equipeData->getRue() . '",
                             "postcode": "' . $equipeData->getCp() . '",
                             "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "'.$root.$equipeData->getLogo().'\n\n# Référent :\n**'.$equipeData->getNomReferent().' '.$equipeData->getPrenomReferent().'**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "description": "'.$root.$equipeData->getLogo().'\n\n# Référent :**'.$equipeData->getNomReferent().' '.$equipeData->getPrenomReferent().'**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -235,7 +235,8 @@ class EquipeController extends Controller
                             ]
                         }
                     }';
-                if ($key < count($equipesDatas) - 1) {
+
+                if ($key < $nbEquipes - 1) {
                     $geojson = $geojson . ',';
                 }
                 $fp = fopen('umap.json','w+');
