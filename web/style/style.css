@@ -107,7 +107,7 @@ main{
 
 .dropdown-menu > li > a{
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 36px;
 }
 
@@ -129,6 +129,11 @@ main{
     margin-left: 10px;
     margin-top:25px;
     margin-bottom:25px;
+}
+
+.quicksearch{
+    min-width: 500px;
+
 }
 
 /***** Gradient Left/Bottom for h1 title ****/
@@ -183,15 +188,14 @@ td > i{
     margin-top: 0;
 }
 .pull-right{
-    font-size:15px;
     padding-top: 3px;
+    padding-right: 10px;
 }
 .panel{
     text-align: justify;
 }
-.auteurDate{
+.auteurDate {
     font-size: 15px;
-    padding-top: 3px;
 }
 .panel-heading{
     padding-top:5px;
@@ -216,8 +220,20 @@ td > i{
 .equipeRow{
     padding: 5px;
 }
-.carteEquipe, .topCarte, .bottomCarte, .equipeLogo, .equipeName, .equipeLeftCarte, .equipeRightCarte{
+.carteEquipe, .bottomCarte, .equipeLogo, .equipeName, .equipeLeftCarte, .equipeRightCarte{
     padding:0 ;
+}
+.topCarteActu{
+    background-color: #b92c28;
+}
+.topCartePublication{
+    background-color: #3e8f3e;
+}
+.topCarteBrevet{
+    background-color: #f0ad4e;
+}
+.topCarteJob{
+    background-color: #8959A8;
 }
 .carteContent a {
     text-decoration: none;
@@ -278,7 +294,7 @@ td > i{
 }
 .list-inline {
     padding-left: 17px;
-    margin-left: 0px;
+    margin-left: 0;
 }
 .list-inline > li {
     padding-left: 18px;
@@ -495,7 +511,6 @@ input[type="text"] {
 .grid {
     margin-left: 9vw;
     margin-right: 1px;
-    fitWidth: true;
 
 }
 

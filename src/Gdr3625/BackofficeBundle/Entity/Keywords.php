@@ -3,7 +3,6 @@
 namespace Gdr3625\BackofficeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Keywords
@@ -30,7 +29,7 @@ class Keywords
     private $keyword;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe", cascade={"all"})
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe")
      * @ORM\JoinColumn(name="equipe_id", referencedColumnName="id")
      */
     protected $equipes;

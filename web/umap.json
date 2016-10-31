@@ -212,5 +212,257 @@
                             ]
                         }
                     },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Villeneuve d’Ascq",
+                            "street": "Cité Scientifique, Université de Lille1",
+                            "postcode": "59655",
+                            "name": "Species Interactions and Comparative Immunology (SPICI)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**Tasiemski Aurélie**\n---\n**Nous trouver : [[http://spici.weebly.com/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                3.1442651,
+                                50.6232523
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Nouzilly",
+                            "street": "Centre de Recherche Val de Loire",
+                            "postcode": "37380",
+                            "name": "Centre International de Ressources Microbiennes dédié aux Bactéries Pathogènes (CIRM-BP)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[www.val-de-loire.inra.fr/cirm_bp|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                0.744155,
+                                47.543367
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Nouzilly",
+                            "street": "Centre de Recherche Val de Loire",
+                            "postcode": "37380",
+                            "name": "Pathogénie de la Colibacillose Aviaire",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LALMANACH Anne-Christine**\n---\n**Nous trouver : [[http://www6.val-de-loire.inra.fr/infectiologie-santepublique/Nos-recherches/Pole-bacteriologie/Pathogenie-de-la-colibacillose-aviaire|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                0.744155,
+                                47.543367
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Saint Julien en Genevois ",
+                            "street": "260 Avenue Marie Curie",
+                            "postcode": "74166",
+                            "name": "IMMUNOLOGIE ANALYTIQUE DES PATHOLOGIES CHRONIQUES",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**BULET Philippe**\n---\n**Nous trouver : [[https://iab.univ-grenoble-alpes.fr|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                6.1207983,
+                                46.1405958
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Rennes",
+                            "street": "Campus de Beaulieu, 263 Av.  Leclerc",
+                            "postcode": "35042",
+                            "name": "ICMV – Ingénierie Moléculaire et Chimie pour le Vivant",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**Bondon Arnaud**\n---\n**Nous trouver : [[http://www.scienceschimiques.univ-rennes1.fr/equipes/icmv/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -1.6777926,
+                                48.117266
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Pessac",
+                            "street": "Allée Saint-Hilaire",
+                            "postcode": "33460",
+                            "name": "Biophysique des Assemblages membranaires (BAM)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**ODAERT Benoît**\n---\n**Nous trouver : [[http://www.cbmn.u-bordeaux.fr/27-chimie-biophysique- biophysique-des-assemblages-membranaires.html|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -0.607487,
+                                44.804218
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Strasbourg",
+                            "street": "Faculté de Chirurgie Dentaire, Hôpital Civil, Porte de l’hôpital,",
+                            "postcode": "67000",
+                            "name": "Design de matériaux antimicrobiens",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**METZ-BOUTIGUE Marie-Hélène**\n---\n**Nous trouver : [[www.u1121.inserm.fr |Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                7.7835217,
+                                48.6019858
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Plouzané",
+                            "street": "Technopôle de Brest Iroise",
+                            "postcode": "29280",
+                            "name": "Contrôle des communautés – Molécules antimicrobiennes",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**FLEURY Yannick**\n---\n**Nous trouver : [[http://www.univ-brest.fr/LUBEM|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -4.620404,
+                                48.381438
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Orléans",
+                            "street": "Rue Charles Sadron",
+                            "postcode": "45071",
+                            "name": "Chimie des protéines de synthèse et glycoingénierie",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DELMAS Agnès**\n---\n**Nous trouver : [[http://cbm.cnrs-orleans.fr/spip.php?article81|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                1.9467861,
+                                47.8404704
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Lorient ",
+                            "street": "Université de Bretagne-Sud",
+                            "postcode": "56321",
+                            "name": "Laboratoire de Biotechnologie et Chimie Marines",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DUFOUR Alain**\n---\n**Nous trouver : [[http://www-lbcm.univ-ubs.fr/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -3.3702449,
+                                47.7482524
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Montpellier",
+                            "street": "Place Eugène Bataillon",
+                            "postcode": "34095",
+                            "name": "Réponses Immunitaires de Macroorganismes et Environnement",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DESTOUMIEUX-GARZON Delphine**\n---\n**Nous trouver : [[http://www.ecosym.univ-montp2.fr/index.php?option=com_content&task=view&id=118&Itemid=9|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                3.8606028,
+                                43.6314973
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Albi",
+                            "street": "Place de Verdun",
+                            "postcode": "81012",
+                            "name": "Venins et Activités Biologiques (VAcBio)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**TREILHOU Michel**\n---\n**Nous trouver : [[http://www.univ-jfc.fr/equipesrecherche/venins-activites-biologiques-vacbio-ea-4357-albi |Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                2.1396019,
+                                43.9198215
+                            ]
+                        }
+                    },
                     ]
                 }

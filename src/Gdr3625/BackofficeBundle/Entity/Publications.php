@@ -105,6 +105,23 @@ class Publications
     {
         return $this->equipes;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPublicationEquipe()
+    {
+        return $this->publicationEquipe;
+    }
+
+    /**
+     * @param mixed $publicationEquipe
+     */
+    public function setPublicationEquipe($publicationEquipe)
+    {
+        $this->publicationEquipe = $publicationEquipe;
+    }
+
     
 
     /**
@@ -128,15 +145,5 @@ class Publications
     public function removePublicationEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe)
     {
         $this->publicationEquipe->removeElement($publicationEquipe);
-    }
-
-    /**
-     * Get publicationEquipe
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPublicationEquipe()
-    {
-        return $this->publicationEquipe;
     }
 }

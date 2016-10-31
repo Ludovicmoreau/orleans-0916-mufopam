@@ -52,13 +52,13 @@ class EquipeController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /*$file = $equipe->getLogo();
+            $file = $equipe->getLogo();
             $fileName = md5(uniqid()) . '.' . $file->guessExtension();
             $equipe->setLogo($fileName);
             $file->move(
                 $this->getParameter('upload_directory'),
                 $fileName
-            );*/
+            );
             $em = $this->getDoctrine()->getManager();
             $em->persist($equipe);
             $em->flush();
@@ -100,23 +100,26 @@ class EquipeController extends Controller
     public function editAction(Request $request, Equipe $equipe)
     {
 
-        /*$equipe->setLogo(
-            new File($this->getParameter('load_directory').$equipe->getLogo())
-        );*/
+        if (!is_null($equipe->getLogo()) and !empty($equipe->getLogo())) {
+            $logo = new File($this->getParameter('upload_directory') . $equipe->getLogo());
+            $equipe->setLogo($logo);
+        }
         $deleteForm = $this->createDeleteForm($equipe);
         $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            /*if (!$_FILES['logo']) {
-                $file = $equipe->getLogo();
+            $file = $equipe->getLogo();
+            if (!is_null($file)  and !empty($file)) {
                 $fileName = md5(uniqid()) . '.' . $file->guessExtension();
                 $equipe->setLogo($fileName);
                 $file->move(
                     $this->getParameter('upload_directory'),
                     $fileName
                 );
-            }*/
+            }elseif (isset($logo)) {
+                $equipe->setLogo(basename($logo));
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($equipe);
             $em->flush();
@@ -131,6 +134,7 @@ class EquipeController extends Controller
 
         return $this->render('equipe/edit.html.twig', array(
             'equipe' => $equipe,
+            'logopath'=>basename($equipe->getLogo()),
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
