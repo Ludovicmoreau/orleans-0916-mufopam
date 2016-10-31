@@ -30,7 +30,7 @@ class Keywords
     private $keyword;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe", cascade={"all"})
+     * @ORM\ManyToMany(targetEntity="Equipe", mappedBy="keywordsEquipe")
      * @ORM\JoinColumn(name="equipe_id", referencedColumnName="id")
      */
     public $equipes;

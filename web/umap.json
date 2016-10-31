@@ -401,5 +401,237 @@
                             ]
                         }
                     },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Lorient ",
+                            "street": "Université de Bretagne-Sud",
+                            "postcode": "56321",
+                            "name": "Laboratoire de Biotechnologie et Chimie Marines",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DUFOUR Alain**\n---\n**Nous trouver : [[http://www-lbcm.univ-ubs.fr/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -3.3702449,
+                                47.7482524
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Montpellier",
+                            "street": "Place Eugène Bataillon",
+                            "postcode": "34095",
+                            "name": "Réponses Immunitaires de Macroorganismes et Environnement",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**DESTOUMIEUX-GARZON Delphine**\n---\n**Nous trouver : [[http://www.ecosym.univ-montp2.fr/index.php?option=com_content&task=view&id=118&Itemid=9|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                3.8606028,
+                                43.6314973
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Albi",
+                            "street": "Place de Verdun",
+                            "postcode": "81012",
+                            "name": "Venins et Activités Biologiques (VAcBio)
+",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**TREILHOU Michel**\n---\n**Nous trouver : [[http://www.univ-jfc.fr/equipesrecherche/venins-activites-biologiques-vacbio-ea-4357-albi |Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                2.1396019,
+                                43.9198215
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "PARIS",
+                            "street": "4 place Jussieu",
+                            "postcode": "75252",
+                            "name": "Structure et dynamique des Biomolécules",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**LEQUIN  Olivier**\n---\n**Nous trouver : [[http://www.labos.upmc.fr/lbm/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                2.3548468,
+                                48.8464111
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Paris ",
+                            "street": "4 place Jussieu ",
+                            "postcode": "75252",
+                            "name": "BIOINTERFACES : DU SITE AU DISPOSITIF",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/\n\n# Référent :\n**HUMBLOT Vincent**\n---\n**Nous trouver : [[http://www.labos.upmc.fr/lrs/fichiers/Biointerfaces.html|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                2.3548468,
+                                48.8464111
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Rennes",
+                            "street": "263 Av.  Leclerc",
+                            "postcode": "35042",
+                            "name": "ICMV – Ingénierie Moléculaire et Chimie pour le Vivant",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/38a3a13056bd87bca47f0db2ffb5c772.jpeg\n\n# Référent :\n**Bondon Arnaud**\n---\n**Nous trouver : [[http://www.scienceschimiques.univ-rennes1.fr/equipes/icmv/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -1.6362678,
+                                48.1141854
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Nouzilly",
+                            "street": "INRA Val de Loire",
+                            "postcode": "37380",
+                            "name": "Défenses de l’œuf, Valorisation, Evolution (DOVE)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/1cc1bee7d8e33f42623e4dce0263deff.jpeg\n\n# Référent :\n**GUYOT Nicolas**\n---\n**Nous trouver : [[http://www.val-de-loire.inra.fr/recherches_avicoles/Equipes-Scientifiques/Fonction-et-Regulation-des-Proteines-de-l-Oeuf|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                0.744155,
+                                47.543367
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Pessac",
+                            "street": "2 rue Robert Escarpit",
+                            "postcode": "33607",
+                            "name": "Peptidomimetic Chemistry Group",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/a880e0681d64d2676402a1834967f0bf.jpeg\n\n# Référent :\n**Douat Céline**\n---\n**Nous trouver : [[http://www.cbmn.u-bordeaux.fr/|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -0.6108704,
+                                44.8033594
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Pessac",
+                            "street": "allée Geoffroy St. Hilaire",
+                            "postcode": "33600",
+                            "name": "Spectroscopie ATR-FTIR, Raman, PWR, ellipsometrie, PMIRRAS et Imagerie IR et Raman pour les études d’interaction peptide/lipide",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/02ecf7c30b31d34da56bd221012a6e85.jpeg\n\n# Référent :\n**ALVES Isabel**\n---\n**Nous trouver : [[http://www.cbmn.u-bordeaux.fr/32-chimie-biophysique-spectroscopies-vibrationnelles-et-proprietes-optiques-de-systemes-biochimiques.html|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -0.607487,
+                                44.804218
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Reims",
+                            "street": "1 avenue du Maréchal Juin",
+                            "postcode": "51100",
+                            "name": "Biomatériaux et Inflammation en site osseux",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/bc81a0494ff9dc32808ac8c40f9a6bf1.png\n\n# Référent :\n**KERDJOUDJ Halima**\n---\n**Nous trouver : [[http://www.univ-reims.fr/universite/organisation,7741,18258.html?&args=Y29tcF9pZD00NCZhY3Rpb249ZGV0YWlsJmlkPTM1OCZ8|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                4.020966,
+                                49.2203383
+                            ]
+                        }
+                    },
+                    {  
+                        "type": "Feature",
+                        "properties": {
+                            "country": "France",
+                            "city": "Mont-Saint-Aignan",
+                            "street": "Faculté des Sciences",
+                            "postcode": "76821",
+                            "name": "Biofilms, résistance, Interactions Cellules-Surfaces (BRICS)",
+                            "description": "%kernel.root_dir%/../web/images/logos_equipes/46ad893ff351b50c99cec19ad08abe5e.jpeg\n\n# Référent :\n**JOUENNE Thierry**\n---\n**Nous trouver : [[http://pbs.univ-rouen.fr/spip.php?rubrique16|Site-Web]]**",
+                            "_storage_options": {
+                                "color": "Blue"
+                            }
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                1.079798,
+                                49.459778
+                            ]
+                        }
+                    }
                     ]
                 }
