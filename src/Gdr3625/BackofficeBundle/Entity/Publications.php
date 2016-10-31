@@ -106,4 +106,37 @@ class Publications
         return $this->equipes;
     }
     
+
+    /**
+     * Add publicationEquipe
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe
+     * @return Publications
+     */
+    public function addPublicationEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe)
+    {
+        $this->publicationEquipe[] = $publicationEquipe;
+
+        return $this;
+    }
+
+    /**
+     * Remove publicationEquipe
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe
+     */
+    public function removePublicationEquipe(\Gdr3625\BackofficeBundle\Entity\Equipe $publicationEquipe)
+    {
+        $this->publicationEquipe->removeElement($publicationEquipe);
+    }
+
+    /**
+     * Get publicationEquipe
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPublicationEquipe()
+    {
+        return $this->publicationEquipe;
+    }
 }

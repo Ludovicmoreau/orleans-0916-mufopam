@@ -142,12 +142,7 @@ class Equipe
      * @Assert\File(mimeTypes={ "image/jpg", "image/png", "image/jpeg", "image/jpeg"})
      */
     private $logo;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Brevets", mappedBy="equipe")
-     */
-    protected $brevets;
-
+    
     /**
      * @ORM\ManyToMany(targetEntity="Keywords", inversedBy="equipes", cascade={"persist"})
      */
@@ -157,11 +152,6 @@ class Equipe
      * @ORM\ManyToMany(targetEntity="Publications", inversedBy="publicationEquipe")
      */
     private $equipePublication;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Brevets", inversedBy="brevetEquipe")
-     */
-    private $equipeBrevet;
 
     /**
      * Get id
@@ -568,45 +558,9 @@ class Equipe
      */
     public function __construct()
     {
-        $this->brevets = new \Doctrine\Common\Collections\ArrayCollection();
         $this->keywordsEquipe = new \Doctrine\Common\Collections\ArrayCollection();
         $this->publications = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-    /**
-     * Add brevets
-     *
-     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
-     * @return Equipe
-     */
-    public function addBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
-    {
-        $this->brevets[] = $brevets;
-
-        return $this;
-    }
-
-    /**
-     * Remove brevets
-     *
-     * @param \Gdr3625\BackofficeBundle\Entity\Brevets $brevets
-     */
-    public function removeBrevet(\Gdr3625\BackofficeBundle\Entity\Brevets $brevets)
-    {
-        $this->brevets->removeElement($brevets);
-    }
-
-    /**
-     * Get brevets
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getBrevets()
-    {
-        return $this->brevets;
-    }
-
-    
 
     /**
      * Add publications
@@ -674,4 +628,37 @@ class Equipe
         return $this->keywordsEquipe;
     }
     
+
+    /**
+     * Add equipePublication
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $equipePublication
+     * @return Equipe
+     */
+    public function addEquipePublication(\Gdr3625\BackofficeBundle\Entity\Publications $equipePublication)
+    {
+        $this->equipePublication[] = $equipePublication;
+
+        return $this;
+    }
+
+    /**
+     * Remove equipePublication
+     *
+     * @param \Gdr3625\BackofficeBundle\Entity\Publications $equipePublication
+     */
+    public function removeEquipePublication(\Gdr3625\BackofficeBundle\Entity\Publications $equipePublication)
+    {
+        $this->equipePublication->removeElement($equipePublication);
+    }
+
+    /**
+     * Get equipePublication
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEquipePublication()
+    {
+        return $this->equipePublication;
+    }
 }
