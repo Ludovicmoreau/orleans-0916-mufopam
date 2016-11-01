@@ -184,7 +184,7 @@ class EquipeController extends Controller
     // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
     // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
     /**
-     * @Route("/generateMap", name="generate_map")
+     * @Route("/back/equipes/generateMap", name="generate_map")
      */
     public function generateMapAction()
     {
@@ -219,11 +219,11 @@ class EquipeController extends Controller
                         "type": "Feature",
                         "properties": {
                             "country": "France",
-                            "city": "' . $equipeData->getVille() . '",
-                            "street": "' . $equipeData->getRue() . '",
-                            "postcode": "' . $equipeData->getCp() . '",
-                            "name": "' . $equipeData->getNomEquipe() . '",
-                            "description": "'.$root.$equipeData->getLogo().'\n\n# Référent :**'.$equipeData->getNomReferent().' '.$equipeData->getPrenomReferent().'**\n---\n**Nous trouver : [[' . $equipeData->getSiteWebEquipe() . '|Site-Web]]**",
+                            "city": "'.trim($equipeData->getVille()).'",
+                            "street": "'.trim($equipeData->getRue()).'",
+                            "postcode": "'.trim($equipeData->getCp()).'",
+                            "name": "'.trim($equipeData->getNomEquipe()).'",
+                            "description": "\n'.$root.$equipeData->getLogo().'---\n# Référent :\n**[[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]\n---\n**Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -252,10 +252,11 @@ class EquipeController extends Controller
             }
         }
         if (!$errorApi){
-            $this->addFlash('success','Génération de la carte réussi, patientez quelques minutes pour que la carte soit actualisée');
+            $this->addFlash('success','Génération de la carte réussi, patientez au moins 5 minutes pour que les données de la carte soit actualisée');
         }
         return $this->redirectToRoute('equipe_index');
     }
 }
 
-
+/*"contact":"---\n Référent : [[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]",
+"site":"---\n Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]",*/
