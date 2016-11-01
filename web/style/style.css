@@ -371,7 +371,10 @@ td > i{
     text-decoration: none;
     color: inherit;
 }
-
+.actuContent img{
+    padding: 10px;
+    max-width: 100%;
+}
 
 /**** table sorter ****/
 th.headerSortUp {
