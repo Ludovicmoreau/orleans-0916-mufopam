@@ -16,7 +16,7 @@ use Gdr3625\BackofficeBundle\Entity\Keywords;
 /**
  * Equipe controller.
  *
- * @Route("back/equipes", name="back_equipes")
+ * @Route("/back/equipes", name="back_equipes")
  */
 
 class EquipeController extends Controller
@@ -184,7 +184,7 @@ class EquipeController extends Controller
     // Lien vers la carte : http://umap.openstreetmap.fr/fr/map/mufopam_104845
     // Récupération de l'adresse de l'équipe dans la BDD et conversion avec google api de l'adresse en coordonnées latitude et longitude
     /**
-     * @Route("/back/equipes/generateMap", name="generate_map")
+     * @Route("/generate/map", name="generate_map")
      */
     public function generateMapAction()
     {
@@ -267,7 +267,7 @@ class EquipeController extends Controller
             }
         }
         // if no error show success message
-        if (!$errorApi){
+        if ($errorApi == false){
             $this->addFlash('success','Génération de la carte réussi, patientez au moins 5 minutes pour que les données de la carte soit actualisée.');
         }
         return $this->redirectToRoute('equipe_index');
