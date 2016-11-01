@@ -71,41 +71,6 @@ class PublicationsController extends Controller
 
     }
 
-  /*  /**
-     * Generate a new Publications before save in BDD.
-     *
-     * @Route("/new/generate/{doi}", name="publication_generate")
-     * @Method({"GET", "POST"})
-     */
-  /*  public function generateAction($doi)
-    {
-        $json = file_get_contents('http://api.crossref.org/works/'.$doi);
-        $publications[]=json_decode($json,true);
-
-        return $this->render('publications/new.html.twig', array(
-            'publications'=>$publications));
-
-
-        /*$publication = new Publications();
-        $form = $this->createForm('Gdr3625\BackofficeBundle\Form\PublicationsType', $publication);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($publication);
-            $em->flush();
-
-            return $this->redirectToRoute('publications_show', array('id' => $publication->getId()));
-        }
-
-        return $this->render('publications/new.html.twig', array(
-            'publication' => $publication,
-            'form' => $form->createView(),
-        ));
-        return $this->render('publications/new.html.twig', array(
-            'publication' => $doi,));
-    } */
-
     /**
      * Finds and displays a Publications entity.
      *
@@ -118,33 +83,6 @@ class PublicationsController extends Controller
 
         return $this->render('publications/show.html.twig', array(
             'publication' => $publication,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Publications entity.
-     *
-     * @Route("/{id}/edit", name="publications_edit")
-     * @Method({"GET", "POST"})
-     */
-    public function editAction(Request $request, Publications $publication)
-    {
-        $deleteForm = $this->createDeleteForm($publication);
-        $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\PublicationsType', $publication);
-        $editForm->handleRequest($request);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($publication);
-            $em->flush();
-
-            return $this->redirectToRoute('publications_show', array('id' => $publication->getId()));
-        }
-
-        return $this->render('publications/edit.html.twig', array(
-            'publication' => $publication,
-            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

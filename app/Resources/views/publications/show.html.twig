@@ -21,9 +21,6 @@
             <a class="btn btn-default btn-lg btnForm" href="{{ path('publications_index') }}">Retourner à la liste</a>
         </li>
         <li class="BoutonTableShow ">
-            <a class="btn btn-success btn-lg btnForm" href="{{ path('publications_edit', { 'id': publication.id }) }}">Editer</a>
-        </li>
-        <li class="BoutonTableShow ">
             {{ form_start(delete_form) }}
                  <button type="submit" class="btn btn-danger btn-lg btnForm">Supprimer</button>
             {{ form_end(delete_form) }}
