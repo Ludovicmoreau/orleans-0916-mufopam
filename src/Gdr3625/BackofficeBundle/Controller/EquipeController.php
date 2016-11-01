@@ -188,9 +188,6 @@ class EquipeController extends Controller
      */
     public function generateMapAction()
     {
-        if (file_exists('umap.json')) {
-            unlink('umap.json');
-        }
         //init variables
         $root = $this->getParameter('upload_directory');
         $em = $this->getDoctrine()->getManager();
@@ -200,25 +197,35 @@ class EquipeController extends Controller
         // get values from bdd
         $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
         $nbEquipes = count($equipesDatas);
+
+        // write geojson for umap
         foreach($equipesDatas as $key => $equipeData){
+            // address construct
             $adresse = urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
+            // url construct
             $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'&key=AIzaSyC3FNl0wh7Ucu8CpnoIw6xH_Pz15ZuAcIs";
 
+            // if error address break loop , show flash message and redirect to equipe_index
             if (file_get_contents($url) == false) {
                 $errorApi = true;
                 $this->addFlash('danger', "Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse.");
                 break;
             }else {
+                // test if dayli api resquest aren't over limit
                 $testApi[] = json_decode(file_get_contents($url),true);
+                // if error limit, break loop, show flash message and redirect to equipe_index
                 if ($testApi[0]['status'] == 'OVER_QUERY_LIMIT') {
                     $errorApi = true;
                     $this->addFlash('danger', "Opération annulée. Vous avez dépassé le nombre de génération de la carte pour la journée.");
                     break;
                 } else {
+                    // no error => write umap.json
                     $json = file_get_contents($url);
                     $coord[] = json_decode($json, true);
+                    // get latitude and longitude for team address
                     $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
                     $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
+                    //write geojson for each team
                     $geojson = $geojson .
                         '
                         {  
@@ -242,10 +249,11 @@ class EquipeController extends Controller
                                 ]
                             }
                         }';
-
+                    // for the last team dont add comma à the end
                     if ($key < $nbEquipes - 1) {
                         $geojson = $geojson . ',';
                     }
+                    // write all in umap.json
                     $fp = fopen('umap.json', 'w+');
                     fwrite($fp, '
                     {
@@ -258,6 +266,7 @@ class EquipeController extends Controller
                 }
             }
         }
+        // if no error show success message
         if (!$errorApi){
             $this->addFlash('success','Génération de la carte réussi, patientez au moins 5 minutes pour que les données de la carte soit actualisée.');
         }
