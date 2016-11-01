@@ -223,7 +223,7 @@ class EquipeController extends Controller
                             "street": "'.trim($equipeData->getRue()).'",
                             "postcode": "'.trim($equipeData->getCp()).'",
                             "name": "'.trim($equipeData->getNomEquipe()).'",
-                            "description": "\n'.$root.$equipeData->getLogo().'---\n# Référent :\n**[[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]\n---\n**Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]**",
+                            "description": "\n'.$root.$equipeData->getLogo().'---\n** Référent :\n**[[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]\n---\n**Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]**",
                             "_storage_options": {
                                 "color": "Blue"
                             }
@@ -257,6 +257,3 @@ class EquipeController extends Controller
         return $this->redirectToRoute('equipe_index');
     }
 }
-
-/*"contact":"---\n Référent : [[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]",
-"site":"---\n Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]",*/
