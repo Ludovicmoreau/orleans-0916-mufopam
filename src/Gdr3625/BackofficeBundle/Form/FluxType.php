@@ -27,7 +27,7 @@ class FluxType extends AbstractType
                         'choices' => array(
                             ' '=>'Selectionnez le type de flux',
                             'Actus' =>  'Actualités',
-                            'Jobs' => 'Stages - Contrats',
+                            'Stage - Contrats' => 'Stages - Contrats',
                             'Events' => 'Evènements',
                         ),
             ))

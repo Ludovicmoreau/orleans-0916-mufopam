@@ -87,7 +87,7 @@ class DefaultController extends Controller
     public function jobsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Jobs');
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Stage - Contrats');
         return $this->render('Gdr3625BackofficeBundle::fluxJobs.html.twig', array(
             'fluxes' => $fluxes));
     }

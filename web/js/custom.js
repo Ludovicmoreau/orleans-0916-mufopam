@@ -37,16 +37,24 @@ $(function() {
     });
 
     /*##### Summernote #####*/
-     $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote({
-            height: 300,
-        });
-
     
-
-    var save = function() {
-        var makrup = $('.click2edit').summernote('code');
-        $('.click2edit').summernote('destroy');
-    };
+         $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote({
+                height: 300,
+            });
+    
+        
+    
+        var save = function() {
+            var makrup = $('.click2edit').summernote('code');
+            $('.click2edit').summernote('destroy');
+        };
+    
+        /* Taille image */
+    
+        $('#summernote').summernote('insertImage', url, function ($image) {
+            $image.css('width', $image.width() / 4);
+            $image.attr('data-filename', 'retriever');
+        });
 
 
 });

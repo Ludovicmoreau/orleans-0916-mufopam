@@ -27,12 +27,15 @@
                     <div class="element-item bleu grid-sizerActu bleu carteEquipe col-lg-12 ">
                         <div class="carteContent ">
                             <div class="topCarte">
-                                <div class="panelFlux">
-                                    <p class="text-left">{{ flux.typeFlux }}</p>
-                                    <p class="text-right"> {{ flux.datePublication | date('d-m-Y')}}</p>
+                                <div class="panelFlux row">
+                                    <div class="col-lg-6">
+                                        <p class="text-left">{{ flux.typeFlux }}</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p class="text-right"> Date de publication : {{ flux.datePublication | date('d-m-Y')}}</p>
+                                    </div>
                                 </div>
-                                <div class="paddingActu">
-
+                                <div class="wysiContent">
                                     <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
                                     <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
                                 </div>

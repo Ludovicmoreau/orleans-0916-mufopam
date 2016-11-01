@@ -1,10 +1,11 @@
 <div class="panel-heading">
     <div class="panel-title">
-        <h4>{{ fluxes.0.typeflux | upper}} <span class="pull-right auteurDate">{{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
+        <h4>{{ fluxes.0.typeflux | upper}} <span class="pull-right auteurDate">Date de parution : {{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
     </div>
 </div>
 <div class="panel-body">
-    <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}">
+    <div>
     {{ fluxes.0.contenu | raw }}
-    </a>
+    </div>
+    <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}"><button type="button" class="btn btn-info">En savoir plus</button></a>
 </div>
