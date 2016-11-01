@@ -192,7 +192,7 @@ class EquipeController extends Controller
             unlink('umap.json');
         }
         //init variables
-        $root = "%kernel.root_dir%/../web/images/logos_equipes/";
+        $root = $this->getParameter('upload_directory');
         $em = $this->getDoctrine()->getManager();
         $geojson = '';
         $errorApi = false;
@@ -204,11 +204,12 @@ class EquipeController extends Controller
 
             $adresse = urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
             $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'&key=AIzaSyC3FNl0wh7Ucu8CpnoIw6xH_Pz15ZuAcIs";
-            if (!$json = file_get_contents($url)){
+            if (file_get_contents($url) == false){
                 $errorApi = true;
                 $this->addFlash('danger',"Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse" );
                 break;
             }else {
+                $json = file_get_contents($url);
                 $coord[] = json_decode($json, true);
                 $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
                 $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
