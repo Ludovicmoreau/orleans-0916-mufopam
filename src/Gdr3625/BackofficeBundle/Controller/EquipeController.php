@@ -66,7 +66,7 @@ class EquipeController extends Controller
             // generation de umap.json après création équipe
             $this->generateMapAction();
             // load success message in flashbag
-            $this->addFlash('success',"Création équipe terminée");
+            $this->addFlash('success',"Création équipe terminée.");
             return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
         }
         return $this->render('equipe/new.html.twig', array(
@@ -128,7 +128,7 @@ class EquipeController extends Controller
             $this->generateMapAction();
 
             // load success message in flashbag
-            $this->addFlash('success',"Edition équipe terminée");
+            $this->addFlash('success',"Edition équipe terminée.");
             return $this->redirectToRoute('equipe_show', array('id' => $equipe->getId()));
         }
 
@@ -201,58 +201,65 @@ class EquipeController extends Controller
         $equipesDatas = $em->getRepository('Gdr3625BackofficeBundle:Equipe')->findAll();
         $nbEquipes = count($equipesDatas);
         foreach($equipesDatas as $key => $equipeData){
-
             $adresse = urlencode($equipeData->getRue().' '.$equipeData->getCp().' '.$equipeData->getVille());
             $url="https://maps.googleapis.com/maps/api/geocode/json?address='.$adresse.'&key=AIzaSyC3FNl0wh7Ucu8CpnoIw6xH_Pz15ZuAcIs";
-            if (file_get_contents($url) == false){
+
+            if (file_get_contents($url) == false) {
                 $errorApi = true;
-                $this->addFlash('danger',"Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse" );
+                $this->addFlash('danger', "Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse.");
                 break;
             }else {
-                $json = file_get_contents($url);
-                $coord[] = json_decode($json, true);
-                $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
-                $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
-                $geojson = $geojson .
-                    '
-                    {  
-                        "type": "Feature",
-                        "properties": {
-                            "country": "France",
-                            "city": "'.trim($equipeData->getVille()).'",
-                            "street": "'.trim($equipeData->getRue()).'",
-                            "postcode": "'.trim($equipeData->getCp()).'",
-                            "name": "'.trim($equipeData->getNomEquipe()).'",
-                            "description": "\n'.$root.$equipeData->getLogo().'---\n** Référent :\n**[[mailto:'.$equipeData->getEmailReferent().'|'.trim($equipeData->getNomReferent()).' '.trim($equipeData->getPrenomReferent()).']]\n---\n**Nous trouver : [['.trim($equipeData->getSiteWebEquipe()).'|Site-Web]]**",
-                            "_storage_options": {
-                                "color": "Blue"
+                $testApi[] = json_decode(file_get_contents($url),true);
+                if ($testApi[0]['status'] == 'OVER_QUERY_LIMIT') {
+                    $errorApi = true;
+                    $this->addFlash('danger', "Opération annulée. Vous avez dépassé le nombre de génération de la carte pour la journée.");
+                    break;
+                } else {
+                    $json = file_get_contents($url);
+                    $coord[] = json_decode($json, true);
+                    $lat = $coord[$key]['results'][0]['geometry']['location']['lat'];
+                    $lng = $coord[$key]['results'][0]['geometry']['location']['lng'];
+                    $geojson = $geojson .
+                        '
+                        {  
+                            "type": "Feature",
+                            "properties": {
+                                "country": "France",
+                                "city": "' . trim($equipeData->getVille()) . '",
+                                "street": "' . trim($equipeData->getRue()) . '",
+                                "postcode": "' . trim($equipeData->getCp()) . '",
+                                "name": "' . trim($equipeData->getNomEquipe()) . '",
+                                "description": "\n' . $root . $equipeData->getLogo() . '\n---\n** Référent : [[mailto:' . $equipeData->getEmailReferent() . '|' . trim($equipeData->getNomReferent()) . ' ' . trim($equipeData->getPrenomReferent()) . ']]**\n---\n**Nous trouver : [[' . trim($equipeData->getSiteWebEquipe()) . '|Site-Web]]**",
+                                "_storage_options": {
+                                    "color": "Blue"
+                                }
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    ' . $lng . ',
+                                    ' . $lat . '
+                                ]
                             }
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                ' . $lng . ',
-                                ' . $lat . '
-                            ]
-                        }
-                    }';
+                        }';
 
-                if ($key < $nbEquipes - 1) {
-                    $geojson = $geojson . ',';
+                    if ($key < $nbEquipes - 1) {
+                        $geojson = $geojson . ',';
+                    }
+                    $fp = fopen('umap.json', 'w+');
+                    fwrite($fp, '
+                    {
+                        "type": "FeatureCollection",
+                        "features": ['
+                        . $geojson . '
+                        ]
+                    }');
+                    fclose($fp);
                 }
-                $fp = fopen('umap.json','w+');
-                fwrite($fp,'
-                {
-                    "type": "FeatureCollection",
-                    "features": ['
-                    .$geojson.'
-                    ]
-                }');
-                fclose($fp);
             }
         }
         if (!$errorApi){
-            $this->addFlash('success','Génération de la carte réussi, patientez au moins 5 minutes pour que les données de la carte soit actualisée');
+            $this->addFlash('success','Génération de la carte réussi, patientez au moins 5 minutes pour que les données de la carte soit actualisée.');
         }
         return $this->redirectToRoute('equipe_index');
     }

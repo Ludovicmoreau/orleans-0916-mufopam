@@ -634,10 +634,10 @@ input[type="text"] {
 
 }
 
-
+/************************** popup message flashbag **************************/
 .alert-message{
     position: absolute;
-    top: 23vh;
+    top: 42vh;
     right: 1.5vw;
     z-index: 1000;
 }
