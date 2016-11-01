@@ -44,24 +44,32 @@ class PublicationsController extends Controller
         $publication = new Publications();
         $form = $this->createForm('Gdr3625\BackofficeBundle\Form\PublicationsType', $publication);
         $form->handleRequest($request);
-
+        //var_dump(file_get_contents('http://api.crossref.org/works/zdzefzedfzeefzefzezfzefze'));
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $json = file_get_contents('http://api.crossref.org/works/'. $publication->getDoi());
-            $publicationJson=json_decode($json,true);
-            $publication -> setTitre($publicationJson['message']['title'][0]);
-            $publication -> setDate($publicationJson['message']['published-print']['date-parts'][0][1] .'-' . $publicationJson['message']['published-print']['date-parts'][0][0]);
-            $authors='';
-            foreach($publicationJson['message']['author'] as $author) {
-                $authors[] = $author['given'].' '.$author['family'];
-            }
-            $publication -> setAuteur(implode(', ', $authors));
-            $publication -> setRevue($publicationJson['message']['publisher']);
-            $publication -> setLien($publicationJson['message']['URL']);
-            $em->persist($publication);
-            $em->flush();
+            if (file_get_contents('http://api.crossref.org/works/'.$publication->getDoi()) == false){
+                $doi = $publication->getDoi();
+                //error message si DOI number is false
+                $this->addFlash('danger', 'Impossible de trouver une publications avec le numéro de DOI : '.$doi);
+            }else {
+                $json = file_get_contents('http://api.crossref.org/works/' . $publication->getDoi());
+                $publicationJson = json_decode($json, true);
+                $publication->setTitre($publicationJson['message']['title'][0]);
+                $publication->setDate($publicationJson['message']['published-print']['date-parts'][0][1] . '-' . $publicationJson['message']['published-print']['date-parts'][0][0]);
+                $authors = '';
+                foreach ($publicationJson['message']['author'] as $author) {
+                    $authors[] = $author['given'] . ' ' . $author['family'];
+                }
+                $publication->setAuteur(implode(', ', $authors));
+                $publication->setRevue($publicationJson['message']['publisher']);
+                $publication->setLien($publicationJson['message']['URL']);
+                $em->persist($publication);
+                $em->flush();
 
-            return $this->redirectToRoute('publications_show', array('id' => $publication->getId()));
+                // load success message in flashbag
+                $this->addFlash('success',"Création publication terminée.");
+                return $this->redirectToRoute('publications_show', array('id' => $publication->getId()));
+            }
         }
 
         return $this->render('publications/new.html.twig', array(
@@ -103,7 +111,8 @@ class PublicationsController extends Controller
             $em->remove($publication);
             $em->flush();
         }
-
+        // load success message in flashbag
+        $this->addFlash('success',"Publication supprimée.");
         return $this->redirectToRoute('publications_index');
     }
 
