@@ -15,7 +15,7 @@ p{
 }
 
 main{
-    min-height: 42vh;
+    min-height: 85vh;
 
 }
 /*###########                   navbar                 ##############*/
@@ -371,7 +371,10 @@ td > i{
     text-decoration: none;
     color: inherit;
 }
-
+.actuContent img{
+    padding: 10px;
+    max-width: 100%;
+}
 
 /**** table sorter ****/
 th.headerSortUp {
@@ -634,10 +637,10 @@ input[type="text"] {
 
 }
 
-
+/************************** popup message flashbag **************************/
 .alert-message{
     position: absolute;
-    top: 23vh;
+    top: 42vh;
     right: 1.5vw;
     z-index: 1000;
 }
