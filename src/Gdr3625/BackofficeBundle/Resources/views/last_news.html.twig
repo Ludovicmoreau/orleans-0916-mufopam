@@ -4,13 +4,15 @@
     </div>
 </div>
 <div class="panel-body">
-    <div class="actuContent hideLastNews ">
+    <div class="actuContent hideLastNews">
+        <h2>{{ fluxes.0.titre  }}</h2>
         {{ fluxes.0.contenu | raw }}
     </div>
     <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}">
         <div>
-            <button class="btn btn-info center-block"><i class="fa fa-external-link-square" aria-hidden="true"></i>
-                En savoir plus</button>
+            <button class="btn btn-info center-block">
+                <i class="fa fa-external-link-square" aria-hidden="true"><span class="textIcon">En savoir plus</span></i>
+            </button>
         </div>
     </a>
 </div>
