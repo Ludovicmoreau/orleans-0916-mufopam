@@ -7,16 +7,15 @@ A Symfony project created on September 27, 2016, 11:03 am.
 
 # ![pageres](web/images/logoGDR.png)
 
-## Install
+## Installation
 
-```
-$ npm install --save pageres
-```
-
-*PhantomJS, which is used for generating the screenshots, is installed automagically, but in some [rare cases](https://github.com/Obvious/phantomjs/issues/102) it might fail to and you'll get an `Error: spawn EACCES` error. [Download](http://phantomjs.org/download.html) PhantomJS manually and reinstall pageres if that happens.*
-
-
-## Usage
+Pour l'installation du site :
+* Sur le terminal du serveur :
+ -> Se mettre dans le dossier choisit
+ -> git clone https://github.com/WildCodeSchool/orleans-0916-mufopam.git
+ -> composer install
+ -> rentrer les informations de la base de donnée et du mail
+ -> Donner les autorisation au dossier app/cache et app/logs : chmod -R 777 app/cache app/logs
 
 ## API
 
