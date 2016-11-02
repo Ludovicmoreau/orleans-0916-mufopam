@@ -23,10 +23,10 @@
         </div>
         <div class="grid row">
             {% for flux in fluxes %}
-                <div class="element-item bleu grid-sizerActu carteEquipe">
-                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                        <div class="carteContent ">
-                            <div class="topCarte">
+                <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
+                    <div class="element-item bleu grid-sizerActu carteEquipe">
+                        <div class="carteContent">
+                            <div class="actuContent">
                                 <div class="panelFlux row">
                                     <div class="col-lg-6">
                                         <p class="text-left">{{ flux.typeFlux }}</p>
@@ -43,8 +43,8 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             {% endfor %}
         </div>
     </div>
