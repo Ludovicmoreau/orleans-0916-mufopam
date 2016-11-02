@@ -684,7 +684,7 @@ input[type="text"] {
     font-size: 20px;
     margin-bottom: 35px;
 }
-#titreRubriques {
+.titreRubriques {
     margin-bottom: 50px;
     text-decoration: underline #A9D1F2;
     width: auto;
@@ -698,26 +698,71 @@ input[type="text"] {
 .textEquipe{
     font-size: 15px;
 }
-
+/************************** popup message flashbag **************************/
+.alert-message{
+    position: absolute;
+    top: 42vh;
+    right: 1.5vw;
+    z-index: 1000;
+}
 /* ########################### Média Queries ########################### */
 
 /* Pager?! WTF!! */
 @media only screen and (min-width : 0px) and (max-width: 319px) {
+    .banniere{
+        display: none;
+    }
     .quicksearch{
         min-width: 60px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .navbar-nav > li > a{
+        padding-top: 5px;
+        font-size: 10px;
+    }
+    .navbar a{
+        height: 20px;
     }
 }
 /* Telephone */
 @media only screen and (min-width : 320px) and (max-width: 479px) {
+    .banniere{
+        display: none;
+    }
     .quicksearch{
         min-width: 80px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .navbar-nav > li > a{
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    .navbar a{
+        height: 40px;
     }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width: 767px){
+    .banniere{
+        display: none;
+    }
     .quicksearch{
         min-width: 80px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .navbar-nav > li > a{
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    .navbar a{
+        height: 40px;
     }
 }
 
@@ -725,6 +770,16 @@ input[type="text"] {
 @media only screen and (min-width : 768px) and (max-width: 991px) {
     .quicksearch{
         min-width: 80px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .navbar-nav > li > a{
+        padding-top: 30px;
+        font-size: 20px;
+    }
+    .navbar a{
+        height: 80px;
     }
 }
 
@@ -740,10 +795,3 @@ input[type="text"] {
 
 }
 
-/************************** popup message flashbag **************************/
-.alert-message{
-    position: absolute;
-    top: 42vh;
-    right: 1.5vw;
-    z-index: 1000;
-}
