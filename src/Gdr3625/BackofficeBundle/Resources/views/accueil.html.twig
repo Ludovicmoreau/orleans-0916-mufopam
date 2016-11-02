@@ -1,60 +1,96 @@
-{% block contenu  %}
-<div id="content" class="fixNav container-fluid">
-    <div class="row row1">
-        <div class="col-xs-12 col-lg-offset-1 col-lg-10">
-            <h1 class="title1 bot-left">GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »</h1>
+{% block contenu %}
+
+    <div id="content" class="fixNav container-fluid">
+        <!-- ################# Panneau latéral droit ################# -->
+        <div class="row">
+            <div class="col-lg-4">
+            <h1 class="accueilTitre">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                GDR3625 MuFoPAM « MultiFonction des Peptides AntiMicrobiens »
+            </h1>
+            </div>
+        </div>
+        <div class="row col-lg-4">
             <p>Le Groupe de recherche MuFoPAM regroupe une quarantaine d'équipes de recherche française, c'est-à-dire environ 200 chercheurs, enseignant-chercheurs, Ingénieurs, techniciens, doctorants et post doctorants, reparties sur tout le territoire et affiliées au CNRS, à l'INRA, l'INSERM, au MNHN, aux Universités, au CEA, ...</p>
+            <div class="panel-assembly">
+                <div class="panel panel-primary accueilNews">
+                {{ render(controller('Gdr3625BackofficeBundle:Flux:findLast')) }}
+                </div>
+            </div>
+        </div>
+        <!-- ################# image carte interactive ################# -->
+        <div class="hidden-xs hidden-sm hidden-md col-lg-8 " id="module_map">
+            <div class="titreCarte">
+                <h2 class="fondBleu"> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Retrouvez nos equipes partout en France</h2>
+            </div>
+            <div id="map">
+                <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&datalayers=251139&fullscreenControl=false&measureControl=false&editinosmControl=false#6/38/2">
+                </iframe>
+                <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i>
+                        Voir en plein écran</a></p>
+            </div>
         </div>
     </div>
-    <div class="row row2">
-        <!--partie présentation -->
-        <div class="col-lg-offset-1 col-lg-5">
-            <div id="prez">
-                <h2 class="title2 objectifs">Objectifs prioritaires</h2>
-                <ul>
-                    <li><p>Fédérer les équipes de recherche françaises qui s’intéressent à la multifonctionnalité des peptides antimicrobiens.</p></li>
-                    <li><p>Favoriser les rencontres et inciter les synergies entre les différentes disciplines afin de permettre l'émergence de projets innovants et transversaux de recherche pluridisciplinaires à l'échelle nationale et internationale afin de répondre aux divers appels à projets.</p></li>
-                    <li><p>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</p></li>
-                </ul>
-                <h2 class="title2 preambule">Preambule</h2>
-                <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
-                <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
-                <h2 class="title2 direction">Direction</h2>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
+    <div class="row tabAccueil">
+        <div class="col-lg-12 ">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" id="tabListHome">
+                <li role="presentation" class="active"><a href="#Préambule" aria-controls="Préambule" role="tab" data-toggle="tab">Préambule</a></li>
+                <li role="presentation"><a href="#ObjectifsPrioritaires" aria-controls="ObjectifsPrioritaires" role="tab" data-toggle="tab">Objectifs Prioritaires</a></li>
+                <li role="presentation"><a href="#Direction" aria-controls="Direction" role="tab" data-toggle="tab">Direction</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Comité de Pilotage</a></li>
+            </ul>
+            <!-- Tab panels -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="Préambule">
+                    <p>L’idée de créer un groupe de recherche (GDR), dont le nom proposé est « MultiFonction des Peptides AntiMicrobiens » avec l’acronyme « GDR-MuFoPAM » est née lors de la réunion annuelle de la toute jeune Société Française de Peptides Antimicrobiens (SFPAM) en février 2012. Cette initiative menée en étroite collaboration avec le Président de la SFPAM, Djamel Drider, a muri au cours du congrès international AMP2012 (Third International Symposium on AntiMicrobial Peptides) organisé par la SFPAM à Lille.</p>
+                    <p>Après la création de la SFPAM fin 2009, ce GDR a pour objectif d’œuvrer pour le rapprochement des acteurs impliqués dans cette thématique en France et pour son rayonnement international. En particulier, ce GDR a pour vocation de fédérer les équipes de recherche qui s'intéressent d'une part à la structure et l'activité antimicrobienne des peptides d ́origine naturelle ou synthétique et d'autre part, aux multiples fonctions de ces peptides ainsi que leurs valorisations socio-économiques.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ObjectifsPrioritaires">
+                    <ul>
+                        <li><p>Fédérer les équipes de recherche françaises qui s’intéressent à la multifonctionnalité des peptides antimicrobiens.</p></li>
+                        <li><p>Favoriser les rencontres et inciter les synergies entre les différentes disciplines afin de permettre l'émergence de projets innovants et transversaux de recherche pluridisciplinaires à l'échelle nationale et internationale afin de répondre aux divers appels à projets.</p></li>
+                        <li><p>Contribuer à la réflexion sur les activités à mener et à susciter en France en fonction du contexte international du développement et de la valorisation de la multifonctionnalité des PAMs.</p></li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="Direction">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
                             <tr>
-                                <th><h3>Directeur</h3> <h4>Céline LANDON - CNRS Orléans</h4></th>
+                                <th><h3>Directeur</h3><h4>Céline LANDON - CNRS Orléans</h4></th>
                             </tr>
                             <tr>
-                                <td><i class="fa fa-envelope-o" aria-hidden="true"></i>celine.landon@cnrs-orleans.fr</td>
+                                <td><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:celine.landon@cnrs-orleans.fr">celine.landon@cnrs-orleans.fr</a></td>
                                 <td><i class="fa fa-phone" aria-hidden="true"></i>02.38.25.55.74</td>
                             </tr>
                             <tr>
-                                <th><h3>Directeur Adjoint</h3> <h4>Mohamed AMICHE - INSERM Créteil</h4></th>
+                                <th><h3>Directeur Adjoint</h3><h4>Mohamed AMICHE - INSERM Créteil</h4></th>
                             </tr>
                             <tr>
-                                <td><i class="fa fa-envelope-o" aria-hidden="true"></i>Mohamed.AMICHE@inserm.fr</td>
+                                <td><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:Mohamed.AMICHE@inserm.fr">Mohamed.AMICHE@inserm.fr</a></td>
                                 <td><i class="fa fa-phone" aria-hidden="true"></i>01.49.81.36.66</td>
                             </tr>
-                        </thead>
-                    </table>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
-                <h2 class="title2 direction">Comité de pilotage</h2>
-                <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
-                <a  data-toggle="modal" data-target="#modalComite">Scientifiques du Comité de pilotage</a>
-                <div id="modalComite" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modale du comité de pilotage">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <p>Le comité scientifique a été composé de façon à représenter l’ensemble des savoir-faire sur les PAMs, qui constituent les racines du GDR-MuFoPAM, et toutes les composantes que nous souhaitons développer au sein de ce GDR.</p>
+                    <a  data-toggle="modal" data-target="#modalComite"><i class="fa fa-external-link-square" aria-hidden="true"></i>
+                        Comité de pilotage</a>
+                    <div id="modalComite" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modale du comité de pilotage">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
                                         <tr>
                                             <th>Chercheurs</th>
                                             <th>Savoir-faire</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                        </thead>
+                                        <tbody>
                                         <tr>
                                             <td>Mohamed AMICHE (Créteil)</td>
                                             <td>PAMs et activité anticancéreuse</td>
@@ -95,63 +131,12 @@
                                             <td>Sylvie REBUFFAT (Paris)</td>
                                             <td>PAMs et fonctions émergentes</td>
                                         </tr>
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!--image carte interactive -->
-        <div class="visible-md col-lg-5">
-            <div id="map" class="stickySide" data-spy="affix" data-offset-top="300">
-                <iframe src="http://umap.openstreetmap.fr/fr/map/mufopam_104845?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=false&tilelayersControl=false&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&datalayers=251139&fullscreenControl=false&measureControl=false&editinosmControl=false#6/38/2">
-                </iframe>
-                <p><a href="http://umap.openstreetmap.fr/fr/map/mufopam_104845" target="_blank">Voir en plein écran</a></p>
-            </div>
-        </div>
-    </div>
-    <div class="row row3">
-        <!--partie panel -->
-        <div class="panel-assembly col-lg-offset-1 col-lg-3">
-            <div class="panel panel-primary ">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <h4>Dernière publication <span class="pull-right auteurDate">Auteur / Date</span></h4>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel-assembly col-lg-4">
-            <div class="panel panel-primary ">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <h4> Dernière News <span class="pull-right auteurDate">Auteur / Date</span></h4>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="panel-assembly col-lg-3">
-            <div class="panel panel-primary ">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <h4> Dernière Offre <span class="pull-right auteurDate">Auteur / Date</span></h4>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid aperiam asperiores assumenda cumque,
-                        dicta fuga fugit in incidunt nobis perferendis praesentium provident quo sed sint tempore vitae voluptatem.</p>
                 </div>
             </div>
         </div>
