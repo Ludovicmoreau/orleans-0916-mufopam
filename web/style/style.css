@@ -580,9 +580,7 @@ input[type="text"] {
 /* ---- isotope ---- */
 
 .grid {
-    margin-left: 9vw;
-    margin-right: 1px;
-
+    margin-left: 7.5vw;
 }
 
 /* clear fix */
@@ -746,8 +744,9 @@ input[type="text"] {
     .navbar a{
         height: 40px;
     }
+    /* Vue Equipes*/
     .grid {
-        margin-left: 5vw;
+        margin-left: 4vw;
     }
     .grid-sizerActu{
         min-width: 248px;
@@ -781,6 +780,7 @@ input[type="text"] {
     .navbar a{
         height: 40px;
     }
+    /* Vue Equipes*/
     .grid {
         margin-left: 18vw;
     }
@@ -791,14 +791,17 @@ input[type="text"] {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 991px) {
+    .banniere{
+        display: none;
+    }
     .input-group{
         margin-bottom: 30px;
-        width: 400Px;
+        width: 500Px;
         margin: auto;
     }
     .quicksearch{
         min-width: 80px;
-        max-width: 400px;
+        max-width: 500px;
     }
     .titreRubriques{
         margin-bottom: 20px;
@@ -813,25 +816,33 @@ input[type="text"] {
     .navbar a{
         height: 80px;
     }
+    /* Vue Equipes*/
     .grid {
-        margin-left: 20vw;
+        margin-left: 14vw;
     }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1199px) {
+    .input-group{
+        margin-bottom: 30px;
+        width: 500Px;
+    }
     .quicksearch{
         min-width: 80px;
+        max-width: 500px;
     }
+    /* Vue Equipes*/
     .grid {
-        margin-left: 20vw;
+        margin-left: 22vw;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) and (max-width: 1712px) {
+    /* Vue Equipes*/
     .grid {
-        margin-left: 20vw;
+        margin-left: 23vw;
     }
 }
 
