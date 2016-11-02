@@ -3,7 +3,59 @@ GDR3625
 
 A Symfony project created on September 27, 2016, 11:03 am.
 
-### Contributors :
+
+
+# ![pageres](web/images/logoGDR.png)
+
+## Installation
+
+Pour l'installation du site :
+* Sur le terminal du serveur :
+ -> Se mettre dans le dossier choisit
+ -> git clone https://github.com/WildCodeSchool/orleans-0916-mufopam.git
+ -> composer install
+ -> rentrer les informations de la base de donnée et du mail
+ -> Donner les autorisation au dossier app/cache et app/logs : chmod -R 777 app/cache app/logs
+
+## API
+
+
+##### css
+
+
+##### script
+
+##### cookies
+
+###### Tip
+
+##### filename
+
+##### selector
+
+##### hide
+
+##### username
+
+##### password
+
+##### scale
+
+##### format
+
+##### userAgent
+
+##### headers
+
+#### url
+
+#### sizes
+
+#### options
+
+#### directory
+
+## Team :
 
   * Mickael LEHOUX
   * Joel PILOSEL
@@ -14,7 +66,4 @@ A Symfony project created on September 27, 2016, 11:03 am.
   
   * Julien KEITA
   * Sylvain BLONDEAU
-
-
-
 
