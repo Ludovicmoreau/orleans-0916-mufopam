@@ -7,7 +7,7 @@ $(function() {
     });
     /*##### Gestion du flashbag #####*/
     $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert();
-    window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 4000);
+    window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 5000);
 
     /*##### bp back to top #####*/
     // scroll distance to display bp
@@ -36,7 +36,7 @@ $(function() {
     /*##### Summernote #####*/
     
          $('#flux_contenu, #equipe_descriptionEquipe, #brevets_brevet').summernote({
-                height: 300,
+                height: 300
             });
     
         

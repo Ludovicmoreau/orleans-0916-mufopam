@@ -9,7 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Gdr3625\BackofficeBundle\Entity\Equipe;
 use Gdr3625\BackofficeBundle\Form\EquipeType;
 use Symfony\Component\HttpFoundation\File\File;
-use Gdr3625\BackofficeBundle\Entity\Keywords;
 
 
 
@@ -236,7 +235,7 @@ class EquipeController extends Controller
                                 "street": "' . trim($equipeData->getRue()) . '",
                                 "postcode": "' . trim($equipeData->getCp()) . '",
                                 "name": "' . trim($equipeData->getNomEquipe()) . '",
-                                "description": "\n' . $root . $equipeData->getLogo() . '\n---\n** Référent : [[mailto:' . $equipeData->getEmailReferent() . '|' . trim($equipeData->getNomReferent()) . ' ' . trim($equipeData->getPrenomReferent()) . ']]**\n---\n**Nous trouver : [[' . trim($equipeData->getSiteWebEquipe()) . '|Site-Web]]**",
+                                "description": "' . $root . $equipeData->getLogo() . '\n---** Référent : [[mailto:' . $equipeData->getEmailReferent() . '|' . trim($equipeData->getNomReferent()) . ' ' . trim($equipeData->getPrenomReferent()) . ']]**\n---**Nous trouver : [[' . trim($equipeData->getSiteWebEquipe()) . '|Site-Web]]**",
                                 "_storage_options": {
                                     "color": "Blue"
                                 }

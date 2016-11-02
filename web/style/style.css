@@ -145,8 +145,9 @@ main{
     padding: 10px;
 }
 .hideLastNews{
-    max-height: 500px;
+    max-height: 480px;
     overflow: hidden;
+    margin-bottom:15px;
 }
 .accueilNews{
     max-height: 600px;
@@ -398,9 +399,13 @@ td > i{
 }
 
 .aNews{
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
 }
+.textIcon{
+    padding-left: 5px;
+}
+
 .bleu a {
     text-decoration: none;
 }
