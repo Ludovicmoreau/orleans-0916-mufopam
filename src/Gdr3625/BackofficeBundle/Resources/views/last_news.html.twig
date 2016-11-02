@@ -1,18 +1,31 @@
-<div class="panel-heading">
-    <div class="panel-title">
-        <h4>{{ fluxes.0.typeflux | upper}} <span class="pull-right auteurDate">Date de parution : {{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
-    </div>
-</div>
-<div class="panel-body">
-    <div class="actuContent hideLastNews">
-        <h2>{{ fluxes.0.titre  }}</h2>
-        {{ fluxes.0.contenu | raw }}
-    </div>
-    <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}">
-        <div>
-            <button class="btn btn-info center-block">
-                <i class="fa fa-external-link-square" aria-hidden="true"><span class="textIcon">En savoir plus</span></i>
-            </button>
+{% if fluxes %}
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h4>{{ fluxes.0.typeflux | upper}} <span class="pull-right auteurDate">Date de parution : {{ fluxes.0.datepublication |date ('d-m-Y') }}</span></h4>
         </div>
-    </a>
-</div>
+    </div>
+    <div class="panel-body">
+        <div class="actuContent hideLastNews">
+            <h2>{{ fluxes.0.titre  }}</h2>
+            {{ fluxes.0.contenu | raw }}
+        </div>
+        <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}">
+            <div>
+                <button class="btn btn-info center-block">
+                    <i class="fa fa-external-link-square" aria-hidden="true"><span class="textIcon">En savoir plus</span></i>
+                </button>
+            </div>
+        </a>
+    </div>
+{% else %}
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h4>Aucune actualité à afficher</h4>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="actuContent hideLastNews">
+            Aucune actualité à afficher
+        </div>
+    </div>
+{% endif %}

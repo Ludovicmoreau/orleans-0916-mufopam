@@ -107,7 +107,7 @@ main{
 
 .dropdown-menu > li > a{
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 36px;
 }
 
@@ -150,10 +150,7 @@ main{
     margin-bottom:15px;
 }
 .accueilNews{
-    max-height: 600px;
-}
-.boutonLastNews{
-    text-decoration: none;
+    height: 600px;
 }
 
 /***** Gradient Left/Bottom for h1 title ****/
@@ -425,7 +422,7 @@ td > i{
     color: #337AB7;
 }
 .divTitre{
-    padding-top:0px;
+    padding-top:0;
     padding-bottom: 5px;
 }
 .taillePubli {
@@ -571,7 +568,7 @@ a.back-to-top {
 }
 .fondBleu{
     background-color: #337ab7;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 /* ---- input ---- */
@@ -704,21 +701,38 @@ input[type="text"] {
 
 /* ########################### Média Queries ########################### */
 
+/* Pager?! WTF!! */
+@media only screen and (min-width : 0px) and (max-width: 319px) {
+    .quicksearch{
+        min-width: 60px;
+    }
+}
 /* Telephone */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 320px) and (max-width: 479px) {
+    .quicksearch{
+        min-width: 80px;
+    }
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : 480px) and (max-width: 767px){
+    .quicksearch{
+        min-width: 80px;
+    }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 768px) and (max-width: 991px) {
+    .quicksearch{
+        min-width: 80px;
+    }
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
+@media only screen and (min-width : 992px) and (max-width: 1199px) {
+    .quicksearch{
+        min-width: 80px;
+    }
 }
 
 /* Large Devices, Wide Screens */
