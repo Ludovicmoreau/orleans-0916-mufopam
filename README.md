@@ -47,26 +47,13 @@ Pour l'installation du site :
 
 ##### headers
 
-### pageres.src(url, sizes, options)
-
 #### url
 
 #### sizes
 
 #### options
 
-### pageres.dest(directory)
-
 #### directory
-
-### pageres.run()
-
-### pageres.on('warning', callback)
-
-## Task runners
-
-## Built with Pageres
-
 
 ## Team :
 
