@@ -713,7 +713,10 @@ input[type="text"] {
         min-width: 80px;
     }
     .grid {
-        margin-left: 20vw;
+        margin-left: 5vw;
+    }
+    .grid-sizerActu{
+        min-width: 248px;
     }
 }
 
@@ -724,6 +727,9 @@ input[type="text"] {
     }
     .grid {
         margin-left: 18vw;
+    }
+    .grid-sizerActu{
+        min-width: 342px;
     }
 }
 
