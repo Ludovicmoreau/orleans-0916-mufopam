@@ -138,6 +138,19 @@ main{
     font-size: 30px;
     color: #337ab7;
 }
+.tabAccueil{
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+}
+.hideLastNews{
+    max-height: 500px;
+    overflow: hidden;
+}
+.accueilNews{
+    max-height: 600px;
+}
 
 /***** Gradient Left/Bottom for h1 title ****/
 .bot-left {
@@ -173,7 +186,7 @@ iframe {
     border:none;
 }
 #module_map{
-    margin-top: -43px;
+    margin-top: -95px;
     padding-left: 25px;
 }
 
@@ -547,8 +560,7 @@ a.back-to-top {
 }
 .fondBleu{
     background-color: #337ab7;
-    margin-right: -108px;
-    margin-left: -15px;
+    margin-bottom: 0px;
 }
 
 /* ---- input ---- */
