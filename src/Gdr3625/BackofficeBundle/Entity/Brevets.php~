@@ -28,6 +28,12 @@ class Brevets
      */
     private $brevet;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="text")
+     */
+    private $titre;
 
     /**
      * Get id
@@ -61,4 +67,22 @@ class Brevets
     {
         return $this->brevet;
     }
+
+    /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+    
+
 }

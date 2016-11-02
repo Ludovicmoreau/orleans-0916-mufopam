@@ -37,7 +37,9 @@
                                 </div>
                                 <div class="wysiContent">
                                     <h2 class="h2Actu">{{ flux.titre | truncate(82,true,' (...) ') }}</h2>
-                                    <p class="text-justify">{{ flux.contenu | truncate(300,true,' (...) ') | raw }}</p>
+                                    <div class="text-justify actuContent">
+                                        {{ flux.contenu | truncate(300,true,' (...) ') | raw }}
+                                    </div>
                                 </div>
                             </div>
                         </div>

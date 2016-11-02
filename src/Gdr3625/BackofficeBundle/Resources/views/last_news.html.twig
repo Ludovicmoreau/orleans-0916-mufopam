@@ -4,8 +4,7 @@
     </div>
 </div>
 <div class="panel-body">
-    <div>
-    {{ fluxes.0.contenu | raw }}
-    </div>
-    <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}"><button type="button" class="btn btn-info">En savoir plus</button></a>
+    <a class="aNews" href="{{ path('actu_detail', { 'id': fluxes.0.id }) }}">
+    <div class="actuContent">{{ fluxes.0.contenu | raw }}</div>
+    </a>
 </div>

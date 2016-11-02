@@ -15,7 +15,7 @@ p{
 }
 
 main{
-    min-height: 42vh;
+    min-height: 85vh;
 
 }
 /*###########                   navbar                 ##############*/
@@ -379,6 +379,10 @@ td > i{
     text-decoration: none;
     color: inherit;
 }
+.actuContent img{
+    padding: 10px;
+    max-width: 100%;
+}
 .divTitre h2{
     height: 88px;
     color: #337AB7;
@@ -399,6 +403,8 @@ td > i{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     text-align: justify;
+    box-shadow: 2px 2px 4px grey;
+    padding-right: 10px;
 }
 .wysiContent li{
     font-size: 16px;
@@ -681,9 +687,11 @@ input[type="text"] {
 @media only screen and (min-width : 1200px) {
 
 }
+
+/************************** popup message flashbag **************************/
 .alert-message{
     position: absolute;
-    top: 23vh;
+    top: 42vh;
     right: 1.5vw;
     z-index: 1000;
 }

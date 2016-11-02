@@ -1,14 +1,11 @@
 $(function() {
-    /*##### un Sticky map at end of row2 ####*/
-    $(window).scroll(function (event) {
-        if ($(window).scrollTop() > ($('header').height() + $('.row1').height()) && ($(window).scrollTop()+$(window).height()) < ($(document).height()-$('footer').height()-$('.row3').height())){
-            $('#map').addClass('affix');
-        } else {
-            $('#map').removeClass('affix');
-        }
+    /*##### stick dynamic navbar ####*/
+    $('#custom-bootstrap-menu').affix({
+       offset: {
+           top:$('.banniere').height()-$('nav').height()-8
+       }
     });
-
-    /*Gestion du flashbag*/
+    /*##### Gestion du flashbag #####*/
     $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert();
     window.setTimeout(function() { $(".flash-success, .flash-notice, .flash-alerte, .alert-message").alert('close'); }, 4000);
 
