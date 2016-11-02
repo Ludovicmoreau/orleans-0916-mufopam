@@ -712,12 +712,18 @@ input[type="text"] {
     .quicksearch{
         min-width: 80px;
     }
+    .grid {
+        margin-left: 20vw;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) and (max-width: 767px){
     .quicksearch{
         min-width: 80px;
+    }
+    .grid {
+        margin-left: 18vw;
     }
 }
 
@@ -726,6 +732,9 @@ input[type="text"] {
     .quicksearch{
         min-width: 80px;
     }
+    .grid {
+        margin-left: 20vw;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -733,11 +742,16 @@ input[type="text"] {
     .quicksearch{
         min-width: 80px;
     }
+    .grid {
+        margin-left: 20vw;
+    }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
+@media only screen and (min-width : 1200px) and (max-width: 1712px) {
+    .grid {
+        margin-left: 20vw;
+    }
 }
 
 /************************** popup message flashbag **************************/
