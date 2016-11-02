@@ -622,10 +622,14 @@ input[type="text"] {
 .positionBrevet{
     margin-left: 6vw;
 }
+.titreBrevet h2{
+    font-size: 20px;
+    height: 75px;
+}
 .grid-sizerBrevet{
     position: relative;
-    height: 10vw;
-    width: 10vw;
+    min-height: 10vw;
+    width: 30vw;
     display: block;
     margin: 7px;
 }
