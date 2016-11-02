@@ -18,6 +18,13 @@ main{
     min-height: 85vh;
 
 }
+.myRow{
+    margin: 0 !important;
+}
+.wrapBanniere{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 /*###########                   navbar                 ##############*/
 
 /***** CSS navbar generator *****/
