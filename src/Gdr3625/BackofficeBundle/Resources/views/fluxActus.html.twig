@@ -11,7 +11,7 @@
                 <!-- Barre de recherche -->
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input id="searchBar" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher un brevet ..." />
+                        <input id="searchBar" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher une actualité ..." />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
@@ -22,9 +22,9 @@
             </div>
         </div>
         <div class="grid row">
-            {% for key, flux in fluxes %}
-                <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
-                    <div class="element-item bleu grid-sizerActu bleu carteEquipe col-lg-12 ">
+            {% for flux in fluxes %}
+                <div class="element-item bleu grid-sizerActu carteEquipe">
+                    <a class="aNews" href="{{ path('actu_detail', { 'id': flux.id }) }}">
                         <div class="carteContent ">
                             <div class="topCarte">
                                 <div class="panelFlux row">
@@ -43,8 +43,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>

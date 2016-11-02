@@ -25,8 +25,8 @@
         <!-- Génération des tuiles equipes -->
         <div class="grid row">
             {% for equipe in equipes %}
-                <a href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
-                    <div class="element-item bleu grid-sizer carteEquipe borderBlue col-lg-12 ">
+                <a class="aNews" href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
+                    <div class="element-item bleu grid-sizer carteEquipe">
                         <div class="carteContent">
                             <div class="topCarte">
                                 <div class="equipeRightCarte">

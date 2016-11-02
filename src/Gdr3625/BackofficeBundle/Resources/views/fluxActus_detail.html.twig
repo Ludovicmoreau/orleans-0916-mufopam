@@ -5,14 +5,12 @@
         <div class="row">
             <div class="col-md-4 col-lg-4 actuDetailDate">
                 <div class="panel-group" id="actuAccordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default panel-primary">
-                        <div class="panel-heading" role="tab">
-                            <a class="aNews" role="button" data-toggle="collapse" data-parent="#actuAccordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="text-center">
-                                    <h3>Détail de l'actualité N° {{ fluxes.id }}</h3>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="panelCustom panel panel-default panel-primary">
+                        <a class="aNews" role="button" data-toggle="collapse" data-parent="#actuAccordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="panel-heading panelHeading" role="tab">
+                                <div class="panelTop panel-title text-center">Détail de l'actualité N° {{ fluxes.id }}</div>
+                            </div>
+                        </a>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="table-responsive">
                                 <table class="table table-striped table-condensed">
@@ -27,15 +25,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default panel-primary">
-                        <div class="panel-heading" role="tab">
-                            <a class="aNews" role="button" data-toggle="collapse" data-parent="#actuAccordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                <div class="text-center">
-                                    <h3>Mots clés</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panelCustom panel panel-default panel-primary">
+                        <a class="aNews" role="button" data-toggle="collapse" data-parent="#actuAccordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <div class="panel-heading panelHeading" role="tab">
+                                <div class="panelTop panel-title text-center">Mots clés</div>
+                            </div>
+                        </a>
+                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="table-responsive">
                                 <table class="table table-striped table-condensed">
                                     <tbody>
@@ -53,10 +49,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-offset-1 col-md-7 col-lg-7">
-                <div>
+            <div class="col-md-8 col-lg-8">
+                <div class="col-lg-12 equipeDetailTitle">
                     <h1>{{ fluxes.titre }}</h1>
-                    <div class="actuContent">{{ fluxes.contenu| raw }}</div>
+                </div>
+                <div class="col-lg-12 equipeDetailResume">
+                    <p>{{ fluxes.contenu| raw }}</p>
                 </div>
             </div>
         </div>
