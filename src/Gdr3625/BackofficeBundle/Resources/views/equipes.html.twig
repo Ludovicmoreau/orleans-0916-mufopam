@@ -1,55 +1,107 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu  %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-offset-1 col-lg-10">
-            <h1 class="title1 bot-left">Les équipes de MuFoPAM</h1>
-        </div>
-        <div class="col-lg-2 filtersDisplay">
-            <div id="filterEquipes" class="filterCol" data-spy="" data-offset-top="">
 
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div>
+                <h1 id="titreRubriques" class="text-center">Listes des équipes du MuFoPAM</h1>
+                </div>
+                <!-- Barre de recherche -->
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input id="search" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher par équipes, mot-clefs, référents ..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-10 equipesDisplay">
-            <div class="col-lg-12 equipeRow">
-                {% for equipe in equipes %}
-                <a href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
-                    <div class="col-md-4 col-lg-4 carteEquipe {{ random(['borderRed','borderBlue','borderGreen','borderOrange','borderPurple']) }}">
+        <!-- Génération des tuiles equipes -->
+        <div class="grid row">
+            {% for equipe in equipes %}
+                <a class="aNews" href="{{ path('equipe_detail', { 'id': equipe.id }) }}">
+                    <div class="element-item bleu grid-sizer carteEquipe">
                         <div class="carteContent">
-                            <div class="col-lg-12 topCarte">
-                                <div class="col-md-4 col-lg-4 equipeLeftCarte">
-                                    <div class="col-lg-12 equipeLogo">
-                                        <img class="img-responsive" src="{{ asset( '/images/logos_equipes/' ~  equipe.logo) }}" alt="logo equipe de recherche">
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-lg-8 equipeRightCarte">
-                                    <div class="col-lg-12 equipeName text-center">
-                                        <h1>{{ equipe.nomEquipe }}</h1>
-                                        <p>{{ equipe.equipes_keywords.keywords.keyword }}</p>
+                            <div class="topCarte">
+                                <div class="equipeRightCarte">
+                                    <div class="equipeName text-center row panelimg">
+                                        <img class="img-responsive center-block " src="
+                                            {% if equipe.logo %}
+                                                {{ asset( '/images/logos_equipes/' ~ equipe.logo) }}
+                                            {% else %} {{ asset( '/images/logoGDR.png') }}
+                                            {% endif %}
+                                        " alt="{{ equipe.nomEquipe }}">
+
                                     </div>
                                 </div>
                             </div>
-                            <div class=" col-lg-12 bottomCarte">
-                                <div class="col-md-5 col-lg-5 equipeLeftCarte">
-                                    <h5>Référent de l'équipe :</h5>
-                                    <ul>
-                                        <li><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
-                                        <li><i class="fa fa-phone" aria-hidden="true"></i>{{ equipe.telephoneReferent }}</li>
-                                        <li><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>email du référent</a></li>
-                                        <li><a href="{{ equipe.sitewebequipe }}" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>Site de l'équipe</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-7 col-lg-7 equipeRightCarte">
-                                    <p>{{ equipe.descriptionequipe | truncate(200,true,' (...) ') }}</p>
+                            <div class="bottomCarte">
+                                <div class="equipeLeftCarte row">
+                                    <div class="col-lg-12 text-center infoEquipe">
+                                        <ul>
+                                            <li><h2 class="col-lg-12 nomEquipe">{{ equipe.nomEquipe }}</h2></li>
+                                            <li class="textEquipe"><i class="fa fa-user" aria-hidden="true"></i>{{ equipe.nomReferent }} {{ equipe.prenomReferent }}</li>
+                                            <li class="textEquipe"><a href="mailto:{{ equipe.emailReferent }}"><i class="fa fa-envelope" aria-hidden="true"></i>Email du référent</a></li>
+                                            <li class="textEquipe"><a href="{{ equipe.siteWebEquipe }}"><i class="fa fa-flask" aria-hidden="true"></i>Site Web du laboratoire</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <ul class="list-unstyled list-inline motclef">
+                                        {%  for k in equipe.keywordsEquipe %}
+                                                <li>
+                                                    {{ k.keyword }}
+                                                </li>
+                                        {% endfor %}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
-                {% endfor %}
-            </div>
+            {% endfor %}
         </div>
     </div>
-</div>
+
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
+    </script>
 {% endblock %}

@@ -151,6 +151,9 @@ main{
 .accueilNews{
     max-height: 600px;
 }
+.boutonLastNews{
+    text-decoration: none;
+}
 
 /***** Gradient Left/Bottom for h1 title ****/
 .bot-left {
@@ -404,7 +407,10 @@ td > i{
 .bleu a {
     text-decoration: none;
 }
-
+.actuContent{
+    height: 580px;
+    overflow: hidden;
+}
 .actuContent img{
     padding: 10px;
     max-width: 100%;

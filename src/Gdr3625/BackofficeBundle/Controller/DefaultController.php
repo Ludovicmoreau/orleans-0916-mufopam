@@ -39,7 +39,7 @@ class DefaultController extends Controller
         $keywords = $em->getRepository('Gdr3625BackofficeBundle:Keywords')->findAll();
 
 
-        return $this->render('Gdr3625BackofficeBundle::new_equipes.html.twig', array(
+        return $this->render('@Gdr3625Backoffice/equipes.html.twig', array(
             'equipes' => $equipes,
             'keywordsEquipe' => $keywords,
         ));
