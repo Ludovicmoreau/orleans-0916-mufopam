@@ -17,7 +17,7 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            publication {{ fluxes.datePublication | date('d-m-Y')}}
+                                            Date de parution {{ fluxes.datePublication | date('d-m-Y')}}
                                         </td>
                                     </tr>
                                     </tbody>
@@ -53,8 +53,8 @@
                 <div class="col-lg-12 equipeDetailTitle">
                     <h1>{{ fluxes.titre }}</h1>
                 </div>
-                <div class="col-lg-12 equipeDetailResume">
-                    <p>{{ fluxes.contenu| raw }}</p>
+                <div class="col-lg-12 equipeDetailResume actuContent">
+                    <p>{{ fluxes.contenu | raw }}</p>
                 </div>
             </div>
         </div>
