@@ -424,6 +424,9 @@ td > i{
     padding: 10px;
     max-width: 100%;
 }
+.paddingDetail img{
+    padding: 10px;
+}
 .divTitre h2{
     height: 88px;
     color: #337AB7;
