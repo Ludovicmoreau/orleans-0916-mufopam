@@ -63,7 +63,7 @@ class DefaultController extends Controller
     public function actusAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBytype_flux('Actus');
+        $fluxes = $em->getRepository('Gdr3625BackofficeBundle:Flux')->findBy(array('typeFlux'=>'Actus'),array('id'=>'DESC'));
         return $this->render('Gdr3625BackofficeBundle::fluxActus.html.twig', array(
             'fluxes' => $fluxes));
     }

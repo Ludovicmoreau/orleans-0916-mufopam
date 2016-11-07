@@ -211,6 +211,24 @@
         <div class="groupequipformulaire">
             <div class="row">
                 <div class="form-group">
+                    {{ form_label(form.equipePublication, "Publications", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                    <a href="#" class="col-sm-1 add-another-publication"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        {# store the prototype on the data-prototype attribute #}
+                        <ul id="new-publication-fields-list" class="list-inline" data-prototype="{{ form_widget(form.equipePublication.vars.prototype)|e }}">
+                            {{ form_widget(form.equipePublication) }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupequipformulaire">
+            <div class="row">
+                <div class="form-group">
                     {{ form_label(form.logo, "Logo", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
                     <div class="col-sm-8">
                         {{ form_widget(form.logo) }}
@@ -235,6 +253,7 @@
     <script>
         // keep track of how many email fields have been rendered
         var keywordCount = '{{ form.keywordsEquipe|length }}';
+        var publicationCount = '{{ form.equipePublication|length }}';
 
         jQuery(document).ready(function() {
             jQuery('.add-another-keyword').click(function(e) {
@@ -247,12 +266,29 @@
                 // replace the "__name__" used in the id and name of the prototype
                 // with a number that's unique to your emails
                 // end name attribute looks like name="contact[emails][2]"
-                newWidget = newWidget.replace(/__name__/g, keywordCount);
+                newWidget = newWidget.replace(/__keywords__/g, keywordCount);
                 keywordCount++;
 
                 // create a new list element and add it to the list
                 var newLi = jQuery('<li></li>').html(newWidget);
                 newLi.appendTo(keywordList);
+            });
+            jQuery('.add-another-publication').click(function(f) {
+                f.preventDefault();
+
+                var publicationList = jQuery('#new-publication-fields-list');
+
+                // grab the prototype template
+                var newWidget = publicationList.attr('data-prototype');
+                // replace the "__name__" used in the id and name of the prototype
+                // with a number that's unique to your emails
+                // end name attribute looks like name="contact[emails][2]"
+                newWidget = newWidget.replace(/__publications__/g, publicationCount);
+                publicationCount++;
+
+                // create a new list element and add it to the list
+                var newLi = jQuery('<li></li>').html(newWidget);
+                newLi.appendTo(publicationList);
             });
         })
 

@@ -16,11 +16,6 @@ class PublicationsType extends AbstractType
     {
         $builder
             ->add('doi')
-          /*  ->add('titre')
-            ->add('date')
-            ->add('auteur')
-            ->add('revue')
-            ->add('lien') */
         ;
     }
     

@@ -95,7 +95,7 @@
                                         {% for publication in equipe.equipePublication %}
                                             <tr>
                                                 <td class="text-left">
-                                                    <a class="aNews" href="{{ publication.doi }}" target="_blank"> {{ publication.doi }}</a>
+                                                    <a class="aNews" href="{{ publication.lien }}" data-toggle="tooltip" data-placement="right" title="{{ publication.titre }}" target="_blank"> {{ publication.doi }}</a>
                                                 </td>
                                             </tr>
                                         {% endfor %}

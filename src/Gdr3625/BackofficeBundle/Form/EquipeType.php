@@ -52,6 +52,23 @@ class EquipeType extends AbstractType
                 'allow_add'=> true,
                 'allow_delete'=> true,
                 'required'=>false,
+                'prototype' => true,
+                'prototype_name' => '__keywords__',
+            ))
+            ->add('equipePublication', CollectionType::class, array(
+                'entry_type' => EntityType::class,
+                'entry_options' => array(
+                    'class' => 'Gdr3625BackofficeBundle:Publications',
+                    'choice_label' => 'doi',
+                    'expanded' => false,
+                    'multiple' => false,
+                    'required' => false,
+                                        ),
+                'allow_add'=> true,
+                'allow_delete'=> true,
+                'required'=>false,
+                'prototype' => true,
+                'prototype_name' => '__publications__',
             ))
             ->add('logo', FileType::class, array('required' => false))
         ;

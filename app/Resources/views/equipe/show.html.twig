@@ -85,7 +85,15 @@
                             <th class="thtable2 text-center">Mots Clés</th>
                             <td class="tdtable2">
                                 {% for key, keywords in equipe.keywordsEquipe %}
-                                    {{ keywords.keyword }}
+                                    {{ keywords.keyword~' | ' }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="thtable2 text-center">Publications</th>
+                            <td class="tdtable2">
+                                {% for key, publications in equipe.equipePublication %}
+                                    {{ publications.doi~' | ' }}
                                 {% endfor %}
                             </td>
                         </tr>
