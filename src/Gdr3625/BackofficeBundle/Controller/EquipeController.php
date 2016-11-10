@@ -99,10 +99,10 @@ class EquipeController extends Controller
     public function editAction(Request $request, Equipe $equipe)
     {
 
-        if (!is_null($equipe->getLogo()) and !empty($equipe->getLogo())) {
+        /*if (!is_null($equipe->getLogo()) and !empty($equipe->getLogo())) {
             $logo = new File($this->getParameter('upload_directory') . $equipe->getLogo());
             $equipe->setLogo($logo);
-        }
+        }*/
         $deleteForm = $this->createDeleteForm($equipe);
         $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $editForm->handleRequest($request);
