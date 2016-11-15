@@ -17,44 +17,6 @@ Pour l'installation du site :
  -> rentrer les informations de la base de donnée et du mail
  -> Donner les autorisation au dossier app/cache et app/logs : chmod -R 777 app/cache app/logs
 
-## API
-
-
-##### css
-
-
-##### script
-
-##### cookies
-
-###### Tip
-
-##### filename
-
-##### selector
-
-##### hide
-
-##### username
-
-##### password
-
-##### scale
-
-##### format
-
-##### userAgent
-
-##### headers
-
-#### url
-
-#### sizes
-
-#### options
-
-#### directory
-
 ## Team :
 
   * Mickael LEHOUX
