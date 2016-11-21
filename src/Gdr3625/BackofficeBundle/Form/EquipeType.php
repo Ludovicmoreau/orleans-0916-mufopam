@@ -40,8 +40,8 @@ class EquipeType extends AbstractType
             ->add('recherche')
             ->add('projet')
             ->add('descriptionEquipe')
-            ->add('keywordsEquipe', CollectionType::class, array(
-                'entry_type' => EntityType::class,
+            ->add('keywordsEquipe', 'collection', array(
+                'entry_type' => 'entity',
                 'entry_options' => array(
                     'class' => 'Gdr3625BackofficeBundle:Keywords',
                     'choice_label' => 'keyword',
@@ -55,8 +55,8 @@ class EquipeType extends AbstractType
                 'prototype' => true,
                 'prototype_name' => '__keywords__',
             ))
-            ->add('equipePublication', CollectionType::class, array(
-                'entry_type' => EntityType::class,
+            ->add('equipePublication', 'collection', array(
+                'entry_type' => 'entity',
                 'entry_options' => array(
                     'class' => 'Gdr3625BackofficeBundle:Publications',
                     'choice_label' => 'doi',
@@ -70,7 +70,7 @@ class EquipeType extends AbstractType
                 'prototype' => true,
                 'prototype_name' => '__publications__',
             ))
-            ->add('logo', FileType::class, array('required' => false))
+            ->add('logo', 'file', array('required' => false))
         ;
     }
     

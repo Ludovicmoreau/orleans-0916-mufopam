@@ -99,10 +99,10 @@ class EquipeController extends Controller
     public function editAction(Request $request, Equipe $equipe)
     {
 
-        if (!is_null($equipe->getLogo()) and !empty($equipe->getLogo())) {
+        /*if (!is_null($equipe->getLogo()) and !empty($equipe->getLogo())) {
             $logo = new File($this->getParameter('upload_directory') . $equipe->getLogo());
             $equipe->setLogo($logo);
-        }
+        }*/
         $deleteForm = $this->createDeleteForm($equipe);
         $editForm = $this->createForm('Gdr3625\BackofficeBundle\Form\EquipeType', $equipe);
         $editForm->handleRequest($request);
@@ -207,7 +207,7 @@ class EquipeController extends Controller
             // if error address break loop , show flash message and redirect to equipe_index
             if (file_get_contents($url) == false) {
                 $errorApi = true;
-                $this->addFlash('danger', "Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse.");
+                $this->addFlash('danger', 'Il y a une erreur dans la fiche de l\'équipe n°'.$equipeData->getId().', il est impossible trouver la latitude et la longitude pour cette adresse.');
                 break;
             }else {
                 // test if dayli api resquest aren't over limit

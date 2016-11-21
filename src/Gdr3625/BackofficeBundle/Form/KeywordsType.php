@@ -20,7 +20,7 @@ class KeywordsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('keyword', TextType::class)
+            ->add('keyword', 'text')
         ;
     }
     

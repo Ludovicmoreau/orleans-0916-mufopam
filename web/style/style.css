@@ -855,11 +855,3 @@ input[type="text"] {
         margin-left: 23vw;
     }
 }
-
-/************************** popup message flashbag **************************/
-.alert-message{
-    position: absolute;
-    top: 42vh;
-    right: 1.5vw;
-    z-index: 1000;
-}
