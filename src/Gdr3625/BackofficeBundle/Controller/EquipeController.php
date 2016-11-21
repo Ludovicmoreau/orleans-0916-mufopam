@@ -207,7 +207,7 @@ class EquipeController extends Controller
             // if error address break loop , show flash message and redirect to equipe_index
             if (file_get_contents($url) == false) {
                 $errorApi = true;
-                $this->addFlash('danger', "Il y a une erreur dans la fiche de l\'équipe, il est impossible trouver la latitude et la longitude pour cette adresse.");
+                $this->addFlash('danger', 'Il y a une erreur dans la fiche de l\'équipe n°'.$equipeData->getId().', il est impossible trouver la latitude et la longitude pour cette adresse.');
                 break;
             }else {
                 // test if dayli api resquest aren't over limit

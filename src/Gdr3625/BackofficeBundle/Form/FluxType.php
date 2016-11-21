@@ -22,8 +22,8 @@ class FluxType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu')
-            ->add('datePublication', DateType::class, array('widget' => "single_text"))
-            ->add('typeFlux',ChoiceType::class, array(
+            ->add('datePublication', 'date', array('widget' => "single_text"))
+            ->add('typeFlux','choice', array(
                         'choices' => array(
                             ' '=>'Selectionnez le type de flux',
                             'Actus' =>  'Actualités',
@@ -31,8 +31,8 @@ class FluxType extends AbstractType
                             'Events' => 'Evènements',
                         ),
             ))
-            ->add('keywordsFlux', CollectionType::class, array(
-                'entry_type' => EntityType::class,
+            ->add('keywordsFlux', 'collection', array(
+                'entry_type' => 'entity',
                 'entry_options' => array(
                     'class' => 'Gdr3625BackofficeBundle:Keywords',
                     'choice_label' => 'keyword',
